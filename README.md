@@ -1,3 +1,1 @@
-{::nomarkdown}
-![](./README.html)
-{:/}
+[README](./README.html)
