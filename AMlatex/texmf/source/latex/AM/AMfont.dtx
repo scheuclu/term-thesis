@@ -1,0 +1,697 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMfont <!AMreleaseVersion!>--- Package of the AMlatex-Bundle for fonts
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMfont.dtx
+and the derived files           AMfont.ins,
+                                AMfont.pdf and
+                                AMfont.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMfont}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMfont}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMfont}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMfont}[\AMinsertGitDate{} \AMinsertGitVersion{} AM font managment]
+\ClassInfo{AMfont}{Document class of the Institute of Applied Mechanics}
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\begin{document}
+    \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+% \changes{1.0}{2015/05/28}{First version}
+%
+%
+% \title{The \textcolor{white}{AMfont} package}
+% \maketitle
+% \tableofcontents
+%
+%
+%
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{User guide: how to use the AMfont package?}
+%
+% \InsertPgfkeysBlaBla{Font}
+%
+% \subsection{Package main option keys}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{usage}
+\usepackage[theme=stix]{AMfont}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+% \begin{docKey}[AM/font]{encoding}{=\meta{enc}}{default is \docValue{T1}}
+% Font encoding. You do not need to take care of this option, except if you use \hologo{LuaLaTeX} or \hologo{XeLaTeX}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{theme}{=\meta{theme name}}{default is \docValue{latex}}
+% General font theme. It will impact both text and math font, as well as the font for the titles, the captions, and so on.
+% Available themes are:
+% \begin{description}
+%   \item[tumhelvetica] Text will be in TUM Neue Helvetica. The math font euler will be used for the equations.
+%   \item[stix] The STIX fonts will be used, both for text and math. \\ See \url{http://www.stixfonts.org/}.
+%   \item[latex] Default \LaTeX{} fonts (Computer Modern).
+%   \item[libertine] Font Linux Libertine will be used for the text and font Palatino (mathpazo) for the equations.
+%   \item[kpfonts] The fonts from the \textsc{Johannes Kepler} project will be used.
+% \end{description}
+% \end{docKey}
+%
+%
+% \subsection{Manual settings}
+%
+%
+% \begin{docCommand}{AMsetFont}{\marg{key-value list}}
+%   Main command of the package \AMpackage{AMfont} that allows you to modify the font settings. 
+%   See next section for the available parameters.
+% \end{docCommand}
+%
+%
+% \subsection{Available font settings}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{usage}
+\AMsetFont{text=libertine,math=latex,subsection title=\itshape}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+% \begin{docKey}[AM/font]{text}{=\meta{font name}}{initial is \docValue{latex}}
+% Main font for the text. Possible values are \docValue{latex}, \docValue{stix}, \docValue{libertine} and \docValue{tumhlv}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{math}{=\meta{font name}}{initial is \docValue{latex}}
+% Main font for mathematics. Possible values are \docValue{latex}, \docValue{stix}, \docValue{pazo} and \docValue{euler}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{footnote}{=\meta{style}}{initial is \docValue{\cs{footnotesize}\cs{sffamily}}}
+% Font style of the foot notes.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{chapter title}{=\meta{style}}{initial is \docValue{\cs{rmfamily}\cs{bfseries}}}
+% Font style of the chapter titles. Note that the size is controlled by another key: \refKey{/AM/font/chapter title size}. \\
+% All title styles can be set at once with key \refKey{/AM/font/titles}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{section title}{=\meta{style}}{initial is \docValue{\cs{rmfamily}\cs{bfseries}}}
+% Font style of the section titles.  Note that the size is controlled by another key: \refKey{/AM/font/section title size}. \\
+% All title styles can be set at once with key \refKey{/AM/font/titles}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{subsection title}{=\meta{style}}{initial is \docValue{\cs{rmfamily}\cs{bfseries}}}
+% Font style of the section titles.  Note that the size is controlled by another key: \refKey{/AM/font/subsection title size}. \\
+% All title styles can be set at once with key \refKey{/AM/font/titles}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{subsubsection title}{=\meta{style}}{initial is \docValue{\cs{rmfamily}\cs{bfseries}}}
+% Font style of the section titles.  Note that the size is controlled by another key: \refKey{/AM/font/subsubsection title size}. \\
+% All title styles can be set at once with key \refKey{/AM/font/titles}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{paragraph title}{=\meta{style}}{initial is \docValue{\cs{rmfamily}\cs{bfseries}}}
+% Font style of the paragraph titles.  Note that the size is controlled by another key: 
+% \refKey{/AM/font/paragraph title size}. \\
+% All title styles can be set at once with key \refKey{/AM/font/titles}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{titles}{=\meta{style}}{initial is \docValue{\cs{rmfamily}\cs{bfseries}}}
+% This key can be used to change the values of \refKey{/AM/font/chapter title}, \refKey{/AM/font/section title}, \refKey{/AM/font/subsection title}
+% and \refKey{/AM/font/subsection title} simultaneously.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{chapter title size}{=\meta{size}}{initial is \docValue{\cs{huge}}}
+% Font size of chapter titles. 
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{section title size}{=\meta{size}}{initial is \docValue{\cs{Large}}}
+% Font size of section titles.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{subsection title size}{=\meta{size}}{initial is \docValue{\cs{large}}}
+% Font size of subsection titles.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{subsubsection title size}{=\meta{size}}{initial is \docValue{\cs{normalsize}}}
+% Font size of subsubsection titles.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{paragraph title size}{=\meta{size}}{initial is \docValue{\cs{normalsize}}}
+% Font size of paragraph titles.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{caption text}{=\meta{size}}{initial is \docValue{normalsize,sf}}
+% Font of the text in figure or table captions. Requires \PackageName{caption} to be loaded.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{caption label}{=\meta{size}}{initial is \docValue{normalsize,bf,sf}}
+% Font of the caption labels (e.g. Figure or Table). Requires \PackageName{caption} to be loaded.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{contact info}{=\meta{size}}{initial is \docValue{\cs{small}}}
+% Font used for the contact information when you use the \docValue{contact} titlepage 
+% of package \AMpackage{AMtitlepage}. 
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{footnote}{=\meta{style}}{initial is \docValue{\cs{footnotesize}\cs{sffamily}}}
+% Allows you to change the font of the text in the footnotes.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{page number}{=\meta{style}}{initial is \docValue{\cs{normalfont}}}
+% Allows you to change the font of the page numbers.
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{left mark}{=\meta{style}}{initially empty}
+% Allows you to change the font of the left mark (see \AMpackage{AMlayout} for more details).
+% \end{docKey}
+%
+% \begin{docKey}[AM/font]{right mark}{=\meta{style}}{initially empty}
+% Allows you to change the font of the right mark (see \AMpackage{AMlayout} for more details).
+% \end{docKey}
+%
+%
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1em}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsection{Loading required for the package writing.}
+%
+% The standards packages \PackageName{ifthen}, \PackageName{kvoptions} and \PackageName{pgfkeys} are loaded to write this package.
+%
+%    \begin{macrocode}
+\RequirePackage{etoolbox}
+\RequirePackage{ifthen}
+\RequirePackage{kvoptions}
+\RequirePackage{pgfopts}
+\RequirePackage{pgfkeys}
+%    \end{macrocode}
+%
+% The package afterpackage allows us to execute some latex code just after a package is loaded with the command \verb|\afterpackage|. 
+%
+%    \begin{macrocode}
+\RequirePackage{afterpackage}
+%    \end{macrocode}
+%
+%
+%
+%
+% 
+% \subsection{Options declaration}
+%
+%    \begin{macrocode}
+\DeclareStringOption[T1]{encoding}
+\DeclareStringOption[latex]{textstyle}
+\DeclareStringOption[latex]{mathstyle}
+\newif\ifAMfont@setup@titles
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\providecommand{\AMset}[1]{\pgfkeys{/AM/.cd,#1}}
+\newcommand{\AMsetFont}[1]{\pgfkeys{/AM/font/.cd,#1}}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\pgfkeys{
+  /AM/font/.is family,/AM/font,
+  text/.estore in = \AMfont@textstyle,
+  math/.estore in = \AMfont@mathstyle,
+  theme/.is choice,
+  theme/tumhelvetica/.style = {text=tumhlv,math=euler},
+  theme/stix/.style = {text=stix,math=stix},
+  theme/latex/.style = {text=latex,math=latex},
+  theme/libertine/.style = {text=libertine,math=pazo},
+  theme/kpfonts/.style = {text=kpfonts,math=kpfonts},
+  encoding/.estore in = \AMfont@encoding,
+  setup titles/.is if = AMfont@setup@titles,
+}
+%    \end{macrocode}
+%
+% Process options.
+%
+%    \begin{macrocode}
+\ProcessPgfOptions{AM/font}
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \subsection{Font information commands}
+%
+%
+% \begin{docCommand}{thefontsize}{\marg{font name}}
+% Print the font name given in argument followed by the current font size.
+% For debuging purpose only.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand\thefontsize[1]{{#1 The current font size is: \f@size pt\par}}
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \begin{docCommand}{thefontdefault}{}
+% Print the current font default name.
+% For debuging purpose only.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand\thefontdefault{{The current font default is: \familydefault\par}}
+%    \end{macrocode}
+%
+%
+%
+% \subsection{Font packages}
+%
+%
+% Package \PackageName{fontenc} is loaded first. I should offer an option to prevent this
+% for the users who want to use \hologo{XeTeX} or \hologo{LuaTeX} instead of
+% \hologo{pdfTeX}.
+%
+% \todo{Fix conflict between AMposter and microtype!}
+%
+%    \begin{macrocode}
+\RequirePackage[\AMfont@encoding]{fontenc}
+\RequirePackage{lmodern}
+%\RequirePackage{microtype}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AM@check@font@compatibility}{}
+%   Verify that the chosen fonts for math and text are compatible. Change them if not and warn the user about it.
+%   For example, |text=stix| can only be used with |math=stix|.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@exec@loadfontpackages}{}
+%   Loads the font packages corresponding to the choice of \refKey{/AM/font/text} and \refKey{/AM/font/math}.
+%   One of the following command will be called: \refCom{AM@font@load@tumhelvetica}, \refCom{AM@font@load@stix},
+%   \refCom{AM@font@load@libertine} for the text font, and \refCom{AM@font@load@mathpazo} or \refCom{AM@font@load@euler}
+%   for the math font.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\AtEndPreamble{\AM@check@font@compatibility\AM@exec@loadfontpackages}
+\newcommand{\AM@check@font@compatibility}{%
+  \ifthenelse{\equal{\AMfont@textstyle}{stix}}%
+    {\ifthenelse{\equal{\AMfont@mathstyle}{stix}}%
+      {}
+      {%
+        \PackageWarning{AMfont}{%
+          <stix> and <\AMfont@mathstyle> are not compatible! Using <stix> for math
+        }
+        \def\AMfont@mathstyle{stix}
+      }%
+    }%
+    {}
+}
+\newcommand{\AM@exec@loadfontpackages}{%
+  \ifthenelse{\equal{\AMfont@textstyle}{stix}}
+    {\AM@font@load@stix}%
+    {}%
+  \ifthenelse{\equal{\AMfont@textstyle}{tumhlv}}
+    {\AM@font@load@tumhelvetica}%
+    {}%
+  \ifthenelse{\equal{\AMfont@textstyle}{libertine}}
+    {\AM@font@load@libertine}%
+    {}%
+  \ifthenelse{\equal{\AMfont@textstyle}{kpfonts}}
+    {\AM@font@load@kpfonts}%
+    {}%
+  \ifthenelse{\equal{\AMfont@mathstyle}{pazo}}
+    {\AM@font@load@mathpazo}%
+    {}%
+  \ifthenelse{\equal{\AMfont@mathstyle}{euler}}
+    {\AM@font@load@euler}%
+    {}%
+  \PackageInfo{AMfont}{%
+    Loaded font <\AMfont@textstyle> for text and <\AMfont@mathstyle> for math.
+  }
+}
+%    \end{macrocode}
+%
+%
+%
+% \subsubsection{TUM Helvetica}
+%
+%
+% The TUM official font of the is called TUM~Helvetica\cite{TUMCorporateDesign}.
+%
+% For some reason, I had trouble to load the font TUM~Helvetica. It appears that
+% I need to use the command \cs{pdfmapfile} to get it work. This is not normal
+% and I hope I can solve this.
+%
+% A font can be selected by redefining the commands \cs{rmdefault}, \cs{sfdefault}
+% and \cs{ttdefault}. The code associated to TUM~Helvetica is |lhv|.
+%
+%
+% \begin{docCommand}{AM@font@load@tumhelvetica}{}
+%   Loads the mapfile \FileName{tumhelv.map} and set \cs{rmdefault}, \cs{sfdefault} to |lhv|.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AM@font@load@tumhelvetica}{%
+  \pdfmapfile{+tumhelv.map}%
+  \renewcommand{\encodingdefault}{T1}%
+  \renewcommand{\rmdefault}{lhv}%
+  \renewcommand{\sfdefault}{lhv}%
+}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsubsection{stix, libertine, mathpazo, euler}
+%
+%
+% \begin{docCommand}{AM@font@load@stix}{}
+%   Loads the package \PackageName{stix}.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@font@load@libertine}{}
+%   Loads the package \PackageName{libertine}.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@font@load@mathpazo}{}
+%   Loads the package \PackageName{mathpazo} with option |osf|.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@font@load@euler}{}
+%   Loads the package \PackageName{eulervm}.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@font@load@kpfonts}{}
+%   Loads the package \PackageName{kpfonts}. Option \docValue{light} should
+%   be considered for printable documents.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AM@font@load@stix}{%
+  \RequirePackage{stix}%
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AM@font@load@libertine}{%
+  \RequirePackage{libertine}%
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AM@font@load@mathpazo}{%
+  %\PassOptionsToPackage{osf}{mathpazo}
+  \RequirePackage{mathpazo}%
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AM@font@load@euler}{%
+  \RequirePackage{eulervm}%
+}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\newcommand{\AM@font@load@kpfonts}{%
+  %\PassOptionsToPackage{light}{kpfonts}
+  \RequirePackage{kpfonts}%
+}
+%    \end{macrocode}
+%
+%
+%
+% \subsection{Font style definitions}
+% \label{subsec:fontdefinitions}
+%
+%
+%    \begin{macrocode}
+\pgfkeys{%
+  /AM/font,
+  footnote/.store in = \AMfont@footnote@style,
+  footnote/.append code = {\AM@exec@footnote@fontsetup},
+  rightmark/.store in = \AMfont@rightmark@style,
+  leftmark/.store in = \AMfont@leftmark@style,
+  chapter title size/.store in = \AMfont@chapter@title@size,
+  chapter title size/.append style = setup titles,
+  chapter title/.store in = \AMfont@chapter@title@style,
+  chapter title/.append style = setup titles,
+  section title size/.store in = \AMfont@section@title@size,
+  section title size/.append style = setup titles,
+  section title/.store in = \AMfont@section@title@style,
+  section title/.append style = setup titles,
+  subsection title size/.store in = \AMfont@subsection@title@size,
+  subsection title size/.append style = setup titles,
+  subsection title/.store in = \AMfont@subsection@title@style,
+  subsection title/.append style = setup titles,
+  subsubsection title size/.store in = \AMfont@subsubsection@title@size,
+  subsubsection title/.store in = \AMfont@subsubsection@title@style,
+  paragraph title size/.store in = \AMfont@paragraph@title@size,
+  paragraph title/.store in = \AMfont@paragraph@title@style,
+  titles/.style = {chapter title=#1,section title=#1,subsection title=#1,subsubsection title=#1,paragraph title=#1},
+  caption text/.store in = \AMfont@caption@text,
+  caption text/.append code = {\AM@exec@caption@fontsetup},
+  caption label/.store in = \AMfont@caption@label,
+  caption label/.append code = {\AM@exec@caption@fontsetup},
+  contact info/.store in = \AMfont@contactinfo@style,
+  titlepage title/.store in = \AMfont@title@style,
+  titlepage author/.store in = \AMfont@author@style,
+  page number/.store in = \AMfont@pagenumber@style,
+  left mark/.store in = \AMfont@leftmark@style,
+  right mark/.store in = \AMfont@rightmark@style,
+  default/.style = {%
+    footnote=\footnotesize\sffamily,
+    rightmark=\normalsize\sffamily\slshape,
+    leftmark=\normalsize\sffamily\slshape,
+    titles=\rmfamily\bfseries,
+    chapter title size=\huge,
+    section title size=\Large,
+    subsection title size=\large,
+    subsubsection title size=\normalsize,
+    paragraph title size=\normalsize,
+    caption text = {normalsize,sf},
+    caption label = {normalsize,bf,sf},
+    setup titles = false,
+    contact info=\small,
+    titlepage title=\large\bfseries\sffamily,
+    titlepage author=\sffamily,
+    page number=\normalfont,
+    left mark=\@empty,
+    right mark=\@empty,
+  },
+}
+%    \end{macrocode}
+%
+%
+%
+% \subsubsection{Footnote}
+%
+%
+% Package \PackageName{footmisc} enables footnote layout changes. It provides the command \cs{footnotelayout}.
+%
+%    \begin{macrocode}
+\RequirePackage{footmisc}
+\newcommand{\AM@exec@footnote@fontsetup}{%
+  \renewcommand*{\footnotelayout}{\AMfont@footnote@style}
+}
+%    \end{macrocode}
+%
+%
+%
+% \subsubsection{Page number and headers}
+%
+%
+% \begin{docKey}[AM/font]{rightmark}{=\meta{style}}{}
+% Right mark. Used by \AMpackage{AMlayout} for the header.
+% \end{docKey}
+%
+%
+% \begin{docKey}[AM/font]{leftmark}{=\meta{style}}{}
+% Left mark. Used by \AMpackage{AMlayout} for the header.
+% \end{docKey}
+%
+%
+%
+%
+% \subsubsection{Titles}
+%
+% \todo{settings here}
+%
+%
+% \subsubsection{Caption}
+%
+%
+% Font of figure and table captions. The command \cs{captionsetup} is provided
+% by the package \PackageName{caption}\cite{PKGcaption}. If this one is loaded then we change the font of 
+% the caption text and label accordingly. Otherwise nothing happens.
+%
+%
+%    \begin{macrocode}
+\newcommand{\AM@setup@catption@labelfont}[1]{\captionsetup{labelfont+={#1}}}
+\newcommand{\AM@setup@catption@textfont}[1]{\captionsetup{textfont+={#1}}}
+\newcommand{\AM@exec@caption@fontsetup}{%
+  \@ifpackageloaded{caption}{
+    \expandafter\forcsvlist\expandafter%
+      \AM@setup@catption@labelfont\expandafter%
+      {\AMfont@caption@label}
+    \expandafter\forcsvlist\expandafter%
+      \AM@setup@catption@textfont\expandafter%
+      {\AMfont@caption@text}
+  }{}
+}
+\AMsetFont{default}
+\AfterPackage{caption}{\AM@exec@caption@fontsetup}
+%    \end{macrocode}
+%
+%
+%
+% \subsection{Enforce title style changes}
+%
+%
+% In the previous section \ref{subsec:fontdefinitions} we have defined various font 
+% styles, for the titles for example. It is important to notice that those are 
+% solely styles definitions, that are intended to be used by other packages like |AMcolor|
+% or by the AM classes. But what happens if those packages are not loaded? Nothing. 
+% 
+% That is why we check at the begining of the document if the package |titlesec|, that is
+% used in the AM classes to setup the title styles, is loaded. If that is not the case
+% then this package will have to do the job... This is what the following code is for:
+%
+% Package \AMpackage{AMcolor} is expected to define \cs{AMcolor@chapter}, 
+% \cs{AMcolor@section}, \cs{AMcolor@subsection}, \cs{AMcolor@subsubsection},
+% \cs{AMcolor@paragraph}.
+%
+%
+%    \begin{macrocode}
+\AtBeginDocument{%
+  \ifAMfont@setup@titles
+    %
+    \PackageInfo{AMfont}{Modification of the title styles (with package titlesec).}
+    \@ifpackageloaded{titlesec}{}{\RequirePackage{titlesec}}
+    \@ifpackageloaded{AMcolor}{}{%
+      \newcommand{\AMcolor@chapter}{black}
+      \newcommand{\AMcolor@section}{black}
+      \newcommand{\AMcolor@subsection}{black}
+      \newcommand{\AMcolor@subsubsection}{black}
+      \newcommand{\AMcolor@paragraph}{black}
+      \providecommand{\color}[1]{}
+    }
+    %
+    \titleformat{\chapter}[display]%
+      {\AMfont@chapter@title@style\color{\AMcolor@chapter}}%
+      {\AMfont@chapter@title@size\chaptertitlename\ \thechapter}%
+      {20pt}%
+      {\AMfont@chapter@title@size}%
+    \titleformat*{\section}{%
+      \AMfont@section@title@style%
+      \AMfont@section@title@size%
+      \color{\AMcolor@section}%
+    }%
+    \titleformat*{\subsection}{%
+      \AMfont@subsection@title@style%
+      \AMfont@subsection@title@size%
+      \color{\AMcolor@subsection}%
+    }%
+    \titleformat*{\subsubsection}{%
+      \AMfont@subsubsection@title@style%
+      \AMfont@subsubsection@title@size%
+      \color{\AMcolor@subsubsection}%
+    }%
+    \titleformat*{\paragraph}{%
+      \AMfont@paragraph@title@style%
+      \AMfont@paragraph@title@size%
+      \color{\AMcolor@paragraph}%
+    }%
+  \fi
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+%
+% \Finale

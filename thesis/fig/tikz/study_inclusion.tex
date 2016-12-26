@@ -1,0 +1,83 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+
+\begin{tikzpicture}
+
+ \begin{groupplot}[
+group style = {group size = 2 by 2, horizontal sep=1.0cm, vertical sep=1.5cm},
+height = 5cm,
+width = 9cm,
+]
+
+
+
+
+\nextgroupplot[ ybar, enlargelimits=0.25, legend style={at={(0.5,-0.24)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$E_{inclusion}/E_{lattice}$}, symbolic x coords={0.001,1,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist, bar width=10pt ]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti1_incratio-0p9.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti2g_incratio-0p9.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetis_incratio-0p9.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetias_incratio-0p9.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetifas_incratio-0p9.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.9$~~~};
+
+ %\legend{FETI-1,FETI-2,FETI-S, FETI-AS, FETI-FAS} 
+
+
+\nextgroupplot[ ybar, enlargelimits=0.25, legend style={at={(-0.1,-0.4)}, anchor=north,legend columns=-1}, xlabel={$E_{inclusion}/E_{lattice}$}, symbolic x coords={0.001,1,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist, bar width=10pt ]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti1_incratio-0p95.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti2g_incratio-0p95.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetis_incratio-0p95.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetias_incratio-0p95.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetifas_incratio-0p95.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.95$~~~};
+
+
+
+
+
+\nextgroupplot[ ybar, enlargelimits=0.25, legend style={at={(0.5,-0.24)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$E_{inclusion}/E_{lattice}$}, symbolic x coords={0.001,1,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist, bar width=10pt ]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti1_incratio-0p9_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti2g_incratio-0p9_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetis_incratio-0p9_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetias_incratio-0p9_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetifas_incratio-0p9_dirich.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.9$~~~};
+
+ %\legend{FETI-1,FETI-2,FETI-S, FETI-AS, FETI-FAS} 
+
+
+\nextgroupplot[ ybar, enlargelimits=0.25, legend style={at={(-0.1,-0.4)}, anchor=north,legend columns=-1}, xlabel={$E_{inclusion}/E_{lattice}$}, symbolic x coords={0.001,1,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist, bar width=10pt ]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti1_incratio-0p95_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/feti2g_incratio-0p95_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetis_incratio-0p95_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetias_incratio-0p95_dirich.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/fetifas_incratio-0p95_dirich.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.95$~~~};
+
+
+
+ \legend{FETI-1,FETI-2, FETI-S,FETI-AS,FETI-FAS} 
+
+
+\end{groupplot} 
+\end{tikzpicture}
+
+
+
+\end{document}

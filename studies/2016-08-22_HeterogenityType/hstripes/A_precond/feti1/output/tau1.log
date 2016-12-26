@@ -1,0 +1,1749 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+102 nodes created                                                              ┃
+80 stiffness elements created                                                  ┃
+6 dirichlet elements created                                                   ┃
+80 neumann elements created                                                    ┃
+wrote mesh to file: ./hstripes/A_precond/feti1/output/tau1.dis                 ┃
+Elapsed time is 0.38582 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.022688 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.071648 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 0.64625 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 0.26639 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.12173 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.012245 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.6162e-15                           ┃
+Elapsed time is 0.008714 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 6.8923e-10                                                          ┃
+after 78 iterations                                                            ┃
+Elapsed time is 0.51341 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.006394 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.00612 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.021968 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.078838 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+102 nodes written                                                              ┃
+80 elements written                                                            ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.076694 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./hstripes/A_precond/feti1/../../../mesh_hstripes.msh             ┃
+output-file: ./hstripes/A_precond/feti1/output/vtk/tau1.vtk.1                  ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 24-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.33075 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.005 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 9.661 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.1601 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.1276 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.006912 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 6.0782e-15                           ┃
+Elapsed time is 0.050408 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 1.0688e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.587 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.027318 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023418 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.34286 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.0566 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 9.6707 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.1952 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.0859 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.005906 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.4071e-15                           ┃
+Elapsed time is 0.049535 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.2369e-09                                                          ┃
+after 32 iterations                                                            ┃
+Elapsed time is 1.2913 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.025944 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023392 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.59122 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.505 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.1352 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.3077 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.0907 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.00748 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 2.9174e-15                           ┃
+Elapsed time is 0.050187 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.4124e-08                                                          ┃
+after 59 iterations                                                            ┃
+Elapsed time is 2.3342 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.027487 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.020807 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.39688 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.0856 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.666 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.9534 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.1011 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.006111 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.9107e-15                           ┃
+Elapsed time is 0.056676 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.9516e-07                                                          ┃
+after 84 iterations                                                            ┃
+Elapsed time is 4.6101 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.0227 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023694 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.3664 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.204 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.9417 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.8619 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.2988 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.007183 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 6.0782e-15                           ┃
+Elapsed time is 0.054233 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 1.0688e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.61557 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.022781 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.031744 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.50916 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.061 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.6923 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 6.54 seconds.                                                  ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.0709 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.007361 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.4071e-15                           ┃
+Elapsed time is 0.060556 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.2369e-09                                                          ┃
+after 32 iterations                                                            ┃
+Elapsed time is 1.196 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.02591 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.02686 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.3711 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.94568 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.3251 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.8267 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.0814 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.009041 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 2.9174e-15                           ┃
+Elapsed time is 0.050008 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.4124e-08                                                          ┃
+after 59 iterations                                                            ┃
+Elapsed time is 2.0644 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023136 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.020865 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.35562 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.93296 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 9.8975 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.0567 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.0656 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.009412 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.9107e-15                           ┃
+Elapsed time is 0.065579 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.9516e-07                                                          ┃
+after 84 iterations                                                            ┃
+Elapsed time is 3.2377 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.033795 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.042467 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.38649 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.0248 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.5317 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.7844 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.88172 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001351 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.8388e-15                           ┃
+Elapsed time is 0.046761 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 1.0688e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.4899 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.019505 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.032434 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.28051 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.79511 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.5801 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.1023 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.87063 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001551 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.3982e-15                           ┃
+Elapsed time is 0.05094 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.2369e-09                                                          ┃
+after 32 iterations                                                            ┃
+Elapsed time is 1.2991 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.036593 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.026177 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.30741 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.7752 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.0553 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.1277 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.85502 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001204 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.0209e-15                           ┃
+Elapsed time is 0.050124 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.4124e-08                                                          ┃
+after 59 iterations                                                            ┃
+Elapsed time is 1.73 seconds.                                                  ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023066 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.030289 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.28608 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.76208 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.2368 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.1089 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.87548 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001189 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.3609e-15                           ┃
+Elapsed time is 0.051473 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.9516e-07                                                          ┃
+after 84 iterations                                                            ┃
+Elapsed time is 2.7123 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023048 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.029828 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.27413 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.75419 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.1098 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 6.708 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.5313 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001804 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.8388e-15                           ┃
+Elapsed time is 0.067385 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 1.0688e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.68573 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.033598 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.03061 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.34464 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.77645 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 8.0117 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 3.8785 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.86753 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001211 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.3982e-15                           ┃
+Elapsed time is 0.040154 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.2369e-09                                                          ┃
+after 32 iterations                                                            ┃
+Elapsed time is 0.96549 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.024577 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.025056 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.2816 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.75589 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.5792 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.1379 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.81983 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001098 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.0209e-15                           ┃
+Elapsed time is 0.039909 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.4124e-08                                                          ┃
+after 59 iterations                                                            ┃
+Elapsed time is 1.7455 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.018532 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.019103 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.27231 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.75409 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.4037 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.8762 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.5386 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.002111 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.3609e-15                           ┃
+Elapsed time is 0.097769 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.9516e-07                                                          ┃
+after 84 iterations                                                            ┃
+Elapsed time is 4.3387 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.025457 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.028025 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.65064 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.2997 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.8579 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 6.8719 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.697 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001905 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.8388e-15                           ┃
+Elapsed time is 0.067276 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 1.0688e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.78907 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.032601 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.03571 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.4711 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.2803 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 12.636 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 6.7098 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.2888 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.00198 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.3982e-15                           ┃
+Elapsed time is 0.062351 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.2369e-09                                                          ┃
+after 32 iterations                                                            ┃
+Elapsed time is 1.4377 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.035967 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.039776 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.41075 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.2372 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 11.6367 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.2891 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.0052 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001953 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.0209e-15                           ┃
+Elapsed time is 0.056854 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.4124e-08                                                          ┃
+after 59 iterations                                                            ┃
+Elapsed time is 2.1358 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.029816 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.03388 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.3698 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.99701 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.8856 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 6.1672 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.95401 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.001234 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.3609e-15                           ┃
+Elapsed time is 0.045465 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.9516e-07                                                          ┃
+after 84 iterations                                                            ┃
+Elapsed time is 2.9899 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.02855 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.025976 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16333 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.49293 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.4293 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.3735 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.50805 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.000747 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.9865e-15                           ┃
+Elapsed time is 0.015856 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 9.195e-07                                                           ┃
+after 9 iterations                                                             ┃
+Elapsed time is 0.14635 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011384 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011626 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16433 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.49126 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.4415 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.4005 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.50962 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.000804 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 5.5612e-15                           ┃
+Elapsed time is 0.014644 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 9.3254e-07                                                          ┃
+after 24 iterations                                                            ┃
+Elapsed time is 0.3751 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.010813 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.01088 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16373 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.50278 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.4578 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.3926 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.48615 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.000741 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.5377e-15                           ┃
+Elapsed time is 0.013936 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 9.4783e-07                                                          ┃
+after 54 iterations                                                            ┃
+Elapsed time is 0.92204 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.013753 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.012461 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16664 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.49256 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.458 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.3875 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.49539 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.000718 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.8895e-15                           ┃
+Elapsed time is 0.013497 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 8.735e-07                                                           ┃
+after 89 iterations                                                            ┃
+Elapsed time is 1.5673 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011325 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.010986 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 

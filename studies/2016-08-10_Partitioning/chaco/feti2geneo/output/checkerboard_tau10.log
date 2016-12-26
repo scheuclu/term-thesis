@@ -1,0 +1,548 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes created                                                              ┃
+324 stiffness elements created                                                 ┃
+19 dirichlet elements created                                                  ┃
+324 neumann elements created                                                   ┃
+wrote mesh to file: ./chaco/feti2geneo/output/checkerboard_tau10.dis           ┃
+Elapsed time is 2.1197 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.094293 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.26373 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 2.5361 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Elapsed time is 2.315 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  0  3  3  3  3  3  0
+Elapsed time is 0.26676 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.027046 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+Auxiliary Coarse Grid: GeNEO
+Coarse Grid C_ IS NOT empty!                                                   ┃
+Check: Error of substructure equilibrium: 1.7203e-15                           ┃
+Elapsed time is 0.23715 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.6231e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.20043 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011895 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.009158 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.15035 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.44956 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes written                                                              ┃
+324 elements written                                                           ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.44072 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./chaco/feti2geneo/../../checkerboard_chaco.msh                   ┃
+output-file: ./chaco/feti2geneo/output/checkerboard_tau10.vtk.1                ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 18-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.092254 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.2286 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 1.6427 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Elapsed time is 0.98008 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  0  3  3  3  3  3  0
+Elapsed time is 0.16014 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.014889 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+Auxiliary Coarse Grid: GeNEO
+Coarse Grid C_ IS NOT empty!                                                   ┃
+Check: Error of substructure equilibrium: 1.7203e-15                           ┃
+Elapsed time is 0.16737 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.6121e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.14394 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.006831 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.008591 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.076408 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.28196 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes written                                                              ┃
+324 elements written                                                           ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.27695 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./chaco/feti2geneo/../../checkerboard_chaco.msh                   ┃
+output-file: ./chaco/feti2geneo/output/checkerboard_tau10.vtk.1                ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 21-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.074888 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.22482 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 2.9745 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Elapsed time is 1.879 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  0  3  3  3  3  3  0
+Elapsed time is 0.28306 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023013 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+Auxiliary Coarse Grid: GeNEO
+Coarse Grid C_ IS NOT empty!                                                   ┃
+Check: Error of substructure equilibrium: 1.7203e-15                           ┃
+Elapsed time is 0.29893 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 3.3519e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.25894 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011151 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.01131 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.13658 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.63444 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes written                                                              ┃
+324 elements written                                                           ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.68037 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./chaco/feti2geneo/../../checkerboard_chaco.msh                   ┃
+output-file: ./chaco/feti2geneo/output/checkerboard_tau10.vtk.1                ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 21-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.085991 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.26433 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 1.8959 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Elapsed time is 1.0108 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  0  3  3  3  3  3  0
+Elapsed time is 0.16002 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.013196 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+Auxiliary Coarse Grid: GeNEO
+Coarse Grid C_ IS NOT empty!                                                   ┃
+Check: Error of substructure equilibrium: 1.7203e-15                           ┃
+Elapsed time is 0.15679 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.3258e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.14221 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.005244 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.004722 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.074384 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.29415 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes written                                                              ┃
+324 elements written                                                           ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.2824 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./chaco/feti2geneo/../../checkerboard_chaco.msh                   ┃
+output-file: ./chaco/feti2geneo/output/checkerboard_tau10.vtk.1                ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 21-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.070553 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.20414 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 1.6763 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Elapsed time is 1.0135 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  0  3  3  3  3  3  0
+Elapsed time is 0.13932 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.014718 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+Auxiliary Coarse Grid: GeNEO
+Coarse Grid C_ IS NOT empty!                                                   ┃
+Check: Error of substructure equilibrium: 1.7203e-15                           ┃
+Elapsed time is 0.15694 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.9703e-09                                                          ┃
+after 16 iterations                                                            ┃
+Elapsed time is 0.13111 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.00597 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.006974 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.0694 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.27583 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes written                                                              ┃
+324 elements written                                                           ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.26794 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./chaco/feti2geneo/../../checkerboard_chaco.msh                   ┃
+output-file: ./chaco/feti2geneo/output/checkerboard_tau10.vtk.1                ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 21-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 

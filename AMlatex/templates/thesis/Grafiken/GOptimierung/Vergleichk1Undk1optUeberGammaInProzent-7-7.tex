@@ -1,0 +1,34 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{AMcolor}
+\usepackage{AMfont}
+\begin{document}
+\begin{tikzpicture}
+		\begin{axis}[
+				%scale only axis,
+				scaled y ticks = false, 
+				scaled x ticks = false, 
+				y tick label style={/pgf/number format/.cd, fixed, fixed zerofill,precision=1},
+				x tick label style={/pgf/number format/.cd, fixed, fixed zerofill,precision=2},
+				ytickmin = {0.0}, ytickmax = {20.8}, xtickmin = {0.0}, xtickmax = {1.8},
+				%width=0.5\textwidth,
+				%height=0.2\textheight,
+				width=7cm,
+				height=7cm,
+				xmin=0.0, xmax=0.63,
+				ymin=0.0, ymax=13.0,
+				axis x line=bottom,
+				axis y line=left,
+				xlabel=$\Gamma$,
+				ylabel={Performanceverbesserung $\Delta \vartheta$ in \%},
+				legend pos= south east,
+				%legend pos= south east,
+				legend style={nodes=right}]
+
+		\addplot[smooth,TUMBlue]  file {ProzentUeberGamma.dat};   
+		\addlegendentry{$\Delta \vartheta$}
+		\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+%\begin{semilogyaxis}[xlabel={$time$},ylabel={$\epsilon_p$}, grid=major,width=12cm,height=7cm, legend pos=outer north east,cycle list name=elelist]
+%				
+%				\addplot+[style=solid,very thick] table [skip first n=1,x index=0, y index=1, col sep=comma]
+%				{\resultspath/config_task3_K5_N1_LF_tend6/L2err_P.dat};
+%				\addlegendentry{5 elements}
+				
+%\begin{tikzpicture}
+%\begin{axis}[enlargelimits=false, xlabel={eigenvalue}, ylabel={$Y=\mathcal{U}(0,1)$}, legend pos=outer north east, cycle list name=markerlist] 
+%  \addplot+[only marks] table [skip first n=0,x index=0, y index=1, col sep=comma] {\patheigstudy/eigvalues_feti1.txt};
+%  \addplot+[only marks] table [skip first n=0,x index=0, y index=1, col sep=comma] {\patheigstudy/eigvalues_feti2geneo.txt}; 
+%  \addplot+[only marks] table [skip first n=0,x index=0, y index=1, col sep=comma] {\patheigstudy/eigvalues_fetis.txt};
+%  \legend{FETI-1~~~~~~~~~~~,FETI-2(Geneo), FETI-S~~~~~~~~~~~} 
+%\end{axis}
+%\end{tikzpicture}
+%\linebreak
+
+
+\begin{tikzpicture}
+\begin{axis}[xlabel={$\frac{E_{stiff}}{E_{soft}}$}, ylabel={$numiter$},cycle list name=linelist]
+  \addplot+[thick, mark=o] table[x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/study_stiffnessratio_feti1.txt};
+  \addplot+[thick, mark=o] table[x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/study_stiffnessratio_feti2geneo.txt};
+  \addplot+[thick, mark=o] table[x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/study_stiffnessratio_fetis.txt};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

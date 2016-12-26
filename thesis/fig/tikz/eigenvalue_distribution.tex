@@ -1,0 +1,84 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+%\begin{semilogyaxis}[xlabel={$time$},ylabel={$\epsilon_p$}, grid=major,width=12cm,height=7cm, legend pos=outer north east,cycle list name=elelist]
+%				
+%				\addplot+[style=solid,very thick] table [skip first n=1,x index=0, y index=1, col sep=comma]
+%				{\resultspath/config_task3_K5_N1_LF_tend6/L2err_P.dat};
+%				\addlegendentry{5 elements}
+				
+\begin{tikzpicture}
+\begin{semilogxaxis}[enlargelimits=false, width=12cm,height=6cm, xlabel={eigenvalue}, ylabel={$Y=\mathcal{U}(0,1)$}, legend pos=outer north east, cycle list name=markerlist] 
+  \addplot+[only marks] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_feti1.txt};
+  \addplot+[only marks] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_feti2geneo.txt}; 
+  \addplot+[only marks] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_fetis.txt};
+  \legend{FETI-1~~~~~~~~~~~,FETI-2(Geneo), FETI-S~~~~~~~~~~~} 
+\end{semilogxaxis}
+\end{tikzpicture}
+\linebreak
+
+
+\begin{tikzpicture}
+\begin{semilogyaxis}[ ybar interval, width=6cm,height=6cm, hist, xtick={}, ylabel={number}, xlabel={value}, cycle list name=linelist ]
+  \addplot+[hist={bins=10}, fill] table[y index=0] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_feti1_temp.txt};
+\end{semilogyaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\pgfplotsset{cycle list shift=+1}
+\begin{semilogyaxis}[ ybar interval, width=6cm,height=6cm, hist, xtick={}, ylabel={number}, xlabel={value}, cycle list name=linelist ]
+  \addplot+[hist={bins=10}, fill] table[y index=0] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_feti2geneo_temp.txt};
+\end{semilogyaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\pgfplotsset{cycle list shift=+2}
+\begin{semilogyaxis}[ ybar interval, width=6cm,height=6cm, hist, xtick={}, ylabel={number}, xlabel={value}, cycle list name=linelist ]
+   \addplot+[hist={bins=10}, fill] table[y index=0] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_fetis_temp.txt};
+\end{semilogyaxis}
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}
+ \begin{groupplot}[
+     group style = {group size = 2 by 2, horizontal sep=1cm, vertical sep=2cm},
+     height = 10cm,
+     width = 10cm,
+%     xticklabels from table = {\Data}{Day}, xtick = {1,...,19},
+%     xticklabel style = {rotate = 90, xshift = -0.8ex, anchor = mid east}
+    ]
+    \nextgroupplot[ymode=log, ybar interval,hist, xtick={}, ylabel={number}, xlabel={value}, cycle list name=linelist ]
+   \addplot+[hist={bins=10}, fill] table[y index=0] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_feti1_temp.txt};
+       \nextgroupplot[ymode=log, ybar interval,hist, xtick={}, ylabel={number}, xlabel={value}, cycle list name=linelist ]
+   \pgfplotsset{cycle list shift=+1}
+   \addplot+[hist={bins=10}, fill] table[y index=0] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_feti2geneo_temp.txt};
+       \nextgroupplot[ymode=log, ybar interval,hist, xtick={}, ylabel={number}, xlabel={value}, cycle list name=linelist ]
+   \pgfplotsset{cycle list shift=+2}
+   \addplot+[hist={bins=10}, fill] table[y index=0] {\studypath/2016-08-18_EigenvalueDistribution/eigvalues_fetis_temp.txt};
+  \end{groupplot}
+\end{tikzpicture}
+
+
+
+
+
+
+
+\end{document}

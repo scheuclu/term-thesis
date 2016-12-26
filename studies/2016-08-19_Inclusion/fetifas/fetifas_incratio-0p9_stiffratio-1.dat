@@ -1,0 +1,79 @@
+--------------------------------------------------------------------GENERAL
+PROBLEMTYPE        STRING           feti
+PROBLEMDIM         NUMERIC          2
+MESHFORMAT         STRING           msh
+MESHPATH           STRING           <thisdir>/../meshgen_0p9.msh.part
+DISPATH            STRING           <thisdir>/output/fetifas_incratio-0p9.dis
+RESPATH            STRING           <thisdir>/output/fetifas_incratio-0p9_stiffratio-1.res
+LOGFILE            STRING           <thisdir>/output/fetifas_incratio-0p9_stiffratio-1.log
+-------------------------------------------------------------------TAGTYPES
+DIRICH             NUMERIC         1
+NEUMANN            NUMERIC         2
+MATERIAL           NUMERIC         3,4
+---------------------------------------------------------------------SOLVER
+NAME               STRING          FETIASSolver
+PARAMS             STRUCT          12
+ NUMSUBSTRUCTS     NUMERIC         9
+ ASSEMBLEDOPS      BOOL            true
+ VERBOSE           BOOL            true
+ REASSEMBLESYS     BOOL            false
+ CHECKS            BOOL            true
+ COARSEGRID        STRING          none
+ WRITEITER         STRING          none
+ ADAPTIVITY        STRING            fast
+ CONTRACTFAC       NUMERIC         0.999
+ TAU               NUMERIC         Inf
+ TERMINATIONTYPE   STRING          absolute
+ TERMINATIONVAL    NUMERIC         1e-6
+------------------------------------------------------------------MATERIALS
+ST_VENANT_KIRCHOFF
+MATID 1 E 1000 nu 0.3 type plane_stress
+
+ST_VENANT_KIRCHOFF
+MATID 2 E 1000 nu 0.3 type plane_stress
+-----------------------------------------------------------------CONDITIONS
+DIRICHLET_CONDITION
+CONDID 1 ONOFF 1 1 VAL 0 0 MSHTAG 1
+
+NEUMANN_CONDITION
+CONDID 2 ONOFF 1 1 VAL 0.0 0.01 MSHTAG 2
+
+MATERIAL_CONDITION
+CONDID 3 MATID 1 MSHTAG 3
+
+MATERIAL_CONDITION
+CONDID 4 MATID 2 MSHTAG 4
+-------------------------------------------------------------------POSTPROC
+ELESTRESSES        BOOL            true
+NODESTRESSES       BOOL            false
+ELESTRAIN          BOOL            false
+NODESTRAIN         BOOL            false
+----------------------------------------------------------------------ERROR
+PRIMARYSOL         STRING          [x*0.005+0*y+0*z+0*t;0;0]
+EVAL_L2            BOOL            true
+EVAL_H1            BOOL            false
+EVAL_ENERGY        BOOL            false
+---------------------------------------------------------------------OUTPUT
+WRITEEVERY         NUMERIC         2
+FORMAT             STRING          vtk
+PATH               STRING          <thisdir>/output/vtk
+NAME               STRING          fetifas_incratio-0p9_stiffratio-1
+------------------------------------------------------------------MATLABOUT-IGNORE
+PLOTSETUP         STRUCT            10
+ PLOTGEO          BOOL              true
+ PLOTBC           BOOL              true
+ LABNODES         BOOL              true
+ LABELE           BOOL              true
+ GRID             STRING            off
+ AXIS             STRING            off
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8
+ DIRICHCOLOR      NUMERIC           0,1,0
+ NEUMANNCOLOR     NUMERIC           1,0,0
+ FACEALPHA        NUMERIC           1.0
+PLOTLAG           STRUCT            2
+ LABNODES         BOOL              false
+ LABELE           BOOL              false
+PLOTRESULT        STRUCT            3
+ LABNODES         BOOL              false   
+ LABELE           BOOL              false
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8

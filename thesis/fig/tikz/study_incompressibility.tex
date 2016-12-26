@@ -1,0 +1,53 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+\begin{tikzpicture}
+
+
+ \begin{groupplot}[
+group style = {group size = 1 by 4, vertical sep=2.5
+cm},
+height = 5cm,
+width = 12cm,
+]
+
+\nextgroupplot[ ybar, title={plane-strain}, enlargelimits=0.15, legend style={at={(0.5,-0.45)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$\frac{1}{2}-\nu$}, symbolic x coords={0.1, 0.01, 0.001, 0.0001}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestrain/numiter_feti1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestrain/numiter_feti2g.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestrain/numiter_fetis.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestrain/numiter_fetias.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestrain/numiter_fetifas.txt};
+%\title{plane-strain};
+%\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{inclusion}}{E_{lattice}}=0.9$~~~};
+%\legend{FETI-1,FETI-2,FETI-S,FETI-FAS} 
+
+
+\nextgroupplot[ ybar, title={plane-stress}, enlargelimits=0.15, legend style={at={(0.5,-0.45)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$\frac{1}{2}-\nu$}, symbolic x coords={0.1, 0.01, 0.001, 0.0001}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_feti1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_feti2g.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_fetis.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_fetias.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_fetifas.txt};
+%\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{inclusion}}{E_{lattice}}=0.9$~~~};
+\legend{FETI-1,FETI-2,FETI-S,FETI-AS,FETI-FAS} 
+
+\end{groupplot}
+\end{tikzpicture}
+
+
+\end{document}

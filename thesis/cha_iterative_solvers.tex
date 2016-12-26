@@ -1,0 +1,147 @@
+\chapter{Iterative Solution techniques}\label{cha:iterative_solvers}
+It has already been outlined, that the goal of FETI methods is parallelism. The approach was to solve local domain-wise problems on different computing nodes. A serial interface problem then remains to connect the local problems. It thus comes natural, that the solution process of this problem should also be parallelized, otherwise scalability will be quite poorly due to Amdahl's law.\\
+Direct solver thus can not be used as they are inherently serial. We chose to use iterative solver instead, which will be discussed in this chapter.
+
+\section{Theory}\label{sec:iterative_theory}
+For the purpose of this introduction, and to be consistent with the notation from~\cite{Spillane2016}, considerations will be generalized to the linear system
+\begin{align}
+\dmat{A} \dvec{x} = \dvec{b}
+\label{eq:basic_linear_equation}
+\end{align}
+As described in~\cite{Kaniel1966}\cite{Saad2003}, the convergence properties of an iterative method applied to a system of type~\eqref{eq:basic_linear_equation} depend on the condition number of the matrix $\dmat{A}$.\\
+We will see in Chapter~\ref{cha:numerical_assesment}, that substructuring often leads to very ill-conditioned problems. One therefore typically solves the related problem
+\begin{align}
+\dmat{H}\dmat{A} \dvec{x} = \dmat{H}\dvec{b}
+\label{eq:preconditioned_linear_equation}
+\end{align}
+instead.\\
+\\
+The matrix $\dmat{H}$ is thereby chosen as an approximation to the inverse of $\dmat{A}$, which significantly improves the condition number of the new iteration matrix $\dmat{H}\dmat{A}$.\\
+The crucial part therefore is, of course, the choice of an appropriate preconditioner. A simple, but not very effective approach could be the inverse of the diagonal of $\dmat{A}$. Other types are deflation, augmentation as well as balancing. For the FETI method, the natural choice, however, is projection. The reason for this is explained in~\cite{Farhat1991}.\\
+The idea is simple. One assumes that the bad condition number of the matrix is caused by just a little fraction of the full eigenvalue spectrum. One therefore tries to identify these "bad" eigenmodes and create a so called "auxiliary coarse space(deflation space)" with those modes. The problem is then solved directly within this small subspace, before the iterative scheme continues in the remaining space, orthogonal to the deflation space. If the deflation space is chosen right, the convergence properties are significantly improved.\\
+\section{The Conjugate Gradient algorithm}\label{sec:cg}
+The most prominent iterative solver is the Conjugate Gradient method. We will see, that the choice of CG comes natural with the FETI formulation. This section is denoted to a formulation of several special variants of CG that we will use in Chapter~\ref{cha:feti_solvers}. Considerations are limited to Preconditioned Conjugate Gradient methods.
+
+
+%\subsection{The Preconditioned Conjugate Gradient algorithm}\label{sec:pcg}
+%\begin{figure}[h!]
+%	\begin{center}
+%        \subimport{./}{\tikzpath/CG/CG}
+%        \caption[Structogram Preconditioned Conjugate Gradient algorithm]{Structogram of the Preconditioned Conjugate Gradient algorithm. The purpose of the preconditioner is to improve the eigenvalue spectrum of the iteration matrix, thus accelerating convergence.}
+%		\label{struk:PCG}
+%    \end{center}
+%\end{figure}
+
+
+\subsection{The Projected Preconditioned Conjugate Gradient algorithm}\label{sec:ppcg}
+The PPCG algorithm introduces both a left preconditioner $\dmat{H}$ as well as a right preconditioner $\dmat{\Pi}$, where the latter one can be interpreted as an A-orthogonal projection to a subspace defined by U:
+\begin{align}
+\dmat{\Pi}=\eyemat-\dmat{U}(\tp{\dmat{U}}\dmat{A}\dmat{U}  )\tp{\dmat{U}}\dmat{A}
+\end{align}
+The derivation of the projector equation was outlined in Section~\ref{sec:natural_subspace}.
+\\
+The general form of a PPCG algorithm is depicted in Figure~\ref{struk:PPCG}
+
+\begin{figure}[h!]
+	\centering
+        \subimport{./}{\tikzpath/CG/PPCG}
+        \caption[Structogram Projected Preconditioned Conjugate Gradient]{Structogram of the Projected Preconditioned Conjugate Gradient. Compared to the PCG algorithm,  the solution is searched for in a subspace, orthogonal to a chosen space $\dmat{U}$. The idea is to put "bad modes" into this space, to improve convergence. }
+		\label{struk:PPCG}
+\end{figure}
+
+From the formulation above it is obvious, that the choice of the coarse space is essential. Naturally, further augmenting the space $\dmat{U}$ leads to better convergence. In the limit, if all vectors are incorporated into $\dmat{U}$ a direct solution method is retrieved, and convergence is achieved in one step. However, building the projector $\dmat{\Pi}$ entails the factorization of $\dmat{\tp{U} A U}$. A reasonable compromise should thus be found.\\
+A useful tool for convergence studies are error estimators. In \cite{Kaniel1966} the following a posterior one is introduced for the PCG algorithm:
+\begin{align}
+\frac{\norm{\dvec{x}_*-\dvec{x}_i   }_A}{\norm{\dvec{x}_*-\dvec{x}_0}_A} =
+2 \Bigg [ \frac{ \sqrt{\lambda_{\dmat{H A},max}/\lambda_{\dmat{H A},min}}-1 }{ \sqrt{\lambda_{\dmat{H A},max}/\lambda_{\dmat{H A},min}}+1 } \Bigg ]^i
+\label{eq:errro_estimate_pcg}
+\end{align}
+Here, $\dvec{x}_*$ denotes the final, converged solution, $\lambda_{\dmat{H A},max}$ and $\lambda_{\dmat{H A},min}$ denote the maximal and minimal value of the Preconditioned matrix $\dmat{A}$ respectively.
+\\
+Equivalently an estimate for the PPCG algorithm can be derived as
+
+\begin{align}
+\frac{\norm{\dvec{x}_*-\dvec{x}_i   }_A}{\norm{\dvec{x}_*-\dvec{x}_0}_A} =
+2 \Bigg [ \frac{ \sqrt{\lambda_{\dmat{H A \Pi},max}/\lambda_{\dmat{H A \Pi},min}}-1 }{ \sqrt{\lambda_{\dmat{H A \Pi},max}/\lambda_{\dmat{H A \Pi},min}}+1 } \Bigg ]^i
+\end{align}
+\\
+The function described by this formula is visualized in Figure~\ref{fig:error_estimation_pcg}. The figure shows, that the convergence properties are extremely sensible to the condition number of the projected, preconditioned operator. The proposed strategy in the PPCG algorithm thus is to identify all extreme, isolated eigenvalues an use their corresponding eigenvectors to built the coarse space. The remaining iteration matrix will thus show a lower condition number, which should be reflected higher convergence rates.
+\begin{figure}[h!]
+	\begin{center}
+	    %\fbox{\subimport{./}{./fig/tikz/study_inclusion.tex}}
+        \subimport{./}{\tikzpath/error_estimationPCG}
+        \caption[A posteriori error estimation PCG]{A posteriori error estimation for the PCG algorithm according to Equation~\eqref{eq:errro_estimate_pcg}. As expected, a condition number of 1 leads to a direct solution. The graph shows that an increasing eigenvalue ratio, drastically worsens performance.}
+		\label{fig:error_estimation_pcg}
+    \end{center}
+\end{figure}
+
+
+\subsection{The Multi Preconditioned Conjugate Gradient algorithm}\label{sec:mpcg}
+The main idea of the Multi Preconditioned Conjugate Gradient algorithm is intuitive. It is designed for problems, where the preconditioner can be written as a sum of local contributions. The approach is straightforward. Instead of adding all local contributions together, each local direction is solved for independently. Therefore, in every iteration the algorithm searches for an optimal step in a space of dimension $\#~substructures$. Of course, the cost of one iteration is significantly higher than for FETI-2, but the hope is, that the overall number of iterations can be significant reduced, especially for problems with very local phenomena like jumps in the material coefficients. The MMPCG algorithm is summarized in Figure~\ref{struk:MPPCG}.
+
+\begin{figure}[h!]
+	\centering
+        \subimport{./}{\tikzpath/CG/MPPCG}
+        \caption[Structogram Multi Preconditioned Projected Conjugate Gradient]{Structogram of the Multi Preconditioned Projected Conjugate Gradient. The main difference compared to the PPCG algorithm as described in Figure~\ref{struk:PPCG} is that a whole set of search directions is used in each iteration. }
+		\label{struk:MPPCG}
+\end{figure}
+
+
+\subsubsection{The Adaptive Multi Preconditioned Conjugate Gradient Algorithm}\label{sec:ampcg}
+The previous section has introduced the Multi Preconditioned Conjugate Gradient method. Therein, each iteration will give significantly better results than a simple PCG one, thanks to the increased iteration space. However, with a growing number of substructures, solving in the growing search space can become quite expensive.\\
+Remembering that MMPCG was derived as a method for problems, where the preconditioner can be written as a sum of contributions, it seems rational to assume that some local contributions are less important than others.\\
+The idea of Adaptive MMPCG therefore is to identify the important directions, built the search space with them, and to sum the not-so-important directions simply up, like in PCG.\\
+\\
+To do so, a method must be derived that determines the importance of a search direction. Of course the cost of this calculation must be kept low to get an effective improvement over MPPCG.\\
+An approach to do so, was first described in \cite{Spillane2013} and further investigated in \cite{Spillane2016}.\\
+
+
+First of all, an a priori error estimate should be derived~\cite{Axelsson2001}.\\
+We know that
+\begin{align}
+\dvec{x}_* =\dvec{x}_0 + \sum_{j=0}^{n-n_0-1}\alpha_i \dvec{p}_j = \dvec{x}_i + \sum_{j=i}^{n-n_0-1} \alpha_j \dvec{p}_j
+\end{align}
+where $\dvec{x}_*$ is the actual solution.
+Since, by construction, search directions are $\dmat{A}$-orthogonal one can write
+\begin{align}
+\norm{\dvec{d}_i}_{\dmat{A}}^2=
+ \norm{\dvec{x}_{*}-\dvec{x}_i}_{\dmat{A}}^2=\sum_{j=i}^{n-n_0-1} \alpha_j^2 \norm{\dvec{p}_i}_{\dmat{A}}^2
+\end{align}
+Simple subtraction finally gives:
+\begin{align}
+\norm{\dvec{d}_i}_{\dmat{A}}^2=\norm{\dvec{d}_{i-1}}_{\dmat{A}}^2-\alpha_{i-1}^2 \norm{\dvec{p}_{i-1}}_{\dmat{A}}^2
+\end{align}
+\\
+The authors in~\cite{Axelsson2001} now use this to derive the a-posteriori error estimate as
+\begin{align}
+\frac{\norm{\dvec{d}_{i-1}}_{\dmat{A}}^2}{\norm{\dvec{d}_i}_{\dmat{A}}^2}=
+1+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{d}_i}_{\dmat{A}}^2}=
+1+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \frac{\norm{\dvec{r}_i}_{\dmat{H}}^2}{\norm{\dvec{d}_i}_{\dmat{A}}^2}=
+1+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \underbrace{\frac{\norm{\dvec{d}_i}_{\dmat{AHA}}^2}{\norm{\dvec{d}_i}_{\dmat{A}}^2}}_{<\lambda_{\dmat{HA},min}}
+\end{align}
+where the last term is related to a Rayleigh quotient for $\dmat{HA}$.
+\\
+\\
+The a posteriori error estimate can therefore be formulated as
+\begin{align}
+\frac{\norm{\dvec{d}_i}_{\dmat{A}}^2}{\norm{\dvec{d}_{i-1}}_{\dmat{A}}^2}\leq
+\inv{\Big(1+\lambda_{\dmat{HA},min} \frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \Big )}
+\end{align}
+One can now show that from this point, it suffices to show
+\begin{align}
+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \geq \tau~with~
+\tau := \frac{1-\rho^2}{\lambda_{min} \rho^2} \geq 0
+\label{eq:general_ampcg_conditions}
+\end{align}
+to guarantee convergence.
+\\
+\\
+An adaptive MPCG algorithm now entails an evaluation of Condition~\eqref{eq:general_ampcg_conditions} at each iteration. Firstly a direction derived as simple sum of all substructure directions is used in every iteration for the search space. Only if the $\tau$-condition is fulfilled for a substructure, the direction is used as additional new search direction in an MPCG sense.
+
+\begin{figure}[h!]
+	\centering
+        \subimport{./}{\tikzpath/CG/AMPPCG}
+        \caption[Structogram Adaptive Multi Preconditioned Conjugate Gradient algorithm]{Structogram of the Adaptive Multi Preconditioned Conjugate Gradient algorithm. The algorithm is based on the MPPCG algorithm described in Figure~\ref{struk:MPPCG}. While the MMPCG algorithms uses one search direction for each summand of the preconditioner in each iteration, the AMPPCG approach consists in performing a so-called $\tau$-test on each of these directions first. Only directions that have been determined as being important are used to build up the search space, the less important ones are simply summed up in a PCG-like manner.}
+		\label{struk:AMPPCG}
+    \centering
+\end{figure}

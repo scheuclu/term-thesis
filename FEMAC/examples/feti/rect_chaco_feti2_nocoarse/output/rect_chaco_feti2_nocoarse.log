@@ -1,0 +1,411 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+{Undefined function or variable 'FETIASSolver'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 33)" style="font-weight:bold">ProblemFETIMain</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',33,0)">line 33</a>)
+          this.solver_ =
+          FETIASSolver(this.dis_,this.outbuffer_,this.params_.SOLVER.PARAMS,this.condlist_);
+          Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 41)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',41,0)">line 41</a>)
+      prob=ProblemFETIMain(params,datpath,materials,condlist,datdir);
+      Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m', 30)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m',30,0)">line 30</a>)
+  prob.main=femac_main(datpath);} 
+femac
+femacdir = 
+    '/home/lukas/Deskt…'    ''
+femacdir =
+/home/lukas/Desktop/SA_Thesis/FEMAC/
+User selected /home/lukas/Desktop/SA_Thesis/FEMAC/examples/feti/rect_chaco_feti2_nocoarse/rect_chaco_feti2_nocoarse.dat
+ 
+datpath =
+/home/lukas/Desktop/SA_Thesis/FEMAC/examples/feti/rect_chaco_feti2_nocoarse/rect_chaco_feti2_nocoarse.dat
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+267 nodes created                                                              ┃
+472 stiffness elements created                                                 ┃
+11 dirichlet elements created                                                  ┃
+10 neumann elements created                                                    ┃
+wrote mesh to file: /home/lukas/Desktop/SA_Thesis/FEMAC/examples/feti/rect_chaco_feti2_nocoarse/rect_chaco_feti2_nocoarse.dis
+Elapsed time is 1.1547 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.055411 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.25775 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+7 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 1.0864 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7            ┃
+Neumann   conditions detected on substructures: 6  7                           ┃
+Elapsed time is 0.08604 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  1  3  3  3  3  3┃
+Elapsed time is 0.18815 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  1  3  3  3  3  3┃
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.044292 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.8499e-16                           ┃
+Elapsed time is 0.02142 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 0.013461                               ┃
+Check: W projected into N coarse-space: 9.7314e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 1.7583e-16                           ┃
+Check: r projected into N coarse-space: 0.0046833                              ┃
+Check: W projected into N coarse-space: 2.3126e-16                             ┃
+current residuum: 0.16207                                                      ┃
+Check: Error of substructure equilibrium: 1.5533e-16                           ┃
+Check: r projected into N coarse-space: 0.0022084                              ┃
+Check: W projected into N coarse-space: 2.2801e-16                             ┃
+current residuum: 0.077872                                                     ┃
+Check: Error of substructure equilibrium: 1.6612e-16                           ┃
+Check: r projected into N coarse-space: 0.00072783                             ┃
+Check: W projected into N coarse-space: 5.4672e-17                             ┃
+current residuum: 0.030272                                                     ┃
+Check: Error of substructure equilibrium: 1.4212e-16                           ┃
+Check: r projected into N coarse-space: 0.00028053                             ┃
+Check: W projected into N coarse-space: 2.4809e-17                             ┃
+current residuum: 0.014525                                                     ┃
+Check: Error of substructure equilibrium: 1.5426e-16                           ┃
+Check: r projected into N coarse-space: 0.00011552                             ┃
+Check: W projected into N coarse-space: 7.3407e-18                             ┃
+current residuum: 0.0049763                                                    ┃
+Check: Error of substructure equilibrium: 1.4955e-16                           ┃
+Check: r projected into N coarse-space: 1.4802e-05                             ┃
+Check: W projected into N coarse-space: 1.8712e-18                             ┃
+current residuum: 0.0012754                                                    ┃
+Check: Error of substructure equilibrium: 1.4643e-16                           ┃
+Check: r projected into N coarse-space: 5.1341e-06                             ┃
+Check: W projected into N coarse-space: 7.0749e-19                             ┃
+current residuum: 0.00043812                                                   ┃
+Check: Error of substructure equilibrium: 1.6282e-16                           ┃
+Check: r projected into N coarse-space: 1.8701e-06                             ┃
+Check: W projected into N coarse-space: 2.2572e-19                             ┃
+current residuum: 0.00010069                                                   ┃
+Check: Error of substructure equilibrium: 1.4609e-16                           ┃
+Check: r projected into N coarse-space: 5.1175e-07                             ┃
+Check: W projected into N coarse-space: 6.6614e-20                             ┃
+current residuum: 2.6078e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.6831e-16                           ┃
+Check: r projected into N coarse-space: 1.3562e-07                             ┃
+Check: W projected into N coarse-space: 1.0666e-20                             ┃
+current residuum: 5.8635e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.391e-16                            ┃
+Check: r projected into N coarse-space: 2.7712e-08                             ┃
+Check: W projected into N coarse-space: 2.8232e-21                             ┃
+current residuum: 1.1813e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.509e-16                            ┃
+Check: r projected into N coarse-space: 2.3261e-09                             ┃
+Check: W projected into N coarse-space: 4.4077e-22                             ┃
+current residuum: 1.4589e-07                                                   ┃
+Residual = 1.4589e-07                                                          ┃
+after 12 FETI-AS iterations with 7  7  3  2  1  1  1  1  1  1  1  1 search directions
+Elapsed time is 0.48851 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.024295 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.013806 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.022661 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.028833 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.034288 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.030992 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.030206 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.031129 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.030677 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.032143 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.029442 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.032423 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.046085 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.040645 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.039316 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.061219 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+46 nodes written                                                               ┃
+68 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.14102 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+46 nodes written                                                               ┃
+67 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.12221 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+47 nodes written                                                               ┃
+67 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.14007 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+48 nodes written                                                               ┃
+68 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.12864 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+47 nodes written                                                               ┃
+67 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.12276 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+47 nodes written                                                               ┃
+68 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.12957 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+46 nodes written                                                               ┃
+67 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.11639 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.075955 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.14571 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+267 nodes written                                                              ┃
+472 elements written                                                           ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.38256 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: /home/lukas/Desktop/SA_Thesis/FEMAC/examples/feti/rect_chaco_feti2_nocoarse/rect_chaco_feti2_nocoarse.msh
+output-file: /home/lukas/Desktop/SA_Thesis/FEMAC/examples/feti/rect_chaco_feti2_nocoarse/output/rect_chaco_feti2_nocoarse.vtk.1
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 27-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: f633e70442206aaf9b3376c2c9b7d8475e2d0d4c                             ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 

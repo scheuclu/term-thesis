@@ -1,0 +1,346 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMgraphic <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for graphics
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMgraphic.dtx
+and the derived files           AMgraphic.ins,
+                                AMgraphic.pdf and
+                                AMgraphic.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMgraphic}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMgraphic}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMgraphic}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMgraphic}[\AMinsertGitDate{} \AMinsertGitVersion{} AM graphic managment]
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{1.0}{2015/05/28}{First version}
+%
+%
+% \title{The \textcolor{white}{AMgraphic} package}
+% \maketitle
+% \tableofcontents
+%
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{User Guide for AMgraphic}
+%
+%
+% \subsection{Included packages}
+%
+%
+% \begin{description}
+%   \item[\PackageName{graphicx}] standard package for graphics. Search paths for the graphic files
+%          are defined with the command  \cs{graphicspath}\marg{dir-list}.
+%   \item[\PackageName{caption}] provides customising captions in floating environments (via \cs{captionsetup})
+%   \item[\PackageName{subcaption}]\cite{PKGsubcaption} successor of the package \PackageName{subfigure} 
+%          (now considered obsolete)
+%          It is \emph{incompatible} with \PackageName{subfigure} and \PackageName{subfig} !
+%          Maybe I should offer a compatibility option for \AMpackage{AMgraphic} so that \PackageName{subfigure}
+%          is loaded instead of \PackageName{caption}.
+%   \item[\PackageName{float}] allows to create floating environment (with the command \cs{newfloat}) and provides 
+%                the \docValue{H} float modifier option\cite{PKGfloat}.
+%   \item[\PackageName{placeins}] for control float placement. 
+%                   Provides the \cs{FloatBarrier} command\cite{PKGplaceins}.
+%   \item[\PackageName{afterpage}] for executing a command after the next page break\cite{PKGafterpage}.
+% \end{description}
+%
+%
+%
+% \subsection{Defaults search paths}
+%
+% All the graphic files placed in the following sub-directories can be included by giving
+% only their names to the command \refCom{includegraphics}:
+%
+% \begin{itemize}
+%   \item |Pictures| (or |pictures|)
+%   \item |Bild|
+%   \item |Images| (or |images|)
+%   \item |Logos| (or |logos|)
+% \end{itemize}
+%
+% \subsection{How to include a graphic}
+%
+% \begin{docCommand}{includegraphics}{\oarg{options}\marg{path or name}}
+% This command allows you to include a graphics. It can be placed inside a \docValue{figure}
+% environment. Typical example for options is |width=\textwidth| (relative length should be preferred).
+% You can also use |page=n| if you want to include only the |n|-{th} page of a pdf. It is a good practice to
+% give the file name \emph{without the extension}, and if possible without its path (you have to make sure that your
+% picture is located in one of the search path for that).
+% \end{docCommand}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{usage}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{myPicture}
+\caption{
+  Example of graphic inclusion for the file Bild/myPicture.pdf
+}
+\label{fig:my-label}
+\end{figure}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+% \subsection{Floating settings}
+%
+% \todo{Explain those parameters.}
+% \todo{Allow those settings to be changed via AMsetLayout}
+%
+% \begin{docKey}[AM/layout]{float page fraction}{=\meta{value}}{initially \docValue{0.8}}
+%
+% \end{docKey}
+%
+% \begin{docKey}[AM/layout]{top fraction}{=\meta{value}}{initially \docValue{0.8}}
+%
+% \end{docKey}
+%
+% \begin{docKey}[AM/layout]{bottom fraction}{=\meta{value}}{initially \docValue{0.5}}
+%
+% \end{docKey}
+%
+% \begin{docKey}[AM/layout]{text fraction}{=\meta{value}}{initially \docValue{0.15}}
+%
+% \end{docKey}
+%
+% \begin{docKey}[AM/layout]{top number}{=\meta{value}}{initially \docValue{1}}
+%
+% \end{docKey}
+%
+% \begin{docKey}[AM/layout]{bottom number}{=\meta{value}}{initially \docValue{1}}
+%
+% \end{docKey}
+%
+% \begin{docKey}[AM/layout]{total number}{=\meta{value}}{initially \docValue{2}}
+%
+% \end{docKey}
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsection{Option declaration and processing}
+%
+% Inclusion of packages \PackageName{ifthen}, \PackageName{ifpdf} and \PackageName{kvoptions} 
+% (soon replaced by |pgfopts|).
+%
+%
+%    \begin{macrocode}
+\RequirePackage{ifthen}
+\RequirePackage{ifpdf}
+\RequirePackage{kvoptions}
+%    \end{macrocode}
+%
+%
+% Declaration of the option \docValue{tikz}, false by default. If this option is given
+% then the current package will load the packages \PackageName{tikz} and \PackageName{pgfplots}.
+%
+%    \begin{macrocode}
+\DeclareBoolOption{tikz}
+%    \end{macrocode}
+%
+%
+% Floating parameters can be given as option. This is not optimal and the use of \PackageName{pgfkeys} will
+% allow us to modify those values \textit{a posteriori} via a setup.
+%
+%
+%    \begin{macrocode}
+\DeclareStringOption[0.8]{floatpagefraction}
+\DeclareStringOption[0.8]{topfraction}
+\DeclareStringOption[0.5]{bottomfraction}
+\DeclareStringOption[0.15]{textfraction}
+\DeclareStringOption[1]{topnumber}
+\DeclareStringOption[1]{bottomnumber}
+\DeclareStringOption[2]{totalnumber}
+%    \end{macrocode}
+%
+%
+% Unknown options are given to the package \PackageName{graphicx}.
+%
+%    \begin{macrocode}
+\DeclareDefaultOption{\PassOptionsToPackage{\CurrentOption}{graphicx}}
+%    \end{macrocode}
+%
+%
+% Option processing.
+%
+%    \begin{macrocode}
+\ProcessKeyvalOptions*
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \subsection{Included packages}
+%
+%
+% Packages loaded are:
+%
+%
+%    \begin{macrocode}
+\RequirePackage{graphicx}
+\RequirePackage{caption}
+%\RequirePackage{subcaption}
+\RequirePackage{float}
+\RequirePackage{placeins}
+\RequirePackage{afterpage}
+%    \end{macrocode}
+%
+%
+% If option \docValue{tikz} is given, then \PackageName{tikz} and \PackageName{pgfplots} are also loaded, 
+% with compatibility mode equal to newest.
+%
+%
+%    \begin{macrocode}
+\ifthenelse{\boolean{AMgraphic@tikz}}{%
+  \RequirePackage{tikz}
+  \RequirePackage{pgfplots}
+  \pgfplotsset{compat=newest} % not sure
+}{}
+%    \end{macrocode}
+%
+%
+%
+% Default extension depending on the compilation driver. 
+% It might be obsolete since only \hologo{pdfLaTeX} is recommanded.
+%
+%
+%    \begin{macrocode}
+\ifpdf 
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\else 
+  \DeclareGraphicsExtensions{.eps}
+\fi
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \subsection{Defaults search paths}
+%
+%
+%    \begin{macrocode}
+\graphicspath{ {Pictures/}{pictures/}{Bild/}{images/}{Images/}{logos/}{Logos} }
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \subsection{Floating parameters}
+%
+%
+%    \begin{macrocode}
+\renewcommand\fps@figure{tp}
+\renewcommand\fps@table{tp}
+\renewcommand{\floatpagefraction}{\AMgraphic@floatpagefraction}
+\renewcommand{\topfraction}{\AMgraphic@topfraction}
+\renewcommand{\bottomfraction}{\AMgraphic@bottomfraction}
+\renewcommand{\textfraction}{\AMgraphic@textfraction}
+\setcounter{topnumber}{\AMgraphic@topnumber}
+\setcounter{bottomnumber}{\AMgraphic@bottomnumber}
+\setcounter{totalnumber}{\AMgraphic@totalnumber}
+\setlength{\@fptop}{0pt}
+%    \end{macrocode}
+%
+%
+% \subsection{Distances between two floatings}
+%
+%
+%    \begin{macrocode}
+\setlength\floatsep{18\p@ \@plus 10\p@ \@minus 2\p@}
+\setlength\textfloatsep{14\p@ \@plus 20\p@ \@minus 4\p@}
+\setlength\@fptop{0\p@ \@plus 1fil}
+\setlength\@fpsep{18\p@ \@plus 1fil}
+\setlength\@fpbot{0\p@ \@plus 2fil}  
+%    \end{macrocode}
+%
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+%
+%
+% \Finale

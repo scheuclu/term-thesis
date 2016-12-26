@@ -1,0 +1,43 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usetikzlibrary{pgfplots.groupplots}
+\usepackage{import}
+\input{\mainpath/colordefinitions}
+\begin{document}
+\begin{tikzpicture}
+	\input{\tikzpath/setup_quad4_basic_example_nodes2.tex}
+	%\subimport{./}{setup_quad4_basic_example_nodes.tex}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+				\def\subsize{2}%
+		\def\sep{1.0}    %separation between rectangles
+				\draw[fill=lightgrey,thick] (N31) rectangle (N33);
+		    \node[anchor=south west]  at (N31) {$\mathit{_{2}^{1}}$};%{N31};
+            \node[anchor=south east]  at (N32) {$\mathit{_{4}^{3}}$};%{N32};
+            \node[anchor=north east]  at (N33) {$\mathit{_{8}^{7}}$};%{N33};
+            \node[anchor=north west]  at (N34) {$\mathit{_{6}^{5}}$};%{N34};
+            
+                   %lagrange multipliers
+       \draw[->] (N12) edge (N34) node [fill=white, font=\small] at ($(N12)!0.35!(N34)$) {\framebox{$_6^5$}};
+       \draw[->] (N21) edge (N34) node [fill=white, font=\small] at ($(N21)!0.5!(N34)$) {\framebox{$_{12}^{11}$}};
+       \draw[->] (N22) edge (N33) node [fill=white, font=\small] at ($(N22)!0.5!(N33)$) {\framebox{$_{14}^{13}$}};
+       \draw[<-] (N31) edge (N42) node [fill=white, font=\small] at ($(N31)!0.5!(N42)$) {\framebox{$_{18}^{17}$}};   
+       \draw[<-] (N34) edge (N43) node [fill=white, font=\small] at ($(N34)!0.5!(N43)$) {\framebox{$_{20}^{19}$}};
+       
+       %\node at (N41) {};
+       %\node at (-5,0) {};
+				
+				
+		\end{tikzpicture}
+		\begin{tikzpicture}
+		\node [anchor=south west,text width=3cm, node distance=1.5cm] (I11) at (1,0) {$\mathit{_{14}^{13}}$ ... substructure-local dof indices};
+		\node [anchor=south west,below of = I11,text width=3cm, node distance=1.5cm] (I2) {\framebox{$_{14}^{13}$} ... global lagrange multiplier indices\\};
+		\node at (0,-2) {};
+		\end{tikzpicture}
+\end{document}

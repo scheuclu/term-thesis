@@ -1,0 +1,294 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 1.3266 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving neumann   condition: ID:2 MSHTAG:2                                   ┃
+Elapsed time is 4.7798 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+9 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 15.4872 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  4  7                        ┃
+Neumann   conditions detected on substructures: 3  6  9                        ┃
+Elapsed time is 0.081141 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  0  3  3  0  3  3
+Elapsed time is 6.1404 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.018376 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.1777e-17                           ┃
+Elapsed time is 0.026363 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 6.8036e-09                                                          ┃
+after 11 iterations                                                            ┃
+Elapsed time is 0.68735 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.085888 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.085814 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.67081 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving neumann   condition: ID:2 MSHTAG:2                                   ┃
+Elapsed time is 3.1176 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+9 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 16.1048 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  4  7                        ┃
+Neumann   conditions detected on substructures: 3  6  9                        ┃
+Elapsed time is 0.12709 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/SetupBase', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 200)" style="font-weight:bold">FETIBaseSolver/SetupBase</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',200,0)">line 200</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Setup', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 28)" style="font-weight:bold">FETI2Solver/Setup</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',28,0)">line 28</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/InitSolve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 304)" style="font-weight:bold">FETIBaseSolver/InitSolve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',304,0)">line 304</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 53)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',53,0)">line 53</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-19_Inclusion/Run.m', 134)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-19_Inclusion/Run.m',134,0)">line 134</a>)] 
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  0  3  3  0  3  3
+Elapsed time is 7.0692 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.000955 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.961e-17                            ┃
+Elapsed time is 0.019612 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 6.8036e-09                                                          ┃
+after 11 iterations                                                            ┃
+Elapsed time is 0.86009 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.11487 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.12567 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.38275 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving neumann   condition: ID:2 MSHTAG:2                                   ┃
+Elapsed time is 1.8288 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+9 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 8.4242 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  4  7                        ┃
+Neumann   conditions detected on substructures: 3  6  9                        ┃
+Elapsed time is 0.046633 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/SetupBase', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 200)" style="font-weight:bold">FETIBaseSolver/SetupBase</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',200,0)">line 200</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Setup', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 28)" style="font-weight:bold">FETI2Solver/Setup</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',28,0)">line 28</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/InitSolve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 304)" style="font-weight:bold">FETIBaseSolver/InitSolve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',304,0)">line 304</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 53)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',53,0)">line 53</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-19_Inclusion/Run.m', 134)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-19_Inclusion/Run.m',134,0)">line 134</a>)] 
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  0  3  3  0  3  3
+Elapsed time is 2.9665 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.000531 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.3255e-17                           ┃
+Elapsed time is 0.008695 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 2.92e-07                                                            ┃
+after 12 iterations                                                            ┃
+Elapsed time is 0.39414 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.043897 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.043924 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 1.8177 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving neumann   condition: ID:2 MSHTAG:2                                   ┃
+Elapsed time is 9.5759 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+9 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 29.9776 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  4  7                        ┃
+Neumann   conditions detected on substructures: 3  6  9                        ┃
+Elapsed time is 0.090179 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/SetupBase', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 200)" style="font-weight:bold">FETIBaseSolver/SetupBase</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',200,0)">line 200</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Setup', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 28)" style="font-weight:bold">FETI2Solver/Setup</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',28,0)">line 28</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/InitSolve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 304)" style="font-weight:bold">FETIBaseSolver/InitSolve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',304,0)">line 304</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 53)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',53,0)">line 53</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run_dirichlet', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-19_Inclusion/Run_dirichlet.m', 134)" style="font-weight:bold">Run_dirichlet</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-19_Inclusion/Run_dirichlet.m',134,0)">line 134</a>)] 
+Scaling: kscaling                                                              ┃
+Preconditioner: Dirichlet                                                      ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  0  3  3  0  3  3
+Elapsed time is 12.7587 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.005646 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.0435e-17                           ┃
+Elapsed time is 0.01347 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 9.4859e-07                                                          ┃
+after 9 iterations                                                             ┃
+Elapsed time is 0.51299 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.075232 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.10842 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 

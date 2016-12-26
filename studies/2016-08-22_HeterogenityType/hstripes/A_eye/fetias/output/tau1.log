@@ -1,0 +1,2452 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+102 nodes created                                                              ┃
+80 stiffness elements created                                                  ┃
+6 dirichlet elements created                                                   ┃
+80 neumann elements created                                                    ┃
+wrote mesh to file: ./hstripes/A_eye/fetis/output/tau1.dis                     ┃
+Elapsed time is 0.35234 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.022867 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.062898 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 0.6416 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 0.27319 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.11434 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETIS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.019753 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 7.2461e-15                           ┃
+Elapsed time is 0.006305 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.3909e-17                             ┃
+Check: W projected into N coarse-space: 1.5564e-15                             ┃
+START FETIS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 7.2185e-15                           ┃
+Check: r projected into N coarse-space: 6.0368e-17                             ┃
+Check: W projected into N coarse-space: 1.0891e-15                             ┃
+Check: Error of substructure equilibrium: 7.1628e-15                           ┃
+Check: r projected into N coarse-space: 5.8864e-17                             ┃
+Check: W projected into N coarse-space: 6.5467e-16                             ┃
+Check: Error of substructure equilibrium: 7.023e-15                            ┃
+Check: r projected into N coarse-space: 5.6529e-17                             ┃
+Check: W projected into N coarse-space: 1.8264e-16                             ┃
+Check: Error of substructure equilibrium: 7.1873e-15                           ┃
+Check: r projected into N coarse-space: 5.5807e-17                             ┃
+Check: W projected into N coarse-space: 9.3608e-17                             ┃
+Check: Error of substructure equilibrium: 7.4619e-15                           ┃
+Check: r projected into N coarse-space: 5.5675e-17                             ┃
+Check: W projected into N coarse-space: 6.9127e-18                             ┃
+Check: Error of substructure equilibrium: 7.5074e-15                           ┃
+Check: r projected into N coarse-space: 5.5668e-17                             ┃
+Check: W projected into N coarse-space: 7.7657e-19                             ┃
+Check: Error of substructure equilibrium: 7.4872e-15                           ┃
+Check: r projected into N coarse-space: 5.5667e-17                             ┃
+Check: W projected into N coarse-space: 4.8909e-20                             ┃
+Check: Error of substructure equilibrium: 7.4887e-15                           ┃
+Check: r projected into N coarse-space: 5.5667e-17                             ┃
+Check: W projected into N coarse-space: 2.337e-22                              ┃
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pseudoinverse/mtimesQR', '/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m', 228)" style="font-weight:bold">pseudoinverse/mtimesQR</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m',228,0)">line 228</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pseudoinverse/mtimes', '/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m', 437)" style="font-weight:bold"> * </a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m',437,0)">line 437</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETISSolver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETISSolver.m', 105)" style="font-weight:bold">FETISSolver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETISSolver.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 45)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',45,0)">line 45</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m', 30)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run_hstripes', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_hstripes.m', 63)" style="font-weight:bold">Run_hstripes</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_hstripes.m',63,0)">line 63</a>)] 
+[Warning: Rank deficient, rank = 7, tol =
+2.809721e-29.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pseudoinverse/mtimesQR', '/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m', 228)" style="font-weight:bold">pseudoinverse/mtimesQR</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m',228,0)">line 228</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pseudoinverse/mtimes', '/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m', 437)" style="font-weight:bold"> * </a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m',437,0)">line 437</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETISSolver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETISSolver.m', 113)" style="font-weight:bold">FETISSolver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETISSolver.m',113,0)">line 113</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 45)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',45,0)">line 45</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m', 30)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run_hstripes', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_hstripes.m', 63)" style="font-weight:bold">Run_hstripes</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_hstripes.m',63,0)">line 63</a>)] 
+[Warning: Rank deficient, rank = 7, tol =
+2.809721e-29.] 
+Check: Error of substructure equilibrium: 7.4865e-15                           ┃
+Check: r projected into N coarse-space: 5.5667e-17                             ┃
+Check: W projected into N coarse-space: 4.2969e-27                             ┃
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pseudoinverse/mtimesQR', '/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m', 228)" style="font-weight:bold">pseudoinverse/mtimesQR</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m',228,0)">line 228</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pseudoinverse/mtimes', '/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m', 437)" style="font-weight:bold"> * </a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/utils/remote/@pseudoinverse/pseudoinverse.m',437,0)">line 437</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETISSolver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETISSolver.m', 140)" style="font-weight:bold">FETISSolver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETISSolver.m',140,0)">line 140</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 45)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',45,0)">line 45</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m', 30)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run_hstripes', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_hstripes.m', 63)" style="font-weight:bold">Run_hstripes</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_hstripes.m',63,0)">line 63</a>)] 
+[Warning: Rank deficient, rank = 7, tol =
+2.809721e-29.] 
+Residual = 8.5571e-14                                                          ┃
+after 9 FETI-S iterations with 144 search directions                           ┃
+Elapsed time is 0.31221 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.015906 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011897 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023197 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.081953 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+102 nodes written                                                              ┃
+80 elements written                                                            ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.080627 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./hstripes/A_eye/fetis/../../../mesh_hstripes.msh                 ┃
+output-file: ./hstripes/A_eye/fetis/output/vtk/tau1.vtk.1                      ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 24-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.64475 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.9887 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 16.7366 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 8.8097 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.8077 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETIS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.04728 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.8666e-15                           ┃
+Elapsed time is 0.085742 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.3251e-17                             ┃
+Check: W projected into N coarse-space: 1.1262e-16                             ┃
+START FETIS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 4.7784e-15                           ┃
+Check: r projected into N coarse-space: 6.1701e-17                             ┃
+Check: W projected into N coarse-space: 1.2924e-17                             ┃
+Check: Error of substructure equilibrium: 4.7729e-15                           ┃
+Check: r projected into N coarse-space: 6.1671e-17                             ┃
+Check: W projected into N coarse-space: 4.9183e-18                             ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1665e-17                             ┃
+Check: W projected into N coarse-space: 9.2415e-19                             ┃
+Check: Error of substructure equilibrium: 4.7741e-15                           ┃
+Check: r projected into N coarse-space: 6.1664e-17                             ┃
+Check: W projected into N coarse-space: 2.1175e-19                             ┃
+Check: Error of substructure equilibrium: 4.7738e-15                           ┃
+Check: r projected into N coarse-space: 6.1664e-17                             ┃
+Check: W projected into N coarse-space: 7.8674e-20                             ┃
+Check: Error of substructure equilibrium: 4.7732e-15                           ┃
+Check: r projected into N coarse-space: 6.1664e-17                             ┃
+Check: W projected into N coarse-space: 5.3364e-21                             ┃
+Check: Error of substructure equilibrium: 4.7747e-15                           ┃
+Check: r projected into N coarse-space: 6.1664e-17                             ┃
+Check: W projected into N coarse-space: 1.1858e-21                             ┃
+Check: Error of substructure equilibrium: 4.7737e-15                           ┃
+Check: r projected into N coarse-space: 6.1664e-17                             ┃
+Check: W projected into N coarse-space: 1.5213e-22                             ┃
+Check: Error of substructure equilibrium: 4.7734e-15                           ┃
+Check: r projected into N coarse-space: 6.1664e-17                             ┃
+Check: W projected into N coarse-space: 3.2389e-23                             ┃
+Residual = 3.7552e-09                                                          ┃
+after 9 FETI-S iterations with 16  16  16  16  16  16  16  16  16 search directions
+Elapsed time is 0.90584 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.033731 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.033438 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.37167 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.0802 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.0462 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 6.1431 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.5349 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETIS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.022293 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.4513e-15                           ┃
+Elapsed time is 0.046532 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 2.3081e-16                             ┃
+Check: W projected into N coarse-space: 8.8176e-15                             ┃
+START FETIS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 3.7819e-15                           ┃
+Check: r projected into N coarse-space: 1.8761e-16                             ┃
+Check: W projected into N coarse-space: 6.3609e-15                             ┃
+Check: Error of substructure equilibrium: 2.2923e-15                           ┃
+Check: r projected into N coarse-space: 1.0489e-16                             ┃
+Check: W projected into N coarse-space: 1.729e-15                              ┃
+Check: Error of substructure equilibrium: 2.1375e-15                           ┃
+Check: r projected into N coarse-space: 9.1911e-17                             ┃
+Check: W projected into N coarse-space: 2.357e-16                              ┃
+Check: Error of substructure equilibrium: 2.1166e-15                           ┃
+Check: r projected into N coarse-space: 9.0642e-17                             ┃
+Check: W projected into N coarse-space: 1.3297e-16                             ┃
+Check: Error of substructure equilibrium: 2.0949e-15                           ┃
+Check: r projected into N coarse-space: 8.9805e-17                             ┃
+Check: W projected into N coarse-space: 5.2119e-17                             ┃
+Check: Error of substructure equilibrium: 2.0909e-15                           ┃
+Check: r projected into N coarse-space: 8.9583e-17                             ┃
+Check: W projected into N coarse-space: 2.362e-17                              ┃
+Check: Error of substructure equilibrium: 2.0906e-15                           ┃
+Check: r projected into N coarse-space: 8.9573e-17                             ┃
+Check: W projected into N coarse-space: 7.4039e-18                             ┃
+Check: Error of substructure equilibrium: 2.0922e-15                           ┃
+Check: r projected into N coarse-space: 8.9553e-17                             ┃
+Check: W projected into N coarse-space: 3.6806e-18                             ┃
+Check: Error of substructure equilibrium: 2.0922e-15                           ┃
+Check: r projected into N coarse-space: 8.9548e-17                             ┃
+Check: W projected into N coarse-space: 1.2281e-18                             ┃
+Check: Error of substructure equilibrium: 2.093e-15                            ┃
+Check: r projected into N coarse-space: 8.9546e-17                             ┃
+Check: W projected into N coarse-space: 3.5319e-19                             ┃
+Check: Error of substructure equilibrium: 2.0919e-15                           ┃
+Check: r projected into N coarse-space: 8.9547e-17                             ┃
+Check: W projected into N coarse-space: 1.1023e-19                             ┃
+Check: Error of substructure equilibrium: 2.0926e-15                           ┃
+Check: r projected into N coarse-space: 8.9546e-17                             ┃
+Check: W projected into N coarse-space: 2.4496e-20                             ┃
+Check: Error of substructure equilibrium: 2.0937e-15                           ┃
+Check: r projected into N coarse-space: 8.9547e-17                             ┃
+Check: W projected into N coarse-space: 4.7244e-21                             ┃
+Check: Error of substructure equilibrium: 2.0919e-15                           ┃
+Check: r projected into N coarse-space: 8.9547e-17                             ┃
+Check: W projected into N coarse-space: 3.8607e-22                             ┃
+Residual = 7.9365e-08                                                          ┃
+after 14 FETI-S iterations with 16  16  16  16  16  16  16  16  16  16  16  16  16  16 search directions
+Elapsed time is 1.6672 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.022835 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.031032 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.24237 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.71449 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.1375 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 3.819 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.82415 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.12211 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.8666e-15                           ┃
+Elapsed time is 0.057679 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.3251e-17                             ┃
+Check: W projected into N coarse-space: 9.7165e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 4.7791e-15                           ┃
+Check: r projected into N coarse-space: 6.1701e-17                             ┃
+Check: W projected into N coarse-space: 1.0276e-16                             ┃
+current residuum: 0.0015349                                                    ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1671e-17                             ┃
+Check: W projected into N coarse-space: 8.5543e-17                             ┃
+current residuum: 0.0012281                                                    ┃
+Check: Error of substructure equilibrium: 4.7724e-15                           ┃
+Check: r projected into N coarse-space: 6.1663e-17                             ┃
+Check: W projected into N coarse-space: 2.1558e-17                             ┃
+current residuum: 0.00040037                                                   ┃
+Check: Error of substructure equilibrium: 4.7737e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.8256e-18                             ┃
+current residuum: 8.4646e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.7738e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.5959e-18                             ┃
+current residuum: 4.924e-05                                                    ┃
+Check: Error of substructure equilibrium: 4.7734e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.5208e-19                             ┃
+current residuum: 1.1154e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.773e-15                            ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.1459e-19                             ┃
+current residuum: 4.0178e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.4977e-20                             ┃
+current residuum: 1.0634e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.2258e-20                             ┃
+current residuum: 2.9941e-07                                                   ┃
+Check: Error of substructure equilibrium: 4.7742e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.3662e-21                             ┃
+current residuum: 9.7489e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7727e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.3412e-22                             ┃
+current residuum: 1.8065e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.4247e-22                             ┃
+current residuum: 4.1242e-09                                                   ┃
+Residual = 4.1242e-09                                                          ┃
+after 12 FETI-AS iterations with 1  13  11   3  11   3   7   8   9  10   7   5 search directions
+Elapsed time is 0.93109 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.018289 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.014002 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.23505 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.69514 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 6.7261 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 3.6133 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.69047 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.10478 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.4513e-15                           ┃
+Elapsed time is 0.021623 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 2.3081e-16                             ┃
+Check: W projected into N coarse-space: 9.0159e-14                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 3.842e-15                            ┃
+Check: r projected into N coarse-space: 1.9095e-16                             ┃
+Check: W projected into N coarse-space: 2.3283e-13                             ┃
+current residuum: 0.34461                                                      ┃
+Check: Error of substructure equilibrium: 2.3908e-15                           ┃
+Check: r projected into N coarse-space: 1.1212e-16                             ┃
+Check: W projected into N coarse-space: 1.1448e-13                             ┃
+current residuum: 0.22561                                                      ┃
+Check: Error of substructure equilibrium: 2.1566e-15                           ┃
+Check: r projected into N coarse-space: 9.4167e-17                             ┃
+Check: W projected into N coarse-space: 2.0618e-14                             ┃
+current residuum: 0.087761                                                     ┃
+Check: Error of substructure equilibrium: 2.1578e-15                           ┃
+Check: r projected into N coarse-space: 9.189e-17                              ┃
+Check: W projected into N coarse-space: 6.4401e-15                             ┃
+current residuum: 0.030243                                                     ┃
+Check: Error of substructure equilibrium: 2.1294e-15                           ┃
+Check: r projected into N coarse-space: 9.0856e-17                             ┃
+Check: W projected into N coarse-space: 9.2871e-14                             ┃
+current residuum: 0.017488                                                     ┃
+Check: Error of substructure equilibrium: 2.0245e-15                           ┃
+Check: r projected into N coarse-space: 9.055e-17                              ┃
+Check: W projected into N coarse-space: 9.9266e-14                             ┃
+current residuum: 0.0085                                                       ┃
+Check: Error of substructure equilibrium: 2.0127e-15                           ┃
+Check: r projected into N coarse-space: 9.0452e-17                             ┃
+Check: W projected into N coarse-space: 9.9899e-15                             ┃
+current residuum: 0.0037317                                                    ┃
+Check: Error of substructure equilibrium: 1.9979e-15                           ┃
+Check: r projected into N coarse-space: 9.0433e-17                             ┃
+Check: W projected into N coarse-space: 5.4463e-15                             ┃
+current residuum: 0.0012518                                                    ┃
+Check: Error of substructure equilibrium: 1.9777e-15                           ┃
+Check: r projected into N coarse-space: 9.0432e-17                             ┃
+Check: W projected into N coarse-space: 2.4815e-15                             ┃
+current residuum: 0.00064651                                                   ┃
+Check: Error of substructure equilibrium: 1.9637e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 6.5469e-16                             ┃
+current residuum: 0.00031064                                                   ┃
+Check: Error of substructure equilibrium: 1.9609e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 4.0365e-16                             ┃
+current residuum: 9.1533e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.9663e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 2.8589e-16                             ┃
+current residuum: 4.2709e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.9652e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 5.6222e-18                             ┃
+current residuum: 7.858e-06                                                    ┃
+Check: Error of substructure equilibrium: 1.9649e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 3.8132e-18                             ┃
+current residuum: 1.6526e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.9641e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 2.2741e-18                             ┃
+current residuum: 6.3425e-07                                                   ┃
+Check: Error of substructure equilibrium: 1.9648e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 6.9158e-20                             ┃
+current residuum: 1.1387e-07                                                   ┃
+Residual = 1.1387e-07                                                          ┃
+after 16 FETI-AS iterations with 17  11  17  15  16  17  17  16  16  16   9  11   2   1   4   3 search directions
+Elapsed time is 1.0401 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.013713 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.013591 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.35201 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.0209 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 11.2603 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.4104 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.0535 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.15022 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.8666e-15                           ┃
+Elapsed time is 0.030811 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.3251e-17                             ┃
+Check: W projected into N coarse-space: 9.7165e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 4.7791e-15                           ┃
+Check: r projected into N coarse-space: 6.1701e-17                             ┃
+Check: W projected into N coarse-space: 1.0276e-16                             ┃
+current residuum: 0.0015349                                                    ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1671e-17                             ┃
+Check: W projected into N coarse-space: 8.5543e-17                             ┃
+current residuum: 0.0012281                                                    ┃
+Check: Error of substructure equilibrium: 4.7724e-15                           ┃
+Check: r projected into N coarse-space: 6.1663e-17                             ┃
+Check: W projected into N coarse-space: 2.1558e-17                             ┃
+current residuum: 0.00040037                                                   ┃
+Check: Error of substructure equilibrium: 4.7737e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.8256e-18                             ┃
+current residuum: 8.4646e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.7738e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.5959e-18                             ┃
+current residuum: 4.924e-05                                                    ┃
+Check: Error of substructure equilibrium: 4.7734e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.5208e-19                             ┃
+current residuum: 1.1154e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.773e-15                            ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.1459e-19                             ┃
+current residuum: 4.0178e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.4977e-20                             ┃
+current residuum: 1.0634e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.2258e-20                             ┃
+current residuum: 2.9941e-07                                                   ┃
+Check: Error of substructure equilibrium: 4.7742e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.3662e-21                             ┃
+current residuum: 9.7489e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7727e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.3412e-22                             ┃
+current residuum: 1.8065e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.4247e-22                             ┃
+current residuum: 4.1242e-09                                                   ┃
+Residual = 4.1242e-09                                                          ┃
+after 12 FETI-AS iterations with 1  13  11   3  11   3   7   8   9  10   7   5 search directions
+Elapsed time is 1.0028 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.019672 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.019198 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.32466 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.9654 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.6854 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.2195 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.99613 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.14609 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.4513e-15                           ┃
+Elapsed time is 0.031754 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 2.3081e-16                             ┃
+Check: W projected into N coarse-space: 9.0159e-14                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 3.842e-15                            ┃
+Check: r projected into N coarse-space: 1.9095e-16                             ┃
+Check: W projected into N coarse-space: 2.3283e-13                             ┃
+current residuum: 0.34461                                                      ┃
+Check: Error of substructure equilibrium: 2.3908e-15                           ┃
+Check: r projected into N coarse-space: 1.1212e-16                             ┃
+Check: W projected into N coarse-space: 1.1448e-13                             ┃
+current residuum: 0.22561                                                      ┃
+Check: Error of substructure equilibrium: 2.1566e-15                           ┃
+Check: r projected into N coarse-space: 9.4167e-17                             ┃
+Check: W projected into N coarse-space: 2.0618e-14                             ┃
+current residuum: 0.087761                                                     ┃
+Check: Error of substructure equilibrium: 2.1578e-15                           ┃
+Check: r projected into N coarse-space: 9.189e-17                              ┃
+Check: W projected into N coarse-space: 6.4401e-15                             ┃
+current residuum: 0.030243                                                     ┃
+Check: Error of substructure equilibrium: 2.1294e-15                           ┃
+Check: r projected into N coarse-space: 9.0856e-17                             ┃
+Check: W projected into N coarse-space: 9.2871e-14                             ┃
+current residuum: 0.017488                                                     ┃
+Check: Error of substructure equilibrium: 2.0245e-15                           ┃
+Check: r projected into N coarse-space: 9.055e-17                              ┃
+Check: W projected into N coarse-space: 9.9266e-14                             ┃
+current residuum: 0.0085                                                       ┃
+Check: Error of substructure equilibrium: 2.0127e-15                           ┃
+Check: r projected into N coarse-space: 9.0452e-17                             ┃
+Check: W projected into N coarse-space: 9.9899e-15                             ┃
+current residuum: 0.0037317                                                    ┃
+Check: Error of substructure equilibrium: 1.9979e-15                           ┃
+Check: r projected into N coarse-space: 9.0433e-17                             ┃
+Check: W projected into N coarse-space: 5.4463e-15                             ┃
+current residuum: 0.0012518                                                    ┃
+Check: Error of substructure equilibrium: 1.9777e-15                           ┃
+Check: r projected into N coarse-space: 9.0432e-17                             ┃
+Check: W projected into N coarse-space: 2.4815e-15                             ┃
+current residuum: 0.00064651                                                   ┃
+Check: Error of substructure equilibrium: 1.9637e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 6.5469e-16                             ┃
+current residuum: 0.00031064                                                   ┃
+Check: Error of substructure equilibrium: 1.9609e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 4.0365e-16                             ┃
+current residuum: 9.1533e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.9663e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 2.8589e-16                             ┃
+current residuum: 4.2709e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.9652e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 5.6222e-18                             ┃
+current residuum: 7.858e-06                                                    ┃
+Check: Error of substructure equilibrium: 1.9649e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 3.8132e-18                             ┃
+current residuum: 1.6526e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.9641e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 2.2741e-18                             ┃
+current residuum: 6.3425e-07                                                   ┃
+Check: Error of substructure equilibrium: 1.9648e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 6.9158e-20                             ┃
+current residuum: 1.1387e-07                                                   ┃
+Residual = 1.1387e-07                                                          ┃
+after 16 FETI-AS iterations with 17  11  17  15  16  17  17  16  16  16   9  11   2   1   4   3 search directions
+Elapsed time is 1.4652 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.020262 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.02054 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.43357 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.1655 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.3419 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.055 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.2002 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.18483 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.8666e-15                           ┃
+Elapsed time is 0.03727 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.3251e-17                             ┃
+Check: W projected into N coarse-space: 9.7165e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 4.7791e-15                           ┃
+Check: r projected into N coarse-space: 6.1701e-17                             ┃
+Check: W projected into N coarse-space: 1.0276e-16                             ┃
+current residuum: 0.0015349                                                    ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1671e-17                             ┃
+Check: W projected into N coarse-space: 8.5543e-17                             ┃
+current residuum: 0.0012281                                                    ┃
+Check: Error of substructure equilibrium: 4.7724e-15                           ┃
+Check: r projected into N coarse-space: 6.1663e-17                             ┃
+Check: W projected into N coarse-space: 2.1558e-17                             ┃
+current residuum: 0.00040037                                                   ┃
+Check: Error of substructure equilibrium: 4.7737e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.8256e-18                             ┃
+current residuum: 8.4646e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.7738e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.5959e-18                             ┃
+current residuum: 4.924e-05                                                    ┃
+Check: Error of substructure equilibrium: 4.7734e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.5208e-19                             ┃
+current residuum: 1.1154e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.773e-15                            ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.1459e-19                             ┃
+current residuum: 4.0178e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.4977e-20                             ┃
+current residuum: 1.0634e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.2258e-20                             ┃
+current residuum: 2.9941e-07                                                   ┃
+Check: Error of substructure equilibrium: 4.7742e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.3662e-21                             ┃
+current residuum: 9.7489e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7727e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.3412e-22                             ┃
+current residuum: 1.8065e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.4247e-22                             ┃
+current residuum: 4.1242e-09                                                   ┃
+Residual = 4.1242e-09                                                          ┃
+after 12 FETI-AS iterations with 1  13  11   3  11   3   7   8   9  10   7   5 search directions
+Elapsed time is 1.7565 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.050075 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.04787 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.43073 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.82574 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 8.1252 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.063 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.315 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.20051 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.8666e-15                           ┃
+Elapsed time is 0.045093 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.3251e-17                             ┃
+Check: W projected into N coarse-space: 9.7165e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 4.7791e-15                           ┃
+Check: r projected into N coarse-space: 6.1701e-17                             ┃
+Check: W projected into N coarse-space: 1.0276e-16                             ┃
+current residuum: 0.0015349                                                    ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1671e-17                             ┃
+Check: W projected into N coarse-space: 8.5543e-17                             ┃
+current residuum: 0.0012281                                                    ┃
+Check: Error of substructure equilibrium: 4.7724e-15                           ┃
+Check: r projected into N coarse-space: 6.1663e-17                             ┃
+Check: W projected into N coarse-space: 2.1558e-17                             ┃
+current residuum: 0.00040037                                                   ┃
+Check: Error of substructure equilibrium: 4.7737e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.8256e-18                             ┃
+current residuum: 8.4646e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.7738e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.5959e-18                             ┃
+current residuum: 4.924e-05                                                    ┃
+Check: Error of substructure equilibrium: 4.7734e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.5208e-19                             ┃
+current residuum: 1.1154e-05                                                   ┃
+Check: Error of substructure equilibrium: 4.773e-15                            ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.1459e-19                             ┃
+current residuum: 4.0178e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.4977e-20                             ┃
+current residuum: 1.0634e-06                                                   ┃
+Check: Error of substructure equilibrium: 4.7735e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.2258e-20                             ┃
+current residuum: 2.9941e-07                                                   ┃
+Check: Error of substructure equilibrium: 4.7742e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 3.3662e-21                             ┃
+current residuum: 9.7489e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7727e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 4.3412e-22                             ┃
+current residuum: 1.8065e-08                                                   ┃
+Check: Error of substructure equilibrium: 4.7745e-15                           ┃
+Check: r projected into N coarse-space: 6.1662e-17                             ┃
+Check: W projected into N coarse-space: 1.4247e-22                             ┃
+current residuum: 4.1242e-09                                                   ┃
+Residual = 4.1242e-09                                                          ┃
+after 12 FETI-AS iterations with 1  13  11   3  11   3   7   8   9  10   7   5 search directions
+Elapsed time is 1.8036 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.039741 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.040165 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.36395 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.0025 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 9.8217 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.9288 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.1842 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.28565 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.4513e-15                           ┃
+Elapsed time is 0.051264 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 2.3081e-16                             ┃
+Check: W projected into N coarse-space: 9.0159e-14                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 3.842e-15                            ┃
+Check: r projected into N coarse-space: 1.9095e-16                             ┃
+Check: W projected into N coarse-space: 2.3283e-13                             ┃
+current residuum: 0.34461                                                      ┃
+Check: Error of substructure equilibrium: 2.3908e-15                           ┃
+Check: r projected into N coarse-space: 1.1212e-16                             ┃
+Check: W projected into N coarse-space: 1.1448e-13                             ┃
+current residuum: 0.22561                                                      ┃
+Check: Error of substructure equilibrium: 2.1566e-15                           ┃
+Check: r projected into N coarse-space: 9.4167e-17                             ┃
+Check: W projected into N coarse-space: 2.0618e-14                             ┃
+current residuum: 0.087761                                                     ┃
+Check: Error of substructure equilibrium: 2.1578e-15                           ┃
+Check: r projected into N coarse-space: 9.189e-17                              ┃
+Check: W projected into N coarse-space: 6.4401e-15                             ┃
+current residuum: 0.030243                                                     ┃
+Check: Error of substructure equilibrium: 2.1294e-15                           ┃
+Check: r projected into N coarse-space: 9.0856e-17                             ┃
+Check: W projected into N coarse-space: 9.2871e-14                             ┃
+current residuum: 0.017488                                                     ┃
+Check: Error of substructure equilibrium: 2.0245e-15                           ┃
+Check: r projected into N coarse-space: 9.055e-17                              ┃
+Check: W projected into N coarse-space: 9.9266e-14                             ┃
+current residuum: 0.0085                                                       ┃
+Check: Error of substructure equilibrium: 2.0127e-15                           ┃
+Check: r projected into N coarse-space: 9.0452e-17                             ┃
+Check: W projected into N coarse-space: 9.9899e-15                             ┃
+current residuum: 0.0037317                                                    ┃
+Check: Error of substructure equilibrium: 1.9979e-15                           ┃
+Check: r projected into N coarse-space: 9.0433e-17                             ┃
+Check: W projected into N coarse-space: 5.4463e-15                             ┃
+current residuum: 0.0012518                                                    ┃
+Check: Error of substructure equilibrium: 1.9777e-15                           ┃
+Check: r projected into N coarse-space: 9.0432e-17                             ┃
+Check: W projected into N coarse-space: 2.4815e-15                             ┃
+current residuum: 0.00064651                                                   ┃
+Check: Error of substructure equilibrium: 1.9637e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 6.5469e-16                             ┃
+current residuum: 0.00031064                                                   ┃
+Check: Error of substructure equilibrium: 1.9609e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 4.0365e-16                             ┃
+current residuum: 9.1533e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.9663e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 2.8589e-16                             ┃
+current residuum: 4.2709e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.9652e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 5.6222e-18                             ┃
+current residuum: 7.858e-06                                                    ┃
+Check: Error of substructure equilibrium: 1.9649e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 3.8132e-18                             ┃
+current residuum: 1.6526e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.9641e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 2.2741e-18                             ┃
+current residuum: 6.3425e-07                                                   ┃
+Check: Error of substructure equilibrium: 1.9648e-15                           ┃
+Check: r projected into N coarse-space: 9.0426e-17                             ┃
+Check: W projected into N coarse-space: 6.9158e-20                             ┃
+current residuum: 1.1387e-07                                                   ┃
+Residual = 1.1387e-07                                                          ┃
+after 16 FETI-AS iterations with 17  11  17  15  16  17  17  16  16  16   9  11   2   1   4   3 search directions
+Elapsed time is 2.4128 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.046349 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.045226 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.29601 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.8493 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.1927 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 3.8468 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.87165 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.12408 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 6.0782e-15                           ┃
+Elapsed time is 0.047648 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 5.1045e-06                             ┃
+Check: W projected into N coarse-space: 1.2375e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 6.0775e-15                           ┃
+Check: r projected into N coarse-space: 9.7078e-07                             ┃
+Check: W projected into N coarse-space: 2.774e-17                              ┃
+current residuum: 0.0010148                                                    ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 3.2786e-07                             ┃
+Check: W projected into N coarse-space: 1.5785e-17                             ┃
+current residuum: 0.00039874                                                   ┃
+Check: Error of substructure equilibrium: 6.0776e-15                           ┃
+Check: r projected into N coarse-space: 1.3953e-07                             ┃
+Check: W projected into N coarse-space: 5.4155e-18                             ┃
+current residuum: 0.00014821                                                   ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 2.7061e-08                             ┃
+Check: W projected into N coarse-space: 6.3326e-18                             ┃
+current residuum: 3.1739e-05                                                   ┃
+Check: Error of substructure equilibrium: 6.077e-15                            ┃
+Check: r projected into N coarse-space: 9.3179e-09                             ┃
+Check: W projected into N coarse-space: 2.2087e-18                             ┃
+current residuum: 9.7111e-06                                                   ┃
+Check: Error of substructure equilibrium: 6.0772e-15                           ┃
+Check: r projected into N coarse-space: 2.5217e-09                             ┃
+Check: W projected into N coarse-space: 5.7882e-19                             ┃
+current residuum: 2.4653e-06                                                   ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 3.8422e-10                             ┃
+Check: W projected into N coarse-space: 3.1784e-19                             ┃
+current residuum: 4.1241e-07                                                   ┃
+Check: Error of substructure equilibrium: 6.0783e-15                           ┃
+Check: r projected into N coarse-space: 9.5827e-11                             ┃
+Check: W projected into N coarse-space: 9.0272e-20                             ┃
+current residuum: 1.0967e-07                                                   ┃
+Check: Error of substructure equilibrium: 6.0769e-15                           ┃
+Check: r projected into N coarse-space: 3.0236e-11                             ┃
+Check: W projected into N coarse-space: 2.7177e-20                             ┃
+current residuum: 2.9169e-08                                                   ┃
+Check: Error of substructure equilibrium: 6.0773e-15                           ┃
+Check: r projected into N coarse-space: 6.5829e-12                             ┃
+Check: W projected into N coarse-space: 1.9817e-20                             ┃
+current residuum: 6.8444e-09                                                   ┃
+Check: Error of substructure equilibrium: 6.0781e-15                           ┃
+Check: r projected into N coarse-space: 9.8191e-13                             ┃
+Check: W projected into N coarse-space: 4.0874e-21                             ┃
+current residuum: 8.8384e-10                                                   ┃
+Residual = 8.8384e-10                                                          ┃
+after 11 FETI-AS iterations with 4  12  16   9  15  14   7  15  13   9   7 search directions
+Elapsed time is 1.3955 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.037385 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.032397 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.30068 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.76561 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.2296 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 3.9737 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.96627 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.12942 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 2.9174e-15                           ┃
+Elapsed time is 0.047886 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 0.0015637                              ┃
+Check: W projected into N coarse-space: 9.2347e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 2.916e-15                            ┃
+Check: r projected into N coarse-space: 0.0011439                              ┃
+Check: W projected into N coarse-space: 8.1367e-16                             ┃
+current residuum: 0.063241                                                     ┃
+Check: Error of substructure equilibrium: 2.918e-15                            ┃
+Check: r projected into N coarse-space: 0.00068583                             ┃
+Check: W projected into N coarse-space: 1.4028e-15                             ┃
+current residuum: 0.037865                                                     ┃
+Check: Error of substructure equilibrium: 2.9197e-15                           ┃
+Check: r projected into N coarse-space: 0.00065142                             ┃
+Check: W projected into N coarse-space: 2.2514e-15                             ┃
+current residuum: 0.03376                                                      ┃
+Check: Error of substructure equilibrium: 2.9e-15                              ┃
+Check: r projected into N coarse-space: 0.00044607                             ┃
+Check: W projected into N coarse-space: 6.138e-16                              ┃
+current residuum: 0.02102                                                      ┃
+Check: Error of substructure equilibrium: 2.8984e-15                           ┃
+Check: r projected into N coarse-space: 0.00032506                             ┃
+Check: W projected into N coarse-space: 2.7747e-15                             ┃
+current residuum: 0.028748                                                     ┃
+Check: Error of substructure equilibrium: 2.8943e-15                           ┃
+Check: r projected into N coarse-space: 0.00017759                             ┃
+Check: W projected into N coarse-space: 1.1763e-15                             ┃
+current residuum: 0.012565                                                     ┃
+Check: Error of substructure equilibrium: 2.8985e-15                           ┃
+Check: r projected into N coarse-space: 2.4351e-05                             ┃
+Check: W projected into N coarse-space: 1.3438e-15                             ┃
+current residuum: 0.0033809                                                    ┃
+Check: Error of substructure equilibrium: 2.901e-15                            ┃
+Check: r projected into N coarse-space: 1.5564e-05                             ┃
+Check: W projected into N coarse-space: 2.3408e-16                             ┃
+current residuum: 0.0012126                                                    ┃
+Check: Error of substructure equilibrium: 2.9054e-15                           ┃
+Check: r projected into N coarse-space: 2.9015e-06                             ┃
+Check: W projected into N coarse-space: 1.8745e-17                             ┃
+current residuum: 0.00027679                                                   ┃
+Check: Error of substructure equilibrium: 2.9045e-15                           ┃
+Check: r projected into N coarse-space: 5.7614e-07                             ┃
+Check: W projected into N coarse-space: 1.3111e-18                             ┃
+current residuum: 2.8861e-05                                                   ┃
+Check: Error of substructure equilibrium: 2.9052e-15                           ┃
+Check: r projected into N coarse-space: 1.0746e-07                             ┃
+Check: W projected into N coarse-space: 1.1949e-18                             ┃
+current residuum: 1.2012e-05                                                   ┃
+Check: Error of substructure equilibrium: 2.9032e-15                           ┃
+Check: r projected into N coarse-space: 1.9283e-08                             ┃
+Check: W projected into N coarse-space: 4.824e-20                              ┃
+current residuum: 1.1337e-06                                                   ┃
+Check: Error of substructure equilibrium: 2.9044e-15                           ┃
+Check: r projected into N coarse-space: 9.1172e-10                             ┃
+Check: W projected into N coarse-space: 6.8995e-21                             ┃
+current residuum: 1.2109e-07                                                   ┃
+Residual = 1.2109e-07                                                          ┃
+after 13 FETI-AS iterations with 17  17  17  17  17  17  15  17  16   5   4   4   1 search directions
+Elapsed time is 1.7067 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.040182 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.036506 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.27573 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.77331 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.2095 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.0456 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.88566 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.12059 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 6.0782e-15                           ┃
+Elapsed time is 0.04576 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 5.1045e-06                             ┃
+Check: W projected into N coarse-space: 1.2375e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 6.0775e-15                           ┃
+Check: r projected into N coarse-space: 9.7078e-07                             ┃
+Check: W projected into N coarse-space: 2.774e-17                              ┃
+current residuum: 0.0010148                                                    ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 3.2786e-07                             ┃
+Check: W projected into N coarse-space: 1.5785e-17                             ┃
+current residuum: 0.00039874                                                   ┃
+Check: Error of substructure equilibrium: 6.0776e-15                           ┃
+Check: r projected into N coarse-space: 1.3953e-07                             ┃
+Check: W projected into N coarse-space: 5.4155e-18                             ┃
+current residuum: 0.00014821                                                   ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 2.7061e-08                             ┃
+Check: W projected into N coarse-space: 6.3326e-18                             ┃
+current residuum: 3.1739e-05                                                   ┃
+Check: Error of substructure equilibrium: 6.077e-15                            ┃
+Check: r projected into N coarse-space: 9.3179e-09                             ┃
+Check: W projected into N coarse-space: 2.2087e-18                             ┃
+current residuum: 9.7111e-06                                                   ┃
+Check: Error of substructure equilibrium: 6.0772e-15                           ┃
+Check: r projected into N coarse-space: 2.5217e-09                             ┃
+Check: W projected into N coarse-space: 5.7882e-19                             ┃
+current residuum: 2.4653e-06                                                   ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 3.8422e-10                             ┃
+Check: W projected into N coarse-space: 3.1784e-19                             ┃
+current residuum: 4.1241e-07                                                   ┃
+Check: Error of substructure equilibrium: 6.0783e-15                           ┃
+Check: r projected into N coarse-space: 9.5827e-11                             ┃
+Check: W projected into N coarse-space: 9.0272e-20                             ┃
+current residuum: 1.0967e-07                                                   ┃
+Check: Error of substructure equilibrium: 6.0769e-15                           ┃
+Check: r projected into N coarse-space: 3.0236e-11                             ┃
+Check: W projected into N coarse-space: 2.7177e-20                             ┃
+current residuum: 2.9169e-08                                                   ┃
+Check: Error of substructure equilibrium: 6.0773e-15                           ┃
+Check: r projected into N coarse-space: 6.5829e-12                             ┃
+Check: W projected into N coarse-space: 1.9817e-20                             ┃
+current residuum: 6.8444e-09                                                   ┃
+Check: Error of substructure equilibrium: 6.0781e-15                           ┃
+Check: r projected into N coarse-space: 9.8191e-13                             ┃
+Check: W projected into N coarse-space: 4.0874e-21                             ┃
+current residuum: 8.8384e-10                                                   ┃
+Residual = 8.8384e-10                                                          ┃
+after 11 FETI-AS iterations with 4  12  16   9  15  14   7  15  13   9   7 search directions
+Elapsed time is 1.1417 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.02211 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.030473 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.27574 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.76108 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 8.0927 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 5.455 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 2.3236 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.25304 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 2.9174e-15                           ┃
+Elapsed time is 0.08387 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 0.0015637                              ┃
+Check: W projected into N coarse-space: 9.2347e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 2.916e-15                            ┃
+Check: r projected into N coarse-space: 0.0011439                              ┃
+Check: W projected into N coarse-space: 8.1367e-16                             ┃
+current residuum: 0.063241                                                     ┃
+Check: Error of substructure equilibrium: 2.918e-15                            ┃
+Check: r projected into N coarse-space: 0.00068583                             ┃
+Check: W projected into N coarse-space: 1.4028e-15                             ┃
+current residuum: 0.037865                                                     ┃
+Check: Error of substructure equilibrium: 2.9197e-15                           ┃
+Check: r projected into N coarse-space: 0.00065142                             ┃
+Check: W projected into N coarse-space: 2.2514e-15                             ┃
+current residuum: 0.03376                                                      ┃
+Check: Error of substructure equilibrium: 2.9e-15                              ┃
+Check: r projected into N coarse-space: 0.00044607                             ┃
+Check: W projected into N coarse-space: 6.138e-16                              ┃
+current residuum: 0.02102                                                      ┃
+Check: Error of substructure equilibrium: 2.8984e-15                           ┃
+Check: r projected into N coarse-space: 0.00032506                             ┃
+Check: W projected into N coarse-space: 2.7747e-15                             ┃
+current residuum: 0.028748                                                     ┃
+Check: Error of substructure equilibrium: 2.8943e-15                           ┃
+Check: r projected into N coarse-space: 0.00017759                             ┃
+Check: W projected into N coarse-space: 1.1763e-15                             ┃
+current residuum: 0.012565                                                     ┃
+Check: Error of substructure equilibrium: 2.8985e-15                           ┃
+Check: r projected into N coarse-space: 2.4351e-05                             ┃
+Check: W projected into N coarse-space: 1.3438e-15                             ┃
+current residuum: 0.0033809                                                    ┃
+Check: Error of substructure equilibrium: 2.901e-15                            ┃
+Check: r projected into N coarse-space: 1.5564e-05                             ┃
+Check: W projected into N coarse-space: 2.3408e-16                             ┃
+current residuum: 0.0012126                                                    ┃
+Check: Error of substructure equilibrium: 2.9054e-15                           ┃
+Check: r projected into N coarse-space: 2.9015e-06                             ┃
+Check: W projected into N coarse-space: 1.8745e-17                             ┃
+current residuum: 0.00027679                                                   ┃
+Check: Error of substructure equilibrium: 2.9045e-15                           ┃
+Check: r projected into N coarse-space: 5.7614e-07                             ┃
+Check: W projected into N coarse-space: 1.3111e-18                             ┃
+current residuum: 2.8861e-05                                                   ┃
+Check: Error of substructure equilibrium: 2.9052e-15                           ┃
+Check: r projected into N coarse-space: 1.0746e-07                             ┃
+Check: W projected into N coarse-space: 1.1949e-18                             ┃
+current residuum: 1.2012e-05                                                   ┃
+Check: Error of substructure equilibrium: 2.9032e-15                           ┃
+Check: r projected into N coarse-space: 1.9283e-08                             ┃
+Check: W projected into N coarse-space: 4.824e-20                              ┃
+current residuum: 1.1337e-06                                                   ┃
+Check: Error of substructure equilibrium: 2.9044e-15                           ┃
+Check: r projected into N coarse-space: 9.1172e-10                             ┃
+Check: W projected into N coarse-space: 6.8995e-21                             ┃
+current residuum: 1.2109e-07                                                   ┃
+Residual = 1.2109e-07                                                          ┃
+after 13 FETI-AS iterations with 17  17  17  17  17  17  15  17  16   5   4   4   1 search directions
+Elapsed time is 1.9949 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.035454 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.032216 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.41229 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.87953 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.9844 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.3133 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.97458 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.12883 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 6.0782e-15                           ┃
+Elapsed time is 0.043707 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 5.1045e-06                             ┃
+Check: W projected into N coarse-space: 1.2375e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 6.0775e-15                           ┃
+Check: r projected into N coarse-space: 9.7078e-07                             ┃
+Check: W projected into N coarse-space: 2.774e-17                              ┃
+current residuum: 0.0010148                                                    ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 3.2786e-07                             ┃
+Check: W projected into N coarse-space: 1.5785e-17                             ┃
+current residuum: 0.00039874                                                   ┃
+Check: Error of substructure equilibrium: 6.0776e-15                           ┃
+Check: r projected into N coarse-space: 1.3953e-07                             ┃
+Check: W projected into N coarse-space: 5.4155e-18                             ┃
+current residuum: 0.00014821                                                   ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 2.7061e-08                             ┃
+Check: W projected into N coarse-space: 6.3326e-18                             ┃
+current residuum: 3.1739e-05                                                   ┃
+Check: Error of substructure equilibrium: 6.077e-15                            ┃
+Check: r projected into N coarse-space: 9.3179e-09                             ┃
+Check: W projected into N coarse-space: 2.2087e-18                             ┃
+current residuum: 9.7111e-06                                                   ┃
+Check: Error of substructure equilibrium: 6.0772e-15                           ┃
+Check: r projected into N coarse-space: 2.5217e-09                             ┃
+Check: W projected into N coarse-space: 5.7882e-19                             ┃
+current residuum: 2.4653e-06                                                   ┃
+Check: Error of substructure equilibrium: 6.0778e-15                           ┃
+Check: r projected into N coarse-space: 3.8422e-10                             ┃
+Check: W projected into N coarse-space: 3.1784e-19                             ┃
+current residuum: 4.1241e-07                                                   ┃
+Check: Error of substructure equilibrium: 6.0783e-15                           ┃
+Check: r projected into N coarse-space: 9.5827e-11                             ┃
+Check: W projected into N coarse-space: 9.0272e-20                             ┃
+current residuum: 1.0967e-07                                                   ┃
+Check: Error of substructure equilibrium: 6.0769e-15                           ┃
+Check: r projected into N coarse-space: 3.0236e-11                             ┃
+Check: W projected into N coarse-space: 2.7177e-20                             ┃
+current residuum: 2.9169e-08                                                   ┃
+Check: Error of substructure equilibrium: 6.0773e-15                           ┃
+Check: r projected into N coarse-space: 6.5829e-12                             ┃
+Check: W projected into N coarse-space: 1.9817e-20                             ┃
+current residuum: 6.8444e-09                                                   ┃
+Check: Error of substructure equilibrium: 6.0781e-15                           ┃
+Check: r projected into N coarse-space: 9.8191e-13                             ┃
+Check: W projected into N coarse-space: 4.0874e-21                             ┃
+current residuum: 8.8384e-10                                                   ┃
+Residual = 8.8384e-10                                                          ┃
+after 11 FETI-AS iterations with 4  12  16   9  15  14   7  15  13   9   7 search directions
+Elapsed time is 1.7115 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.047969 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.041214 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.34963 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 1.0099 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 10.6802 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 4.8594 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 1.2801 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.12998 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 2.9174e-15                           ┃
+Elapsed time is 0.043397 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 0.0015637                              ┃
+Check: W projected into N coarse-space: 9.2347e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 2.916e-15                            ┃
+Check: r projected into N coarse-space: 0.0011439                              ┃
+Check: W projected into N coarse-space: 8.1367e-16                             ┃
+current residuum: 0.063241                                                     ┃
+Check: Error of substructure equilibrium: 2.918e-15                            ┃
+Check: r projected into N coarse-space: 0.00068583                             ┃
+Check: W projected into N coarse-space: 1.4028e-15                             ┃
+current residuum: 0.037865                                                     ┃
+Check: Error of substructure equilibrium: 2.9197e-15                           ┃
+Check: r projected into N coarse-space: 0.00065142                             ┃
+Check: W projected into N coarse-space: 2.2514e-15                             ┃
+current residuum: 0.03376                                                      ┃
+Check: Error of substructure equilibrium: 2.9e-15                              ┃
+Check: r projected into N coarse-space: 0.00044607                             ┃
+Check: W projected into N coarse-space: 6.138e-16                              ┃
+current residuum: 0.02102                                                      ┃
+Check: Error of substructure equilibrium: 2.8984e-15                           ┃
+Check: r projected into N coarse-space: 0.00032506                             ┃
+Check: W projected into N coarse-space: 2.7747e-15                             ┃
+current residuum: 0.028748                                                     ┃
+Check: Error of substructure equilibrium: 2.8943e-15                           ┃
+Check: r projected into N coarse-space: 0.00017759                             ┃
+Check: W projected into N coarse-space: 1.1763e-15                             ┃
+current residuum: 0.012565                                                     ┃
+Check: Error of substructure equilibrium: 2.8985e-15                           ┃
+Check: r projected into N coarse-space: 2.4351e-05                             ┃
+Check: W projected into N coarse-space: 1.3438e-15                             ┃
+current residuum: 0.0033809                                                    ┃
+Check: Error of substructure equilibrium: 2.901e-15                            ┃
+Check: r projected into N coarse-space: 1.5564e-05                             ┃
+Check: W projected into N coarse-space: 2.3408e-16                             ┃
+current residuum: 0.0012126                                                    ┃
+Check: Error of substructure equilibrium: 2.9054e-15                           ┃
+Check: r projected into N coarse-space: 2.9015e-06                             ┃
+Check: W projected into N coarse-space: 1.8745e-17                             ┃
+current residuum: 0.00027679                                                   ┃
+Check: Error of substructure equilibrium: 2.9045e-15                           ┃
+Check: r projected into N coarse-space: 5.7614e-07                             ┃
+Check: W projected into N coarse-space: 1.3111e-18                             ┃
+current residuum: 2.8861e-05                                                   ┃
+Check: Error of substructure equilibrium: 2.9052e-15                           ┃
+Check: r projected into N coarse-space: 1.0746e-07                             ┃
+Check: W projected into N coarse-space: 1.1949e-18                             ┃
+current residuum: 1.2012e-05                                                   ┃
+Check: Error of substructure equilibrium: 2.9032e-15                           ┃
+Check: r projected into N coarse-space: 1.9283e-08                             ┃
+Check: W projected into N coarse-space: 4.824e-20                              ┃
+current residuum: 1.1337e-06                                                   ┃
+Check: Error of substructure equilibrium: 2.9044e-15                           ┃
+Check: r projected into N coarse-space: 9.1172e-10                             ┃
+Check: W projected into N coarse-space: 6.8995e-21                             ┃
+current residuum: 1.2109e-07                                                   ┃
+Residual = 1.2109e-07                                                          ┃
+after 13 FETI-AS iterations with 17  17  17  17  17  17  15  17  16   5   4   4   1 search directions
+Elapsed time is 1.6718 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.030515 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.025936 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.1624 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.49582 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.4588 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.391 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.54883 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.063313 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.9865e-15                           ┃
+Elapsed time is 0.015736 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.278e-17                              ┃
+Check: W projected into N coarse-space: 7.5062e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 3.9264e-15                           ┃
+Check: r projected into N coarse-space: 6.1246e-17                             ┃
+Check: W projected into N coarse-space: 8.792e-17                              ┃
+current residuum: 0.0015353                                                    ┃
+Check: Error of substructure equilibrium: 3.9208e-15                           ┃
+Check: r projected into N coarse-space: 6.1216e-17                             ┃
+Check: W projected into N coarse-space: 7.1135e-17                             ┃
+current residuum: 0.0015532                                                    ┃
+Check: Error of substructure equilibrium: 3.9219e-15                           ┃
+Check: r projected into N coarse-space: 6.1208e-17                             ┃
+Check: W projected into N coarse-space: 1.2794e-16                             ┃
+current residuum: 0.0005092                                                    ┃
+Check: Error of substructure equilibrium: 3.9202e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 5.5339e-17                             ┃
+current residuum: 0.00010845                                                   ┃
+Check: Error of substructure equilibrium: 3.9219e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 1.1649e-17                             ┃
+current residuum: 4.3986e-05                                                   ┃
+Check: Error of substructure equilibrium: 3.922e-15                            ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 2.0865e-18                             ┃
+current residuum: 1.0047e-05                                                   ┃
+Check: Error of substructure equilibrium: 3.9231e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 3.0187e-19                             ┃
+current residuum: 2.0319e-06                                                   ┃
+Check: Error of substructure equilibrium: 3.9208e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 6.5445e-20                             ┃
+current residuum: 3.1534e-07                                                   ┃
+Residual = 3.1534e-07                                                          ┃
+after 8 FETI-AS iterations with 3  15  16   9  14  11  12   9 search directions┃
+Elapsed time is 0.4009 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011067 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011314 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16522 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.49275 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.4631 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.4162 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.48331 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.063471 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.5377e-15                           ┃
+Elapsed time is 0.01593 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 2.6525e-16                             ┃
+Check: W projected into N coarse-space: 9.0122e-14                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Check: Error of substructure equilibrium: 3.8871e-15                           ┃
+Check: r projected into N coarse-space: 2.1904e-16                             ┃
+Check: W projected into N coarse-space: 2.4675e-13                             ┃
+current residuum: 0.4359                                                       ┃
+Check: Error of substructure equilibrium: 2.2282e-15                           ┃
+Check: r projected into N coarse-space: 1.3116e-16                             ┃
+Check: W projected into N coarse-space: 1.3445e-13                             ┃
+current residuum: 0.28541                                                      ┃
+Check: Error of substructure equilibrium: 1.884e-15                            ┃
+Check: r projected into N coarse-space: 1.1108e-16                             ┃
+Check: W projected into N coarse-space: 2.5681e-14                             ┃
+current residuum: 0.11105                                                      ┃
+Check: Error of substructure equilibrium: 1.9021e-15                           ┃
+Check: r projected into N coarse-space: 1.0834e-16                             ┃
+Check: W projected into N coarse-space: 1.3836e-14                             ┃
+current residuum: 0.038206                                                     ┃
+Check: Error of substructure equilibrium: 1.916e-15                            ┃
+Check: r projected into N coarse-space: 1.0691e-16                             ┃
+Check: W projected into N coarse-space: 1.2455e-14                             ┃
+current residuum: 0.021909                                                     ┃
+Check: Error of substructure equilibrium: 1.8537e-15                           ┃
+Check: r projected into N coarse-space: 1.0663e-16                             ┃
+Check: W projected into N coarse-space: 1.2782e-13                             ┃
+current residuum: 0.010874                                                     ┃
+Check: Error of substructure equilibrium: 1.8177e-15                           ┃
+Check: r projected into N coarse-space: 1.0648e-16                             ┃
+Check: W projected into N coarse-space: 1.1967e-14                             ┃
+current residuum: 0.0041563                                                    ┃
+Check: Error of substructure equilibrium: 1.8134e-15                           ┃
+Check: r projected into N coarse-space: 1.0644e-16                             ┃
+Check: W projected into N coarse-space: 1.8262e-15                             ┃
+current residuum: 0.0013778                                                    ┃
+Check: Error of substructure equilibrium: 1.8283e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 4.0483e-16                             ┃
+current residuum: 0.0007994                                                    ┃
+Check: Error of substructure equilibrium: 1.829e-15                            ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 2.6123e-16                             ┃
+current residuum: 0.00042659                                                   ┃
+Check: Error of substructure equilibrium: 1.8299e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 8.7757e-17                             ┃
+current residuum: 0.00012501                                                   ┃
+Check: Error of substructure equilibrium: 1.8285e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 1.0797e-16                             ┃
+current residuum: 5.6152e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.8273e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 8.0081e-18                             ┃
+current residuum: 9.7183e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.829e-15                            ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 2.3028e-18                             ┃
+current residuum: 2.4763e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.8296e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 9.88e-20                               ┃
+current residuum: 2.5058e-07                                                   ┃
+Residual = 2.5058e-07                                                          ┃
+after 15 FETI-AS iterations with 17  17  17  17  16  17  17  17  17  16  16  15   7  10   3 search directions
+Elapsed time is 0.73853 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.01076 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.010539 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16893 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.46662 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.4325 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.3655 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.52891 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.064102 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.9865e-15                           ┃
+Elapsed time is 0.015512 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 6.278e-17                              ┃
+Check: W projected into N coarse-space: 7.5062e-16                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+tau has been determined as:3.3548 through a contraction factor of 0.999        ┃
+Check: Error of substructure equilibrium: 3.9264e-15                           ┃
+Check: r projected into N coarse-space: 6.1246e-17                             ┃
+Check: W projected into N coarse-space: 8.792e-17                              ┃
+current residuum: 0.0015353                                                    ┃
+Check: Error of substructure equilibrium: 3.9208e-15                           ┃
+Check: r projected into N coarse-space: 6.1216e-17                             ┃
+Check: W projected into N coarse-space: 7.1135e-17                             ┃
+current residuum: 0.0015532                                                    ┃
+Check: Error of substructure equilibrium: 3.9219e-15                           ┃
+Check: r projected into N coarse-space: 6.1208e-17                             ┃
+Check: W projected into N coarse-space: 1.2794e-16                             ┃
+current residuum: 0.0005092                                                    ┃
+Check: Error of substructure equilibrium: 3.9202e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 5.5339e-17                             ┃
+current residuum: 0.00010845                                                   ┃
+Check: Error of substructure equilibrium: 3.9219e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 1.1649e-17                             ┃
+current residuum: 4.3986e-05                                                   ┃
+Check: Error of substructure equilibrium: 3.922e-15                            ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 2.0865e-18                             ┃
+current residuum: 1.0047e-05                                                   ┃
+Check: Error of substructure equilibrium: 3.9231e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 3.0187e-19                             ┃
+current residuum: 2.0319e-06                                                   ┃
+Check: Error of substructure equilibrium: 3.9208e-15                           ┃
+Check: r projected into N coarse-space: 6.1207e-17                             ┃
+Check: W projected into N coarse-space: 6.5445e-20                             ┃
+current residuum: 3.1534e-07                                                   ┃
+Residual = 3.1534e-07                                                          ┃
+after 8 FETI-AS iterations with 3  15  16   9  14  11  12   9 search directions┃
+Elapsed time is 0.4305 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.012102 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.012354 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.15986 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.47916 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 4.3538 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Elapsed time is 2.3095 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: none                                                                  ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.47934 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI-AS SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.063932 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.5377e-15                           ┃
+Elapsed time is 0.016544 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+Check: r projected into N coarse-space: 2.6525e-16                             ┃
+Check: W projected into N coarse-space: 9.0122e-14                             ┃
+START FETI-AS ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+tau has been determined as:3.0496 through a contraction factor of 0.999        ┃
+Check: Error of substructure equilibrium: 3.8871e-15                           ┃
+Check: r projected into N coarse-space: 2.1904e-16                             ┃
+Check: W projected into N coarse-space: 2.4675e-13                             ┃
+current residuum: 0.4359                                                       ┃
+Check: Error of substructure equilibrium: 2.2282e-15                           ┃
+Check: r projected into N coarse-space: 1.3116e-16                             ┃
+Check: W projected into N coarse-space: 1.3445e-13                             ┃
+current residuum: 0.28541                                                      ┃
+Check: Error of substructure equilibrium: 1.884e-15                            ┃
+Check: r projected into N coarse-space: 1.1108e-16                             ┃
+Check: W projected into N coarse-space: 2.5681e-14                             ┃
+current residuum: 0.11105                                                      ┃
+Check: Error of substructure equilibrium: 1.9021e-15                           ┃
+Check: r projected into N coarse-space: 1.0834e-16                             ┃
+Check: W projected into N coarse-space: 1.3836e-14                             ┃
+current residuum: 0.038206                                                     ┃
+Check: Error of substructure equilibrium: 1.916e-15                            ┃
+Check: r projected into N coarse-space: 1.0691e-16                             ┃
+Check: W projected into N coarse-space: 1.2455e-14                             ┃
+current residuum: 0.021909                                                     ┃
+Check: Error of substructure equilibrium: 1.8537e-15                           ┃
+Check: r projected into N coarse-space: 1.0663e-16                             ┃
+Check: W projected into N coarse-space: 1.2782e-13                             ┃
+current residuum: 0.010874                                                     ┃
+Check: Error of substructure equilibrium: 1.8177e-15                           ┃
+Check: r projected into N coarse-space: 1.0648e-16                             ┃
+Check: W projected into N coarse-space: 1.1967e-14                             ┃
+current residuum: 0.0041563                                                    ┃
+Check: Error of substructure equilibrium: 1.8134e-15                           ┃
+Check: r projected into N coarse-space: 1.0644e-16                             ┃
+Check: W projected into N coarse-space: 1.8262e-15                             ┃
+current residuum: 0.0013778                                                    ┃
+Check: Error of substructure equilibrium: 1.8283e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 4.0483e-16                             ┃
+current residuum: 0.0007994                                                    ┃
+Check: Error of substructure equilibrium: 1.829e-15                            ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 2.6123e-16                             ┃
+current residuum: 0.00042659                                                   ┃
+Check: Error of substructure equilibrium: 1.8299e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 8.7757e-17                             ┃
+current residuum: 0.00012501                                                   ┃
+Check: Error of substructure equilibrium: 1.8285e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 1.0797e-16                             ┃
+current residuum: 5.6152e-05                                                   ┃
+Check: Error of substructure equilibrium: 1.8273e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 8.0081e-18                             ┃
+current residuum: 9.7183e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.829e-15                            ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 2.3028e-18                             ┃
+current residuum: 2.4763e-06                                                   ┃
+Check: Error of substructure equilibrium: 1.8296e-15                           ┃
+Check: r projected into N coarse-space: 1.0643e-16                             ┃
+Check: W projected into N coarse-space: 9.88e-20                               ┃
+current residuum: 2.5058e-07                                                   ┃
+Residual = 2.5058e-07                                                          ┃
+after 15 FETI-AS iterations with 17  17  17  17  16  17  17  17  17  16  16  15   7  10   3 search directions
+Elapsed time is 0.76489 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.012186 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.012515 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 

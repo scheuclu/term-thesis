@@ -1,0 +1,64 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage{amsmath}
+\input{\mainpath/customcommands}
+
+\input{\mainpath/colordefinitions}
+
+\begin{document}
+
+\begin{tikzpicture}
+ \begin{groupplot}[
+group style = {group size = 2 by 1, horizontal sep=2.0cm, vertical sep=1.0cm},
+height = 5cm,
+width = 8cm,
+]
+
+\nextgroupplot[ymode=log, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={residuum}, xlabel={$\# iteration$}, xlabel={$\# iteration$}, cycle list name=linelist]
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aeye_feti1_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aeye_feti2g_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aeye_fetis_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aeye_fetias_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aeye_fetifas_tau1000.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{stiff}}{E_{soft}}=1000$, no scaling};
+
+
+
+
+\nextgroupplot[ymode=log, enlargelimits=0.15, legend style={at={(-0.1,-0.35)}, anchor=north,legend columns=-1}, xlabel={$\# iteration$}, cycle list name=linelist]
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aprecond_feti1_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aprecond_feti2g_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aprecond_fetis_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aprecond_fetias_tau1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/res_vstripes_Aprecond_fetifas_tau1000.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{stiff}}{E_{soft}}=1000$, K-scaling};
+
+
+
+\legend{FETI-1,FETI-2,FETI-S,FETI-AS,FETI-FAS}
+
+
+\end{groupplot}
+\end{tikzpicture}
+
+\end{document}

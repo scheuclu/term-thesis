@@ -1,0 +1,68 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+\begin{tikzpicture}
+\begin{axis}[ ybar, title={irregular partitioning}, enlargelimits=0.15, legend style={at={(0.5,-0.25)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$\frac{E_{stiff}}{E_{soft}}$}, symbolic x coords={1,10,100,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/chaco_quads_feti1.txt};
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/chaco_quads_feti2g.txt};
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/chaco_quads_fetis.txt};
+%%\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{inclusion}}{E_{lattice}}=0.9$~~~};
+\legend{FETI-1,FETI-2(Geneo),FETI-S} 
+\end{axis} 
+\end{tikzpicture}
+\hspace{0.5cm}
+
+\begin{tikzpicture}
+\begin{axis}[ ybar, title={regular partitioning}, enlargelimits=0.15, legend style={at={(0.5,-0.25)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$\frac{E_{stiff}}{E_{soft}}$}, symbolic x coords={1,10,100,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/regular_quads_feti1.txt};
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/regular_quads_feti2g.txt};
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/regular_quads_fetis.txt};
+%%\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{inclusion}}{E_{lattice}}=0.9$~~~};
+\legend{FETI-1,FETI-2(Geneo),FETI-S} 
+\end{axis} 
+\end{tikzpicture}
+\hspace{0.5cm}
+
+
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/chaco_quads_feti1.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/chaco_quads_feti2g.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/chaco_quads_fetis.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/chaco_tris_feti1.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/chaco_tris_feti2g.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/chaco_tris_fetis.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/regular_quads_feti1.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/regular_quads_feti2g.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/regular_quads_fetis.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/regular_tris_feti1.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/regular_tris_feti2g.txt
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/regular_tris_fetis.txt
+
+
+
+%
+%\begin{tikzpicture}
+%\begin{axis}[ ybar, title={plane-stress}, enlargelimits=0.15, legend style={at={(0.5,-0.2)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$\frac{1}{2}-\nu$}, symbolic x coords={0.1, 0.01, 0.001, 0.0001}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_feti1.txt};
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_feti2g.txt};
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Incompresibility/data/planestress/numiter_fetis.txt};
+%%\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{inclusion}}{E_{lattice}}=0.9$~~~};
+%\legend{FETI-1,FETI-2(Geneo),FETI-S} 
+%\end{axis} 
+%\end{tikzpicture}
+
+
+\end{document}

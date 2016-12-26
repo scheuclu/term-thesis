@@ -1,0 +1,508 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes created                                                              ┃
+324 stiffness elements created                                                 ┃
+19 dirichlet elements created                                                  ┃
+324 neumann elements created                                                   ┃
+wrote mesh to file: ./checkerboard_chaco_feti1.dis                             ┃
+Elapsed time is 1.3871 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.07476 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+Elapsed time is 0.16282 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 1.5921 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Elapsed time is 0.92182 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  0  3  3  3  3  3  0
+Elapsed time is 0.1433 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.0168 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 9.0543e-16                           ┃
+Elapsed time is 0.024774 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.9524e-09                                                          ┃
+after 30 iterations                                                            ┃
+Elapsed time is 0.14522 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.006647 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.008399 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.034512 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.040667 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.041626 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.038961 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.038672 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.04151 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.042226 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.040754 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.040968 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.045931 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.050989 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.049912 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.050495 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.052549 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.050234 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.050299 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+56 nodes written                                                               ┃
+41 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.097708 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+55 nodes written                                                               ┃
+40 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.094126 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+56 nodes written                                                               ┃
+41 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.09631 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+55 nodes written                                                               ┃
+40 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.10706 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+55 nodes written                                                               ┃
+40 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.10095 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+56 nodes written                                                               ┃
+41 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.10937 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+55 nodes written                                                               ┃
+40 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.11131 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+56 nodes written                                                               ┃
+41 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.098511 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.084615 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.26414 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+361 nodes written                                                              ┃
+324 elements written                                                           ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 0.29363 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./checkerboard_chaco.msh                                          ┃
+output-file: ./output/checkerboard_chaco_feti1.vtk.1                           ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 18-Aug-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 

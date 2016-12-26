@@ -1,0 +1,73 @@
+%TODO put all this in AMdissertation and create option 'additions'
+\documentclass[hidelinks, 12pt, a4paper, fleqn, openright,final]{AMdissertation}
+
+ 
+%\usepackage{amsmath, amssymb, units}
+\usepackage{cleveref}
+\setkeys{Gm}{showframe=false} % Draw frame around every page 
+%%% DEFINITION FOR CLEVERREF
+\crefname{equation}{}{}
+\crefname{figure}{Figure}{Figures}
+\crefname{table}{Table}{Tables}
+\crefname{appendix}{Appendix}{Appendices}
+\crefname{chapter}{Chapter}{Chapters}
+\crefname{section}{Section}{Sections}
+\crefname{subsection}{Subsection}{Subsections}
+\crefname{subsubsection}{Subsection}{Subsections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{AMtikz}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{tocloft} % For the vspace of the table of contents
+
+\usepackage{currfile} % To get the file name with the \currfilename command (useful for the externalized pgfplots)
+
+\usepackage{import}
+%\usepackage{graphicx}
+\usepackage{xspace}
+
+\usepackage{booktabs}
+
+\input{acronyms}
+
+\usepackage{enumitem}
+%\usepackage{caption, subcaption} % For subfigures TODO: subfigures-package required somewhere\ldots why?
+%\captionsetup[sub]{format=plain,skip=1ex,position=top,labelfont={bf}}
+ %% Format the subcaption design
+
+\input{preamb_tikz}
+
+%\if11
+%\chairman{\ProfRixen}
+%\supervisor{\ProfUlbrich \and Prof. Carlo L. Bottasso, Ph.d.}
+%\else
+%\chairman{\ }
+%\supervisor{\ProfUlbrich \and ?}
+%\fi
+
+
+
+\usepackage{multicol} % Use two columned stuff (needed e.g. for the glossaries
+
+%% HAck to enable copyright (from: http://tex.stackexchange.com/questions/29895/how-to-get-copyright-when-mixing-t1-fonts-and-fontspec)
+%\renewcommand*\copyright{{\usefont{EU1}{lmr}{m}{n}\textcopyright}}
+
+%% Hack to enable nobreakspace (from: http://tex.stackexchange.com/questions/29895/how-to-get-copyright-when-mixing-t1-fonts-and-fontspec)
+\DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ } 
+
+% Avoid draft mode in hyperref
+%\hypersetup{final}
+
+
+%%%%%%%% SETUP FOR DOCUMENT %%%%%%%%%%%%%%%%%%%%
+\author{Kilian Bartimäus Wolfgang Grundl}
+\title{Validation of a Pushbelt Variator Model --}
+\subtitle{Insights into a non-smooth Multibody System}
+\chairman{\ProfRixen}
+\supervisor{\ProfUlbrich \and Prof. Carlo L. Bottasso, Ph.d.}
+\date{20. Mai 2015}{\hspace{2cm}}
+%\dedication{To My Family}
+
+%%%%%%%% END SETUP

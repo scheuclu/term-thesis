@@ -1,0 +1,306 @@
+%%
+%% This is file `AMcolor.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% AMcolor.dtx  (with options: `package')
+%% --------------------------------------------------------------------------------
+%% AMcolor <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for coloration
+%% E-mail: romain.pennec@tum.de
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% --------------------------------------------------------------------------------
+%% 
+%% /!\      Modifications made in this file will be lost!       /!\ 
+\RequirePackage{AMgit}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMcolor}[\AMinsertGitDate{} \AMinsertGitVersion{} AM color]
+\ClassInfo{AMcolor}{Document class of the Institute of Applied Mechanics}
+\RequirePackage{ifthen}
+\RequirePackage{kvoptions}
+\RequirePackage{pgfkeys}
+\RequirePackage{etoolbox}
+\DeclareBoolOption{nocolor}
+\DeclareBoolOption{setup}
+\DeclareBoolOption{dark}
+\DeclareStringOption[TUMOrange]{link}
+\DeclareStringOption[TUMOrange]{linkborder}
+\DeclareStringOption[black]{anchor}
+\DeclareStringOption[TUMGreen]{cite}
+\DeclareStringOption[TUMGreen]{citeborder}
+\DeclareStringOption[TUMDiag7]{file}
+\DeclareStringOption[TUMDiag7]{fileborder}
+\DeclareStringOption[TUMDiag1]{url}
+\DeclareStringOption[TUMDiag1]{urlborder}
+\DeclareStringOption[TUMOrange]{menuborder}
+\DeclareStringOption[TUMBlue]{captionlabel}
+\DeclareStringOption[black]{captiontext}
+\DeclareStringOption[TUMBlue]{part}
+\DeclareStringOption[TUMBlue]{chapter}
+\DeclareStringOption[TUMBlue]{section}
+\DeclareStringOption[TUMBlue]{subsection}
+\DeclareStringOption[TUMBlue]{subsubsection}
+\DeclareStringOption[TUMBlue]{paragraph}
+\DeclareStringOption[dark]{abstract}
+\DeclareDefaultOption{\PassOptionsToPackage{\CurrentOption}{xcolor}}
+\DeclareLocalOptions{setup,link,linkborder,anchor,cite,citeborder}
+\ProcessKeyvalOptions*
+\providecommand{\AMset}[1]{\pgfkeys{/AM/.cd,#1}}
+\newcommand{\AMsetColor}[1]{\pgfkeys{/AM/color/.cd,setup,#1}}
+\pgfkeys{
+  /AM/color/.is family,/AM/color,
+  link/.code = {\def\AMcolor@link{#1}\def\AMcolor@linkborder{#1}\AM@exec@hypersetup},
+  cite/.code = {\def\AMcolor@cite{#1}\def\AMcolor@citeborder{#1}\AM@exec@hypersetup},
+  url/.code = {\def\AMcolor@url{#1}\def\AMcolor@urlborder{#1}\AM@exec@hypersetup},
+  file/.code = {\def\AMcolor@file{#1}\def\AMcolor@fileborder{#1}\AM@exec@hypersetup},
+  caption label/.estore in = \AMcolor@captionlabel,
+  caption label/.append code = {\AM@exec@captionsetup},
+  caption text/.estore in = \AMcolor@captiontext,
+  caption text/.append code = {\AM@exec@captionsetup},
+  abstract/.estore in = \AMcolor@abstract,
+  abstract/.append code = {\AMcolor@exec@abstractsetup},
+  part/.estore in = \AMcolor@part,
+  chapter/.estore in = \AMcolor@part,
+  section/.estore in = \AMcolor@section,
+  subsection/.estore in = \AMcolor@subsection,
+  subsubsection/.estore in = \AMcolor@subsubsection,
+  paragraph/.estore in = \AMcolor@paragraph,
+  titles/.style = {chapter=#1,section=#1,subsection=#1,subsubsection=#1,paragraph=#1},
+  setup/.is if = AMcolor@setup,
+  dark/.is if = AMcolor@dark,
+  more tum colors/.code = {\AMcolor@define@more@colors},
+}
+\ifAMcolor@nocolor%
+  \PassOptionsToPackage{monochrome}{xcolor}
+\fi
+\RequirePackage{xcolor}
+\definecolorset{RGB}{TUM}{}{%
+Blue,0,101,189;%
+DarkBlue,0,82,147;%
+Orange,227,114,34;%
+Green,162,173,0;%
+Ivory,218,215,203;%
+Gray1,88,88,90;%
+Gray2,156,157,159;%
+Gray3,217,218,219;%
+Diag1,105,8,90;%
+Diag2,15,27,95;%
+Diag3,0,51,89;%
+Diag4,0,82,147;%
+Diag5,0,115,207;%
+Diag6,100,160,200;%
+Diag7,152,198,234;%
+Diag8,0,119,138;%
+Diag9,0,124,48;%
+Diag10,103,154,29;%
+Diag13,255,220,0;%
+Diag14,249,186,0;%
+Diag16,214,76,19;%
+Diag17,196,7,27;%
+Diag18,156,13,22;%
+DarkGray,88,88,90;%
+Gray,156,157,159;%
+LightGray,217,218,219%
+}
+\definecolorset{RGB}{TUM}{P}{%
+  Yellow,255,180,000;%
+  Orange,255,128,000;%
+  Red,229,052,024;%
+  DarkRed,202,033,063;%
+  Blue,000,153,255;%
+  LightBlue,065,190,255;%
+  Green,145,172,107;%
+  LightGreen,181,202,130%
+}
+\definecolorset{cmyk}{TUM}{}{%
+Blue,1,.43,0,0;%
+DarkBlue,1,.54,.04,.19;%
+Orange,0,0.65,0.95,0;%
+Green,0.35,0,1,0.2;%
+Ivory,0.03,0.04,0.14,0.08;%
+Gray1,0,0,0,0.8;%
+Gray2,0,0,0,0.5;%
+Gray3,0,0,0,0.2; %
+Diag1,0.5,1.0,0.0,0.4;%
+Diag2,1.0,1.0,0.0,0.4;%
+Diag3,1,.57,.12,.7;%
+Diag4,1,.54,.04,.19;%
+Diag5,.9,.48,0,0;%
+Diag6,.65,.19,.01,.04;%
+Diag7,.42,.09,0,0;%
+Diag8,1.0,0.03,0.3,0.3;%
+Diag9,1.0,0.0,1.0,0.2;%
+Diag10,0.6,0.0,1.0,0.2;%
+Diag13,0.0,0.1,1.0,0.0;%
+Diag14,0.0,0.3,1.0,0.0;%
+Diag16,0.0,0.8,1.0,0.1;%
+Diag17,0.1,1.0,1.0,0.1;%
+Diag18,0.0,1.0,1.0,0.4;%
+DarkGray,0,0,0,0.8;%
+Gray,0,0,0,0.5;%
+LightGray,0,0,0,0.2%
+}
+\colorlet{AMBlue}{TUMBlue}
+\colorlet{TUMBlue1}{TUMDiag3}
+\colorlet{TUMBlue2}{TUMDiag4}
+\colorlet{TUMBlue3}{TUMDiag5}
+\colorlet{TUMBlue4}{TUMDiag6}
+\colorlet{TUMBlue5}{TUMDiag7}
+\colorlet{TUMDiag11}{TUMGreen}
+\colorlet{TUMDiag12}{TUMIvory}
+\colorlet{TUMDiag15}{TUMOrange}
+\colorlet{TUMgrey}{TUMGray}
+\colorlet{TUMdarkgrey}{TUMDarkGray}
+\colorlet{TUMbrightgrey}{TUMLightGray}
+\colorlet{TUMblue}{TUMBlue}
+\colorlet{TUMhighlightblue}{TUMDiag7}
+\colorlet{TUMlightblue}{TUMDiag6}
+\colorlet{TUMred}{red}
+\colorlet{TUMdarkblue}{TUMDarkBlue}
+\colorlet{TUMblack}{TUMDiag3}
+\colorlet{TUMgreen}{TUMGreen}
+\colorlet{TUMkhaki}{TUMIvory}
+\colorlet{TUMorange}{TUMOrange}
+\colorlet{TUMbluegreen}{TUMDiag8}
+\colorlet{TUMdarkgreen}{TUMDiag9}
+\colorlet{TUMbrightgreen}{TUMDiag10}
+\colorlet{TUMyellow}{TUMDiag13}
+\colorlet{TUMdarkyellow}{TUMDiag14}
+\colorlet{TUMbrightred}{TUMDiag16}
+\colorlet{TUMred}{TUMDiag17}
+\colorlet{TUMdarkred}{TUMDiag18}
+\newcommand{\AMcolor@define@more@colors}{%
+\definecolorset{RGB}{TUM}{P}{%
+Yellow,255,180,000;%
+Orange,255,128,000;%
+Red,229,052,024;%
+DarkRed,202,033,063;%
+Blue,000,153,255;%
+LightBlue,065,190,255;%
+Green,145,172,107;%
+LightGreen,181,202,130%
+}
+\definecolorset{RGB}{TUM}{}{%
+DarkGray,088,088,090;%
+MidGray,156,157,159;%
+LightGray,217,218,219;%
+Purple,105,008,090;%
+DarkPurple,015,027,095;%
+Blue1,000,051,089;%
+Blue2,000,082,147;%
+Blue3,000,115,207;%
+Blue4,100,160,200;%
+Blue5,152,198,234;%
+Green1,000,119,138;%
+Green2,000,124,048;%
+Green3,103,154,029;%
+Green4,162,173,000;%
+Yellow,255,220,000;%
+DarkYellow,249,186,000;%
+DarkOrange,214,076,019;%
+Red,196,007,027;%
+DarkRed,156,013,022%
+}
+}
+\newcommand{\AM@exec@darkcolorsetup}{%
+  \ifAMcolor@dark
+    \colorlet{TUMBlue}{TUMDarkBlue}
+    \colorlet{TUMGreen}{TUMdarkgreen}
+    \colorlet{TUMOrange}{TUMDiag16}
+  \fi
+}
+\RequirePackage{afterpackage}
+\newcommand{\AM@exec@hypersetup}{
+  \@ifpackageloaded{hyperref}{
+    \hypersetup{%
+      linkcolor=\AMcolor@link,%
+      linkbordercolor=\AMcolor@linkborder,%
+      anchorcolor=\AMcolor@anchor,%
+      citecolor=\AMcolor@cite,%
+      citebordercolor=\AMcolor@citeborder,%
+      filecolor=\AMcolor@file,%
+      filebordercolor=\AMcolor@fileborder,%
+      urlcolor=\AMcolor@url,%
+      urlbordercolor=\AMcolor@urlborder,%
+      menubordercolor=\AMcolor@menuborder%
+    }%
+  }{}
+}
+\newcommand{\AMcolor@after@hyperref}{%
+  \AfterPackage{hyperref}{\AM@exec@hypersetup}
+}
+\newcommand{\AM@exec@captionsetup}{%
+  \@ifpackageloaded{caption}{
+    \captionsetup{%
+      textfont+={color={\AMcolor@captiontext}},
+      labelfont+={color={\AMcolor@captionlabel}}
+    }
+  }{}
+}
+\newcommand{\AMcolor@after@caption}{%
+  \AfterPackage{caption}{\AM@exec@captionsetup}
+}
+\newcommand{\AM@exec@subcaptionsetup}{%
+  \@ifpackageloaded{subcaption}{
+    \captionsetup[sub]{labelsep=quad}%
+  }{}
+}
+\newcommand{\AMcolor@after@subcaption}{%
+  \AfterPackage{subcaption}{\AM@exec@subcaptionsetup}
+}
+\newcommand{\AMcolor@exec@colortitlesecsetup}{%
+  \ifAMcolor@setup
+    \@ifpackageloaded{AMfont}{%
+      \pgfkeys{AM/font/setup titles}
+    }{%
+      \@ifclassloaded{beamer}{}{%
+        \RequirePackage{titlesec}
+        \titleformat{\chapter}[display]{\color{\AMcolor@chapter}\normalfont\huge\bfseries}%
+          {\chaptertitlename\ \thechapter}{20pt}{\Huge}%
+        \titleformat*{\section}{\color{\AMcolor@section}\normalfont\Large\bfseries}%
+        \titleformat*{\subsection}{\color{\AMcolor@subsection}\normalfont\large\bfseries}%
+        \titleformat*{\subsubsection}{\color{\AMcolor@subsubsection}\normalfont\normalsize\bfseries}%
+        \titleformat*{\paragraph}{\color{\AMcolor@paragraph}\normalfont\normalsize\bfseries}%
+      }
+    }
+  \fi
+}
+\newif\ifAMcolor@abstract@patched
+\AMcolor@abstract@patchedfalse
+\newcommand{\AMcolor@exec@abstractsetup}{%
+  \ifAMcolor@abstract@patched\relax\else
+    \patchcmd{\abstract}{\bfseries\abstractname}{\color{\AMcolor@abstract}\bfseries\abstractname}{}{}
+    \AMcolor@abstract@patchedtrue
+  \fi
+}
+\ifAMcolor@setup
+  \AMcolor@after@hyperref
+  \AMcolor@after@caption
+  \AMcolor@after@subcaption
+\fi
+\AtEndPreamble{\AMcolor@exec@colortitlesecsetup}
+\AtBeginDocument{\AM@exec@darkcolorsetup}
+%% 
+%% Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+%% Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+%% Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+%% Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Romain Pennec.
+%% 
+%% This work consists of the file  AMcolor.dtx
+%% and the derived files           AMcolor.ins,
+%%                                 AMcolor.pdf and
+%%                                 AMcolor.sty.
+%% 
+%%
+%% End of file `AMcolor.sty'.

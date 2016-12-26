@@ -1,0 +1,130 @@
+/!\
+/!\ Skeleton file for AM packages. Replace the ??? by the package name.
+/!\ They are indicated with an arrow: "<----"
+/!\
+/!\ Delete the lines with the symbole "/!\"
+/!\
+/!\
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AM??? <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for ???       <----
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AM???.dtx                                  <----
+and the derived files           AM???.ins,                                 <----
+                                AM???.pdf and                              <----
+                                AM???.sty.                                 <----
+
+\endpostamble
+\usedir{tex/latex/AM/???}                                                  <----
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/???}                                               <----
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/???}                                                  <----
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{AM???}[\AMinsertGitDate{} \AMinsertGitVersion{} AM ???]     <----
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+% \title{The \textcolor{white}{AM???} package}                             <----
+% \maketitle
+% \tableofcontents
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{User guide}
+%
+%
+% /!\ Package description goes here.                                       <----
+%
+%
+%
+%
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+
+
+/!\ Package code goes here.                                                <----
+
+
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+% \Finale

@@ -1,0 +1,71 @@
+\definecolor{mycolor1}{rgb}{0.00000,0.39608,0.74118}%
+\definecolor{mycolor2}{rgb}{0.63529,0.67843,0.00000}%
+\definecolor{mycolor3}{rgb}{0.89020,0.44706,0.13333}%
+\definecolor{mycolor4}{rgb}{0.34510,0.34510,0.35294}%
+\definecolor{mycolor5}{rgb}{0.8549,0.8431,0.7961}%
+\definecolor{mycolor6}{rgb}{0.5961,0.7765,0.9176}%
+
+\pgfmathdeclarefunction{H31}{1}{\pgfmathparse{1/2-3/4*#1+1/4*#1^3}}
+\pgfmathdeclarefunction{H32}{2}{\pgfmathparse{#2/8-#2/8*#1-#2/8*#1^2+#2/8*#1^3}}
+\pgfmathdeclarefunction{H33}{1}{\pgfmathparse{1/2+3/4*#1-1/4*#1^3}}
+\pgfmathdeclarefunction{H34}{2}{\pgfmathparse{#2/8+#2/8*#1-#2/8*#1^2-#2/8*#1^3}}
+
+\pgfmathdeclarefunction{H51}{1}{\pgfmathparse{1/2-15/16*#1+5/8*#1^3-3/16*#1^5}}
+\pgfmathdeclarefunction{H52}{2}{\pgfmathparse{#2/32*(5-7*#1-6*#1^2+10*#1^3+#1^4-3*#1^5)}}
+\pgfmathdeclarefunction{H53}{2}{\pgfmathparse{#2^2/64*(1-#1-2*#1^2+2*#1^3+#1^4-#1^5)}}
+\pgfmathdeclarefunction{H54}{1}{\pgfmathparse{1/2+15/16*#1-5/8*#1^3+3/16*#1^5}}
+\pgfmathdeclarefunction{H55}{2}{\pgfmathparse{#2/32*(-5-7*#1+6*#1^2+10*#1^3-#1^4-3*#1^5)}}
+\pgfmathdeclarefunction{H56}{2}{\pgfmathparse{#2^2/64*(1+#1-2*#1^2-2*#1^3+#1^4+#1^5)}}
+
+
+
+
+\begin{tikzpicture}
+
+\pgfplotsset{every axis legend/.append style={
+at={(1,1)},
+anchor=north west}} 
+
+\begin{groupplot}[group style={group size=2 by 1, horizontal sep=3cm}, width=0.3\textwidth, height=3cm]
+
+\nextgroupplot[
+scale only axis,
+xmin=-1,
+xmax=1,
+xlabel={$x$},
+ymin=0,
+ymax=1,]
+
+\addplot[color=mycolor1,solid,line width=1pt,domain=-1:1] {H31(x)};
+\addlegendentry{$N_1$};
+\addplot[color=mycolor2,solid,line width=1pt,domain=-1:1] {H32(x,3)};
+\addlegendentry{$N_2$};
+\addplot[color=mycolor3,solid,line width=1pt,domain=-1:1] {H33(x)};
+\addlegendentry{$N_3$};
+\addplot[color=mycolor4,solid,line width=1pt,domain=-1:1] {H34(x,3)};
+\addlegendentry{$N_4$};
+
+\nextgroupplot[
+scale only axis,
+xmin=-1,
+xmax=1,
+xlabel={$x$},
+ymin=-1,
+ymax=1,]
+
+\addplot[color=mycolor1,solid,line width=1pt,domain=-1:1] {H51(x)};
+\addlegendentry{$N_1$};
+\addplot[color=mycolor2,solid,line width=1pt,domain=-1:1] {H52(x,3)};
+\addlegendentry{$N_2$};
+\addplot[color=mycolor3,solid,line width=1pt,domain=-1:1] {H53(x,3)};
+\addlegendentry{$N_3$};
+\addplot[color=mycolor4,solid,line width=1pt,domain=-1:1] {H54(x)};
+\addlegendentry{$N_4$};
+\addplot[color=mycolor5,solid,line width=1pt,domain=-1:1] {H55(x,3)};
+\addlegendentry{$N_5$};
+\addplot[color=mycolor6,solid,line width=1pt,domain=-1:1] {H56(x,3)};
+\addlegendentry{$N_6$};
+
+\end{groupplot}
+
+\end{tikzpicture}

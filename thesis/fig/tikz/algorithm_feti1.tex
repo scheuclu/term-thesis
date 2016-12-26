@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+%\assign{\nassitext{\df2}{text} $equation$  }
+\begin{struktogramm}(150,135)
+\def\df2{0.45}
+\assign{\nassitexttwolines{\df2}{(1) Calculate equilibrium solution with}{regards to rigid body modes} $\lagnvec_0=\scalemat\rmodespace\inv{(\tp{\rmodespace}\scalemat\rmodespace )}\evec$  }
+\assign{\nassitext{\df2}{(2) Projector to natural subspace} $\projn=\eyemat - \scalemat\rmodespace\inv{(\tp{\rmodespace}\scalemat\rmodespace)}\tp{\rmodespace}$  }
+\assign{\nassitext{\df2}{(3) Preconditioner} $\scaled{\locschur}=\sum_s{ \asmids{{\scaled{\locschur}}} }$  }
+\assign{\nassitext{\df2}{(4) Calculate residual(gap) in natural subspace} $\resvec_0=\tp{\projn}(\ifacedispvec-\locdualschur\lagnvec_0)$  }
+\assign{\nassitext{\df2}{(5) Calculate resulting forces (preconditioning)} $\dvec{z}=\scaled{\locschur}\resvec_0,$}
+\assign{\nassitext{\df2}{(6) Remove rigid body-components of forces} $\dvec{w}_0=\projn\dvec{z}_0$}
+\assign{\nassitext{\df2}{(7) Initialize} $\lagfvec_0=\dvec{0}, i=0$  }
+
+\while[8]{\nassitext{\df2}{(8) While not converged}  $\sqrt{ \tp{\resvec}_i\dvec{z}_i }>\epsilon$} %8 decribes the with of the while box
+\assign{\nassitext{\df2}{(9) Compute gap-change due to forces $\sdirnspace_i$  } $\sdirnspacecspace=\locdualschur\sdirnspace_i$} 
+%\assign{\nassitext{\df2}{Remove coarse space components of gap-change due to forces $\sdirnspace_i$}   $\sdirnspacecspace=\tp{\projc}\locdualschur\sdirnspace_i$}
+\assign{\nassitext{\df2}{(10) Auxiliary parameter}   $\delta_i=\tp{\sdirnspacecspace_i}\sdirnspace_i$}
+\assign{\nassitext{\df2}{(11) Auxiliary parameter}   $\gamma_i=\tp{\resvec}_i\sdirfspace_i$  }
+\assign{\nassitext{\df2}{(12) Step in the new direction}   $\lagfvec_{i+1}=\lagfvec_i+(\gamma_i/\delta_i)\sdirnspace_i $}
+\assign{\nassitext{\df2}{(13) Gap after force step}   $\resvec_{i+1}=\resvec_i-(\gamma_i/\delta_i)\tp{\projn}\sdirnspacecspace_i $}
+\assign{\nassitext{\df2}{(14) Calculate resulting forces (preconditioning)}   $\sdirfspace_{i+1}=\scaled{\locschur} \res_{i+1}$}
+\assign{\nassitext{\df2}{(15) Remove rigid body-components of forces}   $\sdirnspace_{i+1}=\projn\sdirfspace_{i+1}$}
+
+\while[8]{\nassitext{\df2}{(16) Loop over previous iterations}  $\text{for:~}0\leq j \leq i$}
+\assign{\nassitext{\df2}{(17) Compute factor}   $\phi_{i,j}=\tp{\sdirnspacecspace}_j \sdirnspace_{i+1}$}
+\assign{\nassitext{\df2}{(18) Orhorgonalize to direction j}   $\sdirnspace_{i+1} \gets \sdirnspace_{i+1}-(\phi_{i,j}/\delta_j)\sdirnspace_j$}
+\whileend
+
+\assign{\nassitext{\df2}{(19) Increase iteration counter}   $i \gets i+1$}
+\whileend
+\assign{\nassitext{\df2}{(20) Compute total interface forces}   $\lagvec=\lagnvec_0+\lagfvec_i$}
+\end{struktogramm}
+
+\end{document}

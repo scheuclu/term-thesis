@@ -1,0 +1,116 @@
+\chapter{Eulerian Description for a One Dimensional Closed Continuum} \label{chap:CoordinateTransformationForTheOneDimConti}
+
+In the following the transformation between the Eulerian description and the Lagrange description is shown for a one dimensional continuum.
+For the general case \textsc{Irschik} and \textsc{Holl} derive the equations \cite{irschik_equations_2002}.
+The following derivation holds for a one dimensional closed continuum and thus is simpler to grasp.
+\footnote{The derivation was done together with my co-worker Thorsten Schindler and I want to acknowledge his support and contributions \cite{grundl_ale_2015}.}
+
+\section{Preliminaries}
+
+The position of a particle along a curve $\barx$ is described with its original position $\xi$ and its motion along the curve $s(t)$ with
+%
+\begin{align}
+  \barx = \xi + s(t), \qquad \frac{d \barx}{d \xi} = \frac{\partial \barx}{\partial s} = 1, \qquad \frac{d \barx}{dt} = \frac{d s}{dt} 
+\end{align}
+%
+where $\xi$ is the Eulerian coordinate describing a fixed point in space and $\barx$ is the Lagrangian coordinate following the particle over time.\\
+%
+A function $f$ is defined as an integral over $g(\barx)$ with time depending limits $l = l(t), u = u(t)$.
+%
+\begin{align*}
+  f \defined \int _{l} ^{u} g(\barx, t) d\barx.
+\end{align*}
+%
+The absolute time derivative of $f$ is given by the Leibniz integral rule. %(Kaplan 1992, p.275) or \url{http://mathworld.wolfram.com/Integral.html}.
+%
+\begin{align}
+  \ddt{f} = \pd{f}{l}  \ddt{l} + \pd{f}{u} \ddt{u} + \int _{l} ^{u}  \ddt{g} d \barx = -g(l) \ddt{l} + g(u) \ddt{u} +  \int _{l} ^{u} \pd{g}{\barx} \ddt{\barx} d \barx + \int _{l} ^{u} \pdt{g} d \barx
+\end{align}
+
+\section{Direct Approach}
+
+Starting with the Lagrangian $\calL = \calT - \calV$ and the standard Lagrange equation
+%
+\begin{align*}
+  \ddt{} \pd{\calL}{\dotqk} - \pd{\calL}{q_k} = 0
+\end{align*}
+%
+a direct method to get the \eom can be derived.
+With the kinetic energy 
+%
+\begin{align}
+  \label{eq:General_Kinetic_Energy}
+  \calT = \frac{1}{2} \int_\Omega v^T v \rho d \Omega = \frac{1}{2} \rho \int_\Omega v^Tv d\Omega
+\end{align}
+%
+where $\Omega$ is the original volume for the integration, $\rho$ is the constant density of the material and $v$ the current velocity field, it follows the expression for the Lagrange equation.
+%
+\begin{align}
+  \label{eq:Lagrange_Equation}
+  \ddt{} \pd{\calT}{\dotqk} - \pd{\calT}{q_k} = Q _{k} \quad \text{with} \quad Q_k \defined - \frac{\partial \calV}{\partial q_k} 
+\end{align}
+%
+For the given situation of a beam, the integral is constant in the two cross-section directions resulting in the area $A$.
+Only the integral over the length from limit $l$ to limit $u$ has to be calculated along the beam in direction $\barx$.
+%
+%\begin{align}
+%  T = \frac{1}{2} \rho A \int _{l} ^{u} v^Tv d\barx
+%\end{align} 
+%
+Inserting this into the Lagrange equation, it follows
+%
+\begin{align}
+  \ddt{} \pd{\calT}{\dotqk} &= \ddt{} \pd{}{\dotqk} \left( \frac{1}{2} \rho A \int _{l} ^{u} v^Tv d\barx \right) 
+  = \frac{1}{2} \rho A  \left( \ddt{} \int _{l} ^{u} \pd{(v^Tv)}{\dotqk} d\barx \right) 
+  =: \frac{\rho A}{2}  \ddt{} \int _{l} ^{u} g_v d\barx \nonumber  \\ 
+  \label{eq:DerivativeOfKineticEnergyWithVariableBoundaries} 
+  &= \frac{1}{2} \rho A \left( -g_v(l) \ddt{l} + g_v(u) \ddt{u} +  \int _{l} ^{u} \pd{g_v}{\barx} \ddt{\barx} d \barx + \int _{l} ^{u} \pdt{g_v} d \barx \right)
+\end{align}
+%
+Remark that the limits of the integral do not depend on the generalized velocities $\dotqk$ but just on the transformation with $s$.\\
+
+%\begin{remark}
+%The function $g_v = g_v(\barx(s), q, \dotq)$ is a function of the Lagrange position, which depends on the drift $s$ as well might be a function of all other \dofs ($q, \dotq$).
+%Thus it might depend on $s$ indirectly and maybe directly as $s$ is part of the \dofs.
+%\end{remark}
+
+
+\section{Closed Curve}
+For a closed curve it holds $\ddt{l} = \ddt{u}$ and $g_v(l) = g_v(u)$.
+Thus, the first two terms in \eqref{eq:DerivativeOfKineticEnergyWithVariableBoundaries} cancel each other.
+Following the fundamental theorem of calculus, the first integral of it is zero as well.
+%
+\begin{align*}
+  \int _l ^u \dot{s} \frac{\partial g_v}{\partial \barx} d \barx = \dot{s} (g_v(u) - g_v(l)) = 0
+\end{align*}
+%
+A transformation of variables to integrate along $\xi$ with $u = L + s$ and $l = 0 + s$ and the length $L$ of the beam yields finally
+%
+\begin{align}
+  \ddt{} \pd{\calT}{\dotqk} &= 
+  %\frac{1}{2} \rho A  \int _{0} ^{L} \underbrace{\pd{g_v}{\xi}} _{= \pd{g_v}{\barx}} \dot{s} + \pdt{g_v} d \xi\\
+  %&=
+  %\underbrace{ \frac{1}{2} \rho A \dot{s}  \int _{0} ^{L}\pd{g_v}{\xi} d \xi } _{\text{First Term}} + 
+  %\underbrace{ 
+  \frac{1}{2} \rho A  \int _{0} ^{L}\pdt{g_v} d \xi
+  % } _{\text{Second Term}}
+  \label{eq:KineticEnergyTerms}
+\end{align}
+%
+where the relative\footnote{The absolute time derivative is incorporated already. Only a direct time dependency is left and the relative time derivative is needed.} time derivative is needed.\\
+Using the same ideas, the derivative of the kinetic energy \wrt. the generalized positions follows.
+%
+\begin{align*}
+  \pd{\calT}{q_k} &= \frac{1}{2} \rho A \pd{}{q_k} \int _{l} ^{u} v^Tv d \barx = 
+    \frac{\rho A}{2} \int _{0} ^{L} \pdqk{v^Tv} d \xi
+\end{align*}
+%
+The potential energy can be represented as an integral over the volume $V \defined \int _{l} ^{u} g_V d\barx$ as well.
+Thus, the last term of \eqref{eq:Lagrange_Equation} is defined as well.
+%
+\begin{align*}
+  \pdqk{\calV} = \left(-g_V(l)  \pdqk{l} +  g_V(u) \pdqk{u} + \int _{l} ^{u} \pdqk{g_V} d \barx \right) = \int _{0} ^{L} \pdqk{g_V} d \xi
+\end{align*}
+%
+Therefore, all expression are written in Eulerian description and for this special case of a closed beam structure the transformation does not yield additional terms. 
+

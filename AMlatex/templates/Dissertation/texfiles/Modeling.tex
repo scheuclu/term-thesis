@@ -1,0 +1,767 @@
+\chapter{Modeling} \label{chap:Modeling}
+
+Many iteration steps have been done leading to the current detailed model during the validation process of the model.
+The single refinement steps for different aspects of the model are given in the following chapter.
+Thereby, three types of modeling aspects are separated.\par
+%
+At first the dynamics is addressed in \cref{sec:Dynamics}.
+Preliminary considerations discuss the three parts within the \CVT, i.e. \els, sheaves and \rings.\\
+The \rings are a crucial concerning computational time \cite[p. 68]{schindler_spatial_2010}.
+Many \DOFs are necessary and complex contact kinematics have to be used solving nonlinear equations each time step.
+A further dynamical submodel for the \rings is introduced.
+The kinematics is specifically derived for the \CVT application.
+The \DOFs could be reduced and a faster contact search is enabled.
+The global and local kinematics are separated which makes it easy to interpret the results.
+These different levels of detail in the model enable also new strategies for specific applications.\par
+%
+The contacts between the single bodies are discussed in \cref{sec:Interactions}.
+Existing models are presented shortly to motivate enhancements.
+New models concerning contact kinematics and contact laws are given for \el-\el-, \el-\ring- and \el-\sheave-contact.
+Parametric options are analyzed and discussed qualitatively \wrt the results in the \CVT model.
+\par
+%
+Finally, the reduction of the computational costs is treated in \cref{sec:ComputingTimeReduction}.
+The solution process of the coupled contact law between \els and sheaves is optimized.
+Different models lead to either one or two contact points.
+The impact on the solver is discussed.
+Conclusions suggest which model should be used.\\
+The initialization process is enhanced as well. 
+Kinetic models are used to enhance the estimate of the stationary condition at the beginning of the simulation.
+Thereby, the transition phase, i.e. oscillations due to initialization errors, is shortened.\\
+The solution of the set-valued conditions is treated at last.
+Improved algorithms reduce \CPU costs when the presented time-stepping integration scheme (\cref{subsec:MultibodyDynamics}) is applied.
+\par
+%
+For discussion and validation, the post-processing steps are finally given in \cref{sec:Postprocessing}.
+Averaging techniques are used to separate trends along the arc from local effects.
+Based on these, global values are gained which are used as general comparison numbers.
+
+\section{Dynamics} \label{sec:Dynamics}
+
+\subsection{Preliminary Considerations} \label{subsec:PreliminaryConsiderations}
+
+The modeling of the dynamics of the single bodies in a \MBS is the first step to gain a complete model.
+Each body may be represented with six rigid \DOFs.
+Possible deformations are accounted for with quasi-statical non-impulsive contact force laws.
+The numerical treatment is typically more robust as for flexible-body dynamics.
+Faster simulation times result as less \DOFs are used.\\
+Yet, the dynamical response of sub-parts of the system may be an important effect that has to be modeled.
+Flexible models are utilized.
+The number of \DOFs increases and thus the simulation time.\par%
+%
+%
+\subsubsection{Elements}
+%
+The \els are the key part within the model.
+The longitudinal as well as the axial deformation do influence the dynamics significantly (\cref{chap:PhysicalAspects}).
+These deformations can be represented very well with single-valued contact laws \cite{geier_dynamics_2007}.
+A deformable representation also would increase the simulation time substantially affecting about 200 - 400 bodies.
+Therefore, rigid body dynamics is chosen incorporating the deformations within the contact laws to gain short integration times.
+%
+\subsubsection{Sheaves}
+%
+The \pulley-\sheave deformation is known to be the main driver for the spiral running.
+Their deformation is well approximated by quasi-statical contact models \cite{cebulla_spatial_2014}.
+However, the \EIN is assumed to be coupled to the eigenmodes of the \pulley-\sheaves.
+This gives reasons to model also these bodies deformable \cite{van_der_noll_gerauschoptimierung_2015}.\\
+The \sheave model described in \cite{schindler_spatial_2010} has found to be not efficient.
+Therefore, also an \FFR based model for the sheaves has been derived and tested in \cite{wang_framework_2014}.
+A full \FEM model of the pulley has been used to gain modal modes.
+NURBS\footnote{see \cite{piegl_nurbs_1997}} interpolation is used to enable contact kinematics.
+Both approaches show the typical problems of deformable bodies.
+In particular the simulation time increases.
+Due to modal reduction the locality of the contact cannot be provided exactly influencing the dynamics.\\
+Altogether, elastodynamic sheaves are not used to ensure efficient and robust integration.
+The dynamic feedback to the overall behavior of the system could not be tested.
+A one-way coupling, i.e. using the forces from the simulation to excite e.g. a full dynamic \FE model of the pulleys, is possible to study effects e.g. the \EIN.
+%
+\subsubsection{Rings}
+%
+For the \rings a deformable model is necessary.
+Spiral running within the arcs and dynamic oscillations within the strands should be respected.
+A change of the ratio has to be covered to enable shifting dynamics.
+As the \ring models derived in \cite{schindler_spatial_2010} and \cite{cebulla_spatial_2014} lead to numerically stiff or ineffective models, a new \ring model is specifically derived for \CVTs in \cref{subsec:ALERing}.
+Using a mixed parameter description for global and local deformations and avoiding internal constraints leads to a minimized number of \DOFs and a robust model.\par
+
+\subsection{ALE Ring Model} \label{subsec:ALERing}
+
+\Ring models are crucial within the complete \CVT.
+Spatial and nonlinear deformation has to be represented efficiently to enable fast integration.
+Due to many contacts between \els and \rings locality of the deformation should be preserved.\\
+Different techniques exist in the literature to represent nonlinear behavior of one dimensional bodies.
+Four different models have been tested within the \CVT.
+This section summarizes the ideas of the \RCM, the \LRVM or the \ANCF.
+For the \LRVM and the \ANCF planar models are presented as difficulties are apparent in this case already.
+Additionally, the main results are given that motivate the development of a new model.
+Eventually, the \EOMs of a model based on the \ALE technique are derived, which takes into account the disadvantages the other models.
+All models are implemented in \MBSim \cite{forg_mbsim_2015}.
+
+\subsubsection{Literature Models}
+
+\paragraph{\RCM Model}
+In \cite{geier_dynamics_2007} a planar model for the beam dynamics uses a co-rotational approach.
+A local set of \DOFs $q_{l}$ describes the deformation of a \FE of a beam with linear material properties.
+The assembly is done via a global set of \DOFs $q_{g}$.
+An explicit relation between the global and the local \DOFs exists.
+Thus, nonlinear kinematics can be represented globally.
+Qualitatively a good correlation between measurements and simulation could be achieved.\par
+%
+For the model in \cite{schindler_spatial_2010} a spatial enhancement is derived using the same ideas.
+Yet, the relation between $q_{l}$ and $q_{g}$ cannot be resolved explicitly.
+A root-finding algorithm has to be applied for each \FE at every time step.
+This leads to an increased simulation time.\\
+Furthermore, the time step is limited as otherwise the root finding algorithm might not succeed.
+Using more \FEs leads to smaller time step sizes for a robust simulation.
+A stiffness-like phenomenon is observed.
+It is not classical stiffness as an internal transformation is affected.
+Stabilization techniques could not be applied successfully for the root finding algorithm and therefore other modeling ideas have been tested.\\
+In \cite{schindler_spatial_2010} 12 \FEs are used as a compromise between robustness and calculation time.
+However, practical tests with the planar model of \cite{geier_dynamics_2007} show that this might be too few \FEs to represent the curvature change between arcs and strands.
+Numerical induced oscillations result in the strands.
+Based on these observations another \ring model is needed for spatial integration.
+
+\paragraph{\LRVM Model}
+\textsc{Lang et. al.} showed in \cite{lang_multi-body_2011} a promising formulation based on \LRVM.
+Cosserat theory is used to represent nonlinear deformations of rods in the field of \MBS.
+The \LRVM separates a position field and a rotation field with two sets of \DOFs.
+Finite differences are used to discretize the \EOM and a staggered grid between positional nodes and rotational nodes promises enhanced performance.\\
+These are used to express the different terms for the energy formulation that can be used with the Lagrange~II formalism to derive the discretized \EOM.
+In \cite{cebulla_spatial_2014} the \EOMs for a planar model are given.
+A contour description is introduced to represent non-smooth contact situations.
+A difficulty of the \LRVM becomes apparent.
+Either the positional field or the rotational field could be used to define the local kinematics for the points, i.e. normal and tangential directions of the contact frame, that are used to project external forces into the generalized directions.\par
+
+The model does not comprise two coordinate sets and the difficulty of the \RCM beam is not apparent.
+However, the material properties, i.e. steel, in combination with the unfavorable geometry, i.e. thin layers of the \rings, lead in practice to a very stiff behavior.
+A first approach with nonlinear reduction techniques to filter high frequency ranges was not successful.
+It is a field of ongoing research \cite{cebulla_application_2015}.
+Different choices for the contour description could not improve the behavior.
+
+\paragraph{\ANCF Model}
+The \ANCF technique uses the nodal deformation and the slopes, i.e. their spatial derivatives, at these positions as \DOFs.
+The \DOFs are interpolated in a global frame with global ansatz functions.
+Thereby, necessary rotations for e.g. beam elements can be represented in an isoparametric way.
+Rigid body modes are incorporated exactly.
+For the planar model the mass matrix is constant which is a major benefit.
+The inverse or a decomposition must not be calculated every time step which is a main driver for simulation time.
+The implementation for the model of this work follows \cite[chap. 7]{shabana_dynamics_2005}.\par
+
+Neither two coordinate sets nor a separation of positional and rotational fields are used which lead to difficulties in the discussed models using \RCM or \LRVM.
+The simulation time is reduced due to the constant mass matrix.
+Using this model within the full \CVT model yields overall good yet oscillatory results.
+Besides, the mass matrix is -- depending on the formulation -- not constant for the spatial case.
+
+\subsubsection{Basic Ideas of the ALE Model}
+
+As one can see from the previous discussion general beam formulations have difficulties when applied in the present \CVT model.
+In the following a specific model for belt drives is derived which addresses the discussed problems.\\
+A pushbelt \CVT consists of two major kinematical degrees.
+On the one hand the ratio defines -- together with the belt length and the pulley distance -- the two arc radii and the strands.
+On the other hand the rotation speed defines the belt speed and thus the travelling along the curve.
+Yet, the kinematics are not fully described with these \DOFs.
+Deformations within the arcs, e.g. spiral running, or between the pulleys, e.g. misalignment, are small deviations from this reference description.\par
+
+To represent the belt speed as a \DOF, an Eulerian description is used.
+With it the tangential movement of a mass particle can be projected to a fixed position in space.
+This technique is called \ALE.
+It is a coordinate transformation.
+For a closed one dimensional continuum the transformation is performed generally in \cref{chap:CoordinateTransformationForTheOneDimConti}.
+Also the equations for the Lagrange~II formalism are derived.\\
+The \ALE formulation is also used by \textsc{Pechstein} and \textsc{Gerstmayr} (2013) in combination with \ANCF elements for a planar model \cite{pechstein_lagrangeeulerian_2013}.
+Similar ideas have been used in \cite{funk_simulation_2004} and \cite{bullinger_dynamik_2005}.
+However the reference kinematics were fixed and only planar \DOFs are used.
+In the following, a spatial model using a planar reference curve is described which is referred to as the \ALE model within the thesis.\par
+
+The following description is general.
+It is not restricted to \CVT belt applications but could be used for all one dimensional systems with a nonlinear reference kinematics and only local deformations.
+%
+\subsubsection{Kinematics} \label{subsubsec:Kinematics}
+%
+\begin{figure}
+  \centering
+    \begin{subfigure}{0.48\textwidth}
+      \import{../multimedia/}{PIC_140205_CVTReferenceCurve.pdf_tex}
+      \caption{Reference curve without deformations}
+      \label{fig:PIC_140205_CVTReferenceCurveWithoutDeformation}
+    \end{subfigure}
+    \hfill{}
+    \begin{subfigure}{0.48\textwidth}
+      \import{../multimedia/}{PIC_140205_CVTReferenceCurveWithDeformations.pdf_tex}
+      \caption{Reference curve with deformations}
+      \label{fig:PIC_140205_CVTReferenceCurveWithDeformations}
+    \end{subfigure}
+    \caption[CVT kinematics described by a reference curve]{\CVT kinematics described by a reference curve}
+    \label{fig:PIC_140205_CVTReferenceCurve}
+\end{figure}
+%
+Consider a planar belt drive with a fixed belt length $L$ (\cref{fig:PIC_140205_CVTReferenceCurve}).
+A reference curve $\rRef (\Theta, \xi)$ is described along $\xi \in [0, L[$ in a fixed frame with axes $x,y$ and $z$.
+The current reference may be described with the scalar $\Theta$.
+For the \CVT, it is a measure for the ratio between the two arcs.
+For each reference position a frame holding the tangential $\tRef$, normal $\nRef$ and binormal $\bRef$ is attached.\\
+A tangential drift $s$ and the corresponding time derivative $\dot{s}$ define the position of a particle along the curve $\barx$ with
+%
+\begin{align}
+  \barx(\xi,t) = \xi + \int _{0} ^{t} \dot{s}(\tau) d\tau = \xi + s(t)
+\end{align}
+%
+where $\xi$ describes the original position of the particle.
+Therefore $\barx$ depends on time.
+%
+\begin{align*}
+  \ddt{\barx} = \dot{s}
+\end{align*}
+%
+The variable $\Theta$ and $s$ describe only the reference motion (\cref{fig:PIC_140205_CVTReferenceCurveWithoutDeformation}).
+Additional coordinates are introduced which enable a small displacement $r_f$ around the reference position $\rRef$ (\cref{fig:PIC_140205_CVTReferenceCurveWithDeformations}).
+The vector $q _{f} ^{i}$ holds the coordinates of node $i$ which describe this deviation in the three possible spatial directions.
+These \dofs are interpolated by local ansatz functions $\msS^i(\xi)$.\par
+%
+\paragraph{Position} The position of a particle is given by
+%
+\begin{align}
+  \label{eq:PositionInGeneral}
+  r = \rRef + r _{f} = \rRef + \msA \sum _{i} \msS^i \qf^i = \rRef + \msA \msS \qf = \rRef + \msB \qf
+\end{align}
+%
+where $\msA(\xi, \Theta)$ is introduced as a general transformation matrix for the directions of the local \dofs.
+Three general different possibilities exist to choose \msA:
+\begin{enumerate}
+  \item The most simple option would be to choose a constant $\msA$, e.g. as the unity matrix. 
+  It does then neither depend on $\xi$ nor $\Theta$.
+  \item A second option would be to choose $\msA$ only depending on $\Theta$, e.g. as the direction matrix of the node where the local deformations are measured via $q_f$.
+  This would mean that the local \dofs are the node deformations in local tangential, normal and binormal direction.
+  \item A third option is to choose $\msA$ to depend on $\Theta$ and $\xi$, e.g. $\msA = \left[\tRef , \nRef , \bRef \right]$ as the orientation matrix that changes over the arc with $\xi$.
+  This would change the interpretation of the local \dofs always in the local tangential, normal and binormal direction respectively.
+\end{enumerate}
+
+In this work the equations are derived for the most general third case to serve as basis for general applications.\par
+
+\paragraph{Velocity}
+To get the absolute velocity the material derivative\footnote{The change in position of a mass-particle has to be derived which is described by $r(\barx)$. The equation is written in Eulerian view and thus the material derivative has to be used.} has to be applied.
+%
+\begin{align*}
+  v &= \ddt{r} = \ddt{\rRef} + \ddt{\msA} \msS \qf + \msA \ddt{\msS} \qf + \msA \msS \dotqf \\
+  &= \difdif{\rRef}{\xi} \dot{s} + \difdif{\rRef}{\Theta} \dot{\Theta} + \difdif{\msA}{\xi} \dot{s} \msS q_f + \difdif{\msA}{\Theta} \dot{\Theta} \msS \qf + \msA \difdif{\msS}{\xi} \dot{s} \qf + \msA \msS \dot{q} _{f}
+\end{align*}
+%
+Using the vector of generalized coordinates and generalized velocities
+%
+\begin{align}
+  q^T =
+  \begin{bmatrix}
+    s & \Theta & \qf
+  \end{bmatrix}, \qquad \dot{q}^T =
+  \begin{bmatrix}
+    \dot{s} & \dot{\Theta} & \dotqf
+  \end{bmatrix}
+\end{align}
+%
+the velocity can be written as
+%
+\begin{align}
+  v &= \bmat{ \rRef' + \msB' q_f & \difdif{\rRef}{\Theta} + \difdif{\msA}{\Theta} \msS q_f & \msA \msS } \dotq = \msP \dotq \label{eq:TranformationGeneralizedVelToRealVel}
+\end{align}
+%
+where
+%
+\begin{align}
+  \label{eq:DefinitionOfP}
+  \msP(q) := \bmat{ r' & \pd{r}{\Theta} & \msB}
+\end{align}
+%
+is the interpolation matrix between the generalized velocities $\dotq$ and the velocity of the mass particles depending only on the generalized positions $q$.
+In the following the most important steps are listed where additional equations are given in \cref{chap:AdditionalEquationsForALERing}.
+
+\subsubsection{Kinetic Energy}
+The equations for the kinetic energy $\cal T$ are derived in \cref{chap:CoordinateTransformationForTheOneDimConti}.
+In the following, the single terms are specified. The gradient of the kinetic energy \wrt generalized coordinates is given by
+%
+\begin{align}
+  \pd{\cal T}{q_k} = \rho A \int _{0} ^{L} v^T  \pd{v}{q_k} d \xi = \rho A \dotq^T \msI _{PTdPdqi} \dotq
+\end{align}
+%
+where the integral
+%
+\begin{align*}
+  \msI _{PTdPdqi} \defined \int _{0} ^{L} \msP^T \pd{\msP}{q_k} d \xi
+\end{align*}
+%
+has to be evaluated in each time step.\\
+The time derivative of the gradient of the kinetic energy \wrt to generalized velocities becomes
+%
+\begin{align}
+  \ddt{} \pd{\cal T}{\dotqk} &= \frac{\rho A}{2}  \int _{0} ^{L} \pdt{} \pd{}{\dotq} \left(v^Tv\right) d \xi = \frac{\rho A}{2} \int _{0} ^{L} 2 \pdt{}\left(v^T \pd{v}{\dotq} \right) d \xi = \frac{\rho A}{2} \int _{0} ^{L} 2 \pdt{} \left( \dotq^T \msP^T  \msP \right) d \xi\\ 
+  \label{eq:FinalKineticEnergyTerms}
+  &=2 \rho A \dot{q}^T \msI _{PTdPdt} + \ddot{q}^T \rho A \msI_{PTP}
+\end{align}
+%
+where the first integral is defined as
+%
+\begin{align}
+  \label{eq:}
+  \msI _{PTdPdt} \defined \int_0 ^L \msP^T \pdt{\msP} d \xi
+\end{align}
+%
+and the second term yields the symmetric mass-matrix $\msM$.
+%
+\begin{align}
+  \label{eq:MassMatrix}
+  \msM \defined \rho A \msI _{PTP} = \rho A \int _0 ^L \msP^T \msP d \xi
+\end{align}
+%
+
+\subsubsection{Elastic Energy}
+
+The elastic energy $\calV$ is defined following \cite{jelenic_kinematically_1995} with
+%
+\begin{align}
+  \calV \defined \frac{1}{2} \int _0 ^{L} \gamma^T \msC _{\gamma} \gamma d \xi + \frac{1}{2} \int _0 ^{L} \kappa^T \msC _{\kappa} \kappa d \xi = \calV _{\gamma} + \calV _{\kappa}
+\end{align}
+%
+where $\gamma$ and $\kappa$ are the deformation quantities and the matrices $\msC _{\gamma}$ and $\msC _{\kappa}$ hold the constitutive laws.
+The Eulerian description is used directly as other terms vanish (\cref{chap:CoordinateTransformationForTheOneDimConti}).
+The partial derivatives are given by
+%
+\begin{align}
+  \pd{\calV _{\gamma}}{q_k} = \int _{0} ^{L} \gamma^T \msC _{\gamma} \pd{\gamma}{q_k} d \xi, \qquad
+  \pd{\calV _{\kappa}}{q_k} = \int _{0} ^{L} \kappa^T \msC _{\kappa} \pd{\kappa}{q_k} d \xi
+\end{align}
+%
+with the strain energy $\calV _{\gamma}$ and the curvature energy $\calV _{\kappa}$.
+The constitutive correlations for an isotropic material are used with
+%
+\begin{align}
+  C _{\gamma} &=
+  \begin{bmatrix}
+    EA & 0 & 0 \\
+    0 & GA _{n} & 0 \\
+    0 & 0 & GA _{b}
+  \end{bmatrix} \quad \text{and} \quad
+  C _{\kappa} =
+  \begin{bmatrix}
+    GI_{t} & 0 & 0 \\
+    0 & EI _{n} & 0 \\
+    0 & 0 & EI _{b}
+  \end{bmatrix}
+\end{align}
+%
+where $E$ is the Youngs modulus, $G$ the shear modulus, $A$ the cross-section area and $A _{n}$ and $A _{b}$ the shear areas in normal and binormal direction respectively.
+The quantities $I _{n}$ and $I _{b}$ are the area moments of inertia for bending around the normal and binormal direction respectively and $I _{t}$ is the torsional area moment of inertia.
+Off-diagonal coupling terms are neglected.
+%
+\paragraph{Strain energy}
+For the strain energy the material strain measure is used with
+%
+\begin{align}
+  \gamma &= \AIK^T r' - \pmat{1 & 0 & 0}^T
+\end{align}
+%
+where the rotation matrix
+%
+\begin{align}
+  \AIK \defined
+  \begin{bmatrix}
+    t & n & b
+  \end{bmatrix}
+\end{align}
+%
+holds the local tangential $t$, normal $n$ and binormal $b$ directions of the neutral phase\footnote{These directions do not coincide with the directions from the reference curve as they regard for the local deformations} following the Frenet-Formulas.
+%
+\begin{align}
+  t &= \frac{r'}{\norm{r'}} = n \times b
+  &
+  n &= \frac{t'}{\norm{t'}} = b \times t
+  &
+  b &= \frac{r' \times t'}{\norm{r'} \norm{t'}} = t \times n
+\end{align}
+%
+With this definition of the tangential direction $t$ the Kirchhoff assumption is fulfilled.
+The cross section is not able to rotate relatively to the neutral phase which avoids possible numerical stiff behavior \cite[Remark 3.4]{lang_multi-body_2011}.
+The complete strain energy can be derived.
+%
+\begin{align*}
+  \pdqk{} W _{\gamma} &=  EA \int _{0} ^{L}  (1 - \frac{1}{\sqrt{r'^Tr'}})   r'^T 
+  \begin{bmatrix}
+    \bmat{0\\0\\0} & \difdif{r'}{\Theta} & \msB'_1 & \ldots & \msB'_n
+  \end{bmatrix} d \xi =: EA \msI _{W\gamma} 
+\end{align*}
+%
+\paragraph{Curvature energy}
+
+The measure for the curvature is defined as
+%
+\begin{align}
+  \kappa \defined
+  \begin{pmatrix}
+\tau\\
+\kappa_n\\
+\kappa_b
+\end{pmatrix}
+%= \begin{pmatrix}
+%  \bRef^T n'\\
+%  \nRef^T t'\\
+%  \tRef^T b'
+%\end{pmatrix}
+\end{align}
+%
+where $\tau$ measures the torsion and $\kappa_n$ and $\kappa_b$ measure the curvatures in the two planes that are spanned between the tangential vector $t$ and the normal $n$ or the binormal $b$ respectively.\\
+The bending and torsional energy derivatives follow.
+%
+\begin{align*}
+  \pdqk{} W _{\kappa} &= \pdqk{} W _{t} + \pdqk{} W _{n} + \pdqk{} W _{b} \\
+  &= G I _{t} \int _{0} ^{L} \tau \pdqk{} \tau d \xi + E I _{n} \int _{0} ^{L} \kappa_n \pdqk{} \kappa_n d \xi + E I _{b} \int _{0} ^{L} \kappa_b \pdqk{} \kappa_b d \xi \\
+  &:= G I _{t} \msI _{Wt} + E I _{n} \msI _{Wn} + E I _{b} \msI _{Wb}
+\end{align*}
+%
+The single measures have to be found, which is discussed in the following.\par
+%
+For the curvature in the $\tRef/\nRef$-plane it is crucial to couple the reference deformation and the overlaid effects.
+Only due to this, the full physics of the \ring can be represented.
+Otherwise, the elastic forces of the reference \DOFs would only affect the movement of the reference motion, i.e. the forces would not be projected into the generalized direction of the overlaid \DOFs.
+This would not lead to a circular shape of the curve in case of no external forces.
+The ratio would shift independently.\\
+To approximate the curvature in the $\tRef/\nRef$-plane, the second derivative of the position is projected along the reference normal direction.
+%
+\begin{align*}
+  \kappa_n \defined \nRef^T r'' \quad \text{with} \quad
+  r '' = \rRef'' + \msA'' \msS q + 2 \msA' \msS' q + \msA \msS''q
+\end{align*}
+%
+This approximation yields correct measures for the reference part and linearized overlaid measures for the additional deformations.
+The derivatives \wrt the generalized coordinates follow.
+%
+\begin{subequations}
+\begin{align}
+  \pd{}{s} \kappa_n &= 0\\
+  \pd{}{\Theta} \kappa_n &= \pd{\nRef^T}{\Theta} r'' + \nRef^T \pd{r''}{\Theta}\\
+  \pd{}{q_{fi}} \kappa_n &= \nRef^T \pd{r_f''}{q_{fi}} = \nRef^T \left(\msA'' \msS_i + 2 \msA' \msS'_i + \msA \msS''_i \right) \label{eq:PDOfKappNWRTqfi}
+\end{align}
+\end{subequations}
+%
+With the derivatives of $\msA$ (\cref{chap:AdditionalEquationsForALERing}) one can show that \eqref{eq:PDOfKappNWRTqfi} simplifies to
+%
+\begin{align}
+  \pd{}{q_{fi}} \kappa_n = \bmat{0&-1&0} \msS_i + 2 \bmat{-1 & 0 & 0} \msS'_i + \bmat{0 & 1 & 0} \msS''_i
+\end{align}
+%
+for any planar reference curve.
+Consequently, only the tangential and normal deformation have an influence on the curvature energy.\\
+Analogously, the binormal curvature measure in the $\tRef/\bRef$-plane is approximated.
+%
+\begin{align*}
+  \kappa_b \defined \bRef^T r''
+\end{align*}
+%
+The derivatives \wrt the generalized coordinates follow
+%
+\begin{subequations}
+\begin{align}
+  \pd{}{s} \kappa_b &= 0\\
+  \pd{}{\Theta} \kappa_b &= \underbrace{\pd{\bRef^T}{\Theta}} _{=0} r'' + \bRef^T \pd{r''}{\Theta}\\
+  \pd{}{q_{fi}} \kappa_b &= \bRef^T \pd{r_f''}{q_{fi}} = \bRef^T \left(\msA'' \msS_i + 2 \msA' \msS'_i + \msA \msS''_i \right) = 0 + 0 + \bmat{0 & 0 & 1} \msS''_i
+\end{align}
+\end{subequations}
+%
+in the case of a planar reference curve.
+Thus, only the binormal deformation has an influence on this curvature energy.\par
+
+The torsion
+%
+\begin{align*}
+  \tau = b^T n' = n^T b'
+\end{align*}
+%
+is generally defined for spatial curves.
+Here the reference curve is planar.
+No torsion is incorporated.
+Therefore, the following approximation is used for the torsion measure which just takes into account the binormal change due to the overlaid deformations.
+%
+\begin{align*}
+  \tau \approx \nRef^T b'
+\end{align*}
+%
+%\todo{Derive the equations with the upper formula: Just interesting for the spatial case with torsion!}\par
+%\todo{one could also introduced a separate torsion DoF, but then has to couple it to the other DoFs in the internal energy\ldots Now how would that be possible?}
+
+\subsubsection{External Forces}
+
+External forces from joints or contacts have to be projected into the generalized directions.
+The Jacobian of translation has to be found which relates the global free directions with the generalized directions.
+According to \eqref{eq:TranformationGeneralizedVelToRealVel} it is the transformation matrix $\msP$.
+%
+\begin{align*}
+  J_T \defined \pd{v}{\dotq} = \msP
+\end{align*}
+%
+Possible link torques are not covered.
+
+\subsubsection{Equations of Motion}
+
+Summarizing the previous findings, one gains the \EOMs
+%
+\begin{align}
+  \msM \ddot{q} = h
+\end{align}
+%
+where the mass matrix is defined by \eqref{eq:MassMatrix} and the right hand side vector $h$ follows with three parts of the kinetic energy and four parts of the potential energy.
+%
+\begin{subequations}
+\begin{align}
+  h &= h _{T1} + h _{T2} + h _{T3} + h _{V1} + h _{V2} + h _{V3} + h _{V4}\\
+  h _{T1} &= - 2 \rho A \dot{s} \dotq^T \msI _{PTdPdxi}\\
+  h _{T2} &= - 2 \rho A \dotq^T \msI _{PTdPdt}\\
+  h _{T3,k} &= \rho A \dotq^T \msI _{PTdPdqi} \dotq\\
+  h _{V1,k} &= - E A \msI _{W\gamma} \\
+  h _{V2,k} &= - E I_n \msI _{Wn} \\
+  h _{V3,k} &= - E I_b \msI _{Wb} \\
+  h _{V4,k} &= - G I_t \msI _{Wt}
+\end{align}
+\end{subequations}
+%
+\subsubsection{Kinematics of the Reference Curve}
+
+\begin{figure}
+  \begin{center}
+    \import{../multimedia/}{PIC_140205_CVTReferenceCurve_Kinematics.pdf_tex}
+    \caption{Kinematics of a simple reference curve}
+    \label{fig:PIC_140205_CVTReferenceCurve_Kinematics}
+  \end{center}
+\end{figure}
+
+The derived \EOMs are valid for any belt system with a planar reference curve.
+For the application within the \CVT system the following reference curve is chosen.
+To be consistent with the general kinematic description -- especially concerning \eqref{eq:GeometricRatioGeneral} -- the following values should carry the index $ref$.
+It is omitted in this section for the sake of clearness.
+All kinematical values refer to the center line of the beam model.\\ 
+\newpage
+It consists of four parts which are depicted in \cref{fig:PIC_140205_CVTReferenceCurve_Kinematics}:
+%
+\begin{itemize}
+  \item primary arc with radius $r_P$ and with length $b_P = 2 r_P (\pi - \varphi)$
+  \item upper strand with length $b = d_A \cos\alpha$
+  \item secondary arc with radius $r_S$ and with length $b_S = 2 r_S \varphi$
+  \item lower strand with length $b$
+\end{itemize}
+%
+with the relations
+%
+\begin{align*}
+  \alpha \defined \arcsin\left( \frac{r_S - r_P}{d_A} \right)
+  \quad \text{and} \quad
+  \varphi \defined \arccos\left(\frac{r_P - r_S}{d_A}\right).
+\end{align*}
+%
+The ratio parameter $\Theta$ is chosen such that symmetric properties can be used for numerical evaluation.
+It holds the relationship to the geometric ratio of the reference curve $i_{g,ref} \defined \frac{r_S}{r_P}$.
+
+\begin{align}
+  \Theta \defined \frac{1-i_{g,ref}}{1+i_{g,ref}} \quad \Leftrightarrow \quad i_{g,ref} = \frac{1-\Theta}{1+\Theta}
+\end{align}
+%
+The nonlinear function to calculate the primary radius for a specific geometric ratio, i.e. a specific value of $\Theta$, is
+%
+\begin{align}
+  \label{eq:NonlinearSystemForTheta}
+  0 = l - 2 b - b_P - b_S
+\end{align}
+%
+where the constraining parameters to the system are $d_A$ -- the distance between the pulley axles -- and $l$ -- the total length of the \ring.\\
+In a preprocessing step the arc-radii for different $\Theta$ are computed solving the nonlinear system \eqref{eq:NonlinearSystemForTheta}.
+The primary radius $r_P$ over the ratio parameter $\Theta$ with at least\footnote{See \eqref{eq:GradientOfP}} $C^2$-continuous splines is interpolated.
+An explicit dependency $r_p(\Theta)$ results.
+The further kinematic description over the arc follows also explicitly and is $C^1$-continuous in $\xi$.\par
+
+For a given interpolated function of the primary radius $r_P(\Theta)$, the positional description over the arc length $\xi$ for the upper part is given by
+%
+\begin{align}
+  \label{eq:UpperPartReferenceCurve}
+  r^u &= \pmat{r^u_x \\ r^u_y \\ 0} =
+  \begin{cases}
+\begin{pmatrix}
+- r_S \cos(\varphi_S)\\
+r_S \sin(\varphi_S)\\
+0
+\end{pmatrix} & \text{if } 0 \leq \xi \leq \varphi r_S\\
+%
+r_{S,end} + \xi_T t_T & \text{if } \varphi r_S < \xi \leq < r_S \varphi + b\\
+%
+\begin{pmatrix}
+d_A - r_P \cos(\varphi_P)\\
+r_P \sin(\varphi_P)\\
+0
+\end{pmatrix} & \text{if } \varphi r_S + b \leq \xi \leq \frac{l}{2}
+\end{cases}
+\end{align}
+%
+with the following definitions
+%
+\begin{align*}
+  \varphi _S &\defined \frac{\xi}{r_S}
+  , \qquad
+  \xi_T \defined \xi - r_S \varphi
+  , \qquad
+  \xi_P \defined \xi - r_S \varphi + b
+  , \qquad
+  \varphi_P \defined \varphi  + \frac{\xi}{r_P},\\
+  r_{S,end} &=
+  \begin{pmatrix}
+-r_S \cos\varphi\\
+r_S \sin\varphi\\
+0
+\end{pmatrix}
+, \qquad
+r_{P,start} =
+\begin{pmatrix}
+d_A - r_P \cos(\varphi)\\
+r_P \sin(\varphi)\\
+0
+\end{pmatrix}
+, \qquad
+t_T = \frac{r_{P,start} - r_{S,end}}{\left| r_{P,start} - r_{S,end} \right|}.
+\end{align*}
+%
+The lower part follows due to symmetry.
+%
+\begin{align}
+  \label{eq:LowerPartReferenceCurve}
+  r^l(\xi) = \pmat{r^u_x(\xi-l) \\ -r^u_y(\xi-l) \\ 0}
+\end{align}
+%
+\subsubsection{Ansatz functions}
+
+\begin{figure}
+  \begin{center}
+      \tikzFile[]{../tikz/}{PIC_Hermite_Functions}
+    \caption[Hermite ansatz functions]{Sketch of the Hermite ansatz functions for the $C^1$-continuous case (left) and $C^2$-continuous case (right) case.}
+    \label{fig:PIC_141113_HermiteFunction}
+  \end{center}
+\end{figure}
+
+The ansatz functions for the \FE are integrated over the whole length $L$.
+Hermite interpolation ansatz functions are chosen to respects the necessity of $C^1$-continuity for the planar case without torsion and $C^2$-continuity for the spatial case.
+The Hermite polynomials are used as they are depicted in \cref{fig:PIC_141113_HermiteFunction}.
+The formulas follow for
+
+\begin{description}
+  \item[... the $C^1$-continuous case]
+  \begin{align*}
+    N_1 &\defined \frac{1}{2} - \frac{3}{4} x + \frac{1}{4} x^3, &
+    N_3 &\defined \frac{1}{2} + \frac{3}{4} x - \frac{1}{4} x^3 \\
+    N_2 &\defined \frac{l_e}{8} - \frac{l_e}{8} x - \frac{l_e}{8} x^2 + \frac{l_e}{8} x^3,&
+    N_4 &\defined \frac{l_e}{8} + \frac{l_e}{8} x - \frac{l_e}{8} x^2 - \frac{l_e}{8} x^3
+  \end{align*}
+  \item[... the $C^2$-continuous case]
+  \begin{align*}
+    N_1 &\defined \frac{1}{2} - \frac{15}{16} x + \frac{5}{8} x^3 - \frac{3}{16} x^5,&
+    N_4 &\defined \frac{1}{2} + \frac{15}{16} x - \frac{5}{8} x^3 + \frac{3}{16} x^5,\\
+    N_2 &\defined \frac{l_e}{32} \left(5 - 7 x - 6 x^2 + 10 x^3 + x^4 - 3 x^5\right),&
+    N_5 &\defined \frac{l_e}{32} \left(-5 - 7 x + 6 x^2 + 10 x^3 - x^4 - 3 x^5\right),\\
+    N_3 &\defined \frac{l_e^2}{64} \left(1 - x - 2 x^2 + 2 x^3 + x^4 - x^5\right),&
+    N_6 &\defined \frac{l_e^2}{64} \left(1 + x - 2 x^2 - 2 x^3 + x^4 + x^5\right)
+  \end{align*}
+\end{description}
+
+where $l_e$ is the element length.
+
+\subsubsection{Remarks}
+
+The equations are implemented and tested qualitatively in the following.
+The first virtual experiment tests the dynamics of the reference kinematics only, i.e. $q_f=0$.
+The parameters follow a real \ring such that the stiffness is incorporated.
+The starting condition is $\Theta=0.4$, $s=0$ and $\dot{\Theta} = \dot{s} = 0$, i.e. an \OD-ratio of $i_g \approx 0.4286$ is set.
+Results are depicted in \cref{fig:PIC_150411_ALERingOscillationReference} for the deformation of the \ring.
+Four different time points are given where $t_0$ is the start position.
+At $t_1$ an intermediate state is given.
+One can see that the ratio changes over time and oscillates around the neutral state $\Theta = 0$.
+This oscillation is given in \cref{fig:PIC_150411_ALERingOscillationReference_Theta}.
+The parameter $s$ stays zero -- it is only numerically affected.
+Keeping in mind, that the local deformations are blocked, this is the expected result.\par
+%
+\begin{figure}
+  \begin{center}
+    \begin{subfigure}{\textwidth}
+      \centering
+      \import{../multimedia/}{PIC_150411_ALERingOscillationReference.pdf_tex}
+      \subcaption{Ring for different times}
+      \label{fig:PIC_150411_ALERingOscillationReference}
+    \end{subfigure}\\
+    \setlength\fheightpgf{3cm}
+    \setlength\fwidthpgf{\textwidth}
+    \begin{subfigure}{\textwidth}
+      \centering
+        \tikzFile[]{../tikz/}{PIC_150411_ALERingOscillationReference_Theta}
+        \subcaption{Oscillation of reference parameter $\Theta$}
+        \label{fig:PIC_150411_ALERingOscillationReference_Theta}
+    \end{subfigure}
+    \caption{Time development of reference oscillation}
+  \end{center}
+\end{figure}
+%
+For a general model with all \DOFs, one would expect a circular shape as neutral state.
+Therefore, another experiment is performed adding the local deformations.
+Thereby, another problem rises.
+As the local deformations build a full space, the position is redundantly described taking into account also the reference \DOFs.
+Practically, the mass matrix becomes singular.
+Therefore, two local \DOFs directions are locked, i.e. one node is fixed at its reference position.
+It moves due to the reference coordinates within the $xy$-plane.
+For this experiment and for the whole work the first node is chosen, which is at $\xi=0$.\\
+The same parameters are chosen as before.
+Cubic ansatz functions within eight \FEs are selected.
+All generalized positions and velocities $q = \dot{q} = 0$ at $t_0=0$.
+The positional development is depicted in \cref{fig:PIC_150411_ALERingToCircle} for four different times in chronological order.
+One can see that at $t_1$ the \ring shows a reasonable behavior.
+Similar to a rubber band, it starts to form a circular shape. 
+The strands deform outwards.
+At $t_2$ however, no reasonable development is observed.
+The first node\footnote{here on the left side of the \ring} can only move with the reference \DOFs, i.e. $\Theta$ in this case.
+To form a circular shape, the left node has to move to the center, i.e. $\Theta$ increases.
+The typical shape of the \CVT \ring for $\Theta > 0$ can be seen as $\Theta$ influences the deformation over the whole arc.
+Yet, the deformation develops further yielding an oval-like shape again at $t_3$, which is the expected behavior.\\
+With this example two points should be emphasized.
+On the one hand the presented model relies on the description of the reference curve.
+One could say that the model assumes an external force distribution that yields a shape similar to the one of the reference configuration.
+Only small deviations from the reference are assumed.
+Then the motion is reasonable ($t_0 \rightarrow t_1$).
+On the other hand the model has all \DOFs of a general model and develops (qualitatively) correct, as one can deduce from the above discussion for $t_1 \rightarrow t_3$.
+%
+\begin{figure}
+  \begin{center}
+    \import{../multimedia/}{PIC_150411_ALERingToCircle.pdf_tex}
+    \caption[Time development of a deformable ALE \ring]{Time development of a deformable ALE \ring with $8$ \FEs and cubic hermite ansatz functions.}
+    \label{fig:PIC_150411_ALERingToCircle}
+  \end{center}
+\end{figure}
+%
+\subsubsection{Further Consideration}
+
+The presented model has been developed for the application within a spatial pushbelt \CVT.
+The idea -- known from e.g. the \FFR-method -- was to describe the nonlinear reference motion and additional small deviations separately.
+This idea leads to successful tests as shown above and which is confirmed later in this work.
+The possibilities that result for further applications are therefore given here in addition.
+
+\begin{description}
+  \item[Application to other belt systems] The presented approach is not restricted to the pushbelt \CVT system. 
+  It could be used for any belt system with a closed one-dimensional curve and a reference kinematics.
+  \item[Separated integration] The separation of the reference and the overlaid deformation also enables the possibility to separate these \DOFs in the integration.
+  It can be assumed that the two reference \DOFs change only slowly compared to overlaid deformation and must not be updated in every time step.
+  It reduces the simulation costs and might increase robustness of the overall system as the dynamical coupling of the \DOFs is reduced.  
+  \item[Reduction] A nonlinear reduction technique, i.e. the proper orthogonal decomposition, could not be performed successfully for the \LRVM model in the \CVT application. 
+  The coupling of the overall movement within the framework of Lagrange description with local small deformation is assumed to be the reason for this as the technique needs to identify both movements separately.
+  Following this consideration, the Eulerian framework in combination with the reference curve description offers the possibility to only reduce the overlaid deformations with techniques known from linear systems.
+  \item[Overlaid deformation fields] The evaluation of the presented integrals is time consuming and yields the most computational costs.
+  For an overall good approximation the two reference \DOFs give good results (\cref{sec:RingModels}). 
+  However, the spiral running in the arcs is not represented which results in small deviations.\\
+  From the overall state of the variator it is possible to approximate the kinematics of the \ring.
+  The small deviations could be set as a quasi-static overlay omitting their dynamic integration.
+  Besides the spiral running, this idea can be adapted for the misalignment.
+  The deviations of the \rings can be deduced from the sheave positions as it is done for the initialization in \cite{schindler_spatial_2010}.
+  The stiff behavior in binormal direction must not be treated dynamically.
+  Therefore, the spatial dynamics of the \els would still be included and thus the influence of it on the system can still be studied.
+\end{description}
+
+
+
+
+
+

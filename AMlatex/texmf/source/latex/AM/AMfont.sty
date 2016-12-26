@@ -1,0 +1,244 @@
+%%
+%% This is file `AMfont.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% AMfont.dtx  (with options: `package')
+%% --------------------------------------------------------------------------------
+%% AMfont <!AMreleaseVersion!>--- Package of the AMlatex-Bundle for fonts
+%% E-mail: romain.pennec@tum.de
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% --------------------------------------------------------------------------------
+%% 
+\RequirePackage{AMgit}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMfont}[\AMinsertGitDate{} \AMinsertGitVersion{} AM font managment]
+\ClassInfo{AMfont}{Document class of the Institute of Applied Mechanics}
+\RequirePackage{etoolbox}
+\RequirePackage{ifthen}
+\RequirePackage{kvoptions}
+\RequirePackage{pgfopts}
+\RequirePackage{pgfkeys}
+\RequirePackage{afterpackage}
+\DeclareStringOption[T1]{encoding}
+\DeclareStringOption[latex]{textstyle}
+\DeclareStringOption[latex]{mathstyle}
+\newif\ifAMfont@setup@titles
+\providecommand{\AMset}[1]{\pgfkeys{/AM/.cd,#1}}
+\newcommand{\AMsetFont}[1]{\pgfkeys{/AM/font/.cd,#1}}
+\pgfkeys{
+  /AM/font/.is family,/AM/font,
+  text/.estore in = \AMfont@textstyle,
+  math/.estore in = \AMfont@mathstyle,
+  theme/.is choice,
+  theme/tumhelvetica/.style = {text=tumhlv,math=euler},
+  theme/stix/.style = {text=stix,math=stix},
+  theme/latex/.style = {text=latex,math=latex},
+  theme/libertine/.style = {text=libertine,math=pazo},
+  theme/kpfonts/.style = {text=kpfonts,math=kpfonts},
+  encoding/.estore in = \AMfont@encoding,
+  setup titles/.is if = AMfont@setup@titles,
+}
+\ProcessPgfOptions{AM/font}
+\newcommand\thefontsize[1]{{#1 The current font size is: \f@size pt\par}}
+\newcommand\thefontdefault{{The current font default is: \familydefault\par}}
+\RequirePackage[\AMfont@encoding]{fontenc}
+\RequirePackage{lmodern}
+\AtEndPreamble{\AM@check@font@compatibility\AM@exec@loadfontpackages}
+\newcommand{\AM@check@font@compatibility}{%
+  \ifthenelse{\equal{\AMfont@textstyle}{stix}}%
+    {\ifthenelse{\equal{\AMfont@mathstyle}{stix}}%
+      {}
+      {%
+        \PackageWarning{AMfont}{%
+          <stix> and <\AMfont@mathstyle> are not compatible! Using <stix> for math
+        }
+        \def\AMfont@mathstyle{stix}
+      }%
+    }%
+    {}
+}
+\newcommand{\AM@exec@loadfontpackages}{%
+  \ifthenelse{\equal{\AMfont@textstyle}{stix}}
+    {\AM@font@load@stix}%
+    {}%
+  \ifthenelse{\equal{\AMfont@textstyle}{tumhlv}}
+    {\AM@font@load@tumhelvetica}%
+    {}%
+  \ifthenelse{\equal{\AMfont@textstyle}{libertine}}
+    {\AM@font@load@libertine}%
+    {}%
+  \ifthenelse{\equal{\AMfont@textstyle}{kpfonts}}
+    {\AM@font@load@kpfonts}%
+    {}%
+  \ifthenelse{\equal{\AMfont@mathstyle}{pazo}}
+    {\AM@font@load@mathpazo}%
+    {}%
+  \ifthenelse{\equal{\AMfont@mathstyle}{euler}}
+    {\AM@font@load@euler}%
+    {}%
+  \PackageInfo{AMfont}{%
+    Loaded font <\AMfont@textstyle> for text and <\AMfont@mathstyle> for math.
+  }
+}
+\newcommand{\AM@font@load@tumhelvetica}{%
+  \pdfmapfile{+tumhelv.map}%
+  \renewcommand{\encodingdefault}{T1}%
+  \renewcommand{\rmdefault}{lhv}%
+  \renewcommand{\sfdefault}{lhv}%
+}
+\newcommand{\AM@font@load@stix}{%
+  \RequirePackage{stix}%
+}
+\newcommand{\AM@font@load@libertine}{%
+  \RequirePackage{libertine}%
+}
+\newcommand{\AM@font@load@mathpazo}{%
+  %\PassOptionsToPackage{osf}{mathpazo}
+  \RequirePackage{mathpazo}%
+}
+\newcommand{\AM@font@load@euler}{%
+  \RequirePackage{eulervm}%
+}
+\newcommand{\AM@font@load@kpfonts}{%
+  %\PassOptionsToPackage{light}{kpfonts}
+  \RequirePackage{kpfonts}%
+}
+\pgfkeys{%
+  /AM/font,
+  footnote/.store in = \AMfont@footnote@style,
+  footnote/.append code = {\AM@exec@footnote@fontsetup},
+  rightmark/.store in = \AMfont@rightmark@style,
+  leftmark/.store in = \AMfont@leftmark@style,
+  chapter title size/.store in = \AMfont@chapter@title@size,
+  chapter title size/.append style = setup titles,
+  chapter title/.store in = \AMfont@chapter@title@style,
+  chapter title/.append style = setup titles,
+  section title size/.store in = \AMfont@section@title@size,
+  section title size/.append style = setup titles,
+  section title/.store in = \AMfont@section@title@style,
+  section title/.append style = setup titles,
+  subsection title size/.store in = \AMfont@subsection@title@size,
+  subsection title size/.append style = setup titles,
+  subsection title/.store in = \AMfont@subsection@title@style,
+  subsection title/.append style = setup titles,
+  subsubsection title size/.store in = \AMfont@subsubsection@title@size,
+  subsubsection title/.store in = \AMfont@subsubsection@title@style,
+  paragraph title size/.store in = \AMfont@paragraph@title@size,
+  paragraph title/.store in = \AMfont@paragraph@title@style,
+  titles/.style = {chapter title=#1,section title=#1,subsection title=#1,subsubsection title=#1,paragraph title=#1},
+  caption text/.store in = \AMfont@caption@text,
+  caption text/.append code = {\AM@exec@caption@fontsetup},
+  caption label/.store in = \AMfont@caption@label,
+  caption label/.append code = {\AM@exec@caption@fontsetup},
+  contact info/.store in = \AMfont@contactinfo@style,
+  titlepage title/.store in = \AMfont@title@style,
+  titlepage author/.store in = \AMfont@author@style,
+  page number/.store in = \AMfont@pagenumber@style,
+  left mark/.store in = \AMfont@leftmark@style,
+  right mark/.store in = \AMfont@rightmark@style,
+  default/.style = {%
+    footnote=\footnotesize\sffamily,
+    rightmark=\normalsize\sffamily\slshape,
+    leftmark=\normalsize\sffamily\slshape,
+    titles=\rmfamily\bfseries,
+    chapter title size=\huge,
+    section title size=\Large,
+    subsection title size=\large,
+    subsubsection title size=\normalsize,
+    paragraph title size=\normalsize,
+    caption text = {normalsize,sf},
+    caption label = {normalsize,bf,sf},
+    setup titles = false,
+    contact info=\small,
+    titlepage title=\large\bfseries\sffamily,
+    titlepage author=\sffamily,
+    page number=\normalfont,
+    left mark=\@empty,
+    right mark=\@empty,
+  },
+}
+\RequirePackage{footmisc}
+\newcommand{\AM@exec@footnote@fontsetup}{%
+  \renewcommand*{\footnotelayout}{\AMfont@footnote@style}
+}
+\newcommand{\AM@setup@catption@labelfont}[1]{\captionsetup{labelfont+={#1}}}
+\newcommand{\AM@setup@catption@textfont}[1]{\captionsetup{textfont+={#1}}}
+\newcommand{\AM@exec@caption@fontsetup}{%
+  \@ifpackageloaded{caption}{
+    \expandafter\forcsvlist\expandafter%
+      \AM@setup@catption@labelfont\expandafter%
+      {\AMfont@caption@label}
+    \expandafter\forcsvlist\expandafter%
+      \AM@setup@catption@textfont\expandafter%
+      {\AMfont@caption@text}
+  }{}
+}
+\AMsetFont{default}
+\AfterPackage{caption}{\AM@exec@caption@fontsetup}
+\AtBeginDocument{%
+  \ifAMfont@setup@titles
+    %
+    \PackageInfo{AMfont}{Modification of the title styles (with package titlesec).}
+    \@ifpackageloaded{titlesec}{}{\RequirePackage{titlesec}}
+    \@ifpackageloaded{AMcolor}{}{%
+      \newcommand{\AMcolor@chapter}{black}
+      \newcommand{\AMcolor@section}{black}
+      \newcommand{\AMcolor@subsection}{black}
+      \newcommand{\AMcolor@subsubsection}{black}
+      \newcommand{\AMcolor@paragraph}{black}
+      \providecommand{\color}[1]{}
+    }
+    %
+    \titleformat{\chapter}[display]%
+      {\AMfont@chapter@title@style\color{\AMcolor@chapter}}%
+      {\AMfont@chapter@title@size\chaptertitlename\ \thechapter}%
+      {20pt}%
+      {\AMfont@chapter@title@size}%
+    \titleformat*{\section}{%
+      \AMfont@section@title@style%
+      \AMfont@section@title@size%
+      \color{\AMcolor@section}%
+    }%
+    \titleformat*{\subsection}{%
+      \AMfont@subsection@title@style%
+      \AMfont@subsection@title@size%
+      \color{\AMcolor@subsection}%
+    }%
+    \titleformat*{\subsubsection}{%
+      \AMfont@subsubsection@title@style%
+      \AMfont@subsubsection@title@size%
+      \color{\AMcolor@subsubsection}%
+    }%
+    \titleformat*{\paragraph}{%
+      \AMfont@paragraph@title@style%
+      \AMfont@paragraph@title@size%
+      \color{\AMcolor@paragraph}%
+    }%
+  \fi
+}
+%% 
+%% Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+%% Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+%% Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+%% Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Romain Pennec.
+%% 
+%% This work consists of the file  AMfont.dtx
+%% and the derived files           AMfont.ins,
+%%                                 AMfont.pdf and
+%%                                 AMfont.sty.
+%% 
+%%
+%% End of file `AMfont.sty'.

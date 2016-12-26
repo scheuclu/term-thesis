@@ -1,0 +1,289 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMposter <!AMreleaseVersion!> --- AM poster class
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMposter.dtx
+and the derived files           AMposter.ins,
+                                AMposter.pdf and
+                                AMposter.cls.
+
+\endpostamble
+\usedir{tex/latex/AM/AMposter}
+\generate{
+  \file{\jobname.cls}{\from{\jobname.dtx}{class}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMposter}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMposter}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*class>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{AMposter}[\AMinsertGitDate{} \AMinsertGitVersion{} AM poster]
+%</class>
+%<*driver>
+\documentclass{AMdocumentation}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{1.0}{2015/08/05}{First version}
+%
+%
+%
+%
+%
+%
+% \title{The \textcolor{white}{AMposter} class}
+% \maketitle
+% \tableofcontents
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{User guide}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{usage}
+\documentclass{AMposter}
+\title{Poster Title}
+\subtitle{Poster Subtitle}
+\author{Poster Author}
+\begin{document}
+\maketitle
+\block{
+  block content...
+}
+\end{document}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+%
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%    \begin{macrocode}
+%<*class>
+%    \end{macrocode}
+%
+% \subsection{Standard package} 
+%
+% \AMpackage{AMposter} is based on class \PackageName{tikzposter}. 
+% \AMpackage{AMfont}, \AMpackage{AMcolor} and \AMpackage{AMmath} are loaded.
+%
+%    \begin{macrocode}
+\LoadClass[a0paper, 25pt, margin=0mm, innermargin=50mm, colspace=20mm]{tikzposter}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[theme=tumhelvetica]{AMfont}
+\RequirePackage{multicol}
+\RequirePackage{AMcolor}
+\RequirePackage{AMmath}
+%    \end{macrocode}
+%
+%
+%
+% \subsection{Color theme}
+%
+% Create color palette \docValue{TUMcolorpalette}
+%    \begin{macrocode}
+\definecolorpalette{TUMcolorpalette}{
+  \definecolor{colorOne}{named}{TUMblue}
+  \definecolor{colorTwo}{named}{black}
+  \definecolor{colorThree}{named}{TUMorange}
+}
+%    \end{macrocode}
+%
+% Create color style \docValue{TUMcolorstyle}
+%    \begin{macrocode}
+\definecolorstyle{TUMcolorstyle}{
+  \definecolor{colorOne}{named}{TUMblue}
+  \definecolor{colorTwo}{named}{black}
+  \definecolor{colorThree}{named}{TUMorange}
+  }{
+%    \end{macrocode}
+% Background Colors
+%    \begin{macrocode}
+  \colorlet{backgroundcolor}{colorOne}
+  \colorlet{framecolor}{black}
+%    \end{macrocode}
+% Title Colors
+%    \begin{macrocode}
+  \colorlet{titlefgcolor}{black}
+  \colorlet{titlebgcolor}{TUMblue}
+%    \end{macrocode}
+% Block Colors
+%    \begin{macrocode}
+  \colorlet{blocktitlebgcolor}{white}
+  \colorlet{blocktitlefgcolor}{TUMblue}
+  \colorlet{blockbodybgcolor}{white}
+  \colorlet{blockbodyfgcolor}{black}
+%    \end{macrocode}
+% Innerblock Colors
+%    \begin{macrocode}
+  \colorlet{innerblocktitlebgcolor}{white}
+  \colorlet{innerblocktitlefgcolor}{black}
+  \colorlet{innerblockbodybgcolor}{colorThree!30!white}
+  \colorlet{innerblockbodyfgcolor}{black}
+%    \end{macrocode}
+% Note colors
+%    \begin{macrocode}
+  \colorlet{notefgcolor}{black}
+  \colorlet{notebgcolor}{colorTwo!50!white}
+  \colorlet{noteframecolor}{colorTwo}
+%    \begin{macrocode}
+}
+%    \end{macrocode}
+%
+%
+% No background needs to be drawn...
+%    \begin{macrocode}
+\definebackgroundstyle{TUMbackgroundstyle}{%
+}
+%    \end{macrocode}
+%
+%
+% \subsection{Poster Title}
+%
+% Um Zeilenumbruch im Titel zu ermöglichen
+%
+%    \begin{macrocode}
+\def\title#1{%
+  \gdef\@title{%
+    \scalebox{\TP@titletextscale}{%
+      \begin{minipage}[t]{\linewidth}
+        #1\par\vspace{0.5em}
+      \end{minipage}%
+    }
+  }
+}
+\def\@subtitle{~}
+\gdef\subtitle#1{\gdef\@subtitle{#1}}
+%    \end{macrocode}
+%
+% TUM-Titel gemäß Styleguide
+%
+%    \begin{macrocode}
+\settitle{%
+  \vbox{
+    \@titlegraphic \\[\TP@titlegraphictotitledistance]
+    \color{titlefgcolor}
+    {\fontseries{b}\fontsize{110}{140}\selectfont \@title \par}
+    \vspace*{1em}
+    {\fontsize{70}{100}\fontseries{b}\selectfont \color{titlebgcolor} \@subtitle \par} 
+    \vspace*{1em}
+    {\fontsize{40}{55}\selectfont  \@author}
+  }
+}
+%    \end{macrocode}
+%
+% Create title style \docValue{TUMtitlestyle}
+%    \begin{macrocode}
+\definetitlestyle{TUMtitlestyle}{
+    width=741mm, roundedcorners=0, linewidth=0pt, innersep=0mm,
+    titletotopverticalspace=47mm, titletoblockverticalspace=20mm,
+    titlegraphictotitledistance=50pt 
+}{}
+%    \end{macrocode}
+%
+% Create block style \docValue{TUMblockstyle}
+%    \begin{macrocode}
+\defineblockstyle{TUMblockstyle}{
+     titlewidthscale=1, bodywidthscale=1, titleleft,
+     titleoffsetx=0pt, titleoffsety=-10pt, bodyoffsetx=0mm, bodyoffsety=-15mm,
+     bodyverticalshift=0mm, roundedcorners=5, linewidth=2pt,
+     titleinnersep=0mm, bodyinnersep=0cm
+}{}
+%    \end{macrocode}
+%
+% \subsection{Poster header}
+%
+%    \begin{macrocode}
+\titlegraphic{%
+  \includegraphics[width=\linewidth]{AM-poster-head}
+}
+%    \end{macrocode}
+%
+% \subsection{Layout theme}
+%
+% Create Layout theme \docValue{TUMposter}
+%    \begin{macrocode}
+\definelayouttheme{TUMposter}{
+  \usecolorstyle{TUMcolorstyle}
+  \usebackgroundstyle{TUMbackgroundstyle}
+  \usetitlestyle{TUMtitlestyle}
+  \useblockstyle{TUMblockstyle}
+  \useinnerblockstyle{Default}
+  \usenotestyle{Corner}
+}
+%    \end{macrocode}
+%
+% Use theme
+%    \begin{macrocode}
+\usetheme{TUMposter}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</class>
+%    \end{macrocode}
+%
+% \Finale

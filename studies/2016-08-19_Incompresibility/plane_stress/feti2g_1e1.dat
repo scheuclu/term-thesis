@@ -1,0 +1,71 @@
+--------------------------------------------------------------------GENERAL
+PROBLEMTYPE        STRING           feti
+PROBLEMDIM         NUMERIC          2
+MESHFORMAT         STRING           msh
+MESHPATH           STRING           <thisdir>/../meshgen_new.msh.part
+DISPATH            STRING           <thisdir>/output/meshgen_new.dis
+RESPATH            STRING           <thisdir>/output/fetis_1e1.res
+LOGFILE            STRING           <thisdir>/output/fetis_1e1.log
+-------------------------------------------------------------------TAGTYPES
+DIRICH             NUMERIC         1
+NEUMANN            NUMERIC         3
+MATERIAL           NUMERIC         4,5
+---------------------------------------------------------------------SOLVER
+NAME               STRING          FETI2Solver
+PARAMS             STRUCT          9
+ NUMSUBSTRUCTS     NUMERIC         12
+ ASSEMBLEDOPS      BOOL            true
+ VERBOSE           BOOL            true
+ REASSEMBLESYS     BOOL            false
+ CHECKS            BOOL            true
+ COARSEGRID        STRING          Geneo
+ WRITEITER         STRING          none
+ TERMINATIONTYPE   STRING          absolute
+ TERMINATIONVAL    NUMERIC         1e-6
+------------------------------------------------------------------MATERIALS
+ST_VENANT_KIRCHOFF
+MATID 1 E 200 nu 0.49 type plane_stress
+
+ST_VENANT_KIRCHOFF
+MATID 2 E 200 nu 0.49 type plane_stress
+-----------------------------------------------------------------CONDITIONS
+DIRICHLET_CONDITION
+CONDID 1 ONOFF 1 1 VAL 0 0 MSHTAG 1
+
+NEUMANN_CONDITION
+CONDID 2 ONOFF 1 0 VAL 1.0 0.0 MSHTAG 3
+
+MATERIAL_CONDITION
+CONDID 3 MATID 1 MSHTAG 4
+
+MATERIAL_CONDITION
+CONDID 4 MATID 2 MSHTAG 5
+-------------------------------------------------------------------POSTPROC
+ELESTRESSES        BOOL            true
+NODESTRESSES       BOOL            false
+ELESTRAIN          BOOL            false
+NODESTRAIN         BOOL            false
+---------------------------------------------------------------------OUTPUT
+WRITEEVERY         NUMERIC         2
+FORMAT             STRING          vtk
+PATH               STRING          <thisdir>/output/vtk
+NAME               STRING          feti1_1e1
+------------------------------------------------------------------MATLABOUT-IGNORE
+PLOTSETUP         STRUCT            10
+ PLOTGEO          BOOL              true
+ PLOTBC           BOOL              true
+ LABNODES         BOOL              true
+ LABELE           BOOL              true
+ GRID             STRING            off
+ AXIS             STRING            off
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8
+ DIRICHCOLOR      NUMERIC           0,1,0
+ NEUMANNCOLOR     NUMERIC           1,0,0
+ FACEALPHA        NUMERIC           1.0
+PLOTLAG           STRUCT            2
+ LABNODES         BOOL              false
+ LABELE           BOOL              false
+PLOTRESULT        STRUCT            3
+ LABNODES         BOOL              false   
+ LABELE           BOOL              false
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8

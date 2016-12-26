@@ -1,0 +1,58 @@
+%%
+%% This is file `struktex-test-2.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% struktex.dtx  (with options: `example3')
+%% 
+%%
+\documentclass{article}
+\usepackage[pict2e, verification]{struktex}
+
+\begin{document}
+\def\StruktBoxHeight{7}
+\begin{struktogramm}(90,137)
+    \assign%
+    {
+      \begin{declaration}[]
+          \description{\(a, b, c\)}{three variables which are to be sorted}
+          \description{\(tmp\)}{temporary variable for the circular swap}
+      \end{declaration}
+    }
+    \assert[\StruktBoxHeight]{\sTrue}
+    \ifthenelse[\StruktBoxHeight]{1}{2}{\(a\le c\)}{j}{n}
+        \assert[\StruktBoxHeight]{\(a\le c\)}
+    \change
+        \assert[\StruktBoxHeight]{\(a>c\)}
+        \assign[\StruktBoxHeight]{\(tmp\gets a\)}
+        \assign[\StruktBoxHeight]{\(a\gets c\)}
+        \assign[\StruktBoxHeight]{\(c\gets tmp\)}
+        \assert[\StruktBoxHeight]{\(a<c\)}
+    \ifend
+    \assert[\StruktBoxHeight]{\(a\le c\)}
+    \ifthenelse[\StruktBoxHeight]{2}{1}{\(a\le b\)}{j}{n}
+        \assert[\StruktBoxHeight]{\(a\le b \wedge a\le c\)}
+        \ifthenelse[\StruktBoxHeight]{1}{1}{\(b\le c\)}{j}{n}
+            \assert[\StruktBoxHeight]{\(a\le b \le c\)}
+        \change
+            \assert[\StruktBoxHeight]{\(a \le  c<b\)}
+            \assign[\StruktBoxHeight]{\(tmp\gets c\)}
+            \assign[\StruktBoxHeight]{\(c\gets b\)}
+            \assign[\StruktBoxHeight]{\(b\gets tmp\)}
+            \assert[\StruktBoxHeight]{\(a\le b<c\)}
+        \ifend
+    \change
+        \assert[\StruktBoxHeight]{\(b < a\le c\)}
+        \assign[\StruktBoxHeight]{\(tmp\gets a\)}
+        \assign[\StruktBoxHeight]{\(a\gets b\)}
+        \assign[\StruktBoxHeight]{\(b\gets tmp\)}
+        \assert[\StruktBoxHeight]{\(a<b\le c\)}
+    \ifend
+    \assert[\StruktBoxHeight]{\(a\le b \le c\)}
+\end{struktogramm}
+
+\end{document}
+%% 
+%%
+%% End of file `struktex-test-2.tex'.

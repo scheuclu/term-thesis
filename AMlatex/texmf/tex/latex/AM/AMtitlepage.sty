@@ -1,0 +1,356 @@
+%%
+%% This is file `AMtitlepage.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% AMtitlepage.dtx  (with options: `package')
+%% --------------------------------------------------------------------------------
+%% AMtitlepage <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for title pages
+%% E-mail: romain.pennec@tum.de
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% --------------------------------------------------------------------------------
+%% 
+\RequirePackage{AMgit}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMtitlepage}[\AMinsertGitDate{} \AMinsertGitVersion{} AM title pages]
+\RequirePackage{ifthen}
+\RequirePackage{pgfopts}
+\RequirePackage{xspace}
+\RequirePackage{AMlogo}
+\RequirePackage{AMlang}
+\RequirePackage{AMcolor}
+\AtBeginDocument{%
+  \@ifpackageloaded{hyperref}{}{\RequirePackage{hyperref}}
+  \@ifpackageloaded{graphicx}{}{\RequirePackage{graphicx}}
+}
+\pgfkeys{
+  /AM/titlepage/.is family,/AM/titlepage,
+  arbeit type/.store in = \AMtitlepage@arbeittype,
+  scriptum/.code={\renewcommand{\maketitle}{\AMtitlepage@scriptum}},
+  bachelor/.style={arbeit type={Bachelor's Thesis},replace maketitle},
+  semester/.style={arbeit type={Semesterarbeit},replace maketitle},
+  master/.style={arbeit type={Master's Thesis},replace maketitle},
+  exercise/.code={\renewcommand{\maketitle}{\AMtitlepage@exercise}},
+  contact/.code={\renewcommand{\maketitle}{\AMtitlepage@contact}},
+  replace maketitle/.code={\renewcommand{\maketitle}{\AMtitlepage@create@titlepage}},
+  dissertation/.code={\renewcommand{\maketitle}{\AMtitlepage@dissertation}},
+  TUMAM/.code={\renewcommand{\maketitle}{\AMtitlepage@TUMAM}},
+}
+\ProcessPgfOptions{/AM/titlepage}
+\providecommand{\AMset}[1]{\pgfkeys{/AM/.cd,#1}}
+\newcommand{\AMsetTitlepage}[1]{\pgfkeys{/AM/titlepage/.cd,#1}}
+\def\AM@subtitle{}
+\providecommand{\subtitle}[1]{\gdef\AM@subtitle{#1}}
+\newcommand*{\@chairman}{}
+\newcommand{\chairman}[1]{\gdef\@chairman{#1}}
+\def\AM@subject{}
+\providecommand{\subject}[1]{\gdef\AM@subject{#1}}
+\def\AM@contactphone{}
+\providecommand{\contactphone}[1]{\gdef\AM@contactphone{#1}}
+\def\AM@contactemail{}
+\providecommand{\contactemail}[1]{\gdef\AM@contactemail{#1}}
+\newcommand*{\AM@supervisor}{}
+\newcommand{\supervisor}[1]{\gdef\AM@supervisor{\def\and{\item}#1}}
+\newcounter{supervisorCounter}
+\newenvironment{supervisorListDiss}{%
+  \begin{list}{\arabic{supervisorCounter}.~~}%
+    {%
+      \usecounter{supervisorCounter}
+      \labelsep=0em \labelwidth=0em \leftmargin=0em
+      \itemindent=0em \topsep=0em
+    }%
+  }{%
+    \end{list}%
+}
+\newcommand{\AMtitlepage@print@background}{%
+  {\raggedright\vspace*{-\headsep}\hspace*{-1in}\hspace*{-\oddsidemargin}%
+    \begin{picture}(0,0)(0,0)%
+      \setlength\fboxsep{0pt}%
+      \put(0,0){\parbox[t][\textheight][c]{\textwidth}%
+      {\includegraphics{AMtitlepage-image-Master}}}
+    \end{picture}
+  }\par
+}
+\newcommand{\AMtitlepage@print@author}{%
+  \raggedright\sffamily\LARGE\@author\par
+}
+\newcommand{\AMtitlepage@print@title}{%
+  \textcolor{TUMBlue}{\huge\bfseries\@title}\par
+}
+\newcommand{\AMtitlepage@print@subtitle}{%
+  \ifx\AM@subtitle\@empty \else
+    \textcolor{TUMBlue2}{\LARGE\AM@subtitle}\par
+  \fi
+}
+\newcommand{\AMtitlepage@print@date}{%
+  {\Large \@date \par}
+}
+\newcommand{\AMtitlepage@print@supervisor}{%
+  \ifx\AM@supervisor\@empty \else
+    {\large \supervisorstring:\\
+    \begin{list}%
+      {}%
+      {\labelsep=0em \labelwidth=0em \leftmargin=0em \itemindent=0em \topsep=0em}%
+      \item\ifx\AM@supervisor\@empty\textbf{?}\else\AM@supervisor\fi%
+    \end{list}
+    }%
+  \fi
+}
+\newcommand{\AMtitlepage@print@dedication}{%
+}
+\providecommand\AMtitlepage@arbeittype{}
+\newcommand{\AMtitlepage@print@arbeit}{%
+  \large\AMtitlepage@arbeittype\par
+}
+\newcommand{\AMtitlepage@create@titlepage}{%
+  \thispagestyle{empty}
+  \begin{titlepage}%
+    \AMtitlepage@print@background
+    \vspace{\stretch{4}}
+    \AMtitlepage@print@author
+    \vspace{\stretch{1}}
+    \AMtitlepage@print@title
+    \AMtitlepage@print@subtitle
+    \vspace{\stretch{1}}
+    \AMtitlepage@print@arbeit
+    \vspace{\stretch{3}}
+    \AMtitlepage@print@date
+    \vspace{\stretch{6}}
+    \AMtitlepage@print@supervisor
+    \null
+  \end{titlepage}
+}
+\providecommand{\includeHeaderAFour}{%
+  \begin{minipage}[t][10mm][t]{\textwidth}%
+    \color{TUMBlue}
+    \AM@font@load@tumhelvetica
+    \fontencoding{T1}\fontseries{m}\fontfamily{lhv}\fontsize{11pt}{11pt}
+    \selectfont%
+    \noindent%
+    \includegraphics[height=11.67mm,width=10.67mm]{AM-logo-AM-blau-RGB}
+    \hspace{1ex}%
+    \begin{minipage}[b]{0.38\textwidth}
+      \raggedright \AMinsertAM
+    \end{minipage}%
+    \hfill{}%
+    \begin{minipage}[b]{0.37\textwidth}
+      \raggedleft \AMinsertTUM
+    \end{minipage}%
+    \hspace{1ex}%
+    \includegraphics[height=10mm,width=18.7mm]{AM-logo-TUM-voll-blau-RGB}%
+\end{minipage}
+\hfill{}%
+}
+\newcommand{\AMtitlepage@TUMAM}{%
+  \thispagestyle{empty}
+  \def\AM@title@style{\bfseries\huge}
+  \def\AM@subtitle@style{\bfseries\Large\color{TUMBlue}}
+  \date{}
+  \pdfbookmark{\@title}{AMtitleanchor}
+  \vspace*{-15mm}
+  \noindent
+  \includeHeaderAFour
+  \vskip15mm
+  \begin{center}
+    \raggedright{\AM@title@style\@title} \\[3ex]
+    \ifx\AM@subtitle\empty\else
+      {\AM@subtitle@style\AM@subtitle} \\[2ex]
+    \fi
+    {\@author \ifx\@date\empty\else-- \@date\fi}
+  \end{center}
+  \vskip5mm
+}
+\AMsetFont{contact info=\color{TUMDarkGray}}
+\newcommand{\AMtitlepage@print@contactinfos}{%
+  \parbox[c]{10cm}{\small
+  \begin{tabular}{rl}
+  \AMfont@contactinfo@style Date & \ifx\@date\empty\today\else\@date\fi \\
+  \AMfont@contactinfo@style Contact & \@author \\
+  \AMfont@contactinfo@style Address & Lehrstuhl f\"{u}r Angewandte Mechanik \\
+  \AMfont@contactinfo@style         & Boltzmannstr. 15 \\
+                                    & D - 85748 Garching \\
+  \AMfont@contactinfo@style Telephone & \AM@contactphone \\
+  \AMfont@contactinfo@style E-mail & \AM@contactemail
+  \end{tabular}
+  }
+}
+\newcommand{\AMtitlepage@contact}{
+  \noindent\hskip-1.5cm
+  \AMtitlepage@print@contactinfos
+\hfill
+\parbox[c]{7cm}{\flushright
+\includegraphics{AM-logo-TUM-voll-blau-RGB} \\[1ex]
+\large\color{TUMDarkBlue} Technische Universit\"{a}t M\"{u}nchen
+\vskip3ex
+}
+\vskip1ex\noindent
+\rule{\textwidth}{0.4pt}
+\vskip1ex\noindent
+\hfill{\AMfont@title@style\@title}\hfill\null \\[1ex]
+\null\hfill{\AMfont@author@style\AM@subtitle}\hfill\null
+
+\noindent\rule{\textwidth}{0.4pt}\vskip3ex
+}
+\newcommand*{\AMtitlepage@scriptum}{
+{%
+\phantomsection%
+\pdfbookmark[1]{Titlepage}{titlepage}%
+\setcounter{page}{1}%
+\includeHeaderAFour%
+\par%
+\vspace{1em}
+{%
+  \fontsize{14pt}{18pt}\selectfont
+  \textit{\AM@subject}\par
+}%
+  {%
+    \color{TUMBlue}\fontsize{22pt}{28pt}\selectfont
+    {\bfseries\@title\par}%
+\ifx\AM@subtitle\@empty \else%
+{\itshape\AM@subtitle}\par%
+\fi%
+    \medskip%
+  }%
+  {%
+    \fontsize{11pt}{15pt}\selectfont
+    \@date\par
+  }%
+  {%
+    \fontsize{14pt}{18pt}\selectfont
+    \@author\par
+  }%
+}
+\vspace{1em}%
+\thispagestyle{empty}%
+}
+\newcommand*{\AMtitlepage@exercise}{
+{%
+\phantomsection%
+\pdfbookmark[1]{Titlepage}{titlepage}%
+\setcounter{page}{1}%
+\includeHeaderAFour\par\vspace{4em}
+  {%
+    \fontsize{22pt}{28pt}\selectfont
+    {\bfseries\@title\par}%
+\ifx\AM@subtitle\@empty \else%
+{\fontsize{14pt}{18pt}\AM@subtitle}\par%
+\fi%
+    \medskip%
+  }%
+  {%
+    \fontsize{11pt}{15pt}\selectfont
+    \@date\par
+  }%
+  {%
+    \fontsize{14pt}{18pt}\selectfont
+    \@author\par
+  }%
+}
+\vspace{1em}%
+\thispagestyle{empty}%
+}
+\newcommand{\AMtitlepage@dissertation}{
+  \begin{titlepage}
+    \phantomsection%
+    \pdfbookmark[1]{Titlepage}{titlepage}%
+    \setcounter{page}{1}%
+    \pdfmapfile{+tumhelv.map}
+    \fontfamily{lhv}\selectfont
+    \setlength{\hoffset}{-1in}%
+    \setlength{\voffset}{-1in}%
+    \setlength\footskip{0pt}%
+    \setlength\headsep{0pt}%
+    \setlength\headheight{0pt}%
+    \setlength\marginparsep{0pt}%
+    \setlength\marginparpush{0pt}%
+    \setlength\marginparwidth{0pt}%
+    \setlength\oddsidemargin{0pt}%
+    \setlength\parindent{0pt}%
+    \setlength\topmargin{0pt}%
+    \addtolength{\hoffset}{25mm}
+    \setlength\textwidth{170mm}
+    \setlength\textheight{239mm}
+    \addtolength{\voffset}{15mm}%
+    \begin{minipage}[t][10mm][t]{\textwidth}%
+      \hspace{-2mm}\includegraphics[height=10mm]{AM-logo-MW-blau-CMYK.pdf}
+      \hfill{}
+      \includegraphics[height=10mm]{AM-logo-TUM-outline-blau-CMYK}%
+    \end{minipage}
+    \hfill{}\par%
+    \vspace{15mm}%
+    {%
+      \fontsize{14pt}{18pt}\selectfont% PRESCRIBED
+      \foreignlanguage{ngerman}{Fakult\"at f\"ur Maschinenwesen}\\%
+      \foreignlanguage{ngerman}{Lehrstuhl f\"ur Angewandte Mechanik}\par%
+    }%
+    \vspace{2cm}% Not Prescribed (?)
+    \begin{minipage}[t]{\textwidth}%
+      {%
+        \color{TUMBlue}\fontsize{22pt}{28pt}\selectfont% PRESCRIBED
+        {\bfseries\@title\par}%
+        \ifx\AM@subtitle\@empty \else%
+            {\itshape\AM@subtitle}\par%
+        \fi%
+      \bigskip\bigskip\medskip%
+      }%
+      {%
+        \fontsize{14pt}{18pt}\selectfont% PRESCRIBED
+        \textbf{\@author}\par\bigskip\bigskip\medskip%
+      }%
+      {%
+        \fontsize{11pt}{15pt}\selectfont% PRESCRIBED
+        \foreignlanguage{ngerman}{%
+          Vollst\"andiger Abdruck der von der Fakult\"at f\"ur Maschinenwesen
+          der Technischen Universit\"at M\"unchen zur Erlangung des akademischen
+          Grades eines
+        }%
+        \par\bigskip\medskip%
+        \foreignlanguage{ngerman}{\textbf{Doktor-Ingenieurs (Dr.-Ing.)}}
+        \par\bigskip\medskip%
+        \foreignlanguage{ngerman}{genehmigten Dissertation.}
+        \par\bigskip\bigskip\bigskip\bigskip%
+        \foreignlanguage{ngerman}{\textbf{Vorsitzender:}~\@chairman}
+        \par\bigskip\medskip%
+        \foreignlanguage{ngerman}{\textbf{Pr\"ufer der Dissertation:}}
+        \par\medskip%
+        \begin{supervisorListDiss}
+          \item\ifx\AM@supervisor\@empty\textbf{?}\else\AM@supervisor\fi%
+        \end{supervisorListDiss}
+        \bigskip\bigskip\bigskip%
+        \foreignlanguage{ngerman}{Die Dissertation wurde am
+          \ifx\@date@i\@empty\textbf{?}\else\mbox{\@date@i}\fi
+          \xspace bei der Technischen Universit\"at M\"unchen ein\-ge\-reicht
+          und durch die Fakult\"at f\"ur Maschinenwesen am
+          \ifx\@date@ii\@empty\textbf{?}\else\mbox{\@date@ii}\fi
+          \xspace angenommen.
+          }%
+      }%
+    \end{minipage}
+    \hfill{}%
+  \end{titlepage}
+}
+%% 
+%% Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+%% Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+%% Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+%% Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Romain Pennec.
+%% 
+%% This work consists of the file  AMtitlepage.dtx
+%% and the derived files           AMtitlepage.ins,
+%%                                 AMtitlepage.pdf and
+%%                                 AMtitlepage.sty.
+%% 
+%%
+%% End of file `AMtitlepage.sty'.

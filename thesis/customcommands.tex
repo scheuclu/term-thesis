@@ -1,0 +1,148 @@
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+%\renewcommand{\mat}[1]{\boldsymbol{#1}}
+
+\newcommand{\derivtime}[1]{\dot{#1}}           % time derivative
+\newcommand{\dderivtime}[1]{\ddot{#1}}         % double time derivative
+
+%\renewcommand{\dd}{\mathrm{d}}                    % differential d
+\newcommand{\pd}{\partial}                      % partial differentiation d
+
+\newcommand{\dvec}[1]{\boldsymbol{ \mathsf{#1} } }         % for vectors
+\newcommand{\dmat}[1]{\boldsymbol{\mathsf{#1}}}           % for matrices
+\newcommand{\tensor}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand{\Bd}[2]{ (#1,#2)_{D^k} }           % bilienarfor over domian
+\newcommand{\Bb}[2]{ (#1,#2)_{\partial D^k} }           % bilienarfor over boundary
+\newcommand{\0}{\textcolor{lightgrey}{0}}
+%
+\newcommand{\domainone}{\Omega_1}
+\newcommand{\domaintwo}{\Omega_2}
+\newcommand{\ifaceone}{\Gamma_1}
+\newcommand{\ifacetwo}{\Gamma_2}
+
+\newcommand{\stiffmat}{\dmat{K}}
+
+\newcommand{\condnum}{\mathcal{K}}
+\newcommand{\myorder}[1]{\mathcal{O}\left(#1\right)}
+
+\newcommand{\sfn}{N}
+
+\newcommand{\disp}{u}
+\newcommand{\dispvec}{\dvec{\disp}}
+
+\newcommand{\lag}{\lambda}
+\newcommand{\lagvec}{\dvec{\lag}}
+
+%natural coarse space lambda
+\newcommand{\lagn}{\lambda_N}
+\newcommand{\lagnvec}{\dvec{\lagn}}
+
+%Coarse space lambda
+\newcommand{\lagc}{\lambda_C}
+\newcommand{\lagcvec}{\dvec{\lagc}}
+
+%FETI subspace space lambda
+\newcommand{\lagf}{\lambda_F}
+\newcommand{\lagfvec}{\dvec{\lagf}}
+
+
+\newcommand{\rmode}{\alpha}
+\newcommand{\rmodevec}{\dvec{\rmode}}
+
+\newcommand{\force}{f}
+\newcommand{\forcevec}{\dvec{\force}}
+
+\newcommand{\ifacedisp}{d}
+\newcommand{\ifacedispvec}{\dvec{\ifacedisp}}
+
+\newcommand{\res}{r}
+\newcommand{\resvec}{\dvec{\res}}
+
+\newcommand{\traceop}{\dmat{t}}
+\newcommand{\asmop}{\dmat{B}}
+\newcommand{\nullspacemat}{\dmat{R}}
+\newcommand{\locschur}{\dmat{S}}
+\newcommand{\asmlocschur}{\asmids{\dmat{S}}}
+\newcommand{\locdualschur}{\dmat{F}}
+
+\newcommand{\precond}{\dmat{F}}
+
+
+\newcommand{\rmodespace}{\dmat{G}}
+\newcommand{\scalemat}{\dmat{A}}
+
+\newcommand{\cspace}{\dmat{C}}
+\newcommand{\projn}{\dmat{P}}
+\newcommand{\projc}{\dmat{P}_c}
+
+\newcommand{\totalgap}{\dvec{\Delta}}
+
+%feti-general
+\newcommand{\evec}{\dvec{e}}
+
+%feti-2
+\newcommand{\sdirnspacecspace}{\dvec{q}}
+\newcommand{\sdirnspace}{\dvec{w}} %search direction
+\newcommand{\sdirfspace}{\dvec{z}}
+
+%feti-s
+\newcommand{\sdirnspacemat}{\dmat{W}}
+\newcommand{\Zmat}{\dmat{Z}}
+\newcommand{\sdirfspacemat}{\dmat{Z}}
+\newcommand{\Deltamat}{\dmat{\Delta}}
+\newcommand{\sdirnspacecspaceblock}{\dmat{Q}}
+
+\newcommand{\eyemat}{\dmat{I}}
+
+\newcommand{\idone}[1]{{#1}^{(1)} }
+\newcommand{\idtwo}[1]{{#1}^{(2)} }
+\newcommand{\ids}[1]  {{#1}^{(s)} }
+\newcommand{\asmids}[1]  {{#1}^{[s]} }
+\newcommand{\inv}[1]  {{#1}^{-1} }
+\newcommand{\pinv}[1] {{#1}^{+} }
+\newcommand{\tp}[1]   {{#1}^{T} }
+%\newcommand{\scaled}[1]{\tilde{#1}}
+\newcommand{\scaled}[1]{#1}
+
+
+
+
+%commands for chapter finite element method
+\newcommand{\bodyforce}[1]{\dvec{\hat{b}}}
+\newcommand{\stress}{\dvec{\sigma}}
+\newcommand{\strain}{\dvec{\epsilon}}
+\newcommand{\traction}{\dvec{t}}
+%\newcommand{\pd}[1]{\partial}
+
+
+
+%\newcommand{\nassitext}[1]{\textit{\textcolor{nassitextcolor}{#1}}}
+\newcommand{\nassitext}[2]{\makebox[#1\textwidth]{\textit{\textcolor{nassitextcolor}{\small #2}}\hfill}}
+
+\newcommand{\nassitextbold}[2]{\makebox[#1\textwidth]{\textbf{\textit{\textcolor{nassitextcolor}{\small #2}}}\hfill}}
+
+\newcommand{\nassitexttwolines}[3]{\nassitext{#1}{#2}\hspace*{\hsize}\linebreak \nassitext{\df2}{#3}}
+
+\usepackage{soul}
+\definecolor{hlcolor}{RGB}{230,230,230}
+\setulcolor{red}
+%\newcommand{\hlchange}[1]{\colorbox{hlcolor}{$#1$}}
+%\newcommand{\hlchange}[1]{\ul{$\displaystyle#1$}}
+%\usepackage{xcolor}
+\newsavebox\MBox
+\newcommand\hlchange[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.7\dp\MBox]{\wd\MBox}{1.0pt}}}
+
+
+
+\newcommand*\MyScale{1}
+\newcommand*\Scale[1][1]{\renewcommand*\MyScale{#1}}
+\tikzset{%
+  every picture/.style={%
+    scale=\MyScale,
+  }
+}
+
+
+%\renewcommand\thesection{\roman{section}}
+%\renewcommand\thesubsection{\thesection.\roman{subsection}}
+%\renewcommand\thesubsubsection{\thesection.\thesubsection.\roman{subsection}}

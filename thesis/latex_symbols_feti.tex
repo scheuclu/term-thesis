@@ -1,0 +1,90 @@
+% -------------------------------------------------------------------
+% Text Abbreviations
+
+\newcommand{\dm}[3]{#1: #2 \times #3} % matrix dimensions
+\newcommand{\dq}[2]{\dm{#1}{#2}{#2}}  % quadratic matrix dimensions
+
+\newcommand{\nbc}{\textsc{Neumann} boundary condition}
+\newcommand{\dbc}{\textsc{Dirichlet} boundary condition}
+\newcommand{\nbcs}{\nbc{s}}
+\newcommand{\dbcs}{\dbc{s}}
+\newcommand{\nbcl}{\nbc~}
+\newcommand{\dbcl}{\dbc~}
+\newcommand{\nbcsl}{\nbcs~}
+\newcommand{\dbcsl}{\dbcs~}
+
+\newcommand{\LM}{\textsc{Lagrange} Multiplier}
+\newcommand{\LMs}{\LM{s}}
+\newcommand{\LMl}{\LM~}
+\newcommand{\LMsl}{\LMs~}
+
+\newcommand{\minimize}[2]{\underset{#1}{\text{min}} \left[ #2 \right]}
+\newcommand{\diag}[1]{\text{diag}\left(#1\right)}
+
+\newcommand{\sv}[1]{{\vec{#1}^{(s)}}}
+\newcommand{\s}[1]{{{#1}^{(s)}}}
+
+\newcommand{\im}{\text{im}}
+% -------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------
+% Formula Constructions
+\newcommand{\sub}[2]{#1^{(#2)}}
+% -------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------
+% Math Symbols
+%Small and Capitals
+%Normal Letters
+%Curved Letters \mathcal{ABC}
+%Greek Letters
+% -------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------
+% Math Symbols: global
+\newcommand{\glbStiff}{\vec{\hat{K}}}
+\newcommand{\glbForceExt}{\vec{\hat{f}}}
+\newcommand{\glbDisp}{\vec{\hat{u}}}
+\newcommand{\glbNrDof}{\hat{N}_{dof}}
+\newcommand{\glbDomain}{\Omega}
+\newcommand{\glbBound}{\Gamma}
+\newcommand{\glbBoundD}{\glbBound_D}
+\newcommand{\glbBoundN}{\glbBound_N}
+\newcommand{\glbBoundI}{\glbBound_I}
+% -------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------
+% Math Symbols: substructure local
+\newcommand{\subDomain}{\glbDomain}
+\newcommand{\subBound}{\glbBound}
+\newcommand{\subBoundD}{\glbBoundD}
+\newcommand{\subBoundN}{\glbBoundN}
+\newcommand{\subBoundI}{\glbBoundI}
+\newcommand{\subStiff}{\vK}
+\newcommand{\subStiffI}{\vK_I} % trace of stiffness on interface
+\newcommand{\subStiffi}{\vK_i} % internal part of stiffness
+\newcommand{\subStiffIi}{\vK_I} % mixed Ii part of stiffness
+\newcommand{\subStiffiI}{\vK_i} % mixed iI part of stiffness
+\newcommand{\subForceExt}{\vf}
+\newcommand{\subDisp}{\vu}
+\newcommand{\subSchurKI}{\vK_SI} % schur complement of the stiffness on the interface
+\newcommand{\subRbm}{\vR}
+\newcommand{\subNrDofs}{N_{dof}}
+\newcommand{\subNrSubs}{N_s}
+\newcommand{\subNrLM}{N_{lm}}
+\newcommand{\subNrRbm}{N_{rbm}}
+% -------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------
+% Math Symbols: interface
+\newcommand{\ifFlex}{$\vF_I$}
+\newcommand{\ifRbm}{\vG_{I,N}}
+\newcommand{\ifAux}{\vG_{I,C}}
+\newcommand{\ifFlexPrec}{\overline{\ifFlex^{-1}}}
+\newcommand{\ifBrd}{\vGamma_I}
+% -------------------------------------------------------------------

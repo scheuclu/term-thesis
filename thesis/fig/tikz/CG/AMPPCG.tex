@@ -1,0 +1,59 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../..}
+\def\tikzpath{..}
+
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+%\assign{\nassitext{\df2}{text} $equation$  }
+\begin{struktogramm}(85,120)
+\def\df2{0.45}
+\assign{$\dvec{x}_0= \Pi \dvec{x}_{00} + \dmat{U}\pinv{(\tp{\dmat{U}} \dmat{A} \dmat{U})} \tp{\dmat{U}} \dvec{b}$  }
+
+
+
+\assign{$\dvec{r}_0 = \dvec{b}-\dmat{A}\dvec{x}_0$  }
+\assign{$\dmat{Z}_0 = (\sum_{s=1}^N \ids{\dmat{H}})\dvec{r}_0$  }
+\assign{$\dmat{P}_0 = \dmat{\Pi}\dmat{Z}_0$  }
+
+
+
+\while[8]{While not converged}
+  \assign{$\dmat{Q}_i = \dmat{A}\dmat{P}_i$  }
+  \assign{$\dmat{\Delta}_i = \tp{\dmat{Q}_i} \dmat{P}_i,~  \dvec{\gamma}_i=\tp{\dmat{P}_i}\dvec{r}_i,~\dmat{\alpha}_i={\dmat{\Delta}_i}^{+} \dvec{\gamma}_i$  }
+  \assign{$\dvec{x}_{i+1} = \dvec{x}_{i}+\dmat{P}_i \dvec{\alpha}_i$  }
+  \assign{$\dvec{r}_{i+1} = \dvec{r}_{i}-\dmat{Q}_i \dvec{\alpha}_i$  }
+
+  \assign{$\dmat{Z}_{i+1} = (\sum_{s=1}^N \ids{\dmat{H}}) \dvec{r}_{i+1}$  }
+  
+  \while[8]{For $s=1,...,N$}
+    \assign{$t_i^s=\frac{\langle \dmat{P}_i \dvec{\alpha}_i, \dmat{A}^s \dmat{P}_i \dvec{\alpha}_i \rangle}{\dvec{r}_{i+1} \ids{\dmat{H}} \dvec{r}_{i+1} }$}
+    
+    
+    \ifthenelse[8]{3}{2}{$t_i^s \leq \tau$}{\sTrue}{~~~~\sFalse}
+	  \assign{$\Zmat_{i+1}=[\dmat{Z}_{i+1} | H^{s} \resvec_{i+1}]$}
+	\change
+	  
+	\ifend
+    
+    
+  \whileend
+
+  	\while[8]{For $j=1,...,i$}
+	  \assign{$\dmat{\beta}_{i,j}=\frac{\langle \dvec{z}_{i+1}, \dmat{A} \dvec{p}_j \rangle}{\langle \dvec{p}_j, \dmat{A} \dvec{p}_j \rangle}$}
+	  \assign{$\dmat{P}_{i+1}= \dmat{\Pi}\dmat{Z}_{i+1}-\dmat{P}_{i}\dmat{\beta}_{i,j}$}
+	\whileend
+\whileend
+
+
+\end{struktogramm}
+
+\end{document}

@@ -1,0 +1,84 @@
+%%
+%% This is file `AMgraphic.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% AMgraphic.dtx  (with options: `package')
+%% --------------------------------------------------------------------------------
+%% AMgraphic <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for graphics
+%% E-mail: romain.pennec@tum.de
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% --------------------------------------------------------------------------------
+%% 
+\RequirePackage{AMgit}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMgraphic}[\AMinsertGitDate{} \AMinsertGitVersion{} AM graphic managment]
+\RequirePackage{ifthen}
+\RequirePackage{ifpdf}
+\RequirePackage{kvoptions}
+\DeclareBoolOption{tikz}
+\DeclareStringOption[0.8]{floatpagefraction}
+\DeclareStringOption[0.8]{topfraction}
+\DeclareStringOption[0.5]{bottomfraction}
+\DeclareStringOption[0.15]{textfraction}
+\DeclareStringOption[1]{topnumber}
+\DeclareStringOption[1]{bottomnumber}
+\DeclareStringOption[2]{totalnumber}
+\DeclareDefaultOption{\PassOptionsToPackage{\CurrentOption}{graphicx}}
+\ProcessKeyvalOptions*
+\RequirePackage{graphicx}
+\RequirePackage{caption}
+\RequirePackage{float}
+\RequirePackage{placeins}
+\RequirePackage{afterpage}
+\ifthenelse{\boolean{AMgraphic@tikz}}{%
+  \RequirePackage{tikz}
+  \RequirePackage{pgfplots}
+  \pgfplotsset{compat=newest} % not sure
+}{}
+\ifpdf
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\else
+  \DeclareGraphicsExtensions{.eps}
+\fi
+\graphicspath{ {Pictures/}{pictures/}{Bild/}{images/}{Images/}{logos/}{Logos} }
+\renewcommand\fps@figure{tp}
+\renewcommand\fps@table{tp}
+\renewcommand{\floatpagefraction}{\AMgraphic@floatpagefraction}
+\renewcommand{\topfraction}{\AMgraphic@topfraction}
+\renewcommand{\bottomfraction}{\AMgraphic@bottomfraction}
+\renewcommand{\textfraction}{\AMgraphic@textfraction}
+\setcounter{topnumber}{\AMgraphic@topnumber}
+\setcounter{bottomnumber}{\AMgraphic@bottomnumber}
+\setcounter{totalnumber}{\AMgraphic@totalnumber}
+\setlength{\@fptop}{0pt}
+\setlength\floatsep{18\p@ \@plus 10\p@ \@minus 2\p@}
+\setlength\textfloatsep{14\p@ \@plus 20\p@ \@minus 4\p@}
+\setlength\@fptop{0\p@ \@plus 1fil}
+\setlength\@fpsep{18\p@ \@plus 1fil}
+\setlength\@fpbot{0\p@ \@plus 2fil}
+%% 
+%% Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+%% Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+%% Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+%% Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Romain Pennec.
+%% 
+%% This work consists of the file  AMgraphic.dtx
+%% and the derived files           AMgraphic.ins,
+%%                                 AMgraphic.pdf and
+%%                                 AMgraphic.sty.
+%% 
+%%
+%% End of file `AMgraphic.sty'.

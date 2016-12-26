@@ -1,0 +1,227 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMutils <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for utilities
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+/!\      Modifications made in this file will be lost!       /!\
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMutils.dtx
+and the derived files           AMutils.ins,
+                                AMutils.pdf and
+                                AMutils.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMutils}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMutils}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMutils}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMutils}[\AMinsertGitDate{} \AMinsertGitVersion{} AM page layout]
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{1.0}{2015/05/28}{First version}
+%
+%
+%
+% \title{The \textcolor{white}{AMutils} package}
+% \maketitle
+% \tableofcontents
+%
+%
+% 
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{AMutils for the impatient}
+%
+% \subsection{Notes}
+%
+% Als sehr hilfreich haben sich die folgenden Befehle erwiesen.  Damit können
+% während der Entwufsphase eines Textes Gedanken, die noch auszuformulieren
+% sind, notiert und farblich hervorgehoben werden:
+%
+% \begin{docEnvironment}{notes}{\oarg{note title}}
+% Diese Umgebung eignet sich für längere Textpassagen:
+% \begin{notes}
+%  denn der Text wird in einem separaten Absatz in roter Farbe abgesetzt.
+%  Zusätzlich wird links vom Text ein roter Balken gesetzt.
+% \end{notes}
+% \end{docEnvironment}
+%
+%
+% \subsection{Tabular extensions}
+%
+% \begin{description}
+% \item[L] linksbündig mit Breitenangabe
+% \item[C] zentriert mit Breitenangabe
+% \item[R] rechtsbündig mit Breitenangabe
+% \end{description}
+%
+% \subsection{Entwurfsstadium}
+%
+% \begin{docCommand}{dummy}{\oarg{Breite}\marg{Höhe}\marg{Text}}
+% Dieser Befehl dient beispielsweise als Platzhalter für noch nicht vorhandene
+% Grafiken.  Er erzeugt eine eingrahmte Box in den Maßen \meta{Breite} mal
+% \meta{Höhe} mit der Beschreibung \meta{Text}. Wird der optionale Parameter
+% \meta{Breite} nicht angegeben, dann erhält die Box eine Breite, die
+% 90\% der aktuellen Zeilenlänge entspricht.
+% \end{docCommand}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispExample}
+\dummy[80mm]{30mm}{Beispiel für die Verwendung von dummy}
+\end{dispExample}
+% \iffalse
+%</verb>
+% \fi
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%<*package>
+%
+% \subsection{Tabular extensions}
+%
+%    \begin{macrocode}
+\RequirePackage{tabularx}
+%    \end{macrocode}
+%
+% linksbündig, zentriert, und rechtsbündig mit Breitenangabe
+%    \begin{macrocode}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+%    \end{macrocode}
+% 
+%
+%
+% \subsection{Unterstützende Befehle im Entwurfsstadium}
+% 
+% shamelessly taken from |AMclsguide.tex| and |AMtools.sty|
+%
+% \begin{docCommand}{AM@notesname}{}
+% Variable that stores the note title label
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@notescolor}{}
+% Variable that contains the note color
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@notesfont}{}
+% Variable that contains the note font
+% \end{docCommand}
+%
+% \todo{Make pdfkeys for the previous commands}
+%
+%    \begin{macrocode}
+\newcommand*\AM@notesname{Notes}
+\newcommand*\AM@notescolor{red}
+\newcommand*\AM@notesfont{\normalfont}
+%    \end{macrocode}
+%
+% Implementation of the environment \refEnv{notes}:
+%    \begin{macrocode}
+\newenvironment{notes}[1][]{%
+  \def\@tempa{#1}
+  \ifx\@tempa\@empty
+    \def\@tempa{\AM@notesname}
+  \else
+    \def\@tempa{\AM@notesname:\space#1}
+  \fi
+  \begin{trivlist} \item[]%
+    \color{\AM@notescolor}%
+    \setlength{\parskip}{0pt}%
+    \noindent%
+    \dotfill\quad{\footnotesize\ttfamily\@tempa}\quad\dotfill\null%
+    \par\noindent\ignorespaces%
+  }{%
+    \par\noindent\dotfill\null%
+    \end{trivlist}%
+}
+%    \end{macrocode}
+%
+% Implementation of command \refCom{dummy}:
+%    \begin{macrocode}
+\newcommand{\dummy}[3][.9\linewidth]{%
+  \bgroup
+    \color{red}%
+    \setlength{\fboxrule}{.4pt}%
+    \setlength{\fboxsep}{-\fboxrule}%
+    \fbox{\parbox[c][#2][c]{#1}{\raggedright\AM@notesfont\ #3}}%
+  \egroup
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% \Finale

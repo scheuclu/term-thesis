@@ -1,0 +1,85 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+
+\begin{tikzpicture}[every axis/.style={
+ticks=none,
+ymax=75
+%ylabel={ search dir},%
+%xlabel={ iterations},%
+%bar width=3pt,
+%xtick={0,1,...,26}
+}]
+
+
+
+ \begin{groupplot}[
+group style = {group size = 4 by 1, horizontal sep=0.5
+cm, vertical sep=0cm},
+height = 6.5cm,
+width = 4.5cm,
+ymax=80,
+]
+
+\nextgroupplot[ ybar, legend style={at={(0.5,-0.2)}, enlargelimits=0.1, anchor=north,legend columns=-1},  ylabel={\# iterations}, align =center, title={regular \\ partitioning},  nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_regular_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_regular_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=2, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_regular_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=3, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_regular_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=4, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_regular_6x6.txt};
+%\legend{FETI-1,FETI-2,FETI-S,FETI-FAS}
+
+
+\nextgroupplot[ ybar,ymax=80, legend style={at={(0.5,-0.2)}, enlargelimits=0.1, anchor=north,legend columns=-1},   align =center, title={automatic \\ partitioning},nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=2, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=3, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_6x6.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=4, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_6x6.txt};
+%\legend{FETI-1,FETI-2,FETI-S,FETI-FAS} 
+
+
+
+\nextgroupplot[ ybar, legend style={at={(0.5,-0.2)}, enlargelimits=0.1, anchor=north,legend columns=-1},  align =center, title={horizontal \\ stripes}, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_11x1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_11x1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=2, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_11x1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=3, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_11x1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=4, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_11x1.txt};
+%\legend{FETI-1,FETI-2,FETI-S,FETI-FAS} 
+
+
+\nextgroupplot[ ybar, legend style={at={(-1.3,-0.1)},enlargelimits=0.1, anchor=north,legend columns=-1},   align =center, title={vertical \\ stripes}, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist ]
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_1x11.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_1x11.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=2, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_1x11.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=3, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_1x11.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,y index=4, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numiter_chaco_1x11.txt};
+\legend{FETI-1,FETI-2,FETI-S,FETI-AS,FETI-FAS} 
+
+
+\end{groupplot}
+\end{tikzpicture}
+\hspace{0.5cm}
+
+\end{document}
+

@@ -1,0 +1,239 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMdisseration <!AMreleaseVersion!> --- Class of the AMlatex-Bundle for dissertation
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMdissertation.dtx
+and the derived files           AMdissertation.ins,
+                                AMdissertation.pdf and
+                                AMdissertation.cls.
+
+\endpostamble
+\usedir{tex/latex/AM/AMdissertation}
+\generate{
+  \file{\jobname.cls}{\from{\jobname.dtx}{class}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMdissertation}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMdissertation}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*class>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{AMdissertation}[\AMinsertGitDate{} \AMinsertGitVersion{} AM disseration]
+\ClassInfo{AMdissertation}{Document class of the Institute of Applied Mechanics}
+%</class>
+%<*driver>
+\documentclass{AMdocumentation}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+% \changes{1.0}{2015/05/28}{First version}
+%
+% \title{The \textcolor{white}{AMdissertation} class}
+% \maketitle
+% \tableofcontents
+%
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{User Guide}
+%
+% \subsection{Description}
+%
+% Class for Dissertation. Replace the old \PackageName{AMdiss} class. See a full example in the \docValue{templates}
+% directory. Note that it can be compiled with the provided \docValue{scons.py} script or directly from the main 
+% file \docValue{Thesis.tex} with you favorite \LaTeX{} editor (the later being recommanded).
+%
+% \subsection{Specific commands}
+%
+% \begin{docCommand}{date}{\marg{hand in}\marg{acceptance}} 
+% The dissertation needs two dates therefore the date command is redefined providing
+% 1- the date of the "hand in" and 2-the date of the "acceptance"
+% \end{docCommand}
+% 
+% \begin{docCommand}{DissTitle}{}
+% Use this command to provide the title of the Dissertation.
+% \end{docCommand}
+%
+% \begin{docCommand}{DissSubTitle}{}
+% Use this command to provide thesub title of the Dissertation.
+% \end{docCommand}
+%
+% \begin{docCommand}{copyrightmatlab}{\marg{year}}
+% This text is needed if matlab is cited anywhere in the text
+% \end{docCommand}
+%
+%
+% \subsection{Settings}
+%
+% If your not satisfied with the default settings (font, color, margins, etc.), you have the possibility to change
+% them in the preamble of your document. Please read the following user guides to learn how you can do that:
+%
+% \begin{description}
+% \item[\AMpackage{AMfont}]
+% \item[\AMpackage{AMcolor}]
+% \item[\AMpackage{AMlayout}]
+% \item[\AMpackage{AMlang}]
+% \item[\AMpackage{AMbiblio}]
+% \item[\AMpackage{AMgraphic}]
+% \item[\AMpackage{AMref}]
+% \item[\AMpackage{AMmath}]
+% \end{description}
+%
+%
+% 
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+%    \begin{macrocode}
+%<*class>
+%    \end{macrocode}
+%
+% This class is based on the standard class \PackageName{book}. It could also
+% be based on the class \PackageName{report}  or \PackageName{memoir}. 
+% Advandage of class \PackageName{book}
+% is that the commands for the matters are already included.
+%
+%    \begin{macrocode} 
+\LoadClass[a4paper,twoside,11pt]{book}
+\RequirePackage[utf8]{inputenc}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\RequirePackage[theme=libertine]{AMfont}
+\RequirePackage{AMlang}
+\RequirePackage[setup]{AMcolor}
+\RequirePackage{AMgraphic} 
+\RequirePackage{AMbiblio} 
+\RequirePackage[online]{AMref}
+\RequirePackage[dissertation]{AMtitlepage}
+\RequirePackage{AMlayout}
+\PassOptionsToPackage{fleqn}{amsmath}
+\RequirePackage{AMmath} 
+%    \end{macrocode}
+%
+% Table of contents entries
+%    \begin{macrocode}
+\RequirePackage{tocbibind}
+\addto\captionsenglish{%
+  \settocname{Table of Contents}
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\AMsetFont{titles=\sffamily\bfseries,page number=\bfseries}
+\AMsetFont{left mark=\normalcolor\normalfont\normalsize\bfseries}
+\AMsetFont{right mark=\normalcolor\normalfont\normalsize\bfseries}
+\AMsetLayout{a4default,setup chapter page,page style=AMdissps}
+%    \end{macrocode}
+%
+% 
+% \begin{docCommand}{PrintTablesAndListsOfContents}{\oarg{options}}
+% Options not available yet.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\PrintTablesAndListsOfContents}[1][]{%
+  {%
+    \hypersetup{linkcolor=black}
+    \hypersetup{linkbordercolor=black} 
+    \tableofcontents%
+    \let\cleardoublepage\clearpage%
+    \listoffigures
+  }
+}
+%    \end{macrocode}
+% 
+%
+% Implementation of \refCom{date}
+%
+%    \begin{macrocode}
+\newcommand*{\@date@i}{}
+\newcommand*{\@date@ii}{}
+\renewcommand{\date}[2]{\gdef\@date@i{#1}\gdef\@date@ii{#2}}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\gdef\DissTitle{\@title}
+\gdef\DissSubTitle{\@subtitle}
+%    \end{macrocode}
+%
+%
+% Implementation of \refCom{copyrightmatlab}
+%
+%    \begin{macrocode}
+\newcommand{\copyrightmatlab}[1]{%
+  \vfill\textcopyright~#1~The MathWorks, Inc. MATLAB and Simulink are registered 
+  trademarks of The MathWorks, Inc. See www.mathworks.com/trademarks for a 
+  list of additional trademarks. Other product or brand names may be trademarks
+  or registered trademarks of their respective holders.
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\AMwritePdfMetaProperties{Created with AMdissertation}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</class>
+%    \end{macrocode}
+%
+%
+% \Finale

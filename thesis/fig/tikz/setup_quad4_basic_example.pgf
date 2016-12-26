@@ -1,0 +1,118 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}
+		\def\subsize{2}%
+		\def\sep{1.0}    %separation between rectangles
+%		subsize
+%		\draw[black, thick] ( \sep, \sep) rectangle ( \sep+\subsize, \sep+\subsize);
+%		\draw[black, thick] (-\sep, \sep) rectangle (-\sep-\subsize, \sep+\subsize);
+%		\draw[black, thick] (-\sep,-\sep) rectangle (-\sep-\subsize,-\sep-\subsize);
+%		\draw[black, thick] ( \sep,-\sep) rectangle ( \sep+\subsize,-\sep-\subsize);
+
+       %define nodes
+       \node (N1) at (-\subsize,-\subsize)  {};%{N1};
+       \node (N2) at (0        ,-\subsize)  {};%{N1};
+       \node (N3) at (+\subsize,-\subsize)  {};%{N1};
+       \node (N4) at (-\subsize,0)          {};%{N1};
+       \node (N5) at (0        ,0)          {};%{N1};
+       \node (N6) at (+\subsize,0)          {};%{N1};
+       \node (N7) at (-\subsize,\subsize)   {};%{N1};
+       \node (N8) at (0        ,\subsize)   {};%{N1};
+       \node (N9) at (+\subsize,\subsize)   {};%{N1};
+       
+       \draw[fill=lightgrey,thick] (N1) rectangle (N5);
+       \draw[fill=lightgrey,thick] (N2) rectangle (N6);
+       \draw[fill=lightgrey,thick] (N4) rectangle (N8);
+       \draw[fill=lightgrey,thick] (N5) rectangle (N9);
+       
+       \node[draw, circle, fill=white, font=\small]  at (N1) {1};
+       \node[draw, circle, fill=white, font=\small]  at (N2) {2};
+       \node[draw, circle, fill=white, font=\small]  at (N3) {3};
+       \node[draw, circle, fill=white, font=\small]  at (N4) {4};
+       \node[draw, circle, fill=white, font=\small]  at (N5) {5};
+       \node[draw, circle, fill=white, font=\small]  at (N6) {6};
+       \node[draw, circle, fill=white, font=\small]  at (N7) {7};
+       \node[draw, circle, fill=white, font=\small]  at (N8) {8};
+       \node[draw, circle, fill=white, font=\small]  at (N9) {9};
+
+
+        % nodes
+       \node (N11) at (-\sep-\subsize,+\sep)          {};%{N11};
+       
+       \node (N12) at (-\sep         ,+\sep)          {};%{N12};
+       \node (N13) at (-\sep         ,+\sep+\subsize) {};%{N13};
+       \node (N14) at (-\sep-\subsize,+\sep+\subsize) {};%{N14};
+       
+       \node (N21) at (+\sep         ,+\sep          ){};%{N21};
+       \node (N22) at (+\sep+\subsize,+\sep          ){};%{N22};
+       \node (N23) at (+\sep+\subsize,+\sep+\subsize) {};%{N23};
+       \node (N24) at (+\sep         ,+\sep+\subsize) {};%{N24};
+       
+       \node (N31) at (+\sep,-\sep-\subsize)          {};%{N31};
+       \node (N32) at (+\sep+\subsize,-\sep-\subsize) {};%{N32};
+       \node (N33) at (+\sep+\subsize,-\sep)          {};%{N33};
+       \node (N34) at (+\sep,-\sep)                   {};%{N34};
+       
+       \node (N41) at (-\sep-\subsize,-\sep-\subsize) {};%{N41};
+       \node (N42) at (-\sep,-\sep-\subsize)          {};%{N42};
+       \node (N43) at (-\sep,-\sep)                   {};%{N43};
+       \node (N44) at (-\sep-\subsize,-\sep)          {};%{N44};
+       
+       
+		
+		
+		\end{tikzpicture}
+		\begin{tikzpicture}
+		
+		%\definecolor{fillcolor}{RGB}{200,200,200}
+       \draw[fill=lightgrey,thick] (N11) rectangle (N13);
+       \draw[fill=lightgrey,thick] (N21) rectangle (N23);
+       \draw[fill=lightgrey,thick] (N31) rectangle (N33);
+       \draw[fill=lightgrey,thick] (N41) rectangle (N43);
+       
+       %lagrange multipliers
+       \draw[<->] (N12) edge (N21) node [fill=white, font=\small] at ($(N12)!0.5!(N21)$) {\framebox{$_2^1$}};
+       \draw[<->] (N13) edge (N24) node [fill=white, font=\small] at ($(N13)!0.5!(N24)$) {\framebox{$_4^3$}};
+       \draw[<->] (N12) edge (N34) node [fill=white, font=\small] at ($(N12)!0.35!(N34)$) {\framebox{$_6^5$}};
+       \draw[<->] (N11) edge (N44) node [fill=white, font=\small] at ($(N11)!0.5!(N44)$) {\framebox{$_8^7$}};
+       \draw[<->] (N12) edge (N43) node [fill=white, font=\small] at ($(N12)!0.5!(N43)$) {\framebox{$_{10}^9$}};
+       \draw[<->] (N21) edge (N34) node [fill=white, font=\small] at ($(N21)!0.5!(N34)$) {\framebox{$_{12}^{11}$}};
+       \draw[<->] (N22) edge (N33) node [fill=white, font=\small] at ($(N22)!0.5!(N33)$) {\framebox{$_{14}^{13}$}};
+       \draw[<->] (N21) edge (N43) node [fill=white, font=\small] at ($(N21)!0.35!(N43)$) {\framebox{$_{16}^{15}$}};
+       \draw[<->] (N31) edge (N42) node [fill=white, font=\small] at ($(N31)!0.5!(N42)$) {\framebox{$_{18}^{17}$}};   
+       \draw[<->] (N34) edge (N43) node [fill=white, font=\small] at ($(N34)!0.5!(N43)$) {\framebox{$_{20}^{19}$}};
+       
+       
+       % doflabels
+       \node[anchor=south west]  at (N11) {$_{8}^{7}$};%{N11};
+       \node[anchor=south east]  at (N12) {$_{10}^{9}$};%{N12};
+       \node[anchor=north east]  at (N13) {$_{16}^{15}$};%{N13};
+       \node[anchor=north west]  at (N14) {$_{14}^{13}$};%{N14};
+       
+       \node[anchor=south west]  at (N21) {$_{10}^{9}$};%{N21};
+       \node[anchor=south east]  at (N22) {$_{12}^{11}$};%{N22};
+       \node[anchor=north east]  at (N23) {$_{18}^{17}$};%{N23};
+       \node[anchor=north west]  at (N24) {$_{15}^{16}$};%{N24};
+       
+       \node[anchor=south west]  at (N31) {$_{4}^{3}$};%{N31};
+       \node[anchor=south east]  at (N32) {$_{6}^{5}$};%{N32};
+       \node[anchor=north east]  at (N33) {$_{12}^{11}$};%{N33};
+       \node[anchor=north west]  at (N34) {$_{10}^{9}$};%{N34};
+       
+       \node[anchor=south west]  at (N41) {$_{2}^{1}$};%{N41};
+       \node[anchor=south east]  at (N42) {$_{4}^{3}$};%{N42};
+       \node[anchor=north east]  at (N43) {$_{10}^{9}$};%{N43};
+       \node[anchor=north west]  at (N44) {$_{14}^{13}$};%{N44};
+       %\node[circle split, draw, fill=white, font=\small] at (N44) {13 \nodepart{lower} 14};
+		
+		\end{tikzpicture}
+		\begin{tikzpicture}
+		\node[anchor=south west,text width=3cm] (I1) at (1,0) {\textcircled{\raisebox{-0.9pt}{1}}... global node indices};
+		\node [anchor=south west,below of = I1,text width=3cm, node distance=1.5cm] (I2) {$_{14}^{13}$ ... global dof indices};
+		\node [anchor=south west,below of = I2,text width=3cm, node distance=1.5cm] (I2) {\framebox{$_{14}^{13}$} ... global lagrange multiplier indices\\};
+		\node at (0,-4) {};
+		
+		\end{tikzpicture}
+\end{document}

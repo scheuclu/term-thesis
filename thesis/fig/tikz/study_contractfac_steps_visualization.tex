@@ -1,0 +1,55 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage[outline]{contour}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\usepackage{subcaption}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+\
+
+%v\includegraphics[width=0.9\linewidth, height=5cm]{/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/setup/feti1_iter1.png} 
+
+\begin{tikzpicture}
+\def\ydist{-5.5}
+\node[inner sep=0pt] (russell) at (0,0)
+    {\includegraphics[width=.5\textwidth]{\studypath/2016-08-25_StudyContractfac/data/iter1.png}};
+\node at (0,0.45*\ydist) [anchor=east, scale=1] {\contour{white}{iteration 1}};
+
+\node[inner sep=0pt] (russell) at (.5\textwidth,0)
+    {\includegraphics[width=.5\textwidth]{\studypath/2016-08-25_StudyContractfac/data/iter2.png}};
+\node at (.5\textwidth,0.45*\ydist) [anchor=east, scale=1] {\contour{white}{iteration 2}};
+
+
+
+
+\node[inner sep=0pt] (russell) at (0,\ydist)
+    {\includegraphics[width=.5\textwidth]{\studypath/2016-08-25_StudyContractfac/data/iter5.png}};
+\node at (0,\ydist+0.45*\ydist) [anchor=east, scale=1] {\contour{white}{iteration 5}};
+
+\node[inner sep=0pt] (russell) at (.5\textwidth,\ydist)
+    {\includegraphics[width=.5\textwidth]{\studypath/2016-08-25_StudyContractfac/data/iter8.png}};
+\node at (.5\textwidth,\ydist+0.45*\ydist) [anchor=east, scale=1] {\contour{white}{iteration 8}};
+
+
+\node[inner sep=0pt] (russell) at (.25\textwidth,\ydist*1.7)
+    {\includegraphics[width=.5\textwidth]{\studypath/2016-08-25_StudyContractfac/data/legend.png}};
+    
+
+\end{tikzpicture}
+
+
+
+\end{document}

@@ -1,0 +1,802 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMtitlepage <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for title pages
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMtitlepage.dtx
+and the derived files           AMtitlepage.ins,
+                                AMtitlepage.pdf and
+                                AMtitlepage.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMtitlepage}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMtitlepage}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMtitlepage}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMtitlepage}[\AMinsertGitDate{} \AMinsertGitVersion{} AM title pages]
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+% \changes{1.0}{2015/05/28}{First version}
+% \changes{1.1}{2015/08/06}{Added Bachelor titlepage}
+%
+% \title{The \textcolor{white}{AMtitlepage} package}
+%
+% \maketitle
+% \tableofcontents
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+%
+%
+% \newpage
+% \section{User guide}
+%
+% \InsertPgfkeysBlaBla{Titlepage}
+%
+% \subsection{Titlepage choice}
+% \label{sec:choice}
+%
+% \begin{docKey}[AM/titlepage]{scriptum}{}{no value, initially unset}
+%  Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/titlepage]{bachelor}{}{no value, initially unset}
+%  Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/titlepage]{semester}{}{no value, initially unset}
+%  Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/titlepage]{exercise}{}{no value, initially unset}
+%  Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/titlepage]{master}{}{no value, initially unset}
+%  Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/titlepage]{dissertation}{}{no value, initially unset}
+%  Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/titlepage]{contact}{}{no value, initially unset}
+%  Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \begin{docKey}[AM/titlepage]{TUMAM}{}{no value, initially unset}
+% Give this key as option of \AMpackage{AMtitlepage} or use \refCom{AMsetTitlepage}.
+% \end{docKey}
+%
+% \subsection{Set the titlepage}
+%
+% 
+%
+% \begin{docCommand}{AMsetTitlepage}{\marg{key-value list}}
+%   Main command of the package \AMpackage{AMtitlepage} that allows you to choose the titlepage. 
+%   See section \ref{sec:choice} for the available parameters.
+% \end{docCommand}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{usage}
+\usepackage[master]{AMtitlepage}
+% or, after AMtitlepage is loaded,
+\AMsetTitlepage{master}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+%
+%
+% \subsection{Titlepage information commands}
+%
+% The following commands can or must be used in the preamble of the document
+% by the user to provide information that will be displayed in the title page.
+%
+%
+% \begin{docCommand}{subtitle}{\marg{the sub title}}
+% 	Command that the end-user can use inside the preamble of the document to 
+%   provide a subtitle, that is stored inside \cs{AM@subtitle}, regardless
+%	of if it will be used later or not.
+% \end{docCommand}
+%
+% \begin{docCommand}{supervisor}{\marg{supervisor name}}
+% 	Command that the end-user can use inside the preamble of the document to 
+%   provide its supervisor(s) name(s), that is stored inside \cs{@supervisor}, regardless
+%	of if it will be used later or not.
+%   Additionally (important for the title page of the dissertation) the command to print 
+% 	the supervisorlist is implemented
+% \end{docCommand}
+%
+%
+% \begin{docCommand}{chairman}{\marg{chairman name}}
+% 	Command that the end-user can use inside the preamble of the document to 
+%   provide the chairman name, that is stored inside \cs{@chairman}, regardless
+%	of if it will be used later or not.
+% \end{docCommand}
+%
+% \begin{docCommand}{subject}{\marg{The topic/lecture what it is written for}}
+% 	Command that the user can specify about which subject / lecture it is. 
+% \end{docCommand}
+%
+% \begin{docCommand}{contactphone}{\marg{telephone number}}
+% 	Command that the end-user can use inside the preamble of the document to 
+%   provide a contact phone number.
+% \end{docCommand}
+%
+% \begin{docCommand}{contactemail}{\marg{email address}}
+% 	Command that the end-user can use inside the preamble of the document to 
+%   provide a contact email address.
+% \end{docCommand}
+%
+% \subsection{Other}
+%
+% \begin{docCommand}{includeHeaderAFour}{}
+% Include the Header for a A4-page.
+% As the TUM says how large the logos etc. have to be on the pages this command 
+% proved the header for a A4-page. 
+%
+% DINA4: 11.67mm width and 10.67mm height for AM-logo
+%
+% DINA4: 18.7mm width and 10mm height for TUM-logo
+%   \todo{options for different logos?}
+% \end{docCommand}
+%
+%
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+% \subsection{Load required packages}
+%
+% The standards packages |ifthen| and |pgfopts| are loaded to write this package.
+%
+%    \begin{macrocode}
+\RequirePackage{ifthen}
+\RequirePackage{pgfopts}
+\RequirePackage{xspace}
+%    \end{macrocode}
+%
+% \begin{description}
+% 	\item[\AMpackage{AMlogo}] The TUM and AM logos are handled by the package |AMlogo|\cite{AMlogo}. 
+% 	\item[\AMpackage{AMlang}] Label commands used to write the titlepage are defined inside the package 
+% 	|AMlang| (see \cite{AMlang} for more information on those commands).
+% 	\item[\AMpackage{AMcolor}] Colors for the titles.
+% 	\item[hyperref] Package |hyperref| is needed for the title page and the pdf informations.
+% Normally it should be loaded with \AMpackage{AMref}. If this is not the case, we load
+% it at the beginning of the document.
+% 	\item[graphicx] Package |graphicx| is needed.
+% Normally it should be loaded with \AMpackage{AMgraphic}. If this is not the case, we load
+% it at the beginning of the document.
+% \end{description}
+%
+%    \begin{macrocode}
+\RequirePackage{AMlogo}
+\RequirePackage{AMlang}
+\RequirePackage{AMcolor}
+\AtBeginDocument{%
+  \@ifpackageloaded{hyperref}{}{\RequirePackage{hyperref}}
+  \@ifpackageloaded{graphicx}{}{\RequirePackage{graphicx}}
+}
+%    \end{macrocode}
+%
+% \subsection{Titlepage choice}
+%
+%    \begin{macrocode}
+\pgfkeys{
+  /AM/titlepage/.is family,/AM/titlepage,
+  arbeit type/.store in = \AMtitlepage@arbeittype,
+  scriptum/.code={\renewcommand{\maketitle}{\AMtitlepage@scriptum}},
+  bachelor/.style={arbeit type={Bachelor's Thesis},replace maketitle},
+  semester/.style={arbeit type={Semesterarbeit},replace maketitle},
+  master/.style={arbeit type={Master's Thesis},replace maketitle},
+  exercise/.code={\renewcommand{\maketitle}{\AMtitlepage@exercise}},
+  contact/.code={\renewcommand{\maketitle}{\AMtitlepage@contact}},
+  replace maketitle/.code={\renewcommand{\maketitle}{\AMtitlepage@create@titlepage}},
+  dissertation/.code={\renewcommand{\maketitle}{\AMtitlepage@dissertation}},
+  TUMAM/.code={\renewcommand{\maketitle}{\AMtitlepage@TUMAM}},
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\ProcessPgfOptions{/AM/titlepage}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\providecommand{\AMset}[1]{\pgfkeys{/AM/.cd,#1}}
+\newcommand{\AMsetTitlepage}[1]{\pgfkeys{/AM/titlepage/.cd,#1}}
+%    \end{macrocode}
+%
+%
+% \subsection{Titlepage information commands}
+%
+% \begin{docCommand}{AM@subtitle}{}
+% Variable that contains the subtitle string. Setter: \refCom{subtitle}.
+% \end{docCommand}
+%
+% \begin{docCommand}{@chairman}{}
+% Variable that contains the chairman name. Setter: \refCom{chairman}.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@subject}{}
+% Variable that contains the subject string. Setter: \refCom{subject}.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@contactphone}{}
+% Variable that contains the telephone string. Setter: \refCom{contactphone}.
+% \end{docCommand}
+%
+% \begin{docCommand}{AM@contactemail}{}
+% Variable that contains the email address. Setter: \refCom{contactemail}.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\def\AM@subtitle{}
+\providecommand{\subtitle}[1]{\gdef\AM@subtitle{#1}}
+\newcommand*{\@chairman}{}
+\newcommand{\chairman}[1]{\gdef\@chairman{#1}}
+\def\AM@subject{}
+\providecommand{\subject}[1]{\gdef\AM@subject{#1}}
+\def\AM@contactphone{}
+\providecommand{\contactphone}[1]{\gdef\AM@contactphone{#1}}
+\def\AM@contactemail{}
+\providecommand{\contactemail}[1]{\gdef\AM@contactemail{#1}}
+%    \end{macrocode}
+%
+%
+% \begin{docCommand}{AM@supervisor}{}
+% Variable that contains the supervisor names (list). Setter: \refCom{supervisor}.
+% \end{docCommand}
+%
+% \todo{Not used yet.}
+%
+% \begin{docEnvironment}{supervisorListDiss}{}
+% Can be used to print the content of variable \refCom{AM@supervisor}. Counter \docCounter{supervisorCounter} is used.
+% \end{docEnvironment}
+%
+%    \begin{macrocode}
+\newcommand*{\AM@supervisor}{}
+\newcommand{\supervisor}[1]{\gdef\AM@supervisor{\def\and{\item}#1}}
+\newcounter{supervisorCounter}
+\newenvironment{supervisorListDiss}{%
+  \begin{list}{\arabic{supervisorCounter}.~~}%
+    {%
+      \usecounter{supervisorCounter}
+      \labelsep=0em \labelwidth=0em \leftmargin=0em
+      \itemindent=0em \topsep=0em
+    }%
+  }{%
+    \end{list}%
+}
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \subsection{Titlepage creation commands}
+%
+% \begin{docCommand}{AMtitlepage@print@background}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@print@background}{%
+  {\raggedright\vspace*{-\headsep}\hspace*{-1in}\hspace*{-\oddsidemargin}%
+    \begin{picture}(0,0)(0,0)%
+      \setlength\fboxsep{0pt}%
+      \put(0,0){\parbox[t][\textheight][c]{\textwidth}%
+      {\includegraphics{AMtitlepage-image-Master}}}
+    \end{picture}
+  }\par
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AMtitlepage@print@author}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@print@author}{%
+  \raggedright\sffamily\LARGE\@author\par
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AMtitlepage@print@title}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@print@title}{%
+  \textcolor{TUMBlue}{\huge\bfseries\@title}\par
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AMtitlepage@print@subtitle}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@print@subtitle}{%
+  \ifx\AM@subtitle\@empty \else 
+    \textcolor{TUMBlue2}{\LARGE\AM@subtitle}\par
+  \fi
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AMtitlepage@print@date}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@print@date}{%
+  {\Large \@date \par}
+}
+%    \end{macrocode}
+%
+%
+% \begin{docCommand}{AMtitlepage@print@supervisor}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@print@supervisor}{%
+  \ifx\AM@supervisor\@empty \else
+    {\large \supervisorstring:\\
+    \begin{list}%
+      {}%
+      {\labelsep=0em \labelwidth=0em \leftmargin=0em \itemindent=0em \topsep=0em}%
+      \item\ifx\AM@supervisor\@empty\textbf{?}\else\AM@supervisor\fi%
+    \end{list}
+    }%
+  \fi
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AMtitlepage@print@dedication}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@print@dedication}{%
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AMtitlepage@print@arbeit}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\providecommand\AMtitlepage@arbeittype{}
+\newcommand{\AMtitlepage@print@arbeit}{%
+  \large\AMtitlepage@arbeittype\par
+}
+%    \end{macrocode}
+%
+%
+% \begin{docCommand}{AMtitlepage@create@titlepage}{}
+% Create the titlepage. Following commands are used:
+% \refCom{AMtitlepage@print@background}, \refCom{AMtitlepage@print@author}, ...
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@create@titlepage}{%
+  \thispagestyle{empty}
+  \begin{titlepage}%
+    \AMtitlepage@print@background
+    \vspace{\stretch{4}}
+    \AMtitlepage@print@author
+    \vspace{\stretch{1}}
+    \AMtitlepage@print@title
+    \AMtitlepage@print@subtitle
+    \vspace{\stretch{1}}
+    \AMtitlepage@print@arbeit
+    \vspace{\stretch{3}}
+    \AMtitlepage@print@date
+    \vspace{\stretch{6}}
+    \AMtitlepage@print@supervisor 
+    \null
+  \end{titlepage}
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{includeHeaderAFour}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\providecommand{\includeHeaderAFour}{%
+  \begin{minipage}[t][10mm][t]{\textwidth}%
+    \color{TUMBlue}
+    \AM@font@load@tumhelvetica
+    \fontencoding{T1}\fontseries{m}\fontfamily{lhv}\fontsize{11pt}{11pt}
+    \selectfont%
+    \noindent%
+    \includegraphics[height=11.67mm,width=10.67mm]{AM-logo-AM-blau-RGB}
+    \hspace{1ex}%
+    \begin{minipage}[b]{0.38\textwidth}
+      \raggedright \AMinsertAM
+    \end{minipage}%
+    \hfill{}%
+    \begin{minipage}[b]{0.37\textwidth}
+      \raggedleft \AMinsertTUM
+    \end{minipage}%
+    \hspace{1ex}%
+    \includegraphics[height=10mm,width=18.7mm]{AM-logo-TUM-voll-blau-RGB}%
+\end{minipage}
+\hfill{}%
+}
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \subsection{Implemented title pages}
+%
+%
+%
+% \subsection{Standard TUM-AM}
+%
+%
+% \begin{docCommand}{AMtitlepage@TUMAM}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@TUMAM}{%
+  \thispagestyle{empty}
+  \def\AM@title@style{\bfseries\huge}
+  \def\AM@subtitle@style{\bfseries\Large\color{TUMBlue}}
+  \date{}
+  \pdfbookmark{\@title}{AMtitleanchor}
+  \vspace*{-15mm}
+  \noindent
+  \includeHeaderAFour
+  \vskip15mm
+  \begin{center}
+    \raggedright{\AM@title@style\@title} \\[3ex]
+    \ifx\AM@subtitle\empty\else 
+      {\AM@subtitle@style\AM@subtitle} \\[2ex]
+    \fi
+    {\@author \ifx\@date\empty\else-- \@date\fi}
+  \end{center}
+  \vskip5mm
+}
+%    \end{macrocode}
+%
+%
+%
+% \subsubsection{Contact}
+%
+%
+% \begin{docCommand}{AMtitlepage@print@contactinfos}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\AMsetFont{contact info=\color{TUMDarkGray}}
+\newcommand{\AMtitlepage@print@contactinfos}{%
+  \parbox[c]{10cm}{\small
+  \begin{tabular}{rl}
+  \AMfont@contactinfo@style Date & \ifx\@date\empty\today\else\@date\fi \\
+  \AMfont@contactinfo@style Contact & \@author \\
+  \AMfont@contactinfo@style Address & Lehrstuhl f\"{u}r Angewandte Mechanik \\
+  \AMfont@contactinfo@style         & Boltzmannstr. 15 \\ 
+                                    & D - 85748 Garching \\
+  \AMfont@contactinfo@style Telephone & \AM@contactphone \\
+  \AMfont@contactinfo@style E-mail & \AM@contactemail
+  \end{tabular}
+  }
+}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AMtitlepage@contact}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@contact}{
+  \noindent\hskip-1.5cm
+  \AMtitlepage@print@contactinfos
+\hfill
+\parbox[c]{7cm}{\flushright
+\includegraphics{AM-logo-TUM-voll-blau-RGB} \\[1ex]
+\large\color{TUMDarkBlue} Technische Universit\"{a}t M\"{u}nchen 
+\vskip3ex
+}
+\vskip1ex\noindent
+\rule{\textwidth}{0.4pt}
+\vskip1ex\noindent
+\hfill{\AMfont@title@style\@title}\hfill\null \\[1ex]
+\null\hfill{\AMfont@author@style\AM@subtitle}\hfill\null
+
+\noindent\rule{\textwidth}{0.4pt}\vskip3ex
+}
+%    \end{macrocode}
+%
+% \subsubsection{Scriptum}
+%
+% \begin{docCommand}{AMtitlepage@scriptum}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand*{\AMtitlepage@scriptum}{
+{%
+\phantomsection%
+\pdfbookmark[1]{Titlepage}{titlepage}%
+\setcounter{page}{1}%
+\includeHeaderAFour%
+\par%
+\vspace{1em}
+{%
+  \fontsize{14pt}{18pt}\selectfont    
+  \textit{\AM@subject}\par
+}%
+  {%
+    \color{TUMBlue}\fontsize{22pt}{28pt}\selectfont
+    {\bfseries\@title\par}%
+	\ifx\AM@subtitle\@empty \else%
+		{\itshape\AM@subtitle}\par%
+	\fi%
+    \medskip%
+  }%
+  {%
+    \fontsize{11pt}{15pt}\selectfont
+    \@date\par
+  }%  
+  {%
+    \fontsize{14pt}{18pt}\selectfont
+    \@author\par
+  }%
+}
+\vspace{1em}%
+\thispagestyle{empty}%
+}
+%    \end{macrocode}
+%
+% \subsubsection{Exercise}
+%
+% \begin{docCommand}{AMtitlepage@exercise}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand*{\AMtitlepage@exercise}{
+{%
+\phantomsection%
+\pdfbookmark[1]{Titlepage}{titlepage}%
+\setcounter{page}{1}%
+\includeHeaderAFour\par\vspace{4em}
+  {%
+    \fontsize{22pt}{28pt}\selectfont
+    {\bfseries\@title\par}%
+\ifx\AM@subtitle\@empty \else%
+{\fontsize{14pt}{18pt}\AM@subtitle}\par%
+\fi%
+    \medskip%
+  }%
+  {%
+    \fontsize{11pt}{15pt}\selectfont
+    \@date\par
+  }%
+  {%
+    \fontsize{14pt}{18pt}\selectfont
+    \@author\par
+  }%
+}
+\vspace{1em}%
+\thispagestyle{empty}%
+}
+%    \end{macrocode}
+%
+%
+% \subsubsection{Dissertation}
+%
+% \todo{Separate this command (see Master and Bachelor)}
+%
+% \begin{docCommand}{AMtitlepage@dissertation}{}
+% Titlepage for dissertations, originally designed by Alexander Ewald. 
+% It follows the TUM-Styleguide p. 244/245.
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMtitlepage@dissertation}{
+  \begin{titlepage}
+%    \end{macrocode}
+%
+% GENERAL SETTINGS
+%    \begin{macrocode}
+    \phantomsection%
+    \pdfbookmark[1]{Titlepage}{titlepage}%
+    \setcounter{page}{1}%
+%    \end{macrocode}
+%
+% FONT: tum helvetica
+%    \begin{macrocode}
+    \pdfmapfile{+tumhelv.map}
+    \fontfamily{lhv}\selectfont
+%    \end{macrocode}
+%
+% PAGE MARGINS
+%    \begin{macrocode}
+    \setlength{\hoffset}{-1in}%
+    \setlength{\voffset}{-1in}%
+    \setlength\footskip{0pt}%
+    \setlength\headsep{0pt}%
+    \setlength\headheight{0pt}%
+    \setlength\marginparsep{0pt}%
+    \setlength\marginparpush{0pt}%
+    \setlength\marginparwidth{0pt}%
+    \setlength\oddsidemargin{0pt}%
+    \setlength\parindent{0pt}%
+    \setlength\topmargin{0pt}%
+%    \end{macrocode}
+%
+% LEFT MARGIN (prescribed: 25mm)
+%    \begin{macrocode}
+    \addtolength{\hoffset}{25mm}
+%    \end{macrocode}
+%
+% TEXT WIDTH (prescribed: 170mm)
+%    \begin{macrocode}
+    \setlength\textwidth{170mm}
+%    \end{macrocode}
+%
+% TEXT HEIGHT (prescribed: 239mm)
+%    \begin{macrocode}
+    \setlength\textheight{239mm}
+%    \end{macrocode}
+%
+% TOP MARGIN (prescribed: 15mm)
+%    \begin{macrocode}
+    \addtolength{\voffset}{15mm}% 
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+    \begin{minipage}[t][10mm][t]{\textwidth}%
+      \hspace{-2mm}\includegraphics[height=10mm]{AM-logo-MW-blau-CMYK.pdf}
+      \hfill{}
+      \includegraphics[height=10mm]{AM-logo-TUM-outline-blau-CMYK}%
+    \end{minipage}
+    \hfill{}\par%
+%    \end{macrocode}
+%
+% prescribed: 15mm (15+10+15=40)
+%    \begin{macrocode}
+    \vspace{15mm}%
+    {%
+      \fontsize{14pt}{18pt}\selectfont% PRESCRIBED
+      \foreignlanguage{ngerman}{Fakult\"at f\"ur Maschinenwesen}\\%
+      \foreignlanguage{ngerman}{Lehrstuhl f\"ur Angewandte Mechanik}\par%
+    }%
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+    \vspace{2cm}% Not Prescribed (?)
+    \begin{minipage}[t]{\textwidth}%
+      {%
+        \color{TUMBlue}\fontsize{22pt}{28pt}\selectfont% PRESCRIBED
+        {\bfseries\@title\par}%
+        \ifx\AM@subtitle\@empty \else%
+            {\itshape\AM@subtitle}\par%
+        \fi%
+      \bigskip\bigskip\medskip%
+      }%
+      {%
+        \fontsize{14pt}{18pt}\selectfont% PRESCRIBED
+        \textbf{\@author}\par\bigskip\bigskip\medskip%
+      }%
+      {%
+        \fontsize{11pt}{15pt}\selectfont% PRESCRIBED
+        \foreignlanguage{ngerman}{%
+          Vollst\"andiger Abdruck der von der Fakult\"at f\"ur Maschinenwesen
+          der Technischen Universit\"at M\"unchen zur Erlangung des akademischen
+          Grades eines
+        }%
+        \par\bigskip\medskip%
+        \foreignlanguage{ngerman}{\textbf{Doktor-Ingenieurs (Dr.-Ing.)}}
+        \par\bigskip\medskip%
+        \foreignlanguage{ngerman}{genehmigten Dissertation.}
+        \par\bigskip\bigskip\bigskip\bigskip%
+        \foreignlanguage{ngerman}{\textbf{Vorsitzender:}~\@chairman}
+        \par\bigskip\medskip%
+        \foreignlanguage{ngerman}{\textbf{Pr\"ufer der Dissertation:}}
+        \par\medskip%
+%    \end{macrocode}
+%
+% Print all supervisors
+%    \begin{macrocode}
+        \begin{supervisorListDiss}
+          \item\ifx\AM@supervisor\@empty\textbf{?}\else\AM@supervisor\fi%
+        \end{supervisorListDiss}
+        \bigskip\bigskip\bigskip%
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+        \foreignlanguage{ngerman}{Die Dissertation wurde am 
+          \ifx\@date@i\@empty\textbf{?}\else\mbox{\@date@i}\fi
+          \xspace bei der Technischen Universit\"at M\"unchen ein\-ge\-reicht
+          und durch die Fakult\"at f\"ur Maschinenwesen am 
+          \ifx\@date@ii\@empty\textbf{?}\else\mbox{\@date@ii}\fi
+          \xspace angenommen.
+          }%
+      }%
+    \end{minipage}
+    \hfill{}%
+%    \end{macrocode}
+%    \begin{macrocode}
+  \end{titlepage}
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% \Finale

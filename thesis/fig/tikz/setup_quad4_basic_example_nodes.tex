@@ -1,0 +1,96 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\input{\mainpath/colordefinitions}
+\begin{document}
+\begin{tikzpicture}
+	\input{setup_quad4_basic_example_nodes.tex}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+       \def\subsize{2}%
+	   \def\sep{1.0}    %separation between rectangles       
+       %define nodes
+       \node (N1) at (-\subsize,-\subsize)  {};%{N1};
+       \node (N2) at (0        ,-\subsize)  {};%{N1};
+       \node (N3) at (+\subsize,-\subsize)  {};%{N1};
+       \node (N4) at (-\subsize,0)          {};%{N1};
+       \node (N5) at (0        ,0)          {};%{N1};
+       \node (N6) at (+\subsize,0)          {};%{N1};
+       \node (N7) at (-\subsize,\subsize)   {};%{N1};
+       \node (N8) at (0        ,\subsize)   {};%{N1};
+       \node (N9) at (+\subsize,\subsize)   {};%{N1};
+       
+               % nodes
+       \node (N11) at (-\sep-\subsize,+\sep)          {};%{N11};
+       
+       \node (N12) at (-\sep         ,+\sep)          {};%{N12};
+       \node (N13) at (-\sep         ,+\sep+\subsize) {};%{N13};
+       \node (N14) at (-\sep-\subsize,+\sep+\subsize) {};%{N14};
+       
+       \node (N21) at (+\sep         ,+\sep          ){};%{N21};
+       \node (N22) at (+\sep+\subsize,+\sep          ){};%{N22};
+       \node (N23) at (+\sep+\subsize,+\sep+\subsize) {};%{N23};
+       \node (N24) at (+\sep         ,+\sep+\subsize) {};%{N24};
+       
+       \node (N31) at (+\sep,-\sep-\subsize)          {};%{N31};
+       \node (N32) at (+\sep+\subsize,-\sep-\subsize) {};%{N32};
+       \node (N33) at (+\sep+\subsize,-\sep)          {};%{N33};
+       \node (N34) at (+\sep,-\sep)                   {};%{N34};
+       
+       \node (N41) at (-\sep-\subsize,-\sep-\subsize) {};%{N41};
+       \node (N42) at (-\sep,-\sep-\subsize)          {};%{N42};
+       \node (N43) at (-\sep,-\sep)                   {};%{N43};
+       \node (N44) at (-\sep-\subsize,-\sep)          {};%{N44};
+		\end{tikzpicture}
+\end{document}       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       
+%       \def\subsize{2}%
+%	   \def\sep{1.0}    %separation between rectangles       
+%       %define nodes
+%       \node (N1) at (-\subsize,-\subsize)  {};%{N1};
+%       \node (N2) at (0        ,-\subsize)  {};%{N1};
+%       \node (N3) at (+\subsize,-\subsize)  {};%{N1};
+%       \node (N4) at (-\subsize,0)          {};%{N1};
+%       \node (N5) at (0        ,0)          {};%{N1};
+%       \node (N6) at (+\subsize,0)          {};%{N1};
+%       \node (N7) at (-\subsize,\subsize)   {};%{N1};
+%       \node (N8) at (0        ,\subsize)   {};%{N1};
+%       \node (N9) at (+\subsize,\subsize)   {};%{N1};
+%       
+%               % nodes
+%       \node (N11) at (-\sep-\subsize,+\sep)          {};%{N11};
+%       
+%       \node (N12) at (-\sep         ,+\sep)          {};%{N12};
+%       \node (N13) at (-\sep         ,+\sep+\subsize) {};%{N13};
+%       \node (N14) at (-\sep-\subsize,+\sep+\subsize) {};%{N14};
+%       
+%       \node (N21) at (+\sep         ,+\sep          ){};%{N21};
+%       \node (N22) at (+\sep+\subsize,+\sep          ){};%{N22};
+%       \node (N23) at (+\sep+\subsize,+\sep+\subsize) {};%{N23};
+%       \node (N24) at (+\sep         ,+\sep+\subsize) {};%{N24};
+%       
+%       \node (N31) at (+\sep,-\sep-\subsize)          {};%{N31};
+%       \node (N32) at (+\sep+\subsize,-\sep-\subsize) {};%{N32};
+%       \node (N33) at (+\sep+\subsize,-\sep)          {};%{N33};
+%       \node (N34) at (+\sep,-\sep)                   {};%{N34};
+%       
+%       \node (N41) at (-\sep-\subsize,-\sep-\subsize) {};%{N41};
+%       \node (N42) at (-\sep,-\sep-\subsize)          {};%{N42};
+%       \node (N43) at (-\sep,-\sep)                   {};%{N43};
+%       \node (N44) at (-\sep-\subsize,-\sep)          {};%{N44};

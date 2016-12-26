@@ -1,0 +1,379 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMlang <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for languages
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMlang.dtx
+and the derived files           AMlang.ins,
+                                AMlang.pdf and
+                                AMlang.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMlang}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMlang}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/PACKAGENAME}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMlang}[\AMinsertGitDate{} \AMinsertGitVersion{} AM language settings]
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{amssymb}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+% \changes{1.0}{2015/05/28}{First version}
+%
+%
+% \title{The \textcolor{white}{AMlang} package}
+% \maketitle
+% \tableofcontents
+%
+%
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{User Guide}
+%
+% This package makes use of \PackageName{babel}, the package that allows multiple language support in \LaTeX.
+% In addition to those that \PackageName{babel} already provides, \AMpackage{AMlang} defines generic commands that 
+% contains a word or a sentence, which values depend on the language. In general you do not use directly this package
+% in your document, since the classes of the AM bundle already load it. The purpose of this package is to centralize
+% the handling of multiple language in a single place. 
+%
+% \subsection{For the impatient}
+%
+% The following tables will give you an overview of the commands that come with this package.
+%
+% \begin{table}[h!]
+% \centering
+% \begin{tabular}{lll}
+% \refCom{sectionname} & \refCom{referencename} & \refCom{keywordsname} \\
+% \refCom{titlepagename} & \refCom{chairmanstring} & \refCom{supervisorstring} \\
+% \refCom{examinerstring} & \refCom{taskstring} & \refCom{signaturestring} \\
+% \refCom{disclaimerstring} & \refCom{Munich} & \refCom{examplename}
+% \end{tabular}
+% \caption{Keywords for titlepages}
+% \end{table}
+%
+%
+% \subsection{Commands specific to the TUM-AM department}
+% 
+% \begin{docCommand}{ProfRixen}{}
+% \ProfRixen
+% \end{docCommand}
+%
+% \begin{docCommand}{ProfUlbrich}{}
+% \ProfUlbrich
+% \end{docCommand}
+%
+% \begin{docCommand}{ProfPfeiffer}{}
+% \ProfPfeiffer
+% \end{docCommand}
+%
+% \begin{docCommand}{AMM}{}
+% \AMlangDemo{\AMM}
+% \end{docCommand}
+%
+% \begin{docCommand}{TUM}{}
+% \AMlangDemo{\TUM}
+% \end{docCommand}
+%
+% \begin{docCommand}{DiplomErklaerungtext}{}
+% \AMlangDemo{\DiplomErklaerungtext}
+% \end{docCommand}
+%
+%
+%
+% \subsection{Available multilingual commands}
+%
+% \begin{docCommand}{sectionname}{}
+% \AMlangDemo{\sectionname}
+% \end{docCommand}
+%
+% \begin{docCommand}{referencename}{}
+% \AMlangDemo{\referencename}
+% \end{docCommand}
+%
+% \begin{docCommand}{keywordsname}{}
+% \AMlangDemo{\keywordsname}
+% \end{docCommand}
+%
+% \begin{docCommand}{titlepagename}{}
+% \AMlangDemo{\titlepagename}
+% \end{docCommand}
+%
+% \begin{docCommand}{chairmanstring}{}
+% \AMlangDemo{\chairmanstring}
+% \end{docCommand}
+
+% \begin{docCommand}{examplename}{}
+% \AMlangDemo{\examplename}
+% \end{docCommand}
+%
+% \begin{docCommand}{supervisorstring}{}
+% \AMlangDemo{\supervisorstring}
+% \end{docCommand}
+%
+% \begin{docCommand}{examinerstring}{}
+% \AMlangDemo{\examinerstring}
+% \end{docCommand}
+%
+% \begin{docCommand}{taskstring}{}
+% \AMlangDemo{\taskstring}
+% \end{docCommand}
+%
+% \begin{docCommand}{signaturestring}{}
+% \AMlangDemo{\signaturestring}
+% \end{docCommand}
+%
+% \begin{docCommand}{disclaimerstring}{}
+% \AMlangDemo{\disclaimerstring}
+% \end{docCommand}
+%
+% \begin{docCommand}{Munich}{}
+% \AMlangDemo{\Munich}
+% \end{docCommand}
+%
+%
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+% \subsection{Loading required for the package writing.}
+%
+% Package \PackageName{etoolbox} is loaded for its command \cs{AfterEndPreamble}
+% The standards packages \PackageName{ifthen}, \PackageName{kvoptions} are also loaded.
+%
+%    \begin{macrocode}
+\RequirePackage{etoolbox}
+\RequirePackage{ifthen}
+\RequirePackage{kvoptions}
+%    \end{macrocode}
+%
+%
+%
+% \subsection{Options declaration}
+%
+%    \begin{macrocode}
+\newif\ifAM@lang@english
+\AM@lang@englishtrue
+\newif\ifAM@lang@ngerman
+\AM@lang@ngermanfalse
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\DeclareOption{english}{\AM@lang@englishtrue\AM@lang@ngermanfalse}
+\DeclareOption{ngerman}{\AM@lang@ngermantrue\AM@lang@englishfalse}
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{babel}}
+\ProcessOptions*\relax
+%    \end{macrocode}
+%
+%
+%
+% \subsection{Load package babel}
+%
+%    \begin{macrocode}
+\ifAM@lang@ngerman
+  \PassOptionsToPackage{english,main=ngerman}{babel}
+  \AfterEndPreamble{\selectlanguage{ngerman}}
+\else
+  \PassOptionsToPackage{english}{babel}
+\fi
+\RequirePackage{babel}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\newcommand{\AMlangDemo}[1]{%
+\foreignlanguage{english}{\textcolor{TUMIvory}{\ensuremath{\blacktriangleright}}\xspace#1}
+\par\vskip0.5ex
+\foreignlanguage{ngerman}{\textcolor{TUMIvory}{\ensuremath{\blacktriangleright}}\xspace#1}
+}
+%    \end{macrocode}
+%
+% \subsection{Available multilingual commands}
+%
+% In this section you will find the initialization. The implementation 
+% for the english language is to be found in section \ref{sec:english} and
+% for the german language in section \ref{sec:german}.
+%
+%
+%    \begin{macrocode}
+\providecommand{\sectionname}{}
+\providecommand{\referencename}{}
+\providecommand{\keywordsname}{}
+\providecommand{\titlepagename}{}
+\providecommand{\chairmanstring}{}
+\providecommand{\examplename}{}
+\providecommand{\supervisorstring}{}
+\providecommand{\examinerstring}{}
+\providecommand{\taskstring}{}
+\providecommand{\signaturestring}{}
+\providecommand{\disclaimerstring}{}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\providecommand{\DiplomErklaerung@text}{}
+\providecommand{\DiplomErklaerungtext}{\DiplomErklaerung@text}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\providecommand{\AMM}{}
+\newcommand{\AMinsertAM}{\AMM}
+\newcommand{\AMinsertAM@ii}{AM\\ Lehrstuhl f\"{u}r\\ Angewandte Mechnik}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\providecommand{\TUM}{}
+\newcommand{\AMinsertTUM}{\TUM}
+\providecommand{\Munich}{}
+%    \end{macrocode}
+%
+% \subsection{Professors}
+%
+%    \begin{macrocode}
+\providecommand{\ProfRixen}{Univ.-Prof. \mbox{dr. ir.} Daniel J. Rixen}
+\providecommand{\ProfUlbrich}{Univ.-Prof.\ Dr.-Ing.\ Dr.-Ing.\,habil.\ Heinz Ulbrich,\ i.R.}
+\providecommand{\ProfPfeiffer}{Univ.-Prof.\ Dr.-Ing., Dr.-Ing.\,E.h., Dr.-Ing.\,h.c.\,mult.\ Friedrich Pfeiffer, i.\,R.}
+%    \end{macrocode}
+%
+%
+% \subsection{German settings}
+% \label{sec:german}
+%
+%    \begin{macrocode}
+\addto\extrasngerman{%
+  \renewcommand{\bibname}{Literatur}
+  \renewcommand{\figurename}{Bild}
+  \renewcommand{\sectionname}{Abschnitt}
+  \renewcommand{\referencename}{Literatur}
+  \renewcommand{\keywordsname}{Stichworte}
+  \renewcommand{\titlepagename}{Titelseite}
+  \renewcommand{\supervisorstring}{Betreuer}
+  \renewcommand{\examinerstring}{Pr\"{u}fer der Dissertation}
+  \renewcommand{\chairmanstring}{Vorsitzender}
+  \renewcommand{\examplename}{Beispiel}
+  \renewcommand{\taskstring}{Aufgabenstellung}
+  \renewcommand{\AMM}{Lehrstuhl f\"{u}r Angewandte Mechanik}
+  \renewcommand{\TUM}{Technische Universit\"{a}t M\"{u}nchen}
+  \renewcommand{\Munich}{M\"{u}nchen}
+  \renewcommand{\signaturestring}{Unterschrift}
+  \renewcommand{\disclaimerstring}{Erkl\"arung}
+  \renewcommand{\DiplomErklaerung@text}{%
+    Hiermit erkl\"are ich, dass ich die vorliegende Arbeit selbst\"andig und
+    ohne Benutzung anderer als der angegebenen Hilfsmittel angefertigt habe. 
+    Alle Stellen, die w\"ortlich oder sinngem\"a\ss{} aus ver\"offentlichten
+    und nicht ver\"offentlichten Schriften entnommen sind, sind als solche 
+    kenntlich gemacht. Die Arbeit ist in gleicher oder \"ahnlicher Form -- 
+    auch auszugsweise -- noch nicht im Rahmen einer anderen Pr\"ufung 
+    vorgelegt worden.
+  }
+}
+%    \end{macrocode}
+%
+%
+% \subsection{English settings}
+% \label{sec:english}
+%
+%    \begin{macrocode}
+\addto\extrasenglish{%
+  \renewcommand{\sectionname}{Section}
+  \renewcommand{\keywordsname}{Keywords}
+  \renewcommand{\referencename}{References}
+  \renewcommand{\titlepagename}{Titlepage}
+  \renewcommand{\supervisorstring}{Supervisor}
+  \renewcommand{\examinerstring}{Examiner}
+  \renewcommand{\chairmanstring}{Chairman}
+  \renewcommand{\examplename}{Example}
+  \renewcommand{\taskstring}{Task Description}
+  \renewcommand{\AMM}{Institute of Applied Mechanics}
+  \renewcommand{\AMinsertAM@ii}{AM\\ \AMinsertAM}
+  \renewcommand{\TUM}{Technical University Munich}
+  \renewcommand{\Munich}{Munich}
+  \renewcommand{\signaturestring}{Signature}
+  \renewcommand{\disclaimerstring}{Disclaimer}
+  \renewcommand{\DiplomErklaerung@text}{%
+    I hereby declare that this thesis is entirely the result of my own work 
+    except where otherwise indicated. I have only used the resources given 
+    in the list of references.
+  }
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+%
+%
+%
+% \Finale

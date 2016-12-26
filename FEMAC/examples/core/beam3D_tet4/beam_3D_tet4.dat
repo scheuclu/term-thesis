@@ -1,0 +1,56 @@
+--------------------------------------------------------------------GENERAL
+PROBLEMTYPE        STRING           structure
+PROBLEMDIM         NUMERIC          3
+MESHFORMAT         STRING           msh
+MESHPATH           STRING           <thisdir>/beam_3D_tet4.msh
+DISPATH            STRING           <thisdir>/beam_3D_tet4.dis
+RESPATH            STRING           <thisdir>/beam_3D_tet4.res
+LOGFILE            STRING           <thisdir>/output/beam_3D_tet4.log
+-------------------------------------------------------------------TAGTYPES
+DIRICH             NUMERIC         1,2
+NEUMANN            NUMERIC         3
+MATERIAL           NUMERIC         4,5
+------------------------------------------------------------------MATERIALS
+ST_VENANT_KIRCHOFF
+MATID 1 E 200 nu 0.3 type plane_strain
+---------------------------------------------------------------------OUTPUT
+WRITEEVERY         NUMERIC         2
+FORMAT             STRING          vtk
+PATH               STRING          <thisdir>/output
+NAME               STRING          beam_3D_tet4
+---------------------------------------------------------------------SOLVER
+SOLVERNAME         STRING          DummySolver
+-------------------------------------------------------------------POSTPROC
+ELESTRESSES        BOOL            false
+NODESTRESSES       BOOL            false
+ELESTRAIN          BOOL            false
+NODESTRAIN         BOOL            false
+-----------------------------------------------------------------CONDITIONS
+DIRICHLET_CONDITION
+CONDID 1 ONOFF 1 0 VAL 0 0 MSHTAG 1
+
+DIRICHLET_CONDITION
+CONDID 2 ONOFF 1 0 VAL 0 0 MSHTAG 2
+
+NEUMANN_CONDITION
+CONDID 3 ONOFF 1 0 VAL 1.0 0.0 MSHTAG 3
+
+MATERIAL_CONDITION
+CONDID 4 MATID 1 MSHTAG 4
+------------------------------------------------------------------MATLABOUT
+PLOTSETUP         STRUCT            10
+ PLOTGEO          BOOL              true
+ PLOTBC           BOOL              false
+ LABNODES         BOOL              false
+ LABELE           BOOL              false
+ GRID             STRING            off
+ AXIS             STRING            off
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8
+ DIRICHCOLOR      NUMERIC           0,1,0
+ NEUMANNCOLOR     NUMERIC           1,0,0
+ FACEALPHA        NUMERIC           0.8
+PLOTRESULT        STRUCT            4
+ LABNODES         BOOL              false   
+ LABELE           BOOL              false
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8
+ FACEALPHA        NUMERIC           0.8

@@ -1,0 +1,202 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMlogo <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for logos
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMlogo.dtx
+and the derived files           AMlogo.ins,
+                                AMlogo.pdf and
+                                AMlogo.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMlogo}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMlogo}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMlogo}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMlogo}[\AMinsertGitDate{} \AMinsertGitVersion{} TUM and AM logos]
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{1.0}{2015/05/28}{First version}
+%
+%
+%
+%
+%
+% \title{The \textcolor{white}{AMlogo} package}
+% \maketitle
+%
+% \vskip1cm
+% \begin{warning}
+% This package is not used yet by the AM classes!
+% \end{warning}
+%
+% \tableofcontents
+%
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+% \section{User guide}
+%
+% \begin{docCommand}{LogoTUM}{}
+% Main command for the logo TUM. By default the logo is in color. 
+% If you want to change that you have to redefine this command.
+% Another possibility would be to add an optional argument to this command.
+% Note that this command does not include the logo, it only contains the path to it. Maybe this should be the case?
+% \end{docCommand}
+%
+% \begin{docCommand}{LogoMW}{}
+% Same as the previous command, but for the logo MW.
+% \end{docCommand}
+%
+% \begin{docCommand}{LogoAM}{}
+% Same as the previous command, but for the logo AM.
+% \end{docCommand}
+%
+%
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%
+%
+% \subsection{Path declarations}
+%
+%
+%
+% \begin{docCommand}{AM@pathLogo@MW@black}{}
+% This command stores the path to the black and white logo of the faculty Maschinenwesen
+% \end{docCommand}
+%    \begin{macrocode}
+\newcommand*{\AM@pathLogo@MW@black}{MW_schwarz_CMYK}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AM@pathLogo@MW@color}{}
+% This command stores the path to the colored logo of the faculty Maschinenwesen
+% \end{docCommand}
+%    \begin{macrocode}
+\newcommand*{\AM@pathLogo@MW@color}{MW_CMYK}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AM@pathLogo@TUM@black}{}
+% This command stores the path to the black and white logo of the TUM
+% \end{docCommand}
+%    \begin{macrocode}
+\newcommand*{\AM@pathLogo@TUM@black}{TUMLogo_oZ_Outline_schwarz_CMYK}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AM@pathLogo@TUM@color}{}
+% This command stores the path to the colored logo of the TUM
+% \end{docCommand}
+%    \begin{macrocode}
+\newcommand*{\AM@pathLogo@TUM@color}{TUMLogo_oZ_Outline_blau_CMYK}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AM@pathLogo@AM@black}{}
+% This command stores the path to the black and white logo of the faculty Applied Mechanics
+% \end{docCommand}
+%    \begin{macrocode}
+\newcommand*{\AM@pathLogo@AM@black}{AM_RGB}
+%    \end{macrocode}
+%
+% \begin{docCommand}{AM@pathLogo@AM@color}{}
+% This command stores the path to the colored logo of the faculty Applied Mechanics
+% \end{docCommand}
+%    \begin{macrocode}
+\newcommand*{\AM@pathLogo@AM@color}{AM_RGB}
+%    \end{macrocode}
+%
+%
+%
+%
+%
+% \subsection{User commands}
+%
+%
+% Implementation of \refCom{LogoTUM}, \refCom{LogoMW} and \refCom{LogoAM}
+%    \begin{macrocode}
+\newcommand*{\LogoTUM}{\AM@pathLogo@TUM@color}
+\newcommand*{\LogoMW}{\AM@pathLogo@MW@color}
+\newcommand*{\LogoAM}{\AM@pathLogo@AM@color}
+%    \end{macrocode}
+%
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+%
+%
+% \Finale

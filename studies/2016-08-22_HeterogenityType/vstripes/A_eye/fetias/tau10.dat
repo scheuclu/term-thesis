@@ -1,0 +1,78 @@
+--------------------------------------------------------------------GENERAL
+PROBLEMTYPE        STRING           feti
+PROBLEMDIM         NUMERIC          2
+MESHFORMAT         STRING           msh
+MESHPATH           STRING           <thisdir>/../../../mesh_vstripes.msh
+DISPATH            STRING           <thisdir>/../../../mesh_vstripes.dis
+RESPATH            STRING           <thisdir>/output/tau10.res
+LOGFILE            STRING           <thisdir>/output/tau10.log
+-------------------------------------------------------------------TAGTYPES
+DIRICH             NUMERIC         1,2
+NEUMANN            NUMERIC         3
+MATERIAL           NUMERIC         4,5
+---------------------------------------------------------------------SOLVER
+NAME               STRING          FETIASSolver
+PARAMS             STRUCT          13
+ NUMSUBSTRUCTS     NUMERIC         16
+ ASSEMBLEDOPS      BOOL            true
+ VERBOSE           BOOL            true
+ REASSEMBLESYS     BOOL            false
+ CHECKS            BOOL            true
+ SCALING           STRING          none
+ COARSEGRID        STRING          none
+ WRITEITER         STRING          none
+ ADAPTIVITY        STRING          standard
+ CONTRACTFAC       NUMERIC         0.999
+ TAU               NUMERIC          Inf
+ TERMINATIONTYPE   STRING          absolute
+ TERMINATIONVAL    NUMERIC         1e-6
+------------------------------------------------------------------MATERIALS
+ST_VENANT_KIRCHOFF
+MATID 1 E 1000 nu 0.3 type plane_strain
+
+ST_VENANT_KIRCHOFF
+MATID 2 E 100 nu 0.3 type plane_strain
+-----------------------------------------------------------------CONDITIONS
+DIRICHLET_CONDITION
+CONDID 1 ONOFF 1 1 VAL 0 0 MSHTAG 1
+
+DIRICHLET_CONDITION
+CONDID 2 ONOFF 1 0 VAL 0 0 MSHTAG 2
+
+NEUMANN_CONDITION
+CONDID 3 ONOFF 1 1 VAL 0.0 -0.0001 MSHTAG 3
+
+MATERIAL_CONDITION
+CONDID 4 MATID 1 MSHTAG 4
+
+MATERIAL_CONDITION
+CONDID 5 MATID 2 MSHTAG 5
+-------------------------------------------------------------------POSTPROC
+ELESTRESSES        BOOL            true
+NODESTRESSES       BOOL            false
+ELESTRAIN          BOOL            false
+NODESTRAIN         BOOL            false
+---------------------------------------------------------------------OUTPUT
+WRITEEVERY         NUMERIC         2
+FORMAT             STRING          vtk
+PATH               STRING          <thisdir>/output/vtk
+NAME               STRING          tau10
+------------------------------------------------------------------MATLABOUT-IGNORE
+PLOTSETUP         STRUCT            10
+ PLOTGEO          BOOL              true
+ PLOTBC           BOOL              true
+ LABNODES         BOOL              true
+ LABELE           BOOL              true
+ GRID             STRING            off
+ AXIS             STRING            off
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8
+ DIRICHCOLOR      NUMERIC           0,1,0
+ NEUMANNCOLOR     NUMERIC           1,0,0
+ FACEALPHA        NUMERIC           1.0
+PLOTLAG           STRUCT            2
+ LABNODES         BOOL              false
+ LABELE           BOOL              false
+PLOTRESULT        STRUCT            3
+ LABNODES         BOOL              false   
+ LABELE           BOOL              false
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8

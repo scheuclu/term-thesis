@@ -1,0 +1,48 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage[outline]{contour}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+\includegraphics[width=.7\textwidth]{\studypath/2016-08-22_HeterogenityType/setup/materials_vertical.pdf}};
+
+
+\begin{tikzpicture}
+\def\ydist{-2.1}
+
+
+
+\node[inner sep=0pt] (russell) at (0,0)
+    {\includegraphics[width=.7\textwidth]{\studypath/2016-08-22_HeterogenityType/setup/materials_vertical.pdf}};
+\node at (-3.5,0) [anchor=south west, scale=1.0, white] {\contour{black}{iteration 1}}; 
+
+\node[inner sep=0pt] (russell) at (0,\ydist)
+    {\includegraphics[width=.7\textwidth]{\studypath/2016-08-22_HeterogenityType/setup/materials_vertical.pdf}};
+\node at (-5.5,\ydist) [anchor=north west, scale=0.7, white] {\contour{black}{iteration 2}}; 
+    
+\node[inner sep=0pt] (russell) at (0,2*\ydist)
+    {\includegraphics[width=.7\textwidth]{\studypath/2016-08-22_HeterogenityType/setup/materials_vertical.pdf}};
+\node at (-5.5,2*\ydist) [anchor=north west, scale=0.7, white] {\contour{black}{iteration 3}}; 
+    
+\node[inner sep=0pt] (russell) at (0,3*\ydist)
+    {\includegraphics[width=.7\textwidth]{\studypath/2016-08-22_HeterogenityType/setup/materials_vertical.pdf}};
+\node at (-5.5,3*\ydist) [anchor=north west, scale=0.7, white] {\contour{black}{converged~~}}; 
+    
+\end{tikzpicture}
+
+
+
+\end{document}

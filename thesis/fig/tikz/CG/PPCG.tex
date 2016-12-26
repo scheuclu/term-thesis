@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../..}
+\def\tikzpath{..}
+
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+%\assign{\nassitext{\df2}{text} $equation$  }
+\begin{struktogramm}(85,100)
+\def\df2{0.45}
+\assign{$\dvec{x}_0= \Pi \dvec{x}_{00} + \dmat{U}\pinv{(\tp{\dmat{U}} \dmat{A} \dmat{U})} \tp{\dmat{U}} \dvec{b}$  }
+
+
+
+\assign{$\dvec{r}_0 = \dvec{b}-\dmat{A}\dvec{x}_0$  }
+\assign{$\dvec{z}_0 = \dmat{H}\dvec{r}_0$  }
+\assign{$\dvec{p}_0 = \dmat{\Pi}\dvec{z}_0$  }
+
+
+
+\while[8]{While not converged}
+  \assign{$\dvec{q}_i = \dmat{A}\dvec{p}_i$  }
+  \assign{$\alpha_i = \frac{\langle \dvec{r}_i \dvec{z}_i \rangle}{\langle \dvec{q}_i \dvec{p}_i   \rangle}$  }
+  \assign{$\dvec{x}_{i+1} = \dvec{x}_{i}+\alpha_i \dvec{p}_i$  }
+  \assign{$\dvec{r}_{i+1} = \dvec{r}_{i}-\alpha_i \dvec{q}_i$  }
+  \assign{$\dvec{z}_{i+1} = \dmat{H} \dvec{r}_{i+1}$  }
+  \assign{$\dvec{z}_{i+1} = \dmat{H} \dvec{r}_{i+1}$  }
+  	\while[8]{For $j=1,...,i$}
+	  \assign{$\frac{\langle \dvec{z}_{i+1}, \dmat{A} \dvec{p}_j \rangle}{\langle \dvec{p}_j, \dmat{A} \dvec{p}_j \rangle}$}
+	  \assign{$\dvec{p}_{i+1}= \dmat{\Pi} \dvec{z}_{i+1}-\beta_i\dvec{p}_{i}$}
+	\whileend
+\whileend
+
+
+\end{struktogramm}
+
+\end{document}

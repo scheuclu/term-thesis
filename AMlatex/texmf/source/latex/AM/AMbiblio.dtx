@@ -1,0 +1,338 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMbiblio <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for bibliography
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMbiblio.dtx
+and the derived files           AMbiblio.ins,
+                                AMbiblio.pdf and
+                                AMbiblio.sty.
+\endpostamble
+\usedir{tex/latex/AM/AMbiblio}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMbiblio}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMbiblio}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMbiblio}[\AMinsertGitDate{} \AMinsertGitVersion{} AM bibliography]
+\ClassInfo{AMbrief}{Document class of the Institute of Applied Mechanics}
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\begin{document}
+    \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+% \changes{1.0}{2015/05/28}{First version}
+%
+%
+% \title{The \textcolor{white}{AMbiblio} package}
+% \maketitle
+% \tableofcontents
+%
+% 
+% \section{License}
+% \InsertLicenseBlaBla
+%
+% \section{User Guide}
+%
+% \begin{docCommand}{AMsetBiblio}{\marg{key-value list}}
+%   Main command of the package \AMpackage{AMbiblio} that allows you to choose 
+%   the settings of the bibliography. 
+% \end{docCommand}
+%
+% \begin{warning}
+% This package is still in construction since the style of the bibliography at the AM
+% department has not been decided yet. But it will be based on the \LaTeX{} package
+% \PackageName{biblatex} together with the program \docValue{biber} (replacement for \docValue{bibtex}).
+% \end{warning}
+%
+% \begin{docCommand}{cite}{\oarg{prenote}\oarg{postnote}\marg{key list}}
+% Example output: Schuetz 2015
+% \end{docCommand}
+% \begin{docCommand}{textcite}{\oarg{prenote}\oarg{postnote}\marg{key list}}
+% Example output: Schuetz (2015)
+% \end{docCommand}
+% \begin{docCommand}{parencite}{\oarg{prenote}\oarg{postnote}\marg{key list}}
+% Example output: (Schuetz 2015)
+% \end{docCommand}
+%
+% \begin{docCommand}{addbibresource}{\marg{file name}}
+% you must provide the complete name, including the extension.
+% \end{docCommand}
+%
+% \subsection{The bibliography factory}
+%
+% \begin{enumerate}
+% \item You need one (or many) \FileName{.bib} file that contains the items of your biblio\-graphy.
+% This file can have additional items that will not be cited in your document, it is not a problem.
+% Each item has several entries depending on its type
+% (for example |@article|, |@book|, |@conference|)
+% like the author, the title, the year, the journal name, etc. plus a unique \docValue{key}.
+% Although possible, it is not advised to write such a file yourself, since many bibliography management
+% tools can generate it for you. A comparison of the available softwares can be found on this 
+% \href{https://en.wikipedia.org/wiki/Comparison_of_reference_management_software}{Wikipedia page}.
+% If you don't know what to choose, we recommand \href{http://jabref.sourceforge.net/}{JabRef} 
+% or \href{https://www.mendeley.com/}{Mendely}.
+% \item In the preamble of your main document, indicates \LaTeX{} that it will find your bibliography database
+% in the \FileName{.bib} file with the command \refCom{addbibresource}.
+% \item Inside your document, make references to your bibliography items with the command \refCom{cite}
+% \item Compile your document normally and run the bibliography program. With \docValue{TeXstudio} you can in
+% the menu \docValue{Tools} then click on \docValue{Bibliography}. Finally compile your document one more time (or two).
+% \end{enumerate}
+%
+% \begin{hint}
+% The bibliography program \docValue{biber} comes with all recent \LaTeX{} distribution. Make sure you are using
+% version \docValue{2.1} at least.
+% \end{hint}
+%
+% \begin{warning}
+% When using the recommanded editor \docValue{TeXstudio}, you have to make sure that 
+% the default bibliography tool is \docValue{biber}: 
+% Go in |Options| $\to$ |Configure TeXstudio...| $\to$ |Build| $\to$ |Default Bibliography Tool|.
+% \end{warning}
+%
+% \subsection{Minimal example}
+%
+% In the following example, it is assumed that the file \FileName{mydocument.tex} is in a directory that 
+% containts a bibliography file named \FileName{mybiblio.bib} with at least two labels: 
+% \docValue{bibKey1} and \docValue{bibKey2}.
+% \smallskip 
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{title={LaTeX Code}}
+% mydocument.tex
+\documentclass{article}
+\usepackage{AMbiblio}
+\addbibresource{mybiblio.bib}
+\begin{document}
+content... 
+\cite{bibKey1,bibKey2}
+content...
+\printbibliography
+\end{document}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{title={Compilation process}}
+pdflatex mydocument.tex
+biber mydocument
+pdflatex mydocument.tex
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+% You can also take inspiration from the template \docValue{thesis}.
+%
+% \newpage
+% \setlength{\parskip}{1em}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%
+%
+%
+%    \begin{macrocode}
+\RequirePackage{ifthen}
+\RequirePackage{kvoptions}
+\RequirePackage{pgfkeys}
+\RequirePackage{pgfopts}
+%    \end{macrocode}
+%
+% \begin{docKey}[AM/biblio]{natbib}{=true/false}{default \docValue{true}, initially \docValue{false}}
+% Enabled support for \PackageName{natbib} instead of \PackageName{biblatex}. This is not recommended.
+% \end{docKey}
+%
+%    \begin{macrocode}
+\newif\ifAMbiblio@natbib
+\pgfkeys{/AM/biblio/.is family,/AM/biblio,
+  natbib/.is if=AMbiblio@natbib,
+  natbib/.initial=false,
+}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\DeclareStringOption[biber]{backend}
+\DeclareStringOption[utf8]{encoding}
+\DeclareStringOption[authoryear-comp]{style}
+%    \end{macrocode}
+%
+% The previous option declarations causes the package \PackageName{kvoptions} to generate the 
+% associated commands:
+%
+% \begin{docCommand}{AMbiblio@backend}{}
+% \end{docCommand}
+% \begin{docCommand}{AMbiblio@encoding}{}
+% \end{docCommand}
+% \begin{docCommand}{AMbiblio@style}{}
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\ProcessLocalKeyvalOptions*
+%    \end{macrocode}
+%
+%
+%
+% \begin{docCommand}{AMbiblio@load@natbib}{}
+%
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AMbiblio@load@natbib}{%
+  \RequirePackage{overcite}%
+  \RequirePackage{natbib}%
+}
+%    \end{macrocode}
+%
+%
+% \begin{docCommand}{AMbiblio@load@biblatex}{}
+% Package \PackageName{biblatex} is loaded with the values for options
+% \docValue{backend}, \docValue{bibencoding} and \docValue{style} being respectively
+% \begin{itemize}
+% \item \refCom{AMbiblio@backend}
+% \item \refCom{AMbiblio@encoding}
+% \item \refCom{AMbiblio@style}
+% \end{itemize}
+% \begin{warning}
+% Contrary to most of the \PackageName{biblatex} options, those three settings cannot
+% be changed after \PackageName{biblatex} has been loaded.
+% \end{warning}
+% \end{docCommand}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AMbiblio@load@biblatex}{%
+  \PassOptionsToPackage{backend=\AMbiblio@backend}{biblatex}
+  \PassOptionsToPackage{bibencoding=\AMbiblio@encoding}{biblatex}
+  \PassOptionsToPackage{style=\AMbiblio@style}{biblatex}
+  \RequirePackage{biblatex}%
+  \ExecuteBibliographyOptions{%
+       doi=false
+      ,isbn=false
+      ,url=false
+      ,maxcitenames=3
+      ,maxbibnames=100
+      ,block=none
+      ,sortcites
+      ,sorting=nyt
+      ,defernumbers
+      ,uniquename=false
+      ,firstinits=true
+  }%
+  \DeclareFieldFormat{url}{%
+    \newline\url{##1}%
+  }%
+  \RequirePackage{csquotes}
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\providecommand{\referencename}{References}
+%    \end{macrocode}
+%
+% \todo{check if natbib or biblatex}
+%    \begin{macrocode}
+\newcommand{\AMPrintBibliography}{%
+  \printbibliography%
+  \addcontentsline{toc}{chapter}{\referencename}
+}
+%    \end{macrocode}
+%
+%
+%
+% \todo{At begin document?}
+%
+%    \begin{macrocode}
+\ifAMbiblio@natbib
+  \AMbiblio@load@natbib
+\else
+  \AMbiblio@load@biblatex
+\fi
+%    \end{macrocode}
+%
+% Specific command to style apa
+%
+%
+%    \begin{macrocode}
+\def\AMbiblio@apa{apa}
+\ifx\AMbiblio@style\AMbiblio@apa
+  \DeclareLanguageMapping{ngerman}{ngerman-apa}
+\fi
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+%
+%
+%
+% \Finale

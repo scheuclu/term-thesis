@@ -1,0 +1,145 @@
+\section*{Nomenclature}\label{sec:nomenclature}
+\subsection*{Representation of scalars. tensors and other quantities}
+\begin{tabular}{l l}
+$q,Q$      &Scalar quantity  \\
+$\vec{q}$  &Continuous vectorial quantity  \\
+$\mat{Q}$  &Continuous matrix quantity \\
+$\dvec{q}$ &Discrete vectorial quantity  \\
+$\dmat{Q}$ &Discrete matrix quantity \\
+\end{tabular}
+
+
+\subsection*{Operators and symbols}
+\begin{tabular}{l l}
+$\tp{(\cdot)}$   &Transpose of a tensor  \\
+$\inv{(\cdot)}$  &Inverse of a tensor or mapping  \\
+$\pinv{(\cdot)}$ &Pseudoinverse of a tensor or mapping  \\
+$\derivtime{(\cdot)},\dderivtime{(\cdot)}$ &First and second time derivative at a fixed reference position  \\
+%$\hat{(\cdot)}$ &prescribed quantity  \\
+%$(\cdot,\cdot)_\mathrm {\lebesgue}$ &$\lebesgue$-inner product in $\Omega$  \\
+%$(\cdot,\cdot)_\mathrm {\sobolev}$ &$\sobolev$-inner product in $\Omega$  \\
+$\mathrm det$ &Determinant  \\
+$\mathrm div$ &Spatial divergence operator  \\
+$\pd$ &Virtual quantity  \\
+\end{tabular}
+
+
+\subsection*{FE space discretization}
+\begin{tabular}{l l}
+$\mathrm{nele}$ &Number of elements \\
+$\mathrm {nnod}$ &Number of nodes \\
+$\mathrm {ndim}$ &Number of spatial dimensions \\
+$\mathrm {ndof}$ &Number of degrees of freedom \\
+$\sfn_\mathrm k$ &FE shape function of node k \\
+%$\sfdual_\mathrm k$ &FE dual shape function of node k \\
+$\vec{\xi}$ &Position in FE parameter space \\
+$\vec{\d X}$ &Discrete nodal positions in reference configuration \\
+$\vec{\d x}$ &Discrete nodal positions in current configuration \\
+$\vec{\d D}$ &Discrete nodal displacements in reference configuration \\
+$\vec{\d d}$ &Discrete nodal displacements in current configuration \\
+$\vec{\d X}$ &Discrete nodal positions in reference configuration \\
+$h$ &Characteristic element size \\
+$p$ &Polynomial degree of finite element interpolation \\
+%$\mmat$ &Mass matrix \\
+%$\dampmat$ &Damping matrix \\
+%$\vec{\d f}$ &Discrete force vector \\
+%$\stiff_\mathrm 0$ &Initial tangent stiffnes matrix
+\end{tabular}
+%
+
+\subsection*{Domain decomposition}
+\begin{tabular}{l l}
+$\Omega_s$   &Domain with index $s$ \\
+$\Gamma_s$   &Interface with index $s$\\
+$\ids{(\cdot)}$      &Quantity related to domain $s$ \\
+\end{tabular}
+
+\subsection*{FETI-Method}
+\subsubsection*{General}
+\begin{tabular}{l l}
+$\ids{(\cdot)}$   &substructure local quantity  \\
+$\asmids{(\cdot)}$   &assembled substructure local quantity  \\
+$\lag$      &Lagrange multiplier (can be interpreted as interface force)\\
+$\lagvec$   &Vector of Lagrange multipliers\\
+$\lagnvec$   &Vector of Lagrange multipliers in the natural subspace\\
+$\lagcvec$   &Vector of Lagrange multipliers in the auxiliary(coarse) space\\
+$\lagfvec$   &Vector of Lagrange multipliers in the conjugate gradient iteration space\\
+$\rmodevec$ &Generalized coordinates of rigid body modes\\
+$\force$    &External force (one component)\\
+$\forcevec$ &Vector of external forces (dof-based)\\
+%$\ifacedisp$ & Interface displacement solution\\
+$\ifacedispvec$ &Interface displacements\\
+$\res$      &Displacement gap(residuum)\\
+$\resvec$   &Vector of residua\\
+$\traceop$  &Trace operator\eqref{eq:asmop_and_traceop_example}\\
+$\asmop$    &Boolean assembly operator \eqref{eq:asmop_and_traceop_example}\\
+$\nullspacemat$ &Rigid body modes\\
+$\locschur$ &Local Schur complement \eqref{eq:locschur}\\
+$\locdualschur$ &Local Dual Schur complement\\
+$\rmodespace$     &Constraint matrix\\
+$\scalemat$ &Scaling matrix\\
+$\cspace$   & Auxiliary Coarse space\\
+$\projn$    &Projector to natural coarse space\\
+$\projc$    &Projector to auxiliary coarse space\\
+$\condnum$  &Condition number\\
+\end{tabular}
+\subsubsection*{FETI-2}
+\begin{tabular}{l l}
+$\sdirnspacecspace$ & Search direction in natural subspace\\
+%$\wvec$ & TODO\\
+$\sdirfspace$ & Search direction in conjugate gradient iteration space\\
+\end{tabular}
+\subsubsection*{FETI-S}
+\begin{tabular}{l l}
+$\sdirnspacecspaceblock$ & Block of search directions in natural subspace\\
+$\sdirnspacemat$ & Search directions in natural subspace\\
+$\Zmat$ & Block of search directions in conjugate gradient iteration space\\
+%$\Deltamat$ & TODO
+\end{tabular}
+
+\subsubsection*{FETI-AS}
+\begin{tabular}{l l}
+$\tau$ & Adaptivity criterion\\
+$t_i^s$ & Convergence Indicator\\
+$\rho$ & Contraction factor\\
+\end{tabular}
+
+%\subsubsection*{FETI-B}
+%\begin{tabular}{l l}
+%a & a\\
+%a & a\\
+%\end{tabular}
+%\subsubsection*{FETI-G}
+%\begin{tabular}{l l}
+%a & a\\
+%a & a\\
+%\end{tabular}
+%\subsubsection*{FETI-A}
+%\begin{tabular}{l l}
+%a & a\\
+%a & a\\
+%\end{tabular}
+
+\subsection*{Abbreviations}
+\begin{tabular}{l l}
+\textbf{DD}  &Domain Decomposition  \\
+\textbf{BDD}  &Balanced Domain Decomposition  \\
+\textbf{FETI}  &Finite Element Tearing and Interconnecting\\
+\textbf{FETI-1} &One-level FETI algorithm\\
+\textbf{FETI-2} &Two-level FETI algorithm\\
+\textbf{FETI-S} &Simultaneous FETI algorithm\\
+\textbf{FETI-B} &Block FETI algorithm\\
+\textbf{FETI-AS} &Adaptive Simultaneous FETI algorithm\\
+\textbf{FETI-FAS} &Fast Adaptive Simultaneous FETI algorithm\\
+\textbf{FE}  &Finite element  \\
+\textbf{FEM}  &Finite element method  \\
+\textbf{GP}  &Gauss point  \\
+\textbf{IBVP}  &Initial boundary value problem  \\
+\textbf{LM}  &Lagrange multiplier  \\
+\textbf{NC}  &Non-conforming  \\
+\textbf{ODE}  &Ordinary differential equation \\
+\textbf{PMTPE}  &Principle of minimum of total energy  \\
+\textbf{PVW}  &Principle of virtual work
+\end{tabular}
+
+

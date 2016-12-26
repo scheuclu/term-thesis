@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+\begin{struktogramm}(150,60)
+\def\df2{0.40}
+
+
+
+\while[8]{\nassitextbold{\df2}{Loop over all substructures }  $ for~s=1,....,N~do $} %8 decribes the with of the while box
+\assign{\nassitext{\df2}{Convergence indicator}   $t_i^s = \frac{ \langle \sdirnspacemat_i \dvec{\alpha_i},\asmids{\locdualschur} \sdirnspacemat_i \dvec{\alpha}_i\rangle }{ \tp{\resvec_{i+1}} \asmids{\locschur} \resvec_{i+1} }$}
+
+
+\whileend
+
+\assign{\nassitext{\df2}{Sort in ascencing order} sort$(\dvec{t}_i)$ }
+\assign{\nassitext{\df2}{~~~~~Sort substructure index vector in the same way} $~$}
+
+\while[8]{\nassitextbold{\df2}{For b=1:numblocks }  $ $}
+
+\while[8]{\nassitextbold{\df2}{For the current block b of substructure indices }  $ $}
+
+\assign{\nassitext{\df2}{Add up search directions}   $\sdirfspace_{i+1}^b=\sdirfspace_{i+1}^b + \asmids{\locschur} \resvec_{i+1}$}
+\whileend
+\assign{\nassitext{\df2}{Concatenate blockwise search directions}   $\Zmat_{i+1}=[\sdirfspace_{i+1}^1 |....| \sdirfspace_{i+1}^{numblocks}]$}
+
+\whileend
+
+
+\end{struktogramm}
+\end{document}

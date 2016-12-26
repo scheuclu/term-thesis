@@ -1,0 +1,74 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage[outline]{contour}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+
+
+
+
+\begin{tikzpicture}[every axis/.style={
+%xmax=26,%
+xmin=-0.5,%
+ymin=0,%
+ymax=12,
+%ymax=40,%
+ylabel={ search dir},%
+xlabel={ iterations},%
+bar width=2pt,
+%xtick={0,1,...,26}
+}]
+
+\pgfplotstableread[col sep=comma]{\studypath/2016-08-25_StudyContractfac/data/contract2tau_chaco.txt}\loadedtable
+
+ \begin{groupplot}[
+group style = {group size = 1 by 4, horizontal sep=2.0cm, vertical sep=1.5cm},
+height = 5cm,
+width = 14cm,
+]
+
+
+\nextgroupplot[ybar, legend style={at={(0.99,0.9)}, anchor=north east,legend columns=-1}, ylabel={\# search directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetis_incratio-0p95_stiffratio-0p001.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetias_incratio-0p95_stiffratio-0p001.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex,  x index=0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetifas_incratio-0p95_stiffratio-0p001.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {\contour{white}{$\frac{E_{inclusion}}{E_{lattice}}=0.001,~\rho=0.999,~\tau=1.31$}~~~};
+
+\nextgroupplot[ybar, legend style={at={(0.99,0.9)}, anchor=north east,legend columns=-1}, ylabel={\# search directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetis_incratio-0p95_stiffratio-1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetias_incratio-0p95_stiffratio-1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetifas_incratio-0p95_stiffratio-1.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {\contour{white}{$\frac{E_{inclusion}}{E_{lattice}}=1,~\rho=0.999,~\tau=1.67$}~~~};
+
+\nextgroupplot[ybar, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={\# search directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetis_incratio-0p95_stiffratio-1000.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetias_incratio-0p95_stiffratio-1000.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/numsdir_fetifas_incratio-0p95_stiffratio-1000.txt};
+\legend{FETI-S,FETI-AS,FETI-FAS};
+\node[anchor=north east] at (rel axis cs:1,1) {\contour{white}{$\frac{E_{inclusion}}{E_{lattice}}=1000,~\rho=0.999,~\tau=3.3e-3$}~~~};
+%\node at (0,0) [anchor=north west, scale=0.7, white] {\contour{black}{converged~~}}; 
+
+
+\end{groupplot}
+\end{tikzpicture}
+
+
+\end{document}

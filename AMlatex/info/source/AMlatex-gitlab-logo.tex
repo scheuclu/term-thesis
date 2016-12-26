@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{AMcolor}
+\usepackage{AMfont}
+\usepackage{shadowtext}
+\usepackage{graphicx}
+\newcommand{\logolatex}{\fontfamily{cmr}\selectfont\small\LaTeX}
+\newcommand{\textAM}{\shadowcolor{TUMBlue!30}\hskip-0.7ex\slshape\shadowtext{AM}}
+
+\begin{document}\Huge
+\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0,scale=4}]
+\begin{scope}
+%\node[opacity=0.7] (bg) at (0,-0.5) {\includegraphics[width=2.5cm]{images/background_equations}};
+\node[TUMBlue,scale=0.7] (AM) at (0,0) {\textAM};
+\node[TUMBlue!30,anchor=north east,yshift=-1mm] (L) at (AM.north west) {$\{$};
+\node[TUMBlue!30,anchor=north west,yshift=-1mm] (R) at (AM.north east) {$\}$};
+\node[anchor=north,yshift=-0.4ex,scale=1.3,yshift=-0.5mm] at (AM.south) {\logolatex};
+\node[anchor=south,yshift=0.5ex] at (AM.north) {};
+\node[anchor=north,yshift=-0.5ex] at (L.south) {};
+\end{scope}
+\end{tikzpicture}
+\end{document}

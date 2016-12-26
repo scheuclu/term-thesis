@@ -1,0 +1,45 @@
+--------------------------------------------------------------------GENERAL
+PROBLEMTYPE        STRING           structure
+PROBLEMDIM         NUMERIC          2
+MESHFORMAT         STRING           msh
+MESHPATH           STRING          <thisdir>/bending_stripe.msh
+DISPATH            STRING          <thisdir>/bending_stripe.dis
+RESPATH            STRING          <thisdir>/bending_stripe.res
+LOGFILE            STRING          <thisdir>/output/bending_stripe.log
+------------------------------------------------------------------ TAGTYPES
+DIRICH             NUMERIC         1,2
+NEUMANN            NUMERIC         3
+MATERIAL           NUMERIC         4,5
+------------------------------------------------------------------MATERIALS
+ST_VENANT_KIRCHOFF
+MATID 1 E 200 nu 0.3 type plane_strain
+
+ST_VENANT_KIRCHOFF
+MATID 2 E 70 nu 0.1 type plane_strain
+-----------------------------------------------------------------CONDITIONS
+DIRICHLET_CONDITION
+CONDID 1 ONOFF 1 1 VAL 0 0 MSHTAG 1
+
+DIRICHLET_CONDITION
+CONDID 2 ONOFF 1 0 VAL 0 0 MSHTAG 2
+
+NEUMANN_CONDITION
+CONDID 3 ONOFF 0 1 VAL 0 0.04 MSHTAG 3
+
+MATERIAL_CONDITION
+CONDID 4 MATID 1 MSHTAG 4
+
+MATERIAL_CONDITION
+CONDID 5 MATID 2 MSHTAG 5
+---------------------------------------------------------------------SOLVER
+SOLVERNAME         STRING          StaticSolver
+-------------------------------------------------------------------POSTPROC
+ELESTRESSES        BOOL            true
+NODESTRESSES       BOOL            false
+ELESTRAIN          BOOL            false
+NODESTRAIN         BOOL            false
+---------------------------------------------------------------------OUTPUT
+WRITEEVERY         NUMERIC         2
+FORMAT             STRING          vtk
+PATH               STRING          <thisdir>/output
+NAME               STRING          bending_stripe.vtk

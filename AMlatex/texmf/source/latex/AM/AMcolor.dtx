@@ -1,0 +1,857 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMcolor <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for coloration
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+/!\      Modifications made in this file will be lost!       /!\
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMcolor.dtx
+and the derived files           AMcolor.ins,
+                                AMcolor.pdf and
+                                AMcolor.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMcolor}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMcolor}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMcolor}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMcolor}[\AMinsertGitDate{} \AMinsertGitVersion{} AM color]
+\ClassInfo{AMcolor}{Document class of the Institute of Applied Mechanics}
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{1.0}{2015/05/28}{First version}
+% \changes{1.1}{2015/07/09}{Added other color names}
+%
+%
+% \title{The \textcolor{white}{AMcolor} package}
+% \maketitle
+% \tableofcontents
+%
+%
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+%
+% \section{AMcolor for the impatient}
+%
+%
+% \subsection{Predefined colors}
+% \label{subsec:predefined} 
+%
+%
+% \begin{center}
+% \begin{tikzpicture}
+% \matrix [column sep=1mm,y=7mm,x=7mm,row sep=2mm]
+% {
+%   \AMdocClr{TUMBlue} & \AMdocLbl{TUMBlue};  &[5mm] 
+%   \AMdocClr{TUMGreen} & \AMdocLbl{TUMGreen}; &[5mm] 
+%   \AMdocClr{TUMOrange} & \AMdocLbl{TUMOrange}; &[5mm] 
+%   \AMdocClr{TUMIvory} & \AMdocLbl{TUMIvory};  \\
+% };
+% \end{tikzpicture}
+% \end{center}
+%
+% \begin{center}
+% \begin{tikzpicture}
+% \def\colcolsep{1cm}
+% \matrix [column sep=1mm,y=7mm,x=7mm,row sep=2mm]
+% {%
+%	\AMdocClr{TUMDiag1} & \AMdocLbl{TUMDiag1};  &[\colcolsep] 
+%   \AMdocClr{TUMDiag7} & \AMdocLbl{TUMDiag7}; &[\colcolsep] 
+%   \AMdocClr{TUMDiag13} & \AMdocLbl{TUMDiag13};  \\
+%
+%	\AMdocClr{TUMDiag2} & \AMdocLbl{TUMDiag2};  &[\colcolsep] 
+%   \AMdocClr{TUMDiag8} & \AMdocLbl{TUMDiag8}; &[\colcolsep] 
+%   \AMdocClr{TUMDiag14} & \AMdocLbl{TUMDiag14};  \\
+%
+%	\AMdocClr{TUMDiag3} & \AMdocLbl{TUMDiag3};  &[\colcolsep] 
+%   \AMdocClr{TUMDiag9} & \AMdocLbl{TUMDiag9}; &[\colcolsep] 
+%   \AMdocClr{TUMDiag15} & \AMdocLbl{TUMDiag15};  \\
+%
+%	\AMdocClr{TUMDiag4} & \AMdocLbl{TUMDiag4};  &[\colcolsep] 
+%   \AMdocClr{TUMDiag10} & \AMdocLbl{TUMDiag10}; &[\colcolsep] 
+%   \AMdocClr{TUMDiag16} & \AMdocLbl{TUMDiag16};  \\
+%
+%	\AMdocClr{TUMDiag5} & \AMdocLbl{TUMDiag5};  &[\colcolsep] 
+%   \AMdocClr{TUMDiag11} & \AMdocLbl{TUMDiag11}; &[\colcolsep] 
+%   \AMdocClr{TUMDiag17} & \AMdocLbl{TUMDiag17};  \\
+%
+%	\AMdocClr{TUMDiag6} & \AMdocLbl{TUMDiag6};  &[\colcolsep] 
+%   \AMdocClr{TUMDiag12} & \AMdocLbl{TUMDiag12}; &[\colcolsep] 
+%   \AMdocClr{TUMDiag18} & \AMdocLbl{TUMDiag18};  \\[3mm]
+%
+%	\AMdocClr{TUMGray} & \AMdocLbl{TUMGray};  &[5mm] 
+%   \AMdocClr{TUMDarkGray} & \AMdocLbl{TUMDarkGray}; &[5mm] 
+%   \AMdocClr{TUMLightGray} & \AMdocLbl{TUMLightGray}; \\
+% };	 
+% \end{tikzpicture}
+% \end{center}
+%
+%
+%
+% \subsection{Main options}
+%
+%
+% \begin{description}
+%   \item[nocolor] Pass this option when you want to print your document in black and white.
+%   \item[setup] Pass this option if you want this package to color the titles and captions of your document.
+% \end{description}
+%
+%
+%
+%
+%
+%
+% \newpage
+% \section{User guide: how to use the AMcolor package?}
+%
+%
+% The package \AMpackage{AMcolor} does not only define the official colors of the TUM. 
+% It can also affects the whole layout
+% of your document, for example the section titles will be in \docColor{TUMBlue}, the colors of the
+% hyperlinks can be modified, and so on. In order to setup  your documents with the AM department standards in term of
+% coloration, load the package \AMpackage{AMcolor} with the option \refKey{/AM/color/setup} or use the 
+% command \refCom{AMsetColor}.
+%
+% \medskip
+% \InsertPgfkeysBlaBla{Color}
+%
+%
+% \subsection{Package main option keys}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{usage}
+\usepackage[nocolor,setup=false]{AMcolor}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+% \begin{docKey}[AM/color]{nocolor}{={true/false}}{default \docValue{true}, initially \docValue{false}}
+%
+% If this key is given, the option |monochrom| option will be given to \PackageName{xcolor}. 
+% It will also affect the setup of the package \PackageName{hyperref}. The logo paths will be changed to
+% the black and white corresponding files.
+%
+% \end{docKey}
+%
+%
+% \begin{docKey}[AM/color]{setup}{={true/false}}{default \docValue{true}, initially \docValue{false}}
+%
+% This key must be given in order to make modifications on the document, otherwise this
+% package will only define the TUM colors. Note that this key is automatically given when
+% you use \refCom{AMsetColor}.
+%
+% \end{docKey}
+%
+% In addition, the unknown options are given to the package \PackageName{xcolor}.
+%
+% \subsection{Defined colors}
+%
+% \begin{itemize}
+%   \item The TUM colors are defined both in RGB and CYMK, in conformity with the 
+%         \citetitle{TUMCorporateDesign}\cite{TUMCorporateDesign}.
+%   \item Four main colors are supposed to be used in the TUM templates, namely
+%         \docColor{TUMBlue}, \docColor{TUMGreen}, \docColor{TUMOrange} and \docColor{TUMIvory}.
+%   \item It also possible to use three shades of gray: \docColor{TUMGray}, \docColor{TUMLightGray} and
+%         \docColor{TUMDarkGray}.
+%   \item Finally |TUMDiag| colors are provided for the diagrams, numbered from 1 to 18, see \ref{subsec:predefined}.
+%   \item For those who thing that \docColor{TUMBlue} is a little too pale, the color \docColor{TUMDarkBlue} is
+%         defined and corresponds to \docColor{TUMDiag4}. You may also note that \docColor{TUMOrange} is in fact
+%        \docColor{TUMDiag15}, that \docColor{TUMGreen} is \docColor{TUMDiag11} and that that \docColor{TUMIvory} is 
+%        \docColor{TUMDiag12}.
+%   \item Although they do not appear in \ref{subsec:predefined} the old colors \docColor{TUMBlue1}, 
+%         \docColor{TUMBlue2}, \docColor{TUMBlue3}, \docColor{TUMBlue4}, \docColor{TUMBlue5},
+%         \docColor{TUMGray1}, \docColor{TUMGray2}, \docColor{TUMGray3} are kept for compatibility reasons.
+% \end{itemize}
+%
+%
+%
+% \subsection{Change the colors}
+%
+% \begin{docCommand}{AMsetColor}{\marg{key-value list}}
+%   Main command of the package \AMpackage{AMcolor} that allows you to modify the color settings. 
+%   See next section for the available parameters.
+% \end{docCommand}
+%
+%
+%
+% \subsection{Available parameters}
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{dispListing*}{usage}
+\AMsetColor{cite=red,section=TUMBlue,caption label=TUMGreem,...}
+\end{dispListing*}
+% \iffalse
+%</verb>
+% \fi
+%
+% \subsubsection{Color of hypertext links} 
+%
+% \begin{docKey}[AM/color]{link}{=\meta{color}}{initially \docValue{TUMOrange}}
+%   Color of the hypertext links that make reference to the documents sections can be modified with this key.
+% \end{docKey}
+%
+% \begin{docKey}[AM/color]{cite}{=\meta{color}}{initially \docValue{TUMGreen}}
+%   Color of the hypertext links that make reference to the citations in the bibliography can be modified with this key.
+% \end{docKey}
+%
+% \begin{docKey}[AM/color]{url}{=\meta{color}}{initially \docValue{TUMDiag1}}
+%   Color of the hypertext links to internet urls can be modified with this key.
+% \end{docKey}
+%
+% \subsubsection{Figure and table captions}
+%
+% \begin{docKey}[AM/color]{caption label}{=\meta{color}}{initially \docValue{TUMBlue}}
+%   Color of the caption label (for example Figure or Table) can be modified with this key.
+% \end{docKey}
+%
+% \begin{docKey}[AM/color]{caption text}{=\meta{color}}{initially \docValue{black}}
+%   Color of the caption text can be modified with this key.
+% \end{docKey}
+%
+%
+%
+% \subsubsection{Section titles}
+%
+%
+% \begin{docKey}[AM/color]{chapter}{=\meta{color}}{initially \docValue{TUMBlue}}
+% 	Color of the chapter titles can be modified with this key.
+% \end{docKey}
+%
+% \begin{docKey}[AM/color]{section}{=\meta{color}}{initially \docValue{TUMBlue}}
+% 	Color of the section titles can be modified with this key.
+% \end{docKey} 
+%
+% \begin{docKey}[AM/color]{subsection}{=\meta{color}}{initially \docValue{TUMBlue}}
+% 	Color of the subsection titles can be modified with this key.
+% \end{docKey} 
+%
+% \begin{docKey}[AM/color]{subsubsection}{=\meta{color}}{initially \docValue{TUMBlue}}
+% 	Color of the subsubsection titles can be modified with this key.
+% \end{docKey} 
+%
+% \begin{docKey}[AM/color]{paragraph}{=\meta{color}}{initially \docValue{TUMBlue}}
+% 	Color of the paragraph titles can be modified with this key.
+% \end{docKey}
+%
+% \begin{docKey}[AM/color]{titles}{=\meta{color}}{}
+% 	Shortcut to setup all the title keys at once.
+% \end{docKey}
+%
+% \begin{docKey}[AM/color]{abstract}{=\meta{color}}{initially \docValue{black}}
+% 	Color of the document abstract.
+% \end{docKey}
+%
+% \subsubsection{Various}
+%
+% \begin{docKey}[AM/color]{more tum colors}{}{initially \docValue{disabled}}
+% 	Give this key if you want to have additional names for the TUM colors.
+% \end{docKey}
+%
+%   \printbibliography
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+% \newpage
+% \setlength{\parskip}{1em}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%
+%
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsection{Loading required for the package writing.}
+%
+%
+% The standards packages \PackageName{ifthen}, \PackageName{kvoptions} and \PackageName{pgfkeys} are 
+% loaded to write this package.
+%
+%
+%    \begin{macrocode}
+\RequirePackage{ifthen}
+\RequirePackage{kvoptions}
+\RequirePackage{pgfkeys}
+\RequirePackage{etoolbox}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsection{Options declaration}
+%
+%
+%    \begin{macrocode}
+\DeclareBoolOption{nocolor}
+\DeclareBoolOption{setup}
+\DeclareBoolOption{dark}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsection{Parameters declaration}
+%
+%
+% Package \PackageName{kvoptions} is used to define the parameters that are used internally. Then keys are created with
+% the package \PackageName{pgfkeys} for the users to manipulate them.
+%
+% Each line \cs{DeclareStringOption}|[default]{<option>}| creates the corresponding command \cs{AMcolor@<option>}
+% initialized to |default|. 
+%
+%
+%    \begin{macrocode}
+\DeclareStringOption[TUMOrange]{link}
+\DeclareStringOption[TUMOrange]{linkborder}
+\DeclareStringOption[black]{anchor}
+\DeclareStringOption[TUMGreen]{cite}
+\DeclareStringOption[TUMGreen]{citeborder}
+\DeclareStringOption[TUMDiag7]{file}
+\DeclareStringOption[TUMDiag7]{fileborder}
+\DeclareStringOption[TUMDiag1]{url}
+\DeclareStringOption[TUMDiag1]{urlborder}
+\DeclareStringOption[TUMOrange]{menuborder}
+\DeclareStringOption[TUMBlue]{captionlabel}
+\DeclareStringOption[black]{captiontext}
+\DeclareStringOption[TUMBlue]{part}
+\DeclareStringOption[TUMBlue]{chapter}
+\DeclareStringOption[TUMBlue]{section}
+\DeclareStringOption[TUMBlue]{subsection}
+\DeclareStringOption[TUMBlue]{subsubsection}
+\DeclareStringOption[TUMBlue]{paragraph}
+\DeclareStringOption[dark]{abstract}
+\DeclareDefaultOption{\PassOptionsToPackage{\CurrentOption}{xcolor}}
+%    \end{macrocode}
+%
+%
+% Finally the options are processed.
+%
+%
+%    \begin{macrocode}
+\DeclareLocalOptions{setup,link,linkborder,anchor,cite,citeborder}
+\ProcessKeyvalOptions*
+%    \end{macrocode}
+%
+%
+%
+%
+%  \subsection{Keys definitions and commands}
+%
+%
+%    \begin{macrocode}
+\providecommand{\AMset}[1]{\pgfkeys{/AM/.cd,#1}}
+\newcommand{\AMsetColor}[1]{\pgfkeys{/AM/color/.cd,setup,#1}}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\pgfkeys{
+  /AM/color/.is family,/AM/color,
+  link/.code = {\def\AMcolor@link{#1}\def\AMcolor@linkborder{#1}\AM@exec@hypersetup},
+  cite/.code = {\def\AMcolor@cite{#1}\def\AMcolor@citeborder{#1}\AM@exec@hypersetup},
+  url/.code = {\def\AMcolor@url{#1}\def\AMcolor@urlborder{#1}\AM@exec@hypersetup},
+  file/.code = {\def\AMcolor@file{#1}\def\AMcolor@fileborder{#1}\AM@exec@hypersetup},
+  caption label/.estore in = \AMcolor@captionlabel,
+  caption label/.append code = {\AM@exec@captionsetup},
+  caption text/.estore in = \AMcolor@captiontext,
+  caption text/.append code = {\AM@exec@captionsetup},
+  abstract/.estore in = \AMcolor@abstract,
+  abstract/.append code = {\AMcolor@exec@abstractsetup},
+  part/.estore in = \AMcolor@part,
+  chapter/.estore in = \AMcolor@part,
+  section/.estore in = \AMcolor@section,
+  subsection/.estore in = \AMcolor@subsection,
+  subsubsection/.estore in = \AMcolor@subsubsection,
+  paragraph/.estore in = \AMcolor@paragraph,
+  titles/.style = {chapter=#1,section=#1,subsection=#1,subsubsection=#1,paragraph=#1},
+  setup/.is if = AMcolor@setup,
+  dark/.is if = AMcolor@dark,
+  more tum colors/.code = {\AMcolor@define@more@colors},
+}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsection{Loading of xcolor}
+%
+%
+% The package \PackageName{xcolor} is loaded, with the option |monochrome| if 
+% \refKey{/AM/color/nocolor} is given.
+%
+%
+%    \begin{macrocode}
+\ifAMcolor@nocolor%
+  \PassOptionsToPackage{monochrome}{xcolor}
+\fi
+\RequirePackage{xcolor}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsection{Definition of the TUM colors}
+%
+%
+% \subsubsection{In RGB}
+%
+%
+%    \begin{macrocode}
+\definecolorset{RGB}{TUM}{}{%
+Blue,0,101,189;%
+DarkBlue,0,82,147;%
+Orange,227,114,34;%
+Green,162,173,0;%
+Ivory,218,215,203;%
+Gray1,88,88,90;%
+Gray2,156,157,159;%
+Gray3,217,218,219;%
+Diag1,105,8,90;%
+Diag2,15,27,95;%
+Diag3,0,51,89;%
+Diag4,0,82,147;%
+Diag5,0,115,207;%
+Diag6,100,160,200;%
+Diag7,152,198,234;%
+Diag8,0,119,138;%
+Diag9,0,124,48;%
+Diag10,103,154,29;%
+Diag13,255,220,0;%
+Diag14,249,186,0;%
+Diag16,214,76,19;%
+Diag17,196,7,27;%
+Diag18,156,13,22;%
+DarkGray,88,88,90;%
+Gray,156,157,159;%
+LightGray,217,218,219%
+}
+%    \end{macrocode}
+%
+%
+% Spezielle Definition für presentationen, s266 Coorparate Design , band 2
+% Abtönungen: 100%, 85%, 70%, 55%
+%
+%
+%    \begin{macrocode}
+\definecolorset{RGB}{TUM}{P}{%
+  Yellow,255,180,000;%
+  Orange,255,128,000;%
+  Red,229,052,024;%
+  DarkRed,202,033,063;%
+  Blue,000,153,255;%
+  LightBlue,065,190,255;%
+  Green,145,172,107;%
+  LightGreen,181,202,130%
+}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsubsection{In cmyk}
+%
+%
+%    \begin{macrocode}
+\definecolorset{cmyk}{TUM}{}{%
+Blue,1,.43,0,0;%
+DarkBlue,1,.54,.04,.19;%
+Orange,0,0.65,0.95,0;%
+Green,0.35,0,1,0.2;%
+Ivory,0.03,0.04,0.14,0.08;%
+Gray1,0,0,0,0.8;%
+Gray2,0,0,0,0.5;%
+Gray3,0,0,0,0.2; %
+Diag1,0.5,1.0,0.0,0.4;%
+Diag2,1.0,1.0,0.0,0.4;%
+Diag3,1,.57,.12,.7;%
+Diag4,1,.54,.04,.19;%
+Diag5,.9,.48,0,0;%
+Diag6,.65,.19,.01,.04;%
+Diag7,.42,.09,0,0;%
+Diag8,1.0,0.03,0.3,0.3;%
+Diag9,1.0,0.0,1.0,0.2;%
+Diag10,0.6,0.0,1.0,0.2;%
+Diag13,0.0,0.1,1.0,0.0;%
+Diag14,0.0,0.3,1.0,0.0;%
+Diag16,0.0,0.8,1.0,0.1;%
+Diag17,0.1,1.0,1.0,0.1;%
+Diag18,0.0,1.0,1.0,0.4;%
+DarkGray,0,0,0,0.8;%
+Gray,0,0,0,0.5;%
+LightGray,0,0,0,0.2%
+}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsubsection{Other names}
+%
+%
+%    \begin{macrocode}
+\colorlet{AMBlue}{TUMBlue}
+\colorlet{TUMBlue1}{TUMDiag3}
+\colorlet{TUMBlue2}{TUMDiag4}
+\colorlet{TUMBlue3}{TUMDiag5}
+\colorlet{TUMBlue4}{TUMDiag6}
+\colorlet{TUMBlue5}{TUMDiag7}
+\colorlet{TUMDiag11}{TUMGreen}
+\colorlet{TUMDiag12}{TUMIvory}
+\colorlet{TUMDiag15}{TUMOrange}
+\colorlet{TUMgrey}{TUMGray}
+\colorlet{TUMdarkgrey}{TUMDarkGray}
+\colorlet{TUMbrightgrey}{TUMLightGray}
+\colorlet{TUMblue}{TUMBlue}
+\colorlet{TUMhighlightblue}{TUMDiag7}
+\colorlet{TUMlightblue}{TUMDiag6}
+\colorlet{TUMred}{red}
+\colorlet{TUMdarkblue}{TUMDarkBlue}
+\colorlet{TUMblack}{TUMDiag3}
+\colorlet{TUMgreen}{TUMGreen}
+\colorlet{TUMkhaki}{TUMIvory}
+\colorlet{TUMorange}{TUMOrange}
+\colorlet{TUMbluegreen}{TUMDiag8}
+\colorlet{TUMdarkgreen}{TUMDiag9}
+\colorlet{TUMbrightgreen}{TUMDiag10}
+\colorlet{TUMyellow}{TUMDiag13}
+\colorlet{TUMdarkyellow}{TUMDiag14}
+\colorlet{TUMbrightred}{TUMDiag16}
+\colorlet{TUMred}{TUMDiag17}
+\colorlet{TUMdarkred}{TUMDiag18}
+%    \end{macrocode}
+%
+% \subsubsection{and more}
+%
+%    \begin{macrocode}
+\newcommand{\AMcolor@define@more@colors}{%
+\definecolorset{RGB}{TUM}{P}{%
+	Yellow,255,180,000;%
+	Orange,255,128,000;%
+	Red,229,052,024;%
+	DarkRed,202,033,063;%
+	Blue,000,153,255;%
+	LightBlue,065,190,255;%
+	Green,145,172,107;%
+	LightGreen,181,202,130%
+}
+\definecolorset{RGB}{TUM}{}{%
+	DarkGray,088,088,090;%
+	MidGray,156,157,159;%
+	LightGray,217,218,219;%
+	Purple,105,008,090;%
+	DarkPurple,015,027,095;%
+	Blue1,000,051,089;%
+	Blue2,000,082,147;%
+	Blue3,000,115,207;%
+	Blue4,100,160,200;%
+	Blue5,152,198,234;%
+	Green1,000,119,138;%
+	Green2,000,124,048;%
+	Green3,103,154,029;%
+	Green4,162,173,000;%
+	Yellow,255,220,000;%
+	DarkYellow,249,186,000;%
+	DarkOrange,214,076,019;%
+	Red,196,007,027;%
+	DarkRed,156,013,022%
+}
+}
+%    \end{macrocode}
+%
+% \subsection{Dark colors}
+%
+% \begin{docCommand}{AM@exec@darkcolorsetup}{}
+% If \refKey{/AM/color/dark} is \docValue{true}, 
+% replace the normal TUM colors (Blue, Orange, Green) by their dark version.
+% Other colors are not modified, which means that you can still obtain the original
+% \docColor{TUMBlue} color by using own of its other names (like \docColor{TUMDiag5}).
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newcommand{\AM@exec@darkcolorsetup}{%
+  \ifAMcolor@dark
+    \colorlet{TUMBlue}{TUMDarkBlue}
+    \colorlet{TUMGreen}{TUMdarkgreen}
+    \colorlet{TUMOrange}{TUMDiag16}
+  \fi
+}
+%    \end{macrocode}
+%
+% \subsection{Interaction with other packages}\label{sec:interaction}
+%
+%
+% The package afterpackage allows us to execute some latex code just after a package is loaded with the command \verb|\afterpackage|. 
+%
+%
+%    \begin{macrocode}
+\RequirePackage{afterpackage}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsubsection{After hyperref}
+%
+%
+% \begin{docCommand}{AM@exec@hypersetup}{}
+% This command is executed when the keys \refKey{/AM/color/link}, \refKey{/AM/color/cite} or \refKey{/AM/color/url}
+% are entered. But it does nothing if the package \PackageName{hyperref} is not loaded.
+% \end{docCommand}
+%
+%
+% \begin{docCommand}{AMcolor@after@hyperref}{}
+% If this command is used the command \cs{AM@exec@hypersetup} will be called just after the package \PackageName{hyperref} is loaded.
+% If package \PackageName{hyperref} is never loaded then the command is not executed.
+% \end{docCommand}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AM@exec@hypersetup}{
+  \@ifpackageloaded{hyperref}{
+    \hypersetup{%
+      linkcolor=\AMcolor@link,%
+      linkbordercolor=\AMcolor@linkborder,%
+      anchorcolor=\AMcolor@anchor,%
+      citecolor=\AMcolor@cite,%
+      citebordercolor=\AMcolor@citeborder,%
+      filecolor=\AMcolor@file,%
+      filebordercolor=\AMcolor@fileborder,%
+      urlcolor=\AMcolor@url,%
+      urlbordercolor=\AMcolor@urlborder,%
+      menubordercolor=\AMcolor@menuborder%
+    }%
+  }{}
+}
+\newcommand{\AMcolor@after@hyperref}{%
+  \AfterPackage{hyperref}{\AM@exec@hypersetup}
+}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsubsection{After caption}
+%
+%
+% \begin{docCommand}{AM@exec@captionsetup}{}
+%
+% This command is executed when the keys \refKey{/AM/color/caption label} or \refKey{/AM/color/caption text}
+% are entered. But it does nothing if the package \PackageName{caption} is not loaded.
+%
+% \end{docCommand}
+%
+%
+% \begin{docCommand}{AMcolor@after@hyperref}{}
+%
+% If this command is used the command \cs{AM@exec@captionsetup} will be called just after the package \PackageName{caption} is loaded.
+% If package \PackageName{caption} is never loaded then the command is not executed.
+%
+% \end{docCommand}
+%
+%
+% \begin{docCommand}{AM@exec@subcaptionsetup}{}
+%
+% This command does nothing if the package \PackageName{caption} is not loaded.
+%
+% \end{docCommand}
+%
+%
+% \begin{docCommand}{AMcolor@after@hyperref}{}
+%
+% If this command is used the command \cs{AM@exec@subcaptionsetup} will be called just after the package |subcaption| 
+% is loaded. If package |subcaption| is never loaded then the command is not executed.
+%
+% \end{docCommand}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AM@exec@captionsetup}{%
+  \@ifpackageloaded{caption}{
+    \captionsetup{%
+      textfont+={color={\AMcolor@captiontext}},
+      labelfont+={color={\AMcolor@captionlabel}}
+    }
+  }{}
+}
+\newcommand{\AMcolor@after@caption}{%
+  \AfterPackage{caption}{\AM@exec@captionsetup}
+}
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AM@exec@subcaptionsetup}{%
+  \@ifpackageloaded{subcaption}{
+    \captionsetup[sub]{labelsep=quad}%
+  }{}
+}
+\newcommand{\AMcolor@after@subcaption}{%
+  \AfterPackage{subcaption}{\AM@exec@subcaptionsetup}
+}
+%    \end{macrocode}
+%
+%
+%
+%
+% \subsubsection{Package AMfont}
+%
+%
+% \begin{docCommand}{AMcolor@exec@colortitlesecsetup}{}
+%
+% This command does nothing if the boolean |setup| is not true. Normally the package \PackageName{AMfont} takes care
+% of the title settings. But if it is not loaded, package \PackageName{AMcolor} must do it. Except if we are using beamer.
+%
+% \end{docCommand}
+%
+%
+%    \begin{macrocode}
+\newcommand{\AMcolor@exec@colortitlesecsetup}{%
+  \ifAMcolor@setup
+    \@ifpackageloaded{AMfont}{%
+      \pgfkeys{AM/font/setup titles}
+    }{%
+      \@ifclassloaded{beamer}{}{%
+        \RequirePackage{titlesec}
+        \titleformat{\chapter}[display]{\color{\AMcolor@chapter}\normalfont\huge\bfseries}%
+          {\chaptertitlename\ \thechapter}{20pt}{\Huge}%
+        \titleformat*{\section}{\color{\AMcolor@section}\normalfont\Large\bfseries}%
+        \titleformat*{\subsection}{\color{\AMcolor@subsection}\normalfont\large\bfseries}%
+        \titleformat*{\subsubsection}{\color{\AMcolor@subsubsection}\normalfont\normalsize\bfseries}%
+        \titleformat*{\paragraph}{\color{\AMcolor@paragraph}\normalfont\normalsize\bfseries}%
+      }
+    }
+  \fi
+}
+%    \end{macrocode}
+%
+%
+% \begin{docCommand}{AMcolor@exec@abstractsetup}{}
+%
+% Changin the style of |abstract| is not always easy, especially if \PackageName{babel} is loaded. 
+% 
+% The solution retained here is to patch the command \cs{abstract} with the help of package
+% \PackageName{etoolbox}. This is done maximum once.
+%
+% \end{docCommand}
+%
+%    \begin{macrocode}
+\newif\ifAMcolor@abstract@patched
+\AMcolor@abstract@patchedfalse
+\newcommand{\AMcolor@exec@abstractsetup}{%
+  \ifAMcolor@abstract@patched\relax\else
+    \patchcmd{\abstract}{\bfseries\abstractname}{\color{\AMcolor@abstract}\bfseries\abstractname}{}{}
+    \AMcolor@abstract@patchedtrue
+  \fi
+}
+%    \end{macrocode}
+%
+%
+% \subsection{Enforce modifications}
+%
+%
+%    \begin{macrocode}
+\ifAMcolor@setup
+  \AMcolor@after@hyperref
+  \AMcolor@after@caption
+  \AMcolor@after@subcaption
+\fi
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\AtEndPreamble{\AMcolor@exec@colortitlesecsetup}
+\AtBeginDocument{\AM@exec@darkcolorsetup}
+%    \end{macrocode}
+%
+%
+%
+%
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+%
+% 
+% \Finale

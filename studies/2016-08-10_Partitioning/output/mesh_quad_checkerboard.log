@@ -1,0 +1,56 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fileread', '/usr/local/MATLAB/R2016a/toolbox/matlab/iofun/fileread.m', 26)" style="font-weight:bold">fileread</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2016a/toolbox/matlab/iofun/fileread.m',26,0)">line 26</a>)
+Could not open file ./mesh_quad_checkerboard.msh. No such file or
+directory.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('MSHReader/ReadMesh', '/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m', 51)" style="font-weight:bold">MSHReader/ReadMesh</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m',51,0)">line 51</a>)
+      fullstring=fileread(this.filepath_);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBasePre/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBasePre.m', 86)" style="font-weight:bold">ProblemBasePre/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBasePre.m',86,0)">line 86</a>)
+      this.meshreader_.ReadMesh();
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_pre', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_pre.m', 48)" style="font-weight:bold">femac_pre</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_pre.m',48,0)">line 48</a>)
+  prob.Work();
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m', 29)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m',29,0)">line 29</a>)
+  prob.pre =femac_pre(datpath);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/Run.m', 11)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/Run.m',11,0)">line 11</a>)
+prob_fs=femac('./checkerboard_chaco_fetis.dat');} 
+Run
+femacdir = 
+    '/home/lukas/Desktop/SA_T…'    ''
+femacdir =
+/home/lukas/Desktop/SA_Thesis/FEMAC/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fileread', '/usr/local/MATLAB/R2016a/toolbox/matlab/iofun/fileread.m', 26)" style="font-weight:bold">fileread</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2016a/toolbox/matlab/iofun/fileread.m',26,0)">line 26</a>)
+Could not open file ./mesh_quad_checkerboard.msh. No such file or
+directory.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('MSHReader/ReadMesh', '/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m', 51)" style="font-weight:bold">MSHReader/ReadMesh</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m',51,0)">line 51</a>)
+      fullstring=fileread(this.filepath_);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBasePre/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBasePre.m', 86)" style="font-weight:bold">ProblemBasePre/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBasePre.m',86,0)">line 86</a>)
+      this.meshreader_.ReadMesh();
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_pre', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_pre.m', 48)" style="font-weight:bold">femac_pre</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_pre.m',48,0)">line 48</a>)
+  prob.Work();
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m', 29)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac.m',29,0)">line 29</a>)
+  prob.pre =femac_pre(datpath);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/Run.m', 11)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/Run.m',11,0)">line 11</a>)
+prob_fs=femac('./checkerboard_chaco_fetis.dat');} 
+Run
+femacdir = 
+    '/home/lukas/Desktop/SA_T…'    ''
+femacdir =
+/home/lukas/Desktop/SA_Thesis/FEMAC/

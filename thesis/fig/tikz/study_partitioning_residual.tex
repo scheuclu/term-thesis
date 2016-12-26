@@ -1,0 +1,96 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage{amsmath}
+\input{\mainpath/customcommands}
+
+\input{\mainpath/colordefinitions}
+
+\begin{document}
+
+\begin{tikzpicture}
+ \begin{groupplot}[
+group style = {group size = 2 by 2, horizontal sep=2.0cm, vertical sep=2.0cm},
+height = 5cm,
+width = 8cm,
+]
+
+%setups={'regular_6x6','chaco_11x1','chaco_6x6','chaco_1x11'}
+
+\nextgroupplot[ymode=log, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={residuum}, xlabel={$\# iteration$}, xlabel={$\# iteration$}, cycle list name=linelist]
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_regular_6x6_feti1.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_regular_6x6_feti2g.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_regular_6x6_fetis.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_regular_6x6_fetias.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_regular_6x6_fetifas.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {regular partitioning};
+
+
+\nextgroupplot[ymode=log, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, xlabel={$\# iteration$}, xlabel={$\# iteration$}, cycle list name=linelist]
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_6x6_feti1.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_6x6_feti2g.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_6x6_fetis.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_6x6_fetias.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_6x6_fetifas.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {automatic partitioning};
+
+
+\nextgroupplot[ymode=log, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={residuum}, xlabel={$\# iteration$}, xlabel={$\# iteration$}, cycle list name=linelist]
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_11x1_feti1.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_11x1_feti2g.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_11x1_fetis.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_11x1_fetias.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_11x1_fetifas.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {horizontal stripes};
+
+
+\nextgroupplot[ymode=log, enlargelimits=0.15, legend style={at={(-0.15,-0.35)}, anchor=north,legend columns=-1}, xlabel={$\# iteration$}, xlabel={$\# iteration$}, cycle list name=linelist]
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_1x11_feti1.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_1x11_feti2g.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_1x11_fetis.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_1x11_fetias.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-10_Partitioning/data/res_chaco_1x11_fetifas.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {vertical stripes};
+
+
+
+
+
+\legend{FETI-1,FETI-2,FETI-S,FETI-AS,FETI-FAS}
+
+
+\end{groupplot}
+\end{tikzpicture}
+
+\end{document}

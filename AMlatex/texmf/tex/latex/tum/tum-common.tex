@@ -1,0 +1,202 @@
+%% Copyright (c) 2008-2009 Rechen-Gilde
+%% Error reports to:  tum@rechengil.de
+%%
+%% This file may be distributed under the terms of the LaTeX Project Public
+%% License (LPPL), as described in lppl.txt in the base LaTeX distribution.
+%% Either version 1.1 or, at your option, any later version.
+%%
+%% The latest version of this license is in
+%%          http://www.latex-project.org/lppl.txt
+%%
+%% LPPL Version 1.1 or later is part of all distributions of LaTeX
+%% version 1999/06/01 or later.
+%%
+\NeedsTeXFormat{LaTeX2e}[2001/06/01]
+\usepackage{svn-prov}
+\ProvidesFileSVN{$Id: tum-common.tex 59 2009-07-27 22:52:27Z miracle $}
+
+\newdimen\VorschubH
+\newdimen\VorschubV
+\VorschubH = 0.0mm
+\VorschubV = 0.0mm
+
+\newif\ifraster\rasterfalse
+\def\raster{\rastertrue}
+
+\def\fakultaet{NEUTRAL}
+\def\fakultaetname{}
+\def\fakultaetlogo{}
+\def\institut{}
+\def\organisation{Technische Universit\"at M\"unchen}
+\def\retouradresse{\organisation{} $\cdot$ 80290 M\"unchen}
+\def\land{Germany}
+\def\telefontext{Tel}
+\def\telefaxtext{Fax}
+\def\aktuelleseitetext{Seite }
+\def\datum{M\"unchen, \today}
+
+\DeclareOption{AR}{
+\def\fakultaetname{Fakult\"at f\"ur Architektur}
+\def\fakultaetlogo{\epsfig{file=AR.pdf,height=9.605mm}}
+}
+\DeclareOption{BV}{
+\def\fakultaetname{Fakult\"at f\"ur Bauingenieur-\\ und Vermessungswesen}
+\def\fakultaetlogo{\epsfig{file=BV.pdf,height=9.605mm}}
+}
+\DeclareOption{CH}{
+\def\fakultaetname{Department Chemie}
+\def\fakultaetlogo{\epsfig{file=CH.pdf,width=9.605mm}}
+}
+\DeclareOption{EI}{
+\def\fakultaetname{Fakult\"at f\"ur Elektro-\\ und Informationstechnik}
+\def\fakultaetlogo{\epsfig{file=EI.pdf,height=9.605mm}}
+}
+\DeclareOption{IN}{
+\def\fakultaetname{Fakult\"at f\"ur Informatik}
+\def\fakultaetlogo{\epsfig{file=IN.pdf,width=9.605mm}}
+}
+\DeclareOption{MW}{
+\def\fakultaetname{Fakult\"at f\"ur Maschinenwesen}
+\def\fakultaetlogo{\epsfig{file=MW.pdf,height=10.1mm,viewport=2.3mm 0mm 13.6mm 11mm}}
+}
+\DeclareOption{MA}{
+\def\fakultaetname{Fakult\"at f\"ur Mathematik}
+\def\fakultaetlogo{\epsfig{file=MA.pdf,height=9.605mm}}
+}
+\DeclareOption{MED}{
+\def\fakultaetname{Fakult\"at f\"ur Medizin}
+\def\fakultaetlogo{\epsfig{file=MED.pdf,width=9.605mm,viewport=0mm 2.7mm 10.5mm 13.4mm}}
+}
+\DeclareOption{PH}{
+\def\fakultaetname{Department Physik}
+\def\fakultaetlogo{\epsfig{file=PH.pdf,height=9.605mm}}
+}
+\DeclareOption{SE}{
+\def\fakultaetname{TUM School of Education}
+\def\fakultaetlogo{\epsfig{file=SE.pdf,height=9.605mm}}
+}
+\DeclareOption{SP}{
+\def\fakultaetname{Fakult\"at f\"ur Sportwissenschaft}
+\def\fakultaetlogo{\epsfig{file=SP.pdf,height=10.065mm,viewport=2mm 0mm 13.4mm 11mm}}
+}
+\DeclareOption{WI}{
+\def\fakultaetname{Fakult\"at f\"ur\\ Wirtschaftswissenschaften}
+\def\fakultaetlogo{\epsfig{file=WI.pdf,height=9.605mm,viewport=0.65mm 0mm 10.9mm 10.5mm}}
+}
+\DeclareOption{WZW}{
+\def\fakultaetname{Wissenschaftszentrum \mbox{Weihenstephan}}
+\def\fakultaetlogo{\epsfig{file=WZW.pdf,height=9.57mm}}
+}
+\DeclareOption{NEUTRAL}{
+\def\fakultaetname{}
+\def\fakultaetlogo{}
+}
+
+\def\Institut#1{\def\institut{#1}}
+\def\Titel#1{\def\titel{#1}} \def\titel{}
+\def\Vorname#1{\def\vorname{#1}} \def\vorname{}
+\def\Nachname#1{\def\nachname{#1}} \def\nachname{}
+\def\Funktion#1{\def\funktion{#1}} \def\funktion{}
+\def\Strasse#1{\def\strasse{#1}} \def\strasse{}
+\def\PLZ#1{\def\plz{#1}} \def\plz{}
+\def\Ort#1{\def\ort{#1}} \def\ort{}
+\def\Land#1{\def\land{#1}}
+
+\def\Telefonnr#1{\def\telefon{#1}} \def\telefon{}
+\def\Telefax#1{\def\telefax{#1}} \def\telefax{}
+\def\Telex#1{\def\telex{#1}} \def\telex{}
+\def\EMail#1{\def\email{#1}} \def\email{}
+\def\HTTP#1{\def\http{#1}} \def\http{}
+
+\def\Weiteres#1{\def\weiteres{#1}} \def\weiteres{}
+\def\Datum#1{\def\datum{#1}}
+
+\def\Betreff#1{\def\betreff{#1}} \def\betreff{}
+\def\Anrede#1{\def\anrede{#1}} \def\anrede{}
+\def\Gruss#1{\def\gruss{#1}} \def\gruss{}
+\def\Unterschrift#1{\def\unterschrift{#1}}
+  \def\unterschrift{\ifx \titel\empty \else \titel{} \fi
+       \ifx \vorname\empty \else \vorname{} \fi
+       \ifx \nachname\empty \else \nachname{} \fi}
+
+\let\@docencoding\@empty
+\DeclareOption{ansinew}{\def\@docencoding{ansinew}}
+\DeclareOption{applemac}{\def\@docencoding{applemac}}
+\DeclareOption{ascii}{\def\@docencoding{ascii}}
+\DeclareOption{cp1250}{\def\@docencoding{cp1250}}
+\DeclareOption{cp1252}{\def\@docencoding{cp1252}}
+\DeclareOption{cp437de}{\def\@docencoding{cp437de}}
+\DeclareOption{cp437}{\def\@docencoding{cp437}}
+\DeclareOption{cp850}{\def\@docencoding{cp850}}
+\DeclareOption{cp852}{\def\@docencoding{cp852}}
+\DeclareOption{cp865}{\def\@docencoding{cp865}}
+\DeclareOption{decmulti}{\def\@docencoding{decmulti}}
+\DeclareOption{latin1}{\def\@docencoding{latin1}}
+\DeclareOption{latin2}{\def\@docencoding{latin2}}
+\DeclareOption{latin3}{\def\@docencoding{latin3}}
+\DeclareOption{latin4}{\def\@docencoding{latin4}}
+\DeclareOption{latin5}{\def\@docencoding{latin5}}
+\DeclareOption{latin9}{\def\@docencoding{latin9}}
+\DeclareOption{next}{\def\@docencoding{next}}
+\DeclareOption{utf8}{\def\@docencoding{utf8x}}
+\def\@docencoding{latin1}
+
+\newcommand{\+}{\hspace{0.042em}.\hspace{0.042em}}
+\newcommand{\abpar}{\\[10.5pt]}
+
+\def\absendersize{\usefont{T1}{lhv}{m}{n}\fontsize{7.5pt}{9.5pt}\selectfont}
+\def\adressblocksize{\usefont{T1}{lhv}{m}{n}\fontsize{8.5pt}{10.5pt}\selectfont}
+\def\eindrucktextsize{\usefont{T1}{lhv}{m}{n}\fontsize{10pt}{12pt}\selectfont}
+
+\ExecuteOptions{@fakultaet} \ProcessOptions
+\LoadClass[a4paper, oneside, final]{letter}[1999/04/29]
+%\usepackage{german}
+\eindrucktextsize
+\raggedbottom
+\renewcommand\baselinestretch{1.0}
+
+\newlength{\h}
+\newlength{\versalieabsender}
+\settoheight{\versalieabsender}{\absendersize H}
+\newlength{\versalieeindrucktext}
+\settoheight{\versalieeindrucktext}{\eindrucktextsize H}
+
+\setlength\oddsidemargin{22mm}
+\addtolength\oddsidemargin{-1in}
+\setlength\evensidemargin{\oddsidemargin}
+\setlength\topmargin{-1in}
+\setlength\headheight{0pt}
+\setlength\headsep{60.5mm-\versalieeindrucktext-0.1mm}
+\setlength\textheight{12pt*50} % 50 lines
+\setlength\textwidth{125mm}
+\setlength\marginparwidth{42.5mm}
+\setlength\marginparsep{12mm}
+\setlength\marginparpush{1em}
+
+\setlength\parskip{12pt}
+\setlength\topskip{0pt}
+\setlength\parsep{0pt}
+\setlength\footskip{0pt}
+\setlength\footnotesep{0pt}
+\setlength\lineskip{0pt}
+\setlength\normallineskip{0pt}
+\setlength\smallskipamount{6pt}
+\setlength\medskipamount{12pt}
+\setlength\bigskipamount{24pt}
+
+\advance\topmargin by \VorschubV
+\advance\oddsidemargin by \VorschubH
+\setlength\evensidemargin{\oddsidemargin}
+
+\AtEndOfClass{\pagestyle{regularpage}}
+
+\newcounter{tumbtextcounter}
+\newcommand*\insertmultitext[2]{%
+  \setcounter{tumbtextcounter}{#1-1}%
+  \whiledo{\value{tumbtextcounter}<#2}{%
+    \stepcounter{tumbtextcounter}%
+    \the\value{tumbtextcounter} \\%
+  }%
+}
+\endinput
+%%

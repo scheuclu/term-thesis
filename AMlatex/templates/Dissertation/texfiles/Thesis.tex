@@ -1,0 +1,56 @@
+\documentclass[hidelinks,openright,final]{AMdissertation}
+\usepackage{AMtikz} % /!\ externalization is not working
+\usepackage{booktabs}
+\usepackage{units} % /!\ units is obsolete and was superseded by siunitx
+\usepackage{transparent}
+\usepackage{subcaption}
+\input{preamb_tikz}
+
+\graphicspath{{../multimedia/}}
+
+% === Title Page ===
+\author{Kilian Bartimäus Wolfgang Grundl}
+\title{Validation of a Pushbelt Variator Model --}
+\subtitle{Insights into a non-smooth Multibody System}
+\chairman{\ProfRixen}
+\supervisor{\ProfUlbrich \and Prof. Carlo L. Bottasso, Ph.d.}
+\date{20. Mai 2015}{\hspace{2cm}}
+
+% === Bibliography === (run 'biber Thesis')
+\addbibresource{library_diss.bib}
+
+% === Nomenclature === (run 'makeglossaries Thesis')
+\input{acronyms}
+\newcommand{\printabbreviations}{%
+  \printglossary[type=\acronymtype
+    ,title={List of Abbreviations}
+    ,nonumberlist,style=mcolindex]
+}
+
+\begin{document}
+\maketitle
+% 
+\frontmatter
+%
+\input{Abstract}
+\tableofcontents
+\printabbreviations
+\listoffigures
+\listoftables
+%
+\mainmatter
+%
+\include{Introduction}
+\include{Modeling}
+\include{NumericalAspects}
+\include{PhysicalAspects}
+\include{Validation}
+\include{Conclusion}
+\appendix
+\include{appendix}
+%
+\backmatter
+%
+\printbibliography[heading=bibintoc]
+\copyrightmatlab{2015}
+\end{document}

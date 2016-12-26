@@ -1,0 +1,38 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{AMfont}
+\usepackage{AMcolor}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+		%scale only axis,
+		scaled y ticks = false, 
+		scaled x ticks = false, 
+		y tick label style={/pgf/number format/.cd, fixed, fixed zerofill,precision=2},
+		x tick label style={/pgf/number format/.cd, fixed, fixed zerofill,precision=2},
+		ytickmin = {0.0}, ytickmax = {0.8}, xtickmin = {0.0}, xtickmax = {1.8},
+		%width=0.5\textwidth,
+		%height=0.2\textheight,
+		width=7cm,
+		height=7cm,
+		xmin=0.0, xmax=0.63,
+		ymin=0.0, ymax=0.29,
+		axis x line=bottom,
+		axis y line=left,
+		xlabel=$\Gamma$,
+		ylabel=$\vartheta$,
+		legend pos= north west,
+		%legend pos= south east,
+		legend style={nodes=right}]
+
+\addplot[smooth,TUMBlue]  file {varthetamit0k1=1.5.dat};   
+\addlegendentry{$k_1 = 1.5$}
+
+\addplot[smooth,TUMOrange]  file {varthetamit0k1opt.dat};   
+\addlegendentry{$k_{1,opt} $} %= 1.524833
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

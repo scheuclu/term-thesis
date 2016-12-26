@@ -1,0 +1,79 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{AMcolor}
+\usepackage{AMfont}
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+		scale only axis,
+		scaled y ticks = false, 
+		scaled x ticks = false, 
+		y tick label style={/pgf/number format/.cd, fixed, fixed zerofill,precision=2},
+		x tick label style={/pgf/number format/.cd, fixed, fixed zerofill,precision=3},
+		ytickmin = {0.0}, ytickmax = {0.15}, xtickmin = {0.0}, xtickmax = {1.8},
+		width=0.5\textwidth,
+		height=0.2\textheight,
+		width=7cm,
+		height=7cm,
+		xmin=1.42, xmax=1.68,
+		ymin=0.0, ymax=0.17,
+		axis x line=bottom,
+		axis y line=left,
+		xlabel=$k_E$,
+		ylabel=$\vartheta$,
+		legend pos= north west,
+		legend pos= south east,
+		legend style={nodes=right}]
+
+\addplot[smooth,TUMBlue]  file {varthetak1=1.5.dat};   
+\addlegendentry{$k_1 = 1.5$}
+
+\addplot[smooth,TUMOrange]  file {varthetak1opt.dat};   
+\addlegendentry{$k_{1,opt} $} %= 1.524833
+
+\draw[TUMgrey,dashed] (axis cs:1.45,0.034) rectangle (axis cs:1.53,0.0405);
+
+\end{axis}
+\end{tikzpicture}
+%
+\begin{tikzpicture}[>=stealth]
+\begin{axis}[
+		scaled y ticks = false, 
+		scaled x ticks = false, 
+		y tick label style={/pgf/number format/.cd, fixed, fixed zerofill,precision=3},
+		width=7cm,
+		height=7cm,
+		xmin=1.45, xmax=1.53,
+		ymin=0.034, ymax=0.0405,
+		axis x line=bottom,
+		axis y line=left,
+		xlabel={$k_E$},
+		ylabel=$\vartheta$,
+		legend pos= north west,
+		%legend pos= south east,
+		legend style={nodes=right}]
+
+\addplot[smooth,TUMBlue]  file {varthetak1=1.5.dat};   
+\addlegendentry{$k_1 = 1.5$}
+
+\addplot[smooth,TUMOrange]  file {varthetak1opt.dat};   
+\addlegendentry{$k_{1,opt} $} %= 1.524833
+
+\draw[dashed] (axis cs:1.4748,0.034) -- (axis cs:1.4748,0.036);
+\draw[dashed] (axis cs:1.5,0.034) -- (axis cs:1.5,0.0402);
+
+
+\draw[] (axis cs:1.497,0.03512500) -- (axis cs:1.523,0.03512500);
+\draw[] (axis cs:1.497,0.03935800) -- (axis cs:1.523,0.03935800);
+
+\draw [<->] (axis cs:1.52,0.03512500) --  node[right]{$\Delta \vartheta$} (axis cs:1.52,0.03935800);
+\draw [<->] (axis cs:1.4748,0.0343) --  node[above]{$\Delta k_E$} (axis cs:1.5,0.0343);
+
+\end{axis}
+\end{tikzpicture}
+
+	
+\end{document}

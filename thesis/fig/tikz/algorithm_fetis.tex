@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+\begin{struktogramm}(150,155)
+\def\df2{0.40}
+
+\assign{\nassitexttwolines{\df2}{(1) Calculate equilibrium solution with}{regards to rigid body modes} $\lagnvec_0=\scalemat\rmodespace\inv{(\tp{\rmodespace}\scalemat\rmodespace )}\evec$  }
+\assign{\nassitext{\df2}{(2) Projector to natural subspace} $\projn=\eyemat - \scalemat\rmodespace\inv{(\tp{\rmodespace}\scalemat\rmodespace)}\tp{\rmodespace}$  }
+\assign{\nassitexttwolines{\df2}{(3) Calculate residual(gap) in}{natural subspace} $\resvec_0=\tp{\projn}(\ifacedispvec-\locdualschur\lagvec_0)$  }
+\assign{\nassitexttwolines{\df2}{(4) Calculate resulting forces for}{each substructure (preconditioning)} $\Zmat_0=\hlchange{\begin{bmatrix} \cdots, \asmids{\scaled{\locschur}} \resvec_0,\cdots \end{bmatrix}}    $}%, \asmids{\locschur}=\sum_s \ids{\asmop}\ids{\traceop}\ids{\locschur}\tp{\ids{\traceop}}\tp{\ids{\asmop}} 
+\assign{\nassitext{\df2}{(5) Rigid body-components of forces} $\sdirnspacemat_0=\projn\Zmat_0$}
+\assign{\nassitext{\df2}{(6) Initialize} $\lagfvec_0=0, i=0$  }
+
+\while[8]{\nassitext{\df2}{(7) While not converged}  $\sqrt{ \tp{\resvec}\Zmat\dmat{1} }>\epsilon$} %8 decribes the with of the while box
+\assign{\nassitexttwolines{\df2}{(8) Compute gap-changes}{due to forces $\sdirnspacemat_i$}   $\sdirnspacecspaceblock_{i}=\locdualschur\sdirnspacemat_i$}
+\assign{\nassitext{\df2}{(9) Auxiliary variable}   $\Deltamat_i=\tp{\sdirnspacecspaceblock_i}\sdirnspacemat_i$}
+\assign{\nassitext{\df2}{(10) Auxiliary variable}   $\dvec{\gamma}_i=\tp{\Zmat_i} \resvec_i$  }
+\assign{\nassitext{\df2}{(11) Step in new direction}   $\lagfvec_{i+1}=\lagfvec_i+\sdirnspacemat_i \pinv{\Deltamat_i} \dvec{\gamma}_i$}
+\assign{\nassitext{\df2}{(12) Gap change due to force step}   $\resvec_{i+1}=\resvec_i-\tp{\projn}\sdirnspacecspaceblock_i\pinv{\Deltamat}_i\dvec{\gamma}_i$}
+\assign{\nassitexttwolines{\df2}{(13) Calculate resulting forces for}{each substructure (preconditioning)}   $\Zmat_{i+1}=\hlchange{\begin{bmatrix} \cdots,\asmids{\scaled{\locschur}}  \resvec_{i+1},\cdots \end{bmatrix}}     $}
+\assign{\nassitexttwolines{\df2}{(14) Remove rigid body-components}{of forces}   $\sdirnspacemat_{i+1}=\projn\Zmat_{i+1}$}
+
+\while[8]{\nassitext{\df2}{(15) Loop over previous iterations}  $\text{for:~}0\leq j \leq i$}
+\assign{\nassitext{\df2}{(16) Compute othogonalization factor}   $\dmat{\phi}_{i,j}=\tp{\sdirnspacecspaceblock}_j \sdirnspacemat_{i+1}$}
+\assign{\nassitext{\df2}{(17) Orhtogonalize to direction j}   $\sdirnspacemat_{i+1} \gets \sdirnspacemat_{i+1}-\sdirnspacemat_j\pinv{\Deltamat_j}\dmat{\phi}_{i,j}$}
+\whileend
+
+\assign{\nassitext{\df2}{(18) Increase iteration counter}   $i \gets i+1$}
+\whileend
+\assign{\nassitext{\df2}{(19) Compute total interface forces}   $\lagvec=\lagnvec_0+\lagfvec_0$}
+
+\end{struktogramm}
+\end{document}

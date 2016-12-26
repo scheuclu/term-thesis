@@ -1,0 +1,65 @@
+%%
+%% This is file `AMtikz.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% AMtikz.dtx  (with options: `package')
+%% --------------------------------------------------------------------------------
+%% AMtikz <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for adding tikzFiles (on linux systems)
+%% E-mail: romain.pennec@tum.de
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% --------------------------------------------------------------------------------
+%% 
+%% /!\      Modifications made in this file will be lost!       /!\ 
+\RequirePackage{AMgit}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMtikz}[\AMinsertGitDate{} \AMinsertGitVersion{} AM tikz]
+\RequirePackage{ifthen}
+\RequirePackage{import}
+\RequirePackage{filemod}
+\RequirePackage{currfile}
+\newif\ifdraftmode\draftmodefalse
+\newif\ifdraftclsmode\draftclsmodefalse
+\newcommand{\tikzFile}[3][]{%
+  \ifdraftmode % draft option is active
+    \fbox{\parbox[b][\fheightpgf][t]{\fwidthpgf}{\ } }\vfill%
+  \else%
+  %% In case the pdf is not the newest file update the pgfplot
+  \ifthenelse{%
+  \equal%
+    {\filemodNewest[1]{#1{#2#3.tikz}{tikz/#3.pdf}}}
+    {\detokenize{tikz/#3.pdf}}%
+  }{% NO REBUILD
+  }{% REBUILD
+    \tikzset{external/remake next}{}%
+  }%
+  \tikzifexternalizing{\setkeys{Gm}{showframe=false}}{}
+  \tikzsetnextfilename{#3}%
+  \import{#2}{#3.tikz}%
+  \fi%
+}
+%% 
+%% Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+%% Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+%% Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+%% Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Romain Pennec.
+%% 
+%% This work consists of the file  AMtikz.dtx
+%% and the derived files           AMtikz.ins,
+%%                                 AMtikz.pdf and
+%%                                 AMtikz.sty.
+%% 
+%%
+%% End of file `AMtikz.sty'.

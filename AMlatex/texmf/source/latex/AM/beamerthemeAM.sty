@@ -1,0 +1,254 @@
+%%
+%% This is file `beamerthemeAM.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% AMbeamer.dtx  (with options: `theme')
+%% --------------------------------------------------------------------------------
+%% AMbeamer <!AMreleaseVersion!> --- AM beamer class
+%% E-mail: romain.pennec@tum.de
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% --------------------------------------------------------------------------------
+%% 
+%% /!\      Modifications made in this file will be lost!       /!\ 
+\RequirePackage{AMgit}
+\ProvidesPackage{beamerthemeAM}[\AMinsertGitDate{} \AMinsertGitVersion{} AM beamer theme]
+\usefonttheme{default}
+\usecolortheme{AM}
+\useinnertheme{default}
+\useoutertheme{default}
+\def\AM@emph@color{TUMOrange}
+\renewcommand{\emph}[1]{\textcolor{\AM@emph@color}{\textit{#1}}}
+\newcommand{\mathemph}[1]{\textcolor{TUMBlue}{\mathbf{#1}}}
+\setbeamerfont{example text}{series=\bfseries}
+\setbeamerfont{alerted text}{series=\bfseries}
+\tcbset{highlight math style={enhanced,arc=0pt,boxrule=0pt,colback=TUMIvory!55}}
+\newtcbox{\AMmathboxintheorem}[1][]{%
+  reset,nobeforeafter,tcbox raise base,
+  boxrule=1pt,colframe=TUMGreen,colback=white
+  ,arc=0pt,coltext=TUMGreen,#1
+}
+\newtcbtheorem[number within=section]{AMtheorem}{}%
+{theorem name,highlight math,fonttitle=\bfseries\large,halign title=center,
+separator sign none,colbacktitle=white,coltitle=TUMGreen,beforeafter skip=1ex plus 1ex minus .5ex,
+titlerule=3pt,colframe=white,width=0.9\textwidth,coltext=TUMBlue}{th}
+\newtcbtheorem[number within=section]{AMdefinition}{Definition}%
+{theorem name,fonttitle=\large,coltitle=TUMBlue,separator sign none,colframe=TUMGreen,empty,
+borderline west={1pt}{-10pt}{TUMGreen},blanker,description color=\AM@emph@color,
+,description delimiters none,fontupper=\normalfont,oversize}{defi}
+\setbeamertemplate{theorem begin}
+{%
+  \empheqset{innerbox=\AMmathboxintheorem}
+  \centering
+  \def\@tempa{definition}%
+  \ifx\@currenvir\@tempa
+    \def\AM@usetheorem{AMdefinition}
+    \def\AM@emph@color{TUMGreen}
+  \else
+    \def\AM@usetheorem{AMtheorem}
+  \fi
+  \begin{\AM@usetheorem}{\inserttheoremaddition}{AMtheoremlabel}
+}
+\setbeamertemplate{theorem end}{\end{\AM@usetheorem}}
+\setbeamerfont{frametitle}{series=\bfseries,size=\Large}
+\setbeamerfont{framesubtitle}{series=\itshape,size=\large}
+\setbeamerfont{author}{size=\normalsize, series=\normalfont}
+\setbeamerfont{date}{size=\normalsize}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{section}{series=\bfseries}
+\setbeamerfont{institute}{size=\normalsize}
+\newcommand{\AM@item@triange}{\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize item}{\color{TUMBlue}\scriptsize\AM@item@triange}
+\setbeamertemplate{itemize subitem}{\color{TUMGreen}\scriptsize\AM@item@triange}
+\setbeamertemplate{itemize subsubitem}{\color{TUMOrange}\tiny\AM@item@triange}
+\setbeamertemplate{enumerate item}{\color{TUMGreen}\insertenumlabel.}
+\setbeamertemplate{enumerate subitem}{\insertenumlabel.\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\insertenumlabel.\insertsubenumlabel.\insertsubsubenumlabel}
+\setbeamertemplate{enumerate mini template}{\insertenumlabel}
+\setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}
+\setbeamertemplate{navigation symbols}{}
+\newcommand{\TUMtitlepage}{%
+  {%
+  \begin{frame}
+    \pdfbookmark{\inserttitle}{AMtitleanchor}
+    \usebeamerfont{title}
+    \usebeamercolor[fg]{title}
+    \inserttitle
+
+    \vspace{3 mm}
+    \usebeamerfont{subtitle}
+    \usebeamercolor[fg]{subtitle}
+    \insertsubtitle
+
+    \vspace{5 mm}
+    \usebeamerfont{date}
+    \usebeamercolor[fg]{date}
+    \insertdate
+
+    \vspace{10 mm}
+    \usebeamerfont{author}
+    \usebeamercolor[fg]{author}
+    \insertauthor
+  \end{frame}
+  }
+}
+\newcommand{\AMbeamer@titleframe}{
+  \begin{frame}[t,plain]
+  \vskip1cm
+  \begin{tcolorbox}[size=tight,oversize,sharp corners,enhanced,scale=0.5,
+    colframe=TUMBlue,colback=TUMBlue,colupper=TUMBlue,
+    enlarge left by=-65pt,right=400pt,left=30pt,bottom=30pt,top=20pt,
+    frame code app={
+    \path[tcb fill frame] ([xshift=-1cm]frame.north) to[out=180,in=0] ([xshift=4cm,yshift=60pt]frame.north west)
+      -- ([yshift=60pt]frame.north west) -- (frame.north west) --cycle;
+    },overlay={%
+    \node[black,anchor=east,xshift=-20pt] at ([xshift=-20pt]frame.east) {\includegraphics[height=30pt]{AM-logo-TUM-voll-weiss-RGB}};
+    \node[black,anchor=west,xshift=32pt,yshift=30pt] at (frame.west) {\includegraphics[height=75pt]{AM-logo-AM-ivory-RGB}};
+    \node[white,xshift=-255pt,yshift=50pt,anchor=west] at (frame.center) {\huge AM};
+    \node[white,xshift=-255pt,yshift=25pt,anchor=west] at (frame.center) {\huge Lehrstuhl f\"{u}r};
+    \node[white,xshift=-255pt,anchor=west] at (frame.center) {\huge Angewandte Mechanik };
+    },overlay app={%
+    \node[opacity=1,xshift=-2.0cm] at([xshift=-20pt]frame.east) {\includegraphics[width=4.5cm]{AM-logo-MW-ivory-RGB}};
+    }]
+  \end{tcolorbox}
+  \vspace{10mm}
+  \pdfbookmark{\inserttitle}{AMtitleanchor}
+  \usebeamerfont{title}
+  \usebeamercolor[fg]{title}
+  \inserttitle
+
+  \vspace{3mm}
+  \usebeamerfont{subtitle}
+  \usebeamercolor[fg]{subtitle}
+  \insertsubtitle
+
+  \vspace{5mm}
+  \usebeamerfont{date}
+  \usebeamercolor[fg]{date}
+  \insertdate
+
+  \vspace{10mm}
+  \usebeamerfont{author}
+  \usebeamercolor[fg]{author}
+  \insertauthor
+  \end{frame}
+}
+\renewcommand{\maketitle}{\TUMtitlepage}
+\pgfdeclareimage[width=\paperwidth]{SliceHead}{AM-beamer-slice-head}
+\defbeamertemplate*{headline}{standard}
+{
+  \leavevmode
+  \pgfuseimage{SliceHead}
+}
+\defbeamertemplate*{footline}{standard}
+{
+\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{bottom}
+  \vspace*{0pt} \insertframenumber\hspace{1ex}
+\end{beamercolorbox}
+}
+\defbeamertemplate*{footline}{titlepage}
+{
+\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{bottom}
+  % No pagenumber on titlepage
+  % \vspace*{0pt} \insertframenumber/5000\hspace{1ex}
+\end{beamercolorbox}
+}
+\setbeamertemplate{footline}[standard]
+\setbeamertemplate{frametitle}
+{
+  \vspace{0.5ex}\hspace{-2.1ex}\parbox{\linewidth}{\insertframetitle}
+  \hspace{-2.1ex}\parbox{\linewidth}{%
+    \usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}
+    \insertframesubtitle
+  }
+}
+\newif\ifAM@beamer@toc@current@part
+\newif\ifAM@beamer@toc@current@section
+\newif\ifAM@beamer@toc@current@subsection
+\pgfkeys{
+  /AM/beamer/.is family, /AM/beamer,
+  recall part/.is if=AM@beamer@toc@current@part,
+  recall section/.is if=AM@beamer@toc@current@section,
+  recall subsection/.is if=AM@beamer@toc@current@subsection,
+  recall part=false,
+  recall section=false,
+  recall subsection=false,
+  fancy maketitle/.code={\renewcommand{\maketitle}{\AMbeamer@titleframe}},
+}
+\newcommand{\AM@recall@toc@currentsection}{%
+  \begin{frame}<beamer>
+    \frametitle{\hyperlink{AMpartOverview.1}{Outline}}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\AtBeginSection[]
+{
+  \ifAM@beamer@toc@current@section\AM@recall@toc@currentsection\fi
+}
+\newcommand{\AM@recall@toc@currentsubsection}{%
+  \begin{frame}<beamer>
+    \frametitle{\hyperlink{AMpartOverview.1}{Outline}}
+    \tableofcontents[currentsubsection]
+  \end{frame}
+}
+\AtBeginSubsection[]
+{
+  \ifAM@beamer@toc@current@subsection\AM@recall@toc@currentsubsection\fi
+}
+\newcommand{\AM@create@currentpart}{%
+  {%
+    \addtocontents{toc}{%
+      \protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}%
+    }%
+    \setbeamertemplate{background canvas}{%
+      \color{TUMIvory}\rule{\paperwidth}{\paperheight}%
+    }%
+    \frame{\hypertarget{part:\the\c@part}\partpage}%
+  }%
+}
+\AtBeginPart{%
+  \ifAM@beamer@toc@current@part\AM@create@currentpart\fi
+}
+\newcommand{\AMmakePartOverview}{
+  \begin{frame}
+    \pdfbookmark[1]{Overview}{AMpartOverview}
+    \tableofcontents[onlyparts]
+  \end{frame}
+}
+\providecommand\beamer@partintoc[3]{%
+  \ifnum\c@tocdepth=-1\relax
+    \makebox[6em]{\color{TUMOrange} \partname~#1:} \hyperlink{part:#1}{#2}
+    \par\vfill
+  \fi
+}
+\define@key{beamertoc}{onlyparts}[]{%
+  \c@tocdepth=-1\relax
+}
+%% 
+%% Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+%% Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+%% Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+%% Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Romain Pennec.
+%% 
+%% This work consists of the file  AMbeamer.dtx
+%% and the derived files           AMbeamer.ins,
+%%                                 AMbeamer.pdf,
+%%                                 beamercolorthemeAM.sty,
+%%                                 beamerthemeAM.sty and
+%%                                 AMbeamer.cls.
+%% 
+%%
+%% End of file `beamerthemeAM.sty'.

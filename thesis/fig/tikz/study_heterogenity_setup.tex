@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+\begin{tikzpicture}
+
+\def\ydist{-1.4}
+\node[inner sep=0pt] (russell) at (0,0)
+    {\includegraphics[width=.5\textwidth]{/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/setup/materials_horizontal.pdf}};
+%\node at (0,0) [anchor=east, text=white, scale=1] {iteration 1};
+
+\node[inner sep=0pt] (russell) at (0,\ydist)
+    {\includegraphics[width=.5\textwidth]{/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/setup/materials_vertical.pdf}};
+%\node at (0,0) [anchor=east, text=white, scale=1] {iteration 1};
+
+\node[inner sep=0pt] (russell) at (0,2*\ydist)
+    {\includegraphics[width=.5\textwidth]{/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/setup/materials_checkerboard.pdf}};
+%\node at (0,0) [anchor=east, text=white, scale=1] {iteration 1};
+
+\node[inner sep=0pt] (russell) at (0,2.8*\ydist)
+    {\includegraphics[width=.3\textwidth]{/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/setup/materials_legend.pdf}};
+%\node at (0,0) [anchor=east, text=white, scale=1] {iteration 1};
+
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/setup/materials_horizontal.pdf
+\end{tikzpicture}
+
+
+\end{document}

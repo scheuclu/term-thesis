@@ -1,0 +1,24 @@
+#!/bin/bash
+# Simple script to clean the temporary files of a LaTeX compilation.
+# The cleaning will be done in the current directory 
+# If you give the agument `sub` then the sub-directories will be cleaned as well
+
+echo "Clean directory $(pwd)"
+declare rm_ext_list='out log dvi ps aux bcf blg lof run.xml xwm toc maf mtc'
+rm_ext_list="$rm_ext_list glo tcp tps nlo lot synctex.gz bbl"
+rm_ext_list="$rm_ext_list pyg idx vrb snm nav glg gls auxlock"
+rm_ext_list="$rm_ext_list alg acr acn xdyi ilg ind tdo xdy dpth"
+
+find "$(pwd)" -name "*~" -exec rm {} -fv \;
+
+if [[ "$1" == 'sub' ]]; then
+	for ext in $rm_ext_list; do
+		find "$(pwd)" -name "*.$ext" -exec rm {} -fv \;
+	done
+else
+	for ext in $rm_ext_list; do
+		rm *.$ext -fv 2> /dev/null
+	done
+fi
+rm -rf _minted-* 2> /dev/null 
+rm -f *.mtc*

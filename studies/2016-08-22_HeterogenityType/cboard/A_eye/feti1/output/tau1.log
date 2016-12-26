@@ -1,0 +1,30 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+1365 nodes created                                                             ┃
+{Operation terminated by user during
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('MSHReader/CreateCondEle', '/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m', 161)" style="font-weight:bold">MSHReader/CreateCondEle</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m',161,0)">line 161</a>)
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('MSHReader/ReadMesh', '/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m', 136)" style="font-weight:bold">MSHReader/ReadMesh</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/io/MSHReader.m',136,0)">line 136</a>)
+            newele=this.CreateCondEle(ELEID,ELETYPE,NUMTAGS,TAGS,NODEIDS,'neumann');
+            In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBasePre/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBasePre.m', 86)" style="font-weight:bold">ProblemBasePre/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBasePre.m',86,0)">line 86</a>)
+      this.meshreader_.ReadMesh();
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_pre', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_pre.m', 49)" style="font-weight:bold">femac_pre</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_pre.m',49,0)">line 49</a>)
+  prob.Work();
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run_cboard', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_cboard.m', 75)" style="font-weight:bold">Run_cboard</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-22_HeterogenityType/Run_cboard.m',75,0)">line 75</a>)
+femac_pre(files.cboard.eye.feti1{1})} 
+% feti1
+numiter.cboard.precond.feti1=[];
+res.cboard.precond.feti1={};
+for iter=files.cboard.precond.feti1
+  prob=femac_main(iter{:})
+  numiter.cboard.precond.feti1=[numiter.cboard.precond.feti1,prob.solver_.numiter_];
+  res.cboard.precond.feti1{end+1}=prob.solver_.res_;
+end

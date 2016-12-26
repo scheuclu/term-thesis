@@ -1,0 +1,99 @@
+\chapter{Rotationspendel} \label{ap:Rotationspendel}
+
+
+
+Im Folgenden wird das Beispiel zum rotierenden Pendel aus \cite{Mayet:Tautochronic} dargelegt, 
+da die dort hergeleiteten Sachverhalte 
+als wichtige Grundlage für die im Rahmen dieser Arbeit durchgeführten Untersuchungen dienen.
+Betrachtet wird ein einzelnes Pendel ($n_p = 1$), welches die Möglichkeit hat, im rotorfesten
+Koordinatensystem zu rotieren ($\mu_r \neq 0$). 
+%
+Die geometrische Zwangsbedingung für ein solches Pendel ergibt sich nach \secref{subsec:TautDesignBedingungen} zu
+\begin{equation}
+		\left(\pdiff{\rho}{s}\right)^2 +  \rho^2 \left(\pdiff{\varphi}{s}\right)^2    + \mu_{r} \left(\pdiff{\alpha}{s}\right)^2  = 1.
+				\label{eq:AnhTautochronerAbsorberentwurfGeomZwangsbedRotPendel}
+\end{equation}
+
+
+
+
+Werden die Lösungen $\varphi$, für welche kein Rotationsgradient $\pdiff{\alpha}{s}$ auftritt, mit $\varphi_0$ bezeichnet, 
+resultiert die Zwangsbedingung für diesen Fall zu
+\begin{equation}
+		\left(\pdiff{\rho}{s}\right)^2 +  \rho^2 \left(\pdiff{\varphi_0}{s}\right)^2  = 1
+				\label{eq:AnhTautochronerAbsorberentwurfGeomZwangsbedRotPendelOhneRot}
+\end{equation}
+und für $\varphi_0$ gilt mit dem skalierten Radius $\rho^2(s) = 1 - k^2 s^2$ explizit
+\begin{equation}
+		\left(\pdiff{\varphi_0}{s}\right)^2  = \frac{1}{\rho^2}  \left(   1 - \left(\pdiff{\rho}{s}\right)^2    \right),
+				\label{eq:AnhTautochronerAbsorberentwurfGeomZwangsbedDefPhi0}
+\end{equation}
+wofür eine analytische Lösung existiert, welche in \cite{Mayet:Tautochronic} angegeben ist.
+%
+%
+%
+% Geom. Zwangsbedingung für Rotationspendel
+%
+Mit dieser Definition lautet die geometrische Zwangsbedingung für $\varphi$ für ein rotierendes Pendel
+\begin{equation}
+		\left(\pdiff{\varphi}{s}\right)^2  =  \left(\pdiff{\varphi_0}{s}\right)^2     -   \frac{\mu_r}{\rho^2} \left(\pdiff{\alpha}{s}\right)^2.   
+				\label{eq:AnhTautochronerAbsorberentwurfGeomZwangsbedDefPhi}
+\end{equation}
+%
+%
+% Ansatz für Rotationsgradien
+%
+Der Rotationsgradient wird in \cite{Mayet:Tautochronic} als
+\begin{equation}
+		\pdiff{\alpha}{s}  = \frac{\rho}{\sqrt{\mu_r}}   \pdiff{\varphi_0}{s} \pdiff{\bar{\alpha}}{s}   
+		\qquad \text{mit} \qquad 			  \left| \pdiff{\bar{\alpha}}{s} \right|  < 1 \quad \forall s
+				\label{eq:AnhTautochronerAbsorberentwurfAnsatzRotationsgradient}
+\end{equation}
+%
+angesetzt, wobei $\bar{\alpha}(s)$ eine beliebige Funktion von $s$ und deren Betrag kleiner als 1 ist. Damit resultiert
+\begin{equation}
+		\pdiff{\varphi}{s} =  \pdiff{\varphi_0}{s}  \sqrt{  1 - \left(\pdiff{\bar{\alpha}}{s}\right)^2  },
+				\label{eq:AnhTautochronerAbsorberentwurfGeomZwangsbedDefPhiMitSpezAlpha}
+\end{equation}
+%
+wobei jedoch für $\varphi$ keine allgemeine Lösung mehr existiert. Diese wird auch nicht zwingend benötigt, da für das dynamische Verhalten des Systems nur der Rotationsgradient entscheidend ist, wie anhand der Definition von $f(s)$ ersichtlich ist. 
+$f(s)$ ergibt sich nach Gleichung 	\eqref{eq:Abkuerzungenfuerf} unter Verwendung der eben dargestellten Definitionen   für ein Rotationspendel zu
+%
+%
+% Defintion von f(s)
+%
+\begin{equation}
+	\begin{split}
+		f(s) &= \rho^2 \pdiff{\varphi}{s} + \mu_r \pdiff{\alpha}{s}
+				  = \rho^2 \pdiff{\varphi_0}{s}  \sqrt{  1 - \left(\pdiff{\bar{\alpha}}{s}\right)^2  } + \mu_r \frac{\rho}{\sqrt{\mu_r}}   \pdiff{\varphi_0}{s} \pdiff{\bar{\alpha}}{s}  \\
+				 &= \pdiff{\varphi_0}{s} \left(\rho^2 \sqrt{  1 - \left(\pdiff{\bar{\alpha}}{s}\right)^2} + \sqrt{\mu_r} \rho  \pdiff{\bar{\alpha}}{s}  \right)	.
+				\label{eq:AnhTautochronerAbsorberentwurfDefVonf}
+	\end{split}				
+\end{equation}
+%
+In \cite{Mayet:Tautochronic}  wird vorgeschlagen, den Gradienten von $\bar{\alpha}$ %der Einfachheit halber
+konstant zu wählen. 
+Die Wahl von 
+\begin{equation}
+		 \pdiff{\bar{\alpha}}{s} = \sqrt{\frac{\mu_r}{1+\mu_r}}
+				\label{eq:AnhTautochronerAbsorberentwurfWahlVonAlphaS}
+\end{equation}
+maximiert die Funktion $f(s)$ an der Stelle $s=0$, was die Wirkung des Absorbers bei kleinen Amplituden erhöht \cite{Mayet:Tautochronic}.
+Für die Wahl von  $\pdiff{\bar{\alpha}}{s} = \const$ ergeben sich die Lösungen von $\varphi$ durch Multiplikation von $\varphi_0$
+mit einer Konstanten und die resultierende Funktion $f(s)$ lautet 
+%
+%
+% Resultierendes f(s)
+%
+\begin{equation}
+		 f(s) = \sqrt{1+\mu_r} - \frac{k^2}{2 \sqrt{\mu_r+1}} \left(\left(\mu_r + 1\right) k^2 + 1 \right) s^2 +  \mathcal{O}(s^4),
+			\label{eq:AnhTautochronerAbsorberentwurfFendgueltig}
+\end{equation}
+welche für weitere Untersuchungen allgemein als 
+\begin{equation}
+		 f(s) = b_0 + b_2 s^2 +  \mathcal{O}(s^4) \qquad \text{mit} \qquad b_0, b_2 \in \MR
+			\label{eq:AnhTautochronerAbsorberentwurfFAlsPolynom}
+\end{equation}
+geschrieben wird.
+
+

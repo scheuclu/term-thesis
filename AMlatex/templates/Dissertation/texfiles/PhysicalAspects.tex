@@ -1,0 +1,41 @@
+\chapter{Physical Aspects} \label{chap:PhysicalAspects}
+
+The models sensitivity on numerical parameters is treated in the previous chapter.
+Physical parameters are treated separately in this thesis.
+Their value cannot be measured exactly, e.g. contact stiffness or friction.
+Thus, they are varied to show the models sensitivity on them.
+This serves two major goals.
+On the one hand it shows the uncertainty of the model and thus the updating possibilities of it.
+On the other hand it offers the basis for further improvement strategies for future design.\\
+This chapter discusses the quality of the complete model on basis of the variations of the most crucial parameters.
+It is intended to show possible variations of the model's output when the parameters are not known.
+Again the nine cases of \cref{tab:BCCasesForParVar} are used to draw general conclusions.
+They are sorted \wrt the ratio in \cref{tab:BCCasesForParVarSortedForRatio}.\par
+%
+\begin{table}[h]
+\centering
+\begin{tabular}{l l l}
+  \toprule
+  \OD & \MED & \UD\\ 
+  \midrule
+  1,4,7 & 2,5,8 & 3,6,(9)\\
+  \bottomrule
+\end{tabular}
+\caption[The basis cases sorted with respect to the speed ratio]{The basis cases (\cref{tab:BCCasesForParVar}) sorted with respect to the speed ratio. The applied torque increases in each column with the number.}
+\label{tab:BCCasesForParVarSortedForRatio}
+\end{table}
+%
+Due to production uncertainties, the assembly conditions of the belt is not precisely known.
+Thus, the influence of the endplay, i.e. the number of elements on the belt is studied at first in \cref{sec:RealElements}.
+The connection between \els and pulleys is analyzed in \cref{sec:ElementPulleyContact}.
+Different contact positions as well as the \el's axial stiffness show an impact on the overall systems behavior.
+In contrast to the \RE, where the contact geometry is defined due to the circular shape, the contact geometry at the \head is not defined precisely.
+The radial and the longitudinal variation of the contact point yields high influences on the system behavior as demonstrated in \cref{sec:ElementElementContact}.
+Finally, the friction coefficients are analyzed.
+Due to production and assembly the contact parameters vary, which changes the influence functions.
+This is treated finally in \cref{sec:Friction}.\par
+
+%\input{PA_RealElements}
+%\input{PA_ElementPulleyContact}
+%\input{PA_ElementElementContact}
+%\input{PA_Friction}

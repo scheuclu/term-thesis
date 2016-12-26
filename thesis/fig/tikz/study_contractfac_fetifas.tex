@@ -1,0 +1,68 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage{amsmath}
+\input{\mainpath/customcommands}
+
+\input{\mainpath/colordefinitions}
+
+\begin{document}
+
+
+\begin{tikzpicture}[every axis/.style={
+%xmax=100,%
+xmin=-0.5,%
+ymin=0,%
+ymax=40,%
+bar width=2pt,
+%xtick={0,1,...,100}
+}]
+
+
+ \begin{groupplot}[
+group style = {group size = 1 by 4, horizontal sep=2.0cm, vertical sep=0.5cm},
+height = 4cm,
+width = 14cm,
+]
+
+\nextgroupplot[ybar stacked, legend style={at={(0.5,-0.32)}, anchor=north,legend columns=-1}, ylabel style={align=center}, ylabel={\# search \\ directions}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=0};
+\addplot+[fill, opacity=1.0] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma] {\studypath/2016-08-25_StudyContractfac/data/numsdir_chaco_fetifas_all.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {scheme 1};
+
+
+\nextgroupplot[ybar stacked, legend style={at={(0.5,-0.32)}, anchor=north,legend columns=-1}, ylabel style={align=center}, ylabel={\# search \\ directions}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=1};
+
+\addplot+[fill, opacity=1.0] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-25_StudyContractfac/data/numsdir_chaco_fetifas_all.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {scheme 2};
+
+
+\nextgroupplot[ybar stacked, legend style={at={(0.5,-0.32)}, anchor=north,legend columns=-1}, ylabel style={align=center}, xlabel=iterations, ylabel={\# search \\ directions}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+
+\addplot+[fill, opacity=1.0] table [skip first n=0,x expr=\coordindex, y index=2, col sep=comma] {\studypath/2016-08-25_StudyContractfac/data/numsdir_chaco_fetifas_all.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {scheme 3};
+
+\end{groupplot}
+\end{tikzpicture}
+
+
+
+
+
+\end{document}

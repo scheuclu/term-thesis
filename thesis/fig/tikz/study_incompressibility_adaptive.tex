@@ -1,0 +1,86 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage[outline]{contour}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+
+
+
+
+\begin{tikzpicture}[every axis/.style={
+%xmax=26,%
+xmin=-0.5,%
+ymin=0,%
+%ymax=40,%
+ylabel={ search dir},%
+xlabel={ iterations},%
+%xtick={0,1,...,26}
+}]
+
+\pgfplotstableread[col sep=comma]{\studypath/2016-08-25_StudyContractfac/data/contract2tau_chaco.txt}\loadedtable
+
+ \begin{groupplot}[
+group style = {group size = 1 by 4, horizontal sep=2.0cm, vertical sep=1.5cm},
+height = 5cm,
+width = 14cm,
+]
+
+
+\nextgroupplot[ybar,bar width=2pt, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={\# search directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+%{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetis_1e1.txt};
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetis_1e1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetias_1e1.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetifas_1e1.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {\contour{white}{$\frac{1}{2}-\nu=1e-1,~\rho=0.999,~\tau=39.5$}~~~};
+
+\nextgroupplot[ybar,bar width=1.5pt, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={\# search directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+%\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+%{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetis_1e2.txt};
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetis_1e2.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetias_1e2.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetifas_1e2.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {\contour{white}{$\frac{1}{2}-\nu=1e-2,~\rho=0.999,~\tau=289$}~~~};
+
+\nextgroupplot[ybar,bar width=1pt, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={\# search directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetis_1e3.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetias_1e3.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=1, col sep=comma]
+{\studypath/2016-08-19_Incompresibility/data/planestrain/numsdir_fetifas_1e3.txt};
+
+\legend{FETI-S,FETI-AS,FETI-FAS};
+\node[anchor=north east] at (rel axis cs:1,1) {\contour{white}{$\frac{1}{2}-\nu=1e-3,~\rho=0.999,~\tau=2072$}~~~};
+%\node at (0,0) [anchor=north west, scale=0.7, white] {\contour{black}{converged~~}}; 
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-19_Incompresibility/data/planestrain/numiter_feti1.txt    ./data/planestrain/numsdir_fetifas_1e1.txt
+
+\end{groupplot}
+\end{tikzpicture}
+
+
+\end{document}

@@ -1,0 +1,118 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Abbreviations	Nomenclature.tex	/^\\end{tabular}$/;"	b
+Adaptive Multi Preconditioned Conjugate Gradient	cha_adaptive_mpcg.tex	/^\\chapter{Adaptive Multi Preconditioned Conjugate Gradient}$/;"	c
+After changing the boolean values with	struktex/struktex-test-3.tex	/^}$/;"	P
+Augmented Lagrange	cha_fe-formulation.tex	/^They main advantage of the penalty method lies in the fact, that it does not introduce any new unknows, und thus maintains the positive definitness of the system matrix. On the other hand, the constraints are not fulfilled exactly. Regarding the choice of $\\sigma_\\mathrm k$ one has to weight carefully between a more accurate constraint fulfillment and the overall systems constitution since a greater $\\sigma_k$ value might enforce the constraints stronger, but can also lead to numerical instabilities.$/;"	b
+CLSDIR	struktex/struktex.mk	/^CLSDIR=$(INSTALLTEXMF)\/tex\/latex\/$(PACKAGE)$/;"	m
+COMMON_OPTIONS	struktex/struktex.mk	/^COMMON_OPTIONS = # \\OnlyDescription\\CodelineNumbered\\PageIndex$/;"	m
+Choices for $ dmat A	cha_feti-formulation.tex	/^\\end{align}$/;"	b
+Combined heterogeneities	cha_numerical-assesment.tex	/^\\end{figure}$/;"	b
+Computational cost of FETI S	cha_feti-solvers.tex	/^A detailed description of the FETI-S algorithm is provided in Figure~\\ref{strukt:fetis}$/;"	b
+Condition number	cha_numerical-assesment.tex	/^\\end{center}$/;"	s
+Conditioning of the FETI problem	cha_numerical-assesment.tex	/^It has been shown in TODO that the number of iterations required to reach a defined accuracy in an iterative scheme depends on the condition number as TODO.$/;"	b
+DEVELOPER_OPTIONS	struktex/struktex.mk	/^DEVELOPER_OPTIONS = \\EnableCrossrefs\\RecordChanges\\AlsoImplementation\\CodelineIndex$/;"	m
+DOCDIR	struktex/struktex.mk	/^DOCDIR=$(INSTALLTEXMF)\/doc\/latex\/$(PACKAGE)$/;"	m
+DVIPS	struktex/struktex.mk	/^DVIPS = dvips$/;"	m
+Default values C	struktex/struktex-test-3.tex	/^\\pBoolValue{\\texttt{WAHR}}{\\texttt{FALSCH}}$/;"	s
+Default values Java	struktex/struktex-test-3.tex	/^\\pBoolValue{\\texttt{WAHR}}{\\texttt{FALSCH}}$/;"	s
+Default values Pascal	struktex/struktex-test-3.tex	/^\\pLanguage{Pascal}$/;"	s
+Default values Python	struktex/struktex-test-3.tex	/^\\pBoolValue{\\texttt{WAHR}}{\\texttt{FALSCH}}$/;"	s
+Domain decomposition	Nomenclature.tex	/^\\end{tabular}$/;"	b
+FE space discretization	Nomenclature.tex	/^\\end{tabular}$/;"	b
+FETI 1	cha_feti-solvers.tex	/^The projection into the natural subspace however, is also used in all other FETI algorithms.$/;"	s
+FETI 2	Nomenclature.tex	/^\\end{tabular}$/;"	b
+FETI 2	cha_feti-solvers.tex	/^\\end{figure}$/;"	s
+FETI 2	temporary_formulas.tex	/^A solution to this problem is the introduction of an auxiliary coarse problem, which will leads to the FETI-2 methods describedin Section~\\ref{sec:FETI2}.$/;"	s
+FETI AS	Nomenclature.tex	/^\\end{tabular}$/;"	b
+FETI AS	cha_feti-solvers.tex	/^\\end{figure}$/;"	s
+FETI B	temporary_formulas.tex	/^A detailed explanition of the FETI-S algorithm is provided in Figure~\\ref{fig:algorithm_feti-2}$/;"	s
+FETI FAS	cha_feti-solvers.tex	/^\\end{figure}$/;"	b
+FETI Method	Nomenclature.tex	/^\\end{tabular}$/;"	b
+FETI S	Nomenclature.tex	/^\\end{tabular}$/;"	b
+FETI S	cha_feti-solvers.tex	/^A mathematically appealing approach for the definition of the auxiliary coarse space $\\cspace$ in a FETI-2 method are the so-called Geneo methods (Generalized eigenvalues on the interface).\\\\ The idea is to identify the "bad" eigenmodes, corresponding to the "bad" eigenvalues in the spectrum of the system matrix (see Figure~\\ref{fig:eigvalues_pointdistribution}) and to build up the auxiliary coarse space with them. The CG iterations themselves are then performed in a subspace orthogonal to these modes, the spectrum of the projected system matrix can thus be significantly improved. Extensive Analysis of this methods\\cite{Spillane2016}\\cite{Spillane2013}\\cite{Spillane2014} has shown their remarkable robustness, especially for the generally quite challenging FETI problems described in Chapter~\\ref{cha:numerical_assesment}. However, although mathematically found and robust, the eigenvalue problems on the interface introduce a substantial computational overhead and cannot be parallelized well. What is more increasing the size of the auxiliary coarse grid degenerates the parallelizability of the algorithm further. Thus other methods like the family of Multi Preconditioned Conjugate Gradient solvers are generally more efficient for engineering problems.$/;"	s
+FETI S	temporary_formulas.tex	/^A mathematically appealing approach for the definition of the auxiliary coarse space $\\cspace$ are the so-called Geneo methods (Geneo). They try to identify the bad eigenmodes, corresponding to the bad eigenvalues (see Figure~\\ref{fig:TODO} and build the coarse space upon them. Extensive Analysis of this methods\\cite{Spillane2016,Spillane2013,Spillane2014} has shown their remarkable robustnes, espacially for the generally quite challenging FETI problems described in Section\\ref{sec:challenges}. However, althoug mathemetically found and robust the eigenvalue problems on the interface introduce a substantial computational overhead, thus other methods like FETI-S\\ref{sec:fetis} or FETI-B\\ref{sec:fetib} are more efficient for engineering problems.$/;"	b
+FETI Solvers	cha_feti-solvers.tex	/^\\chapter{FETI Solvers}\\label{cha:feti_solvers}$/;"	c
+GV	struktex/struktex.mk	/^GV = gv$/;"	m
+Geneo	cha_feti-solvers.tex	/^\\end{figure}$/;"	b
+Geneo	temporary_formulas.tex	/^\\end{align}$/;"	b
+General	Nomenclature.tex	/^\\subsection*{FETI-Method}$/;"	b
+General	cha_feti-formulation.tex	/^\\end{figure}$/;"	s
+General	temporary_formulas.tex	/^\\begin{document}$/;"	s
+Governing equations and finite element formulations	cha_fe-formulation.tex	/^$/;"	c
+HISTORY_OPTIONS	struktex/struktex.mk	/^HISTORY_OPTIONS = \\RecordChanges$/;"	m
+Heterogeneities	cha_numerical-assesment.tex	/^\\end{figure}$/;"	s
+Heterogeneities across the interface	cha_numerical-assesment.tex	/^\\end{figure}$/;"	b
+Heterogeneities along the interface	cha_numerical-assesment.tex	/^\\pagebreak$/;"	b
+INSTALLTEXMF	struktex/struktex.mk	/^INSTALLTEXMF=`kpsewhich --expand-var '$$TEXMFHOME'`$/;"	m
+Inclusion	cha_numerical-assesment.tex	/^\\end{figure}$/;"	s
+Incompressibility	cha_numerical-assesment.tex	/^\\end{figure}$/;"	s
+Interface reduction	cha_feti-formulation.tex	/^\\\\$/;"	s
+Introduction	cha_introduction.tex	/^\\chapter{Introduction}\\label{cha:introduction}$/;"	c
+Introduction	chapters/chapt_introduction.tex	/^\\chapter{Introduction} a$/;"	c
+Iterative Solution techniques	cha_iterative-solvers.tex	/^\\chapter{Iterative Solution techniques}$/;"	c
+Iterative Solution techniques	cha_iterative_solvers.tex	/^\\chapter{Iterative Solution techniques}\\label{cha:iterative_solvers}$/;"	c
+LATEX	struktex/struktex.mk	/^LATEX = latex$/;"	m
+LaTeX-env-declaration	struktex/struktex.el	/^(defun LaTeX-env-declaration (environment)$/;"	f
+LaTeX-env-struktogramm	struktex/struktex.el	/^(defun LaTeX-env-struktogramm (environment)$/;"	f
+LaTeX-struktex-package-options	struktex/struktex.el	/^(defvar LaTeX-struktex-package-options '("curves" "draft" "emlines" "final"$/;"	f
+Lagrange multiplier approach	cha_fe-formulation.tex	/^Numerous methods have been proposed to solve this kind of problems. Among the most common ones are the Lagrange multiplier approach and the penalty method. This thesis focuses solemnly on the first on, nevertheless a quick introduction into the alternatives shall be provided, so that the pros and cons of each method can be discussed.$/;"	b
+Matrix notation	cha_feti-formulation.tex	/^as the local schur operator, assembled local schur operator and global schur operator respectively.$/;"	s
+Methods of constraint enforcement	cha_fe-formulation.tex	/^\\end{align}$/;"	s
+Monitoring the realtive error in PCG	cha_adaptive_mpcg.tex	/^\\end{figure}$/;"	b
+Monitoring the realtive error in PCG	cha_iterative-solvers.tex	/^\\end{figure}$/;"	b
+Motivation	cha_introduction.tex	/^\\chapter{Introduction}\\label{cha:introduction}$/;"	s
+Motivation	chapters/chapt_introduction.tex	/^\\chapter{Introduction} a$/;"	s
+Nitsche method	cha_fe-formulation.tex	/^Contrary to the Penalty approach, $\\mu \\rightarrow \\infty$ is not required in order to solve the original, unconstrained problem, thanks to the presence of the Lagrange multiplier term. The method is therefor especially favorable due to both, an exact fulfillment of the boundary conditions and no introduction of new Unknowns. It also avoids the ill conditioning of the standard quadratic penalty method.$/;"	b
+Nomenclature	Nomenclature.tex	/^\\section*{Nomenclature}\\label{sec:nomenclature}$/;"	s
+Numerical Assessment	cha_numerical-assesment.tex	/^\\chapter{Numerical Assessment}\\label{cha:numerical_assesment}$/;"	c
+Objective	cha_introduction.tex	/^A recent publication \\cite{Spillane2016} has proposed a new, Adaptive Multi Preconditioned Conjugate Gradient Algorithm (AMPCG) for cases where the preconditioner is built as a sum of contributions (like in FETI). A first application to the Balancing Domain Decomposition method has shown promising results.$/;"	s
+Operators and symbols	Nomenclature.tex	/^\\end{tabular}$/;"	b
+Outlook	cha_outlook.tex	/^\\chapter{Outlook}$/;"	c
+PACKAGE	struktex/struktex.mk	/^PACKAGE = struktex$/;"	m
+PDFLATEX	struktex/struktex.mk	/^PDFLATEX = pdflatex$/;"	m
+Partitioning	cha_numerical-assesment.tex	/^\\end{figure}$/;"	s
+Penalty approach	cha_fe-formulation.tex	/^The Lagrange multiplier approach does, however, come with the disadvantage of introducing additional unknowns, as well as worsening the overall system of equations constitution.$/;"	b
+Principle of Virtual Work	cha_fe-formulation.tex	/^Gauss divergence divergence is subsequently applied for further derivations.$/;"	P
+Problem Setup	cha_feti-formulation.tex	/^\\chapter{The FETI formulation}\\label{cha:feti_formulation}$/;"	s
+Representation of scalars tensors and other quantities	Nomenclature.tex	/^\\section*{Nomenclature}\\label{sec:nomenclature}$/;"	b
+Residuum formulation	cha_feti-formulation.tex	/^TODO$/;"	s
+SRCDIR	struktex/struktex.mk	/^SRCDIR=$(INSTALLTEXMF)\/source\/latex\/$(PACKAGE)$/;"	m
+Scalability	cha_feti-formulation.tex	/^The displacements can finally be recovered by Equation~\\eqref{eq:displacement_recovery}.$/;"	s
+Scalability	temporary_formulas.tex	/^\\end{align}$/;"	s
+Solid mechanics	cha_fe-formulation.tex	/^The following section provides a short summary of the most important equations of solid mechanics in the finite element context. It thus serves as a short preparation for Chapter \\ref{cha:feti_formulation}, which will will enhanced the basic formulation by a domain decomposition approach. A comprehensive declaration of all terms and expressions used in this thesis can also be found in the nomenclature. Moreover, since domain decomposition typically involves some kind of constraint enforcement, the most important methods in a finite element context are highlighted.$/;"	s
+Space discretization	cha_fe-formulation.tex	/^The finite element formulation is finally derived expressing all terms of the PVW exclusively in the primary variables. To do so, the strong connections of the Tonti diagram are taken advantage of.$/;"	s
+Summary	cha_summary.tex	/^\\chapter{Summary}\\label{cha:summary}$/;"	c
+TEXHASH	struktex/struktex.mk	/^TEXHASH=texhash$/;"	m
+TEXINPUTS	struktex/struktex.mk	/^TEXINPUTS := $(PWD):$(TEXINPUTS)$/;"	m
+TeX-mac-case	struktex/struktex.el	/^(defun TeX-mac-case (macro)$/;"	f
+TeX-mac-forever	struktex/struktex.el	/^(defun TeX-mac-forever (macro)$/;"	f
+TeX-mac-ifthenelse	struktex/struktex.el	/^(defun TeX-mac-ifthenelse (macro)$/;"	f
+TeX-mac-inparallel	struktex/struktex.el	/^(defun TeX-mac-inparallel (macro)$/;"	f
+TeX-mac-until	struktex/struktex.el	/^(defun TeX-mac-until (macro)$/;"	f
+TeX-mac-while	struktex/struktex.el	/^(defun TeX-mac-while (macro)$/;"	f
+The Conjugate Gradient algorithm	cha_iterative-solvers.tex	/^aaa$/;"	s
+The FETI formulation	cha_feti-formulation.tex	/^\\chapter{The FETI formulation}\\label{cha:feti_formulation}$/;"	c
+The Multi Preconditioned Conjugate Gradient algorithm	cha_iterative-solvers.tex	/^aaa$/;"	b
+The Preconditend Conjugate Gradient algorithm	cha_iterative-solvers.tex	/^aaa$/;"	b
+The Projeced Preconditioned Conjugate Gradient algorithm	cha_iterative-solvers.tex	/^aaa$/;"	b
+The natural subspace	cha_feti-formulation.tex	/^\\\\$/;"	s
+The problem with FETI 1 FETI 2	cha_feti-solvers.tex	/^Numerical analysis will finally test their robustness and performance compared to FETI-AS and conclusions will be drawn in Chapter~\\ref{cha:summary}.$/;"	P
+Theory	cha_iterative-solvers.tex	/^aa$/;"	s
+Theory	cha_numerical-assesment.tex	/^As any iterative method, a CG algorithm is quite susceptible to bad condition numbers. It should be noted at this point, that the conditioning is a property of the problem formulation, not the algorithm itself. Of course, the absolute value of $\\condnum$ depends on the norm used, it should therefore be used only for relative statements.\\\\$/;"	b
+This is the first chapter	main.tex	/^$/;"	c
+VERSION_L	struktex/struktex.mk	/^VERSION_L := latex getversion | grep '^VERSION'$/;"	m
+VERSION_S	struktex/struktex.mk	/^VERSION_S := `latex getversion | grep '^VERSION' | \\$/;"	m
+after changing the fonts with	struktex/struktex-test-3.tex	/^}$/;"	P
+projected preconditioned conjugate gradient	cha_adaptive_mpcg.tex	/^The idea is simple. One assumes that the bad condition number of the matrix is caused by just a little fraction of the full eigenvalue spectrum. One therefor tries to identify these "bad" eigenmodes and create a so called "auxiliary coarse space(deflation space)" with those modes. The problem is then solved directly within this small subspace, before the iterative scheme continues in the remaining space, orthorgonal to the deflation space. If the deflation space is chosen right, the convergence properties are greatly improved.\\\\$/;"	b
+projected preconditioned conjugate gradient	cha_iterative-solvers.tex	/^The idea is simple. One assumes that the bad condition number of the matrix is caused by just a little fraction of the full eigenvalue spectrum. One therefor tries to identify these "bad" eigenmodes and create a so called "auxiliary coarse space(deflation space)" with those modes. The problem is then solved directly within this small subspace, before the iterative scheme continues in the remaining space, orthorgonal to the deflation space. If the deflation space is chosen right, the convergence properties are greatly improved.\\\\$/;"	b
+this is the first section	main.tex	/^asdasad$/;"	s
+this is the first section	main2.tex	/^asdasad$/;"	s
+this is the second section	main.tex	/^asdasdadasd$/;"	s
+this is the second section	main2.tex	/^asdasdadasd$/;"	s
+what a great subsection	main.tex	/^all god stuff of the first section can be found at \\secref{sec:firstsection}$/;"	b
+what a great subsection	main2.tex	/^all god stuff of the first section can be found at \\secref{sec:firstsection}$/;"	b

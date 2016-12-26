@@ -1,0 +1,94 @@
+%%
+%% This is file `AMbiblio.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% AMbiblio.dtx  (with options: `package')
+%% --------------------------------------------------------------------------------
+%% AMbiblio <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for bibliography
+%% E-mail: romain.pennec@tum.de
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% --------------------------------------------------------------------------------
+%% 
+\RequirePackage{AMgit}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMbiblio}[\AMinsertGitDate{} \AMinsertGitVersion{} AM bibliography]
+\ClassInfo{AMbrief}{Document class of the Institute of Applied Mechanics}
+\RequirePackage{ifthen}
+\RequirePackage{kvoptions}
+\RequirePackage{pgfkeys}
+\RequirePackage{pgfopts}
+\newif\ifAMbiblio@natbib
+\pgfkeys{/AM/biblio/.is family,/AM/biblio,
+  natbib/.is if=AMbiblio@natbib,
+  natbib/.initial=false,
+}
+\DeclareStringOption[biber]{backend}
+\DeclareStringOption[utf8]{encoding}
+\DeclareStringOption[authoryear-comp]{style}
+\ProcessLocalKeyvalOptions*
+\newcommand{\AMbiblio@load@natbib}{%
+  \RequirePackage{overcite}%
+  \RequirePackage{natbib}%
+}
+\newcommand{\AMbiblio@load@biblatex}{%
+  \PassOptionsToPackage{backend=\AMbiblio@backend}{biblatex}
+  \PassOptionsToPackage{bibencoding=\AMbiblio@encoding}{biblatex}
+  \PassOptionsToPackage{style=\AMbiblio@style}{biblatex}
+  \RequirePackage{biblatex}%
+  \ExecuteBibliographyOptions{%
+       doi=false
+      ,isbn=false
+      ,url=false
+      ,maxcitenames=3
+      ,maxbibnames=100
+      ,block=none
+      ,sortcites
+      ,sorting=nyt
+      ,defernumbers
+      ,uniquename=false
+      ,firstinits=true
+  }%
+  \DeclareFieldFormat{url}{%
+    \newline\url{##1}%
+  }%
+  \RequirePackage{csquotes}
+}
+\providecommand{\referencename}{References}
+\newcommand{\AMPrintBibliography}{%
+  \printbibliography%
+  \addcontentsline{toc}{chapter}{\referencename}
+}
+\ifAMbiblio@natbib
+  \AMbiblio@load@natbib
+\else
+  \AMbiblio@load@biblatex
+\fi
+\def\AMbiblio@apa{apa}
+\ifx\AMbiblio@style\AMbiblio@apa
+  \DeclareLanguageMapping{ngerman}{ngerman-apa}
+\fi
+%% 
+%% Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+%% Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+%% Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+%% Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Romain Pennec.
+%% 
+%% This work consists of the file  AMbiblio.dtx
+%% and the derived files           AMbiblio.ins,
+%%                                 AMbiblio.pdf and
+%%                                 AMbiblio.sty.
+%%
+%% End of file `AMbiblio.sty'.

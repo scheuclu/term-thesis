@@ -1,0 +1,173 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMtikz <!AMreleaseVersion!> --- Package of the AMlatex-Bundle for adding tikzFiles (on linux systems)
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+/!\      Modifications made in this file will be lost!       /!\
+
+\endpreamble
+\postamble
+
+Copyright (C) 2003-2010 by S. Lohmeier <lohmeier@amm.mw.tum.de>
+Copyright (C) 2011-2013 by M. Schwienbacher <m.schwienbacher@tum.de>
+Copyright (C) 2014 by K. Grundl <kilian.grundl@tum.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMtikz.dtx
+and the derived files           AMtikz.ins,
+                                AMtikz.pdf and
+                                AMtikz.sty.
+
+\endpostamble
+\usedir{tex/latex/AM/AMtikz}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMtikz}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMtikz}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{AMtikz}[\AMinsertGitDate{} \AMinsertGitVersion{} AM tikz]
+%</package>
+%<*driver>
+\documentclass{AMdocumentation}
+\usepackage{\jobname}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+% \changes{1.0}{2015/05/28}{First version}
+% \changes{1.1}{2015/07/09}{Added other color names}
+%
+%
+%
+% \title{The \textcolor{white}{AMtikz} package}
+% \maketitle
+% \tableofcontents
+%
+%
+% 
+% \section{License}
+% \InsertLicenseBlaBla
+%
+%
+%
+% \section{User guide}
+%
+% \begin{hint}
+% HINWEIS: Diese Klasse war notwendig unter Linux Ende des Jahre 2014 (Ubuntu 
+% 14.04 LTS). Unter Windows hat das checken, ob die Datei neu externalisiert
+% (gebaut) werden muss schon funktioniert und ist daher hier nur lokal genutzt!
+% \end{hint}
+%
+%
+% \begin{docCommand}{tikzFile}{\oarg{file list}\marg{directory}\marg{data name}}
+% Befehl um tikz-Picture einbinden zu können.
+% Der Befehl checkt erstens, ob gebaut werden soll. 
+%  - Entweder es ist der Klassen-Draft-Modus aktiviert, dann wird nicht gebaut.
+%  - Oder  es ist ein optionaler Eintrag für den Befehl gegeben, dann wird auch nicht gebaut.
+% Für den Fall, dass gebaut werden soll wird das tikz-File externalisiert und noch ein Check durchgeführt, ob sich die Ursprungsdatei geändert hat.
+% Beispielbefehl: \verb|\tikzFile[{main.tex}{}]{}{}|
+% \end{docCommand}
+%
+%
+% \newpage
+% \setlength{\parskip}{1em}
+% \section{Implementation}
+%
+% \InsertImplementationBlabla
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\RequirePackage{ifthen}
+\RequirePackage{import}
+\RequirePackage{filemod} 
+%    \end{macrocode}
+%
+% \begin{warning}
+% \PackageName{filemod} does not work for XeTex
+% \end{warning}
+%
+% To get the file name with the \cs{currfilename} command:
+%    \begin{macrocode}
+\RequirePackage{currfile} 
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+\newif\ifdraftmode\draftmodefalse
+\newif\ifdraftclsmode\draftclsmodefalse
+\newcommand{\tikzFile}[3][]{%
+  \ifdraftmode % draft option is active
+    \fbox{\parbox[b][\fheightpgf][t]{\fwidthpgf}{\ } }\vfill%
+  \else%
+  %% In case the pdf is not the newest file update the pgfplot 
+  \ifthenelse{%
+  \equal%
+    {\filemodNewest[1]{#1{#2#3.tikz}{tikz/#3.pdf}}}
+%    \end{macrocode}
+% filemodNewest gives a dekonized filename already
+%    \begin{macrocode}
+    {\detokenize{tikz/#3.pdf}}%
+  }{% NO REBUILD
+  }{% REBUILD
+    \tikzset{external/remake next}{}%
+  }%
+  \tikzifexternalizing{\setkeys{Gm}{showframe=false}}{}
+  \tikzsetnextfilename{#3}%  
+  \import{#2}{#3.tikz}%
+  \fi%
+}
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% 
+% \Finale

@@ -1,0 +1,125 @@
+
+@report{cebulla_spatial_2012,
+	location = {Warrendale, {PA}},
+	title = {Spatial Dynamics of Pushbelt {CVTs}: Model Enhancements},
+	url = {http://papers.sae.org/2012-01-0307/},
+	shorttitle = {Spatial Dynamics of Pushbelt {CVTs}},
+	abstract = {Apart from performance, comfort, cost and fun to drive, the reduction of fuel consumption has become a primary driver in the world market of the automotive industry. As continuously variable transmissions based on the pushbelt principle can be operated in an optimal state at any time, they are very suitable to meet the mentioned requirements. However, the power transmission in the system is very complicated. Both detailed measurements and simulations are necessary to understand and to optimize the physical mechanisms, power density and shift characteristics.The current paper presents a spatial simulation model for transient analysis at different levels of detail. An initial model based on non-smooth multi-body theory is outlined. It consists of two rigid pulleys each with one tilting loose sheave. The pushbelt comprises two ring packages based on the co-rotational approach. These guide approximately 400 rigid elements by bilateral friction laws, with possibility for Coulomb and Stribeck curves. Flexible decoupled contact laws with spatial friction between sheaves and elements represent the axial stiffness of the elements. In-between the elements, flexible and frictionless contact laws are chosen. The comparison with local and global measurements validates this approach in realistic load cases.In the main part, improvement possibilities are presented. In particular, the influence of curved strand shapes between the pulleys is discussed. Planar pre-integration strategies are added to reduce the simulation time. The effect of unilateral contact laws between elements and ring packages is examined. Finally, the stiffness of the sheaves is added by coupled quasi-static contact laws.Overall, an efficient framework is shown to investigate the dynamics of individual components, pushbelt misalignment, elastic slip as well as local push and tension forces. This is very important for the economic optimization of the real system without carrying out costly experiments.},
+	number = {2012-01-0307},
+	institution = {{SAE} International},
+	type = {{SAE} Technical Paper},
+	author = {Cebulla, Thomas and Grundl, Kilian and Schindler, Thorsten and Ulbrich, Heinz and Velde, Arie van der and Pijpers, Han},
+	urldate = {2015-01-16},
+	date = {2012-04-16},
+	file = {Cebulla et al. - 2012 - Spatial Dynamics of Pushbelt CVTs Model Enhanceme.pdf:/home/local_grundl/common/Forschung/Projekte/CVT/30_Grundl/Literatur_Zotero/storage/7BE2XAIV/Cebulla et al. - 2012 - Spatial Dynamics of Pushbelt CVTs Model Enhanceme.pdf:application/pdf;SAE Technical Papers Snapshot:/home/local_grundl/common/Forschung/Projekte/CVT/30_Grundl/Literatur_Zotero/storage/QA35SFRV/2012-01-0307.html:text/html}
+}
+
+@article{grundl_maxwell-contact_2012,
+	title = {The Maxwell-Contact},
+	volume = {12},
+	rights = {Copyright © 2012 {WILEY}-{VCH} Verlag {GmbH} \& Co. {KGaA}, Weinheim},
+	issn = {1617-7061},
+	url = {http://onlinelibrary.wiley.com/doi/10.1002/pamm.201210028/abstract},
+	doi = {10.1002/pamm.201210028},
+	abstract = {In multibody systems, two alternative approaches exist to compute contact forces between bodies. The unilateral constraint contact and the unilateral regularized contact do not take into account the influence of the deformation due to other contacts on a body using rigid body dynamics. In this paper, a third alternative, i.e. the Maxwell-Contact, is derived coupling the deformations of different contacts on one body quasi-statically. An academic example validates the fundamental properties of the contact model and the application in a simulation of a pushbelt {CVT} shows improved results. (© 2012 Wiley-{VCH} Verlag {GmbH} \& Co. {KGaA}, Weinheim)},
+	pages = {73--74},
+	number = {1},
+	journaltitle = {{PAMM}},
+	shortjournal = {Proc. Appl. Math. Mech.},
+	author = {Grundl, Kilian and Cebulla, Thomas and Schindler, Thorsten and Ulbrich, Heinz},
+	urldate = {2015-01-19},
+	date = {2012},
+	langid = {english},
+	file = {Grundl et al. - 2012 - The Maxwell-Contact.pdf:/home/local_grundl/common/Forschung/Projekte/CVT/30_Grundl/Literatur_Zotero/storage/4U8SPU6I/Grundl et al. - 2012 - The Maxwell-Contact.pdf:application/pdf;Snapshot:/home/local_grundl/common/Forschung/Projekte/CVT/30_Grundl/Literatur_Zotero/storage/3948XA6N/abstract.html:text/html}
+}
+
+@unpublished{grundl_influence_2013,
+	location = {Hamburg, Germany},
+	title = {Influence of Different Pulley-Contours on the Kinematics of a Pushbelt Variator},
+	url = {http://www.tuhh.de/gacm2013},
+	abstract = {In the recent years, a detailed model of a Continuously Pushbelt Variator using spatial dynamics has been
+developed at the Institute of Applied Mechanics of the Technische Universität München in
+cooperation with Bosch Transmission Technology B.V. The model consists of up to 400 bodies with more
+than 5000 interactions combining specialized single- and set-valued force laws resulting in promising results
+[1,2]. However due to the complexity of the model, different approaches can be used for both, model
+refinement as well as computing time reduction. After an overview of the model, the talk presents a new
+kinematical description for the contact between element-flank and pulley-sheave focusing on these two
+subjects.
+To represent a yawing motion of the elements due to normal forces, the spatial model of [1] uses two circular
+arcs (at the front and rear edge) on one element flank that are in contact with flat frustum-shaped pulley-
+sheaves together with a decoupled contact law to compute contact forces between element and pulley. A
+coupled contact law leads to improved results in local forces as well as e.g. in spiral-running [2]. However
+due to the enhanced contact law, a linear complementarity problem ({LCP}) has to be solved for each of the
+four pulley-sheaves in every time-step. Using Lemke’s algorithm, the solution-time is growing as a third
+order polynomial in the number of contacts.
+To study the effects of a convex pulley-sheave compared to a flat description, a new contour-pairing between
+element-flank and sheave is introduced. The surface of the sheave is described by a convex polynomial along
+the radial direction whereas the element-flank is described by one rectangular flat area. Thus, only one
+potential contact point results, leading to a smaller dimension of the {LCP}. The contact point can move along
+the element flank and thus a yawing motion of the element is still represented.
+A condition for a possible contact point is, that the normal vectors of the contacting contours are in parallel
+[3], leading to a one-dimensional non-linear contact point search. However, this is not true if the contact-
+point is on the edge of the flank as the normal is not defined uniquely there. Here, two cases have to be
+separated: either the contact point is at the corner or the contact point is in the interior of one of the edges. As
+the used contact law is not set-valued, a penetration is allowed and thus more than one corner-point might
+penetrate the sheave. The contact point is then found by a weighting between all penetrating corner points
+leading to a smooth movement of the corner point along the flank.
+The new contact-kinematics allows for a detailed investigation on the load movement along the element
+flank as well as for an investigation on different sheave-contours and on the effect on the global dynamics.
+Although the new contact kinematics is more complex compared to the circle-flat sheave contact, a
+computing time reduction is gained in combination with the coupled-contact law as the number of contacts is
+reduced.},
+	note = {5th {GACM} Colloquium on Computational Mechanics 2013},
+	author = {Grundl, Kilian},
+	editora = {Cebulla, Thomas and Schindler, Thorsten and van der Velde, Arie and Yildiz, Semih},
+	editoratype = {collaborator},
+	date = {2013-02-10}
+}
+
+@unpublished{grundl_modelling_2014,
+	location = {Busan, South-Korea},
+	title = {Modelling of mechanical ring-tracking in a pushbelt variator for the analysis of the multi-body system dynamics},
+	url = {http://imsd-acmd2014.ksme.or.kr/main/},
+	note = {The 3rd Joint International Conference on Multibody System Dynamics - {IMSD} 2014},
+	author = {Grundl, Kilian},
+	editora = {Schindler, Thorsten and Rixen, Daniel J. and Ulbrich, Heinz and Tran, Minh-Duc and van der Velde, Arie and Yildiz, Semih},
+	editoratype = {collaborator},
+	date = {2014-06-30}
+}
+
+@unpublished{grundl_modelling_2015,
+	location = {Lecce,Italy},
+	title = {Modelling a pushbelt variator},
+	url = {http://conference.unisalento.it/ocs/index.php/gamm/gamm2015},
+	abstract = {A pushbelt continuously variable transmission ({CVT}) consists of about 400 steel elements guided by two loop-
+sets and transmitting torque from a primary to a secondary pulley due to ring-tension and element-push forces.
+About 1500 degrees of freedom and about 3500 contacts in a spatial model of the system combined with nonlinear
+effects and coupled deformations of the single parts lead to a high complexity and not fully understood dynamic
+effects.
+In the recent years, a joint research project between the Institute of Applied Mechanics of the Technische
+Universität München and Bosch Transmission Technology has dealt with the detailed modelling of {CVTs} ([1],
+[2] and [3]). The model is implemented in the general framework for nonsmooth multibody systems, {MBSim} [4].
+Besides standard elements, i.e. rigid bodies and unilateral spring-dampers, specific elements for the pushbelt
+{CVT} have been derived and implemented including e.g. a coupled force law to represent the pulley-sheave
+deformation or different nonlinear beam models for the representation of the loop-sets.
+This work summarizes the most important findings including a detailed validation of the results comparing
+stationary situations in local output curves, e.g. element axial forces, element push forces or spiral running, and
+in global output curves, e.g. thrust ratio or transmission torques. Furthermore different modelling techniques
+are compared concerning physical influence (i.e. forces and kinematics), but also numerical output (e.g. smooth
+vs. nonsmooth dynamics).},
+	note = {{GAMM} 86th Annual Scientific Conference},
+	author = {Grundl, Kilian},
+	editora = {Schindler, Thorsten and Rixen, Daniel J. and Ulbrich, Heinz},
+	editoratype = {collaborator},
+	date = {2015-03-24}
+}
+
+@inproceedings{schindler_spatial_2009,
+	title = {Spatial {MFR}-{FE} Sheave with {NURBS}-based Contact Description},
+	url = {https://mediatum.ub.tum.de/node?id=1134205},
+	eventtitle = {Proceedings of 7th {EUROMECH} Solid Mechanics Conference},
+	author = {Schindler, Thorsten and Zander, Roland and Grundl, Kilian and Missel, Raphael and Ulbrich, Heinz},
+	urldate = {2015-05-13},
+	date = {2009-09},
+	file = {Snapshot:/home/local_grundl/common/Forschung/Projekte/CVT/30_Grundl/Literatur_Zotero/storage/6VBKT3BA/node.html:text/html}
+}

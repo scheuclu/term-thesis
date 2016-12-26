@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\usepackage{import}
+\input{\mainpath/colordefinitions}
+\begin{document}
+\begin{tikzpicture}
+\node (N1) at (0,0)  {1};
+\node (N2) at (4,0.2)  {2};
+\node (N3) at (5,0)  {3};
+\node (N4) at (7,0)  {4};
+\node (N5) at (0,3)  {5};
+\node (N6) at (3.8,3)  {6};
+\node (N7) at (5.1,2.8)  {7};
+\node (N8) at (7,3)  {8};
+
+%line from 1 to 2
+%\node [fill=black, font=\small] at ($0.4*(N1)+0.6*(N2)$) {121};
+%\draw plot[smooth,tension=.7] coordinates { (0,0) (1,0) (2.5,0.3) (4,0.2)};
+\filldraw (N1) -- (N2) %plot[smooth,tension=.7] coordinates { (0,0) (1,0) (2.5,0.3) (4,0.2)}      
+      (N2) -- (N6)
+      (N6) -- (N5)
+      (N5) -- (N1);
+      %plot[smooth,tension=.7] coordinates { (0,1) (1,0) (2.5,0.3) (4,0.2)};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,116 @@
+\chapter{Iterative Solution techniques}
+aa
+\section{Theory}
+aaa
+\section{The Conjugate Gradient algorithm}
+aaa
+\subsection{The Preconditend Conjugate Gradient algorithm}
+aaa
+\subsection{The Projeced Preconditioned Conjugate Gradient algorithm}
+aaa
+\subsection{The Multi Preconditioned Conjugate Gradient algorithm}
+aaa
+
+The basic FETI formulation has been derived in Chapter~\ref{cha:feti-method}. As explained, the overall motivations is parallelism and increased robustness of the solver. Typically, the substructure size wll be chosen such, that the substructure local problems can be solved directly. The remaing interface problems constitutes a linear problem that is then solved by iterative means. For the purpose of this introduction, and to be conistent with the notation from~\cite{Spillane2016} considerations will be generalized to the linear system
+\begin{align}
+\dmat{A} \dvec{x} = \dvec{b}
+\label{eq:basic_linear_equation}
+\end{align}
+As described in~\cite{Kaniel1966}\cite{Saad2003}, the convergence properties of an iterative method applied to a system of type~\eqref{eq:basic_linear_equation} depend on the condition number of the matrix $\dmat{A}$.\\
+We will see in Chapter~\ref{cha:numerical_assesment}, that substructring often leads to very ill-conditioned problems. One therefor typycally solves the related problem
+\begin{align}
+\dmat{H}\dmat{A} \dvec{x} = \dmat{H}\dvec{b}
+\label{eq:preconditioned_linear_equation}
+\end{align}
+instead.\\
+The matrix $\dmat{H}$ is therby chosen as an approximation to the inverse of $\dmat{a}$, which significantly improves the condition number of the new iteration matrix $\dmat{H}\dmat{A}$.\\
+The crucial part therfor is, of course, the choice of an approbriate preconditioner. A simple, but not very effective approach could be the inverse of the diagonal of $\dmat{a}$. Other types are deflation, augmentation as well as balancing. For the FETI method, the natural choice, however, is projection. The reason for this is expained in REF.\\
+The idea is simple. One assumes that the bad condition number of the matrix is caused by just a little fraction of the full eigenvalue spectrum. One therefor tries to identify these "bad" eigenmodes and create a so called "auxiliary coarse space(deflation space)" with those modes. The problem is then solved directly within this small subspace, before the iterative scheme continues in the remaining space, orthorgonal to the deflation space. If the deflation space is chosen right, the convergence properties are greatly improved.\\
+
+\subsection{projected preconditioned conjugate gradient}
+The PPCG alogrithm introduces both a left preconditioner $\dmat{H}$ as well as a right preconditioner $\dmat{\Pi}$, where the latter one can be interpreted as an A-orthogonal projection to a subspace defined by U:
+\begin{align}
+\dmat{\Pi}=\eyemat-\dmat{U}(\tp{\dmat{U}}\dmat{A}\dmat{U}  )\tp{\dmat{U}}\dmat{A}
+\end{align}
+The deriveation of the projector equation will be outlined in Section~\ref{TODO}.\\
+Summing up, the PPCG algorithm can be formulated as
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+From the formulation above it is obvoius, that the choice of the coarse space is essential. Naturally, further augumenting the space $\dmat{U}$ leads to better convergence. In the limit, if all vectors are incorporatet in t $\dmat{U}$ a direct solution method is retrieved, and convergence is achieved in one step. However, building the projcetor $\dmat{\Pi}$ entails the factorization of $\dmat{\tp{U} A U}$. A reasonable compromise should thus be found.\\
+A uesful tool are error estimators. In \cite{Kaniel1966} the following a posterior error estimator is introduced for the PCG algorithm:
+\begin{align}
+\frac{\norm{\dvec{x}_*-\dvec{x}_i   }_A}{\norm{\dvec{x}_*-\dvec{x}_0}_A} =
+2 \Bigg [ \frac{ \sqrt{\lambda_{\dmat{H A},max}/\lambda_{\dmat{H A},min}}-1 }{ \sqrt{\lambda_{\dmat{H A},max}/\lambda_{\dmat{H A},min}}+1 } \Bigg ]^i
+\end{align}
+\\
+Equivalently an estimate for the PPCG algorithm can be derived as
+
+\begin{align}
+\frac{\norm{\dvec{x}_*-\dvec{x}_i   }_A}{\norm{\dvec{x}_*-\dvec{x}_0}_A} =
+2 \Bigg [ \frac{ \sqrt{\lambda_{\dmat{H A \Pi},max}/\lambda_{\dmat{H A \Pi},min}}-1 }{ \sqrt{\lambda_{\dmat{H A \Pi},max}/\lambda_{\dmat{H A \Pi},min}}+1 } \Bigg ]^i
+\end{align}
+
+The function described by this formula is visualized in Figure~\ref{fig:error_estimation_pcg}. The figure shows, that the convergence properties are extremly sensible to the condition number of them projected, preconditioned operator. THe puposed strategy in the PPCG algorithm thus is to identify all extreme, isolated eigenvalues an use their corresponding eigenvectors to built the coarse space.
+\begin{figure}[h!]
+	\begin{center}
+	    %\fbox{\subimport{./}{./fig/tikz/study_inclusion.tex}}
+        \includestandalone{./fig/tikz/error_estimationPCG}
+        \caption[A posteriror error estimation PCG]{A posteriori error estimation for the PCG algorithm. As expected, a condition number of 1 leads to a direct solution. The graph shows that an increasing eigenvalue ratio, drastically worsens performance.}
+		\label{fig:error_estimation_pcg}
+    \end{center}
+\end{figure}
+
+
+\subsection{Monitoring the realtive error in PCG}
+For further considerations an a priori error estimate should be derived~\cite{Axelsson2001}. First we know that
+\begin{align}
+\dvec{x}_* =\dvec{x}_0 + \sum_{j=0}^{n-n_0-1}\alpha_i \dvec{p}_j = \dvec{x}_i + \sum_{j=i}^{n-n_0-1} \alpha_j \dvec{p}_j
+\end{align}
+Since, by construction, search directions are $\dmat{A}$-orthogonal one can write
+\begin{align}
+\norm{\dvec{d}_i}_{\dmat{A}}=
+ \norm{\dvec{x}_{*}-\dvec{x}_i}_{\dmat{A}}^2=\sum_{j=i}^{n-n_0-1} \alpha_j^2 \norm{\dvec{p}_i}_{\dmat{A}}^2
+\end{align}
+Simple substraction finnaly gives:
+\begin{align}
+\norm{\dvec{d}_i}_{\dmat{A}}^2=\norm{\dvec{d}_{i-1}}_{\dmat{A}}^2-\alpha_{i-1}^2 \norm{\dvec{p}_{i-1}}_{\dmat{A}}^2
+\end{align}
+\\
+The authors in~\cite{Axelsson2001} use this to derive a n a posterio error estimate as
+\begin{align}
+\frac{\norm{\dvec{d}_{i-1}}_{\dmat{A}}^2}{\norm{\dvec{d}_i}_{\dmat{A}}^2}=
+1+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{d}_i}_{\dmat{A}}^2}=
+1+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \frac{\norm{\dvec{r}_i}_{\dmat{H}}^2}{\norm{\dvec{d}_i}_{\dmat{A}}^2}=
+1+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \underbrace{\frac{\norm{\dvec{d}_i}_{\dmat{AHA}}^2}{\norm{\dvec{d}_i}_{\dmat{A}}^2}}_{\lambda_{\dmat{HA},min}}
+\end{align}
+where the last term is related to a Rayleigh quotient for $\dmat{HA}$.
+\\
+The a posteriori error estimate can thus finnaly be derived as
+\begin{align}
+\frac{\norm{\dvec{d}_i}_{\dmat{A}}^2}{\norm{\dvec{d}_{i-1}}_{\dmat{A}}^2}\leq
+\inv{\Big(1+\lambda_{\dmat{HA},min} \frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \Big )}
+\end{align}
+One can now derive that from this point, it suffices to show
+\begin{align}
+\frac{\norm{\alpha_{i-1}\dvec{p}_{i-2} }}{\norm{\dvec{r}_i}_{\dmat{H}}^2} \geq \tau~with~
+\tau := \frac{1-\rho^2}{\lambda_{min} \rho^2} \geq 0
+\label{eq:general_ampcg_conditions}
+\end{align}
+to guarentee convergence.
+\\
+An adaptive MPCG algorithm now entail an eavluation of Condition~\eqref{eq:general_ampcg_conditions} at each iteration. If the condition is fullfilled, the direction is used as new iterate in an MPCG sense, otherwise the direction is used to enrich the space $\dmat{U}$ in a PPCG sense, where, of course, the projector has to be newly built then.
+

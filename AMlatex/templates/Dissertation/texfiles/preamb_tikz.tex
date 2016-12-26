@@ -1,0 +1,106 @@
+%TODO this should be a part of AMtikz
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+\usetikzlibrary{external}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{matrix,positioning}
+\tikzexternalize[prefix=tikzExternal/,shell escape=-enable-write18]
+\tikzexternalize[up to date check=md5]
+
+%\providecommand{\tikzExtPDF}{\tikzset{external/system call={pdflatex \tikzexternalcheckshellescape -shell-escape -halt-on-error -interaction=batchmode -jobname "\image" "\texsource" "\def \tikzexternalrealjob {DOC_140411_Thesis}\input {DOC_140411_Thesis}"}}}
+\providecommand{\tikzExtPDF}{\tikzset{external/system call={pdflatex \tikzexternalcheckshellescape -shell-escape -halt-on-error -interaction=batchmode -jobname "\image" "\texsource"}}}
+\providecommand{\tikzExtLua}{\tikzset{external/system call={lualatex \tikzexternalcheckshellescape -enable-write18 -halt-on-error -interaction=batchmode -jobname "\image" "\texsource"}}}
+
+\usetikzlibrary{plotmarks}
+% and optionally (as of Pgfplots 1.3): 
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false}
+\newlength\fheightpgf
+\newlength\fwidthpgf
+
+%% Create pgfplot for only legend (from: http://tex.stackexchange.com/questions/131934/adding-a-legend-next-to-subfigures-of-pgfplots)
+% argument #1: any options
+\newenvironment{customlegend}[1][]{%
+    \begingroup
+    % inits/clears the lists (which might be populated from previous
+    % axes):
+    \csname pgfplots@init@cleared@structures\endcsname
+    \pgfplotsset{#1}%
+}{%
+    % draws the legend:
+    \csname pgfplots@createlegend\endcsname
+    \endgroup
+}%
+
+% makes \addlegendimage available (typically only available within an
+% axis environment):
+\def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
+
+%% Command to draw vertical line and name it. Additionally (if given) the name could be written at the max or the min position
+\newcommand{\specialPos}[3][]{
+ \ifstrempty{#1}{%
+    \draw [black!40] (axis cs:#2,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:#2,\pgfkeysvalueof{/pgfplots/ymax}) node [below right] {#3};
+  }{%
+    \draw [black!40] (axis cs:#2,\pgfkeysvalueof{/pgfplots/ymax}) -- (axis cs:#2,\pgfkeysvalueof{/pgfplots/ymin}) node [above right] {#3};
+  }%
+  }
+
+%% Um das Problem anzugehen, dass 0^x von pgfplots ausgewertet wird. Kopiert von http://tex.stackexchange.com/questions/153978/pgfplots-function-x0-5-skipping-first-sample-sqrt-is-not
+
+\makeatletter
+\def\pgfmathfloatpow@#1#2{%
+    \begingroup%
+    \expandafter\pgfmathfloat@decompose@tok#1\relax\pgfmathfloat@a@S\pgfmathfloat@a@Mtok\pgfmathfloat@a@E
+    \ifcase\pgfmathfloat@a@S\relax
+        % 0 ^ #2 = 0
+        \pgfmathfloatcreate{0}{0.0}{0}%
+    \else
+        \expandafter\pgfmathfloat@decompose@tok#2\relax\pgfmathfloat@a@S\pgfmathfloat@a@Mtok\pgfmathfloat@a@E
+        \ifcase\pgfmathfloat@a@S\relax
+            % #1 ^ 0 = 1
+            \pgfmathfloatcreate{1}{1.0}{0}%
+        \or
+            % #2 > 0
+            \pgfmathfloatpow@@{#1}{#2}%
+        \or
+            % #2 < 0
+            \pgfmathfloatpow@@{#1}{#2}%
+        \or
+            % #2 = nan
+            \edef\pgfmathresult{#2}%
+        \or
+            % #2 = inf
+            \edef\pgfmathresult{#2}%
+        \or
+            % #2 = -inf
+            \pgfmathfloatcreate{0}{0.0}{0}%
+        \fi
+    \fi
+    \pgfmath@smuggleone\pgfmathresult
+    \endgroup
+}%
+\makeatother 
+
+\usepackage[bordercolor=red!50,backgroundcolor=red!10,linecolor=red!20,textsize=footnotesize,textwidth=20mm]{todonotes}
+\setlength{\marginparwidth}{20mm}
+
+%% AVOID that todonotes get externalized
+\makeatletter
+\renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
+\makeatother
+
+%% make it possible to refer to a footnote with a specific label (having basically the same footnote)
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+%% Enables reading string keys from cvs file
+\makeatletter
+\pgfplotsset{ 
+    /pgfplots/flexible xticklabels from table/.code n args={3}{%
+        \pgfplotstableread[#3]{#1}\coordinate@table
+        \pgfplotstablegetcolumn{#2}\of{\coordinate@table}\to\pgfplots@xticklabels
+        \let\pgfplots@xticklabel=\pgfplots@user@ticklabel@list@x
+    }
+}
+\makeatother

@@ -1,0 +1,153 @@
+% Compilation process: 
+%     pdflatex poster.tex
+\documentclass{AMposter}
+\usepackage{pgfplots}
+\usepackage{ngerman}
+
+\title{Modellordnungsreduktion\\ für geometrisch nichtlineare Systeme}
+\subtitle{Ein nichtlinearer Projektionsansatz}
+\author{Johannes Rutzmoser}
+
+\begin{document}
+\maketitle
+
+\begin{columns}
+\column{0.5}
+
+\block{Motivation \& Anwendungsgebiete}{
+	\parbox[c]{0.48\linewidth}{
+		\input{motivation.tikz}
+	}
+	\parbox[c]{0.48\linewidth}{
+		\begin{itemize}\setlength\itemsep{1em}
+			\item Regelungstechnik und\\ Echtzeitsysteme
+			\item Optimierung
+			\item Simulation von großen Modellen\\ bzw. über lange Zeiträume
+			\item Substrukturen und\\ gekoppelte Probleme
+		\end{itemize}
+	}
+}
+
+\block{Überblick über nichtlineare Reduktionsmethoden}{
+	\input{overview.tikz}
+}
+
+\block{Lineare projektive Modellordungsreduktion}{
+	Das nichtlineare dynamisches System zweiter Ordnung
+	\begin{gather*}
+		\vM\ddot{\vx} + \vD\dot{\vx} + \vf(\vx) = \vF(t)
+	\intertext{wird mit linearer Transformation}
+		\vx=\vV\vz
+	\intertext{zu dem System mit der reduzierten Variable $\vz$ mit Residuum $\vr$ überführt:}
+		\vM\vV\ddot{\vz} + \vD\vV\dot{\vz} + \vf(\vV\vz) = \vF(t) + \vr
+	\end{gather*}
+	
+	\bigskip
+	Forderung, dass Residuum orthogonal zu Spaltenraum von $W$ ist:
+	\begin{gather*}
+		\vW^T\vr = 0 \\
+		\underbrace{\vW^T\vM\vV}_{\vM^*}\ddot{\vz} + \underbrace{\vW^T\vD\vV}_{\vD^*}\dot{\vz} + \underbrace{\vW^T\vf(\vV\vz)}_{\vf^*(\vz)} = \underbrace{\vW^T\vF(t)}_{\vF^*(t)}
+	\end{gather*}
+}
+
+\block{Nichtlineare projektive Modellordungsreduktion}{
+	Nichtlineares mechanisches System (ohne Dämpfung)
+	\begin{equation*}
+		\vM\ddot{\vx} + \vf(\vx) = \vF(t)
+	\end{equation*}
+
+	nichtlineare Transformation $\vx = \vg(\vz)$
+	
+	entspricht Projektion auf zustandsabhängige Basis $\vV(\vz)$
+	
+	ergibt die Differentialgleichung für das nichtlinear projizierte System:
+	\begin{equation*}
+		\pdiff{\vg}{\vz}^T \vM \pdiff{\vg}{\vz}\ddot{\vz} + 
+		{\color{TUMblue}
+			\underbrace{
+				\frac{\partial \vg}{\partial\vz}^T \vM \frac{\partial^2 \vg}{\partial\vz^2} \dot{\vz}\dot{\vz}
+			}_{\text{zusätzlicher konvektiver Term}}
+		}
+		+ \pdiff{\vg}{\vz}^T \vf\bigl(\vg(\vz)\bigr) = \pdiff{\vg}{\vz}^T \vF(t)
+	\end{equation*}
+}
+
+\column{0.5}
+
+\block{Nichtlineare statische Kondensation}{
+	Idee der statischen Kondensation (Guyan): Elimination von einseitig gekoppelten Freiheitsgraden bei Vernachlässigung der dynamischen Effekte:\\
+	Die Gleichung 
+	\begin{gather*}
+		\vM\ddot{\vx} + \vK\vx + \vf(\vx) = \vF(t) \\[1ex]
+		\pmat{\vM_{11} & 0 \\ 0 & \vM_{22}} \pmat{\ddot\vx_1 \\ \ddot\vx_2} + 
+		\pmat{\vK_{11} & \vK_{12} \\ \vK_{21} & \vK_{22}} \pmat{\vx_1 \\ \vx_2} + \pmat{\vf_1(\vx_1, \vx_2) \\ \vf_2(\vx_1)} = \pmat{\vF_1(t) \\ \vF_2(t)} 
+	\intertext{kann mit der Bedingung}
+		\vM_{22} \ddot{\vx}_2 = 0
+	\intertext{und der Elimination von $\vx_2$ durch}
+		\vx_2 = -\vK_{22}^{-1} \bigl[ \vK_{21}\vx_1 + \vf_2(\vx_2) - \vF_2(t) \bigr]
+	\intertext{überführt werden in}
+		\vM_{11} \ddot{\vx}_1 + \vK_{11}\vx_1 - \vK_{12}\vK_{22}^{-1} 
+		\bigl[ \vK_{21}\vx_1 + \vf_2(\vx_1) - \vF_2(t) \bigr]
+	\end{gather*}
+
+	\bigskip
+	Idee der nichtlinearen statischen Kondensation: Projektion auf die Kondensationsmannigfaltigkeit. Beispiel einfacher Balken:\\
+	Bewegungsgleichung:
+		\begin{equation*}
+			\underbrace{
+				\pmat{\vM_{w} & 0 \\ 0 & \vM_{u}}
+			}_{\vM} 
+			\pmat{\ddot{\vw} \\ \ddot{\vu}} + 
+			\underbrace{
+				\pmat{\vK_{w} & 0 \\ 0 & \vK_{u}}
+			}_{\vK} 
+			\pmat{\vw\\\vu} + 
+			\underbrace{
+				\pmat{\vf_w(\vw, \vu) \\ \vf_u(\vw)}
+			}_{\vf(\dots)} 
+			= 
+			\underbrace{
+				\pmat{\vF_w(t) \\ \vF_u(t)}
+			}_{\vF(t)}
+		\end{equation*}
+		Projektion auf Mannigfaltigkeit liefert den Projektor:
+		\begin{equation*}
+			\vK_u \vu + \vf_u(\vw) = 0 \qquad \Longrightarrow\quad
+			\pmat{\vw \\ \vu} = \vg(\vw) = \pmat{\vw \\ -\vK_{u}^{-1} \vf_u(\vw)}
+		\end{equation*}
+		Reduzierte Bewegungsgleichung:
+		\begin{equation*}
+			\pdiff{\vg}{\vw}^T \vM \pdiff{\vg}{\vw} \ddot{\vw} + \pdiff{\vg}{\vw}^T \vM \pdiff[2]{\vg}{\vw} \dot{\vw}\dot{\vw} + \pdiff{\vg}{\vw}^T \vK\vg(\vw) + \pdiff{\vg}{\vw}^T \vf\bigl(\vg(\vw)\bigr) = \pdiff{\vg}{\vw}^T\vF(t)
+		\end{equation*}
+}
+
+
+\block{Statische Kraftkompensationsmethode}{
+	The linear Basis $\vV$ kann frei gewählt werden. Sie beschreibt die Abbildung an der Stelle $z=0$: 
+	\begin{equation*}
+		\vV = \pdiff{\vx}{\vz} \biggr|_{\vz=0}
+	\end{equation*}
+	Die Idee ist, die lineare Abbildung zu einer Abbildung zweiter Ordnung zu expandieren:
+	\begin{equation*}
+		\vg(\vz) = \pdiff{\vx}{\vz} \biggr|_{\vz=0} \vz + \frac{1}{2} \pdiff[2]{\vx}{\vz} \biggr|_{\vz=0} \vz\;\vz
+	\end{equation*}
+	
+	Nun wird gefordert, dass sich die Abbildung so verhält, dass die zweite Ableitung der Kraft im transformierten System null ist:
+	\begin{equation*}
+		\pdiff[2]{}{\vz} \Bigl( \vK\vx + \vf_{nl}(\vx) \Bigr) \biggr|_{\vz=0} = 0
+	\end{equation*}
+	daraus folgt die zweite Ableitung der Abbildung zwischen $x$ und $z$:
+	\begin{equation*}
+		\pdiff[2]{\vx}{\vz} \biggr|_{\vz=0} = - \vK^{-1} \pdiff[2]{\vf_{nl}}{\vz} \biggr|_{\vz=0} = -\vK^{-1} \pdiff[2]{\vf_{nl}}{\vx} \biggr|_{\vx=0} \;\vV\;\vV
+	\end{equation*}
+	
+	So ergibt sich der nichtlineare Projektor zu:
+	\begin{align*}
+		\vg(\vz) = & \vV \vz - \vK^{-1}\, \pdiff[2]{\vf_{nl}}{\vx} \Bigr|_{\vx=0} \;(\vV\vz)\;(\vV\vz) \\
+		= & \vK^{-1}\left(\vK \vV \vz + \pdiff[2]{\vf_{nl}}{\vx} \Bigr|_{\vx=0} \;(\vV\vz)\;(\vV\vz)\right)
+	\end{align*}
+}
+
+\end{columns}
+
+\end{document}

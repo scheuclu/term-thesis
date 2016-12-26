@@ -1,0 +1,2018 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+          ______________  ______   ______            ____  ____  ______        ┃
+         / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ____/        ┃
+        / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / /_/ / __/           ┃
+       / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ _, _/ /___           ┃
+      /_/   /_____/_/  /_/_/  |_\____/           /_/   /_/ |_/_____/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START MESH READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+1365 nodes created                                                             ┃
+1280 stiffness elements created                                                ┃
+21 dirichlet elements created                                                  ┃
+12 neumann elements created                                                    ┃
+wrote mesh to file: ./mesh_5layers_16domains_fetis.dis                         ┃
+Elapsed time is 3.5412 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.17847 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.66576 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 7.1699 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 16                             ┃
+Elapsed time is 0.041977 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.94311 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.015097 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.6369e-27                           ┃
+Elapsed time is 0.058721 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.3507e-08                                                          ┃
+after 43 iterations                                                            ┃
+Elapsed time is 1.2828 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.021247 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.028649 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+       ______________  ______   ______            ____  ____  ___________      ┃
+      / ____/ ____/  |/  /   | / ____/           / __ \/ __ \/ ___/_  __/      ┃
+     / /_  / __/ / /|_/ / /| |/ /      ______   / /_/ / / / /\__ \ / /         ┃
+    / __/ / /___/ /  / / ___ / /___   /_____/  / ____/ /_/ /___/ // /          ┃
+   /_/   /_____/_/  /_/_/  |_\____/           /_/    \____//____//_/           ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.066446 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.068069 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.066373 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.065785 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.1025 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.10721 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.088756 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.082222 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.077934 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.086194 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.092821 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.094796 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.092886 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.094918 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097997 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097859 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.093858 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097354 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.099874 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097995 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.098777 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.091919 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.096756 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.10001 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097625 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.094045 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.094158 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097351 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.093982 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097065 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.098736 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 0.097639 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.18137 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.2044 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.2044 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.21728 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.21779 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.21317 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.21118 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.21244 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.20766 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.21022 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.20106 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.2062 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.19881 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.20491 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.20603 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+105 nodes written                                                              ┃
+80 elements written                                                            ┃
+field displacement_ITER1 VECTORS FLOAT written                                 ┃
+field displacement_ITER2 VECTORS FLOAT written                                 ┃
+field displacement_ITER3 VECTORS FLOAT written                                 ┃
+field displacement_ITER4 VECTORS FLOAT written                                 ┃
+field displacement_ITER5 VECTORS FLOAT written                                 ┃
+field displacement_ITER6 VECTORS FLOAT written                                 ┃
+field displacement_ITER7 VECTORS FLOAT written                                 ┃
+field displacement_ITER8 VECTORS FLOAT written                                 ┃
+field displacement_ITER9 VECTORS FLOAT written                                 ┃
+field displacement_ITER10 VECTORS FLOAT written                                ┃
+field displacement_ITER11 VECTORS FLOAT written                                ┃
+field displacement_ITER12 VECTORS FLOAT written                                ┃
+field displacement_ITER13 VECTORS FLOAT written                                ┃
+field displacement_ITER14 VECTORS FLOAT written                                ┃
+field displacement_ITER15 VECTORS FLOAT written                                ┃
+field displacement_ITER16 VECTORS FLOAT written                                ┃
+field displacement_ITER17 VECTORS FLOAT written                                ┃
+field displacement_ITER18 VECTORS FLOAT written                                ┃
+field displacement_ITER19 VECTORS FLOAT written                                ┃
+field displacement_ITER20 VECTORS FLOAT written                                ┃
+field displacement_ITER21 VECTORS FLOAT written                                ┃
+field displacement_ITER22 VECTORS FLOAT written                                ┃
+field displacement_ITER23 VECTORS FLOAT written                                ┃
+field displacement_ITER24 VECTORS FLOAT written                                ┃
+field displacement_ITER25 VECTORS FLOAT written                                ┃
+field displacement_ITER26 VECTORS FLOAT written                                ┃
+field displacement_ITER27 VECTORS FLOAT written                                ┃
+field displacement_ITER28 VECTORS FLOAT written                                ┃
+field displacement_ITER29 VECTORS FLOAT written                                ┃
+field displacement_ITER30 VECTORS FLOAT written                                ┃
+field displacement_ITER31 VECTORS FLOAT written                                ┃
+field displacement_ITER32 VECTORS FLOAT written                                ┃
+field displacement_ITER33 VECTORS FLOAT written                                ┃
+field displacement_ITER34 VECTORS FLOAT written                                ┃
+field displacement_ITER35 VECTORS FLOAT written                                ┃
+field displacement_ITER36 VECTORS FLOAT written                                ┃
+field displacement_ITER37 VECTORS FLOAT written                                ┃
+field displacement_ITER38 VECTORS FLOAT written                                ┃
+field displacement_ITER39 VECTORS FLOAT written                                ┃
+field displacement_ITER40 VECTORS FLOAT written                                ┃
+field displacement_ITER41 VECTORS FLOAT written                                ┃
+field displacement_ITER42 VECTORS FLOAT written                                ┃
+field displacement_ITER43 VECTORS FLOAT written                                ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+field element_stresses TENSORS FLOAT written                                   ┃
+Elapsed time is 0.20481 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.22459 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START POSTPROCESSING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+element stresses processed                                                     ┃
+Elapsed time is 1.0923 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START VTK-WRITING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+1365 nodes written                                                             ┃
+1280 elements written                                                          ┃
+field CONDID_1 SCALARS FLOAT written                                           ┃
+field CONDID_2 SCALARS FLOAT written                                           ┃
+field CONDID_3 SCALARS FLOAT written                                           ┃
+field CONDID_4 SCALARS FLOAT written                                           ┃
+field displacement VECTORS FLOAT written                                       ┃
+field MATID_1 SCALARS FLOAT written                                            ┃
+field MATID_2 SCALARS FLOAT written                                            ┃
+field SUB_ID SCALARS FLOAT written                                             ┃
+field SubCenter_Diff VECTORS FLOAT written                                     ┃
+Elapsed time is 1.0396 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INFO━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+dat   -file:                                                                   ┃
+mesh  -file: ./mesh_5layers_16domains.msh                                      ┃
+output-file: ./output/mesh_5layers_16domains_fetis.vtk.1                       ┃
+matlab-version: 9.0.0.341360 (R2016a)                                          ┃
+calculated on : 10-Sep-2016 by lukas on xubuntu                                ┃
+git-hash: unknown                                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.17248 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.62351 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+16 subtructures created                                                        ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 6.73 seconds.                                                  ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+Neumann   conditions detected on substructures: 16                             ┃
+Elapsed time is 0.031979 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3
+Elapsed time is 0.78607 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.005674 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.5599e-25                           ┃
+Elapsed time is 0.044741 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 5.396e-07                                                           ┃
+after 82 iterations                                                            ┃
+Elapsed time is 2.3477 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.023196 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.030224 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.14205 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.67385 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+4 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 2.5586 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4                     ┃
+Neumann   conditions detected on substructures: 4                              ┃
+Elapsed time is 0.017866 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 5  8  8  8         ┃
+Elapsed time is 0.44059 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.005122 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 2.7828e-13                           ┃
+Elapsed time is 0.004997 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/AccumulateSubSol', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 363)" style="font-weight:bold">FETIBaseSolver/AccumulateSubSol</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',363,0)">line 363</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETI2Solver/Solve', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m', 125)" style="font-weight:bold">FETI2Solver/Solve</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETI2Solver.m',125,0)">line 125</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 115)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',115,0)">line 115</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+Residual = 6.0131e-07                                                          ┃
+after 27 iterations                                                            ┃
+Elapsed time is 0.37465 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/Solution', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 330)" style="font-weight:bold">FETIBaseSolver/Solution</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',330,0)">line 330</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 116)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',116,0)">line 116</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+Elapsed time is 0.013157 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('FETIBaseSolver/Solution', '/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m', 330)" style="font-weight:bold">FETIBaseSolver/Solution</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/solver/FETIBaseSolver.m',330,0)">line 330</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemBaseMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m', 117)" style="font-weight:bold">ProblemBaseMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemBaseMain.m',117,0)">line 117</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ProblemFETIMain/Work', '/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m', 47)" style="font-weight:bold">ProblemFETIMain/Work</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/prob/ProblemFETIMain.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac_main', '/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m', 47)" style="font-weight:bold">femac_main</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/FEMAC/femac_main.m',47,0)">line 47</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Run', '/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m', 12)" style="font-weight:bold">Run</a> (<a href="matlab: opentoline('/home/lukas/Desktop/SA_Thesis/studies/2016-08-18_EigenvalueDistribution/Run.m',12,0)">line 12</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.324482e-17.] 
+Elapsed time is 0.012446 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.14202 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.67256 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 2.9453 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.01911 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 3  3  0  3  3  3  3  3
+Elapsed time is 0.31765 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.004881 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.3274e-30                           ┃
+Elapsed time is 0.007281 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 9.0525e-10                                                          ┃
+after 46 iterations                                                            ┃
+Elapsed time is 0.34272 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.011571 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.01385 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.14789 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.6724 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 2.9669 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.018494 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 3  3  0  3  3  3  3  3
+Elapsed time is 0.32638 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.005867 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 4.3274e-30                           ┃
+Elapsed time is 0.006101 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 9.0525e-10                                                          ┃
+after 46 iterations                                                            ┃
+Elapsed time is 0.33403 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.009403 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.014247 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16801 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.60281 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 5.9344 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.026912 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3
+Elapsed time is 0.99811 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.005826 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.8341e-27                           ┃
+Elapsed time is 0.013987 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.7846e-08                                                          ┃
+after 52 iterations                                                            ┃
+Elapsed time is 0.65434 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.017192 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.024681 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.16299 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.59857 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 5.8685 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.028256 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3
+Elapsed time is 0.94343 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.005957 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 3.8341e-27                           ┃
+Elapsed time is 0.012303 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 4.7846e-08                                                          ┃
+after 52 iterations                                                            ┃
+Elapsed time is 0.63823 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.019702 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.028643 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.17117 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.60028 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 6.684 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.027951 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3
+Elapsed time is 1.1523 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as preconditioner                                               ┃
+Elapsed time is 0.000673 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 1.8566e-26                           ┃
+Elapsed time is 0.012452 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 3.545e-08                                                           ┃
+after 31 iterations                                                            ┃
+Elapsed time is 0.52563 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.025024 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.025827 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.18419 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.72252 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 6.6073 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.0355 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3
+Elapsed time is 1.255 seconds.                                                 ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.002037 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 7.2042e-27                           ┃
+Elapsed time is 0.014407 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 2.204e-08                                                           ┃
+after 40 iterations                                                            ┃
+Elapsed time is 0.61922 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.029161 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.034929 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.17298 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.66641 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 6.4612 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.033766 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3
+Elapsed time is 1.1488 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.000969 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 7.2042e-27                           ┃
+Elapsed time is 0.009967 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 2.204e-08                                                           ┃
+after 40 iterations                                                            ┃
+Elapsed time is 0.7041 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.034275 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.034615 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ______________  ______   ______            __  ______    _____   __      ┃
+     / ____/ ____/  |/  /   | / ____/           /  |/  /   |  /  _/ | / /      ┃
+    / /_  / __/ / /|_/ / /| |/ /      ______   / /|_/ / /| |  / //  |/ /       ┃
+   / __/ / /___/ /  / / ___ / /___   /_____/  / /  / / ___ |_/ // /|  /        ┃
+  /_/   /_____/_/  /_/_/  |_\____/           /_/  /_/_/  |_/___/_/ |_/         ┃
+  ©Lehrstuhl fuer Angewandte Mechanik - Technische Universitaet Muenchnen      ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START DIS READING━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.18423 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START RESOLVING CONDITIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+resolving dirichlet condition: ID:1 MSHTAG:1                                   ┃
+resolving dirichlet condition: ID:2 MSHTAG:2                                   ┃
+resolving neumann   condition: ID:3 MSHTAG:3                                   ┃
+resolving neumann   condition: ID:4 MSHTAG:4                                   ┃
+Elapsed time is 0.68092 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RESOLVE FETI MANAGER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+8 subtructures created                                                         ┃
+substructures resolved                                                         ┃
+substructures evaluated                                                        ┃
+connectivity matrices created                                                  ┃
+Elapsed time is 6.7167 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+APPLY KINEMATIC CONDITIONS ON SUBSTRUCTURES━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Dirichlet conditions detected on substructures: 1  2  3  4  5  6  7  8         ┃
+Neumann   conditions detected on substructures: 8                              ┃
+Elapsed time is 0.031262 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+FETI Base Setup━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Scaling: kscaling                                                              ┃
+Preconditioner: Lumped                                                         ┃
+FETISSolver.FETISSolver: rigid body modes of substructures: 0  3  3  3  3  3  3  3
+Elapsed time is 1.1624 seconds.                                                ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 SETUP━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+A-matrix taken as unity matrix                                                 ┃
+Elapsed time is 0.000822 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+INITIALIZE SOLVER━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Using assembled FI operator!                                                   ┃
+No Auxiliary Coarse Grid
+Coarse Grid C_ IS empty!                                                       ┃
+Check: Error of substructure equilibrium: 7.2042e-27                           ┃
+Elapsed time is 0.007048 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+START FETI2 ITERATIONS━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Residual = 2.204e-08                                                           ┃
+after 40 iterations                                                            ┃
+Elapsed time is 0.55702 seconds.                                               ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.020241 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 
+RECOVER DOMAIN SOLUTION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+Elapsed time is 0.027785 seconds.                                              ┃
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ 

@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+\begin{struktogramm}(150,120)
+\def\df2{0.4}
+\assign{\nassitext{\df2}{Initial projected residual} $\scaled{\lagvec}_0=\lagvec_0+\projn\lagvec_{00}$  }
+\assign{\nassitext{\df2}{Initial projected residual} $\resvec_0=\tp{\projn}(\ifacedispvec-\locdualschur\scaled{\lagvec}_0)$  }
+\assign{\nassitext{\df2}{???} $\Zmat_0=\scaled{\locschur}\begin{bmatrix} \cdots,\ids{\scaled{\asmop}} (\ids{\ifacedispvec}-\ids{\locdualschur}\ids{\asmop}{}^T\scaled{\lagvec}_0 ) ,\cdots \end{bmatrix}     $}
+\assign{\nassitext{\df2}{Project Residual to natural coarsegrid} $\sdirnspacemat_0=\projn\Zmat_0$}
+\assign{\nassitext{\df2}{Initialize} $\scaled{\lagvec}_0=0, i=0$  }
+
+\while[8]{\nassitext{\df2}{While not converged}  $\sqrt{ \tp{\resvec}\Zmat\dmat{1} }>\epsilon$} %8 decribes the with of the while box
+\assign{\nassitext{\df2}{Project search direction to coarse grid}   $\sdirnspacecspaceblock_{i}=\locdualschur\sdirnspacemat_i$}
+\assign{\nassitext{\df2}{What does that step do???}   $\Deltamat_i=\tp{\sdirnspacecspaceblock_i}\sdirnspacemat_i$}
+\assign{\nassitext{\df2}{What does that step do???}   $\dvec{\gamma}_i=\tp{\resvec_i} \Zmat_i$  }
+\assign{\nassitext{\df2}{???}   $\scaled{\lagvec}_{i+1}=\scaled{\lagvec}_i+\sdirnspacemat_i \pinv{\Deltamat_i} \dvec{\gamma}_i$}
+\assign{\nassitext{\df2}{Update residual}   $\resvec_{i+1}=\resvec_i-\tp{\projn}\sdirnspacecspaceblock_i\pinv{\Deltamat}_i\dvec{\gamma}_i$}
+\assign{\nassitext{\df2}{Precondition Residual}   $\Zmat_{i+1}=\scaled{\locschur}\tp{\projn}\sdirnspacecspaceblock_i $}
+\assign{\nassitext{\df2}{Project to ???}   $\sdirnspacemat_{i+1}=\projn\Zmat_{i+1}$}
+
+\while[8]{\nassitext{\df2}{Loop over previous iterations}  $\text{for:~}0\leq j \leq i$}
+\assign{\nassitext{\df2}{Compute ???}   $\dmat{\phi}_{i,j}=\tp{\sdirnspacecspaceblock}_j \sdirnspacemat_{i+1}$}
+\assign{\nassitext{\df2}{Orhorgonalize new direction}   $\sdirnspacemat_{i+1} \gets \sdirnspacemat_{i+1}-\sdirnspacemat_j\pinv{\Deltamat_j}\dmat{\phi}_{i,j}$}
+\whileend
+
+\assign{\nassitext{\df2}{Increase iteration counter}   $i \gets i+1$}
+\whileend
+\assign{\nassitext{\df2}{Compute total interface forces}   $\lagvec=\scaled{\lagvec}_i$}
+
+\end{struktogramm}
+\end{document}

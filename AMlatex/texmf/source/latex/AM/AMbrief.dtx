@@ -1,0 +1,172 @@
+% \iffalse meta-comment
+% !TEX program  = pdfLaTeX
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+\input docstrip.tex
+\keepsilent
+\askforoverwritefalse
+\preamble
+--------------------------------------------------------------------------------
+AMbrief <!AMreleaseVersion!> --- Class of the AMlatex-Bundle for letters
+E-mail: romain.pennec@tum.de
+Released under the LaTeX Project Public License v1.3c or later
+See http://www.latex-project.org/lppl.txt
+--------------------------------------------------------------------------------
+
+\endpreamble
+\postamble
+
+Copyright (c) 2008-2009 Rechen-Gilde <tum@rechengil.de>
+Copyright (C) 2015-2016 by R. Pennec <romain.pennec@tum.de>
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License (LPPL), either
+version 1.3c of this license or (at your option) any later
+version.  The latest version of this license is in the file:
+
+http://www.latex-project.org/lppl.txt
+
+This work is "maintained" (as per LPPL maintenance status) by
+Romain Pennec.
+
+This work consists of the file  AMbrief.dtx
+and the derived files           AMbrief.ins,
+                                AMbrief.pdf and
+                                AMbrief.cls.
+\endpostamble
+\usedir{tex/latex/AM/AMbrief}
+\generate{
+  \file{\jobname.cls}{\from{\jobname.dtx}{class}}
+}
+%</install>
+%<install>\endbatchfile
+%<*internal>
+\usedir{source/latex/AM/AMbrief}
+\generate{
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
+}
+\nopreamble\nopostamble
+\usedir{doc/latex/AM/AMbrief}
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+\RequirePackage{AMgit}
+%<*class>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{AMbrief}[\AMinsertGitDate{} \AMinsertGitVersion{} AM TUM letter]
+\ClassInfo{AMbrief}{Document class of the Institute of Applied Mechanics}
+%</class>
+%<*driver>
+\documentclass{AMdocumentation}
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{1.0}{2015/08/28}{First version}
+%
+%
+% \title{The \textcolor{white}{AMbrief} class}
+% \maketitle
+% \tableofcontents
+%
+% \section{License}
+% \InsertLicenseBlaBla
+%
+% \section{User guide}
+%
+% \begin{docEnvironment}{tumbrief}{}
+% \end{docEnvironment}
+%
+% \begin{docCommand}{Titel}{\marg{tile}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Vorname}{\marg{first name}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Nachname}{\marg{last name}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Stasse}{\marg{street}}
+% \end{docCommand}
+%
+% \begin{docCommand}{PLZ}{\marg{post code}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Ort}{\marg{city}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Telefonnr}{\marg{phone}}
+% Bitte Telefonnummern mit |\+| gruppieren
+% \end{docCommand}
+%
+% \begin{docCommand}{Telefax}{\marg{fax}}
+% Bitte Telefonnummern mit |\+| gruppieren
+% \end{docCommand}
+%
+% \begin{docCommand}{Email}{\marg{email}}
+% \end{docCommand}
+%
+% \begin{docCommand}{HTTP}{\marg{website}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Adresse}{\marg{destination address}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Anrede}{\marg{form of address}}
+% \end{docCommand}
+%
+% \begin{docCommand}{Gruss}{\marg{salutation}}
+% \end{docCommand}
+%
+% You will find an example in the template directory.
+%
+% \newpage
+% \setlength{\parskip}{1ex}
+% \section{Implementation}
+%
+%
+%
+%
+%    \begin{macrocode}
+%<*class>
+%    \end{macrocode}
+%
+%
+%
+%
+% This class is based on the class \PackageName{tumbrief.cls} provided by the TUM 
+% (under the LPPL Version 1.1).
+%
+% Copyright (c) 2008-2009 Rechen-Gilde
+%
+%
+%
+%
+%    \begin{macrocode}
+\pdfmapfile{+tumhelv.map}
+\LoadClass[MW,ngerman]{tumbrief}
+\Institut{Lehrstuhl f\"ur Angewandte Mechanik}
+\RequirePackage{AMref}
+\AMwritePdfMetaProperties{Created with AMbrief}
+%    \end{macrocode}
+%
+%
+%
+%
+%
+%
+%    \begin{macrocode}
+%</class>
+%    \end{macrocode}
+%
+% \Finale

@@ -1,0 +1,43 @@
+\documentclass[ngerman]{AMmasterArbeit}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{footnote}
+\usepackage{import}
+\usepackage{subcaption}
+
+\usepackage{mycommands}
+\addbibresource{Literatur.bib}
+
+\graphicspath{{Grafiken/GOptimierung/}{Grafiken/GTheorie/}}
+
+\author{Author Name}
+\title{Template for MasterArbeit}
+\date{30.\,09.~2013}
+\supervisor{Supervisor Name}
+
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[page={1},color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{template}
+
+\begin{document}
+\frontmatter
+\maketitle
+\include{Danksagung}
+\PrintTablesAndListsOfContents
+\mainmatter
+\include{Einleitung}
+\include{Theorie}
+\include{Optimierung}
+\include{Schluss}
+\backmatter
+\include{./Anhaenge/Averaging}
+\include{./Anhaenge/BeispielRotationspendel}
+\AMPrintBibliography
+\end{document}
+
+% Compilation process:
+pdflatex Masterarbeit.tex
+biber Masterarbeit
+pdflatex Masterarbeit.tex
+pdflatex Masterarbeit.tex

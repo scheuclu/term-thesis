@@ -1,0 +1,51 @@
+--------------------------------------------------------------------GENERAL
+PROBLEMTYPE        STRING           structure
+PROBLEMDIM         NUMERIC          2
+MESHFORMAT         STRING           msh
+MESHPATH           STRING           <thisdir>/logo.msh
+LOGFILE            STRING           <thisdir>/logo.log
+-------------------------------------------------------------------TAGTYPES
+DIRICH             NUMERIC         1
+NEUMANN            NUMERIC         2
+MATERIAL           NUMERIC         510
+------------------------------------------------------------------MATERIALS
+ST_VENANT_KIRCHOFF
+MATID 1 E 200 nu 0.0
+-----------------------------------------------------------------CONDITIONS
+DIRICHLET_CONDITION
+CONDID 1 ONOFF 1 1 VAL 0 0 MSHTAG 1
+
+NEUMANN_CONDITION
+CONDID 2 ONOFF 1 1 VAL 0.0 1.0 MSHTAG 2
+
+MATERIAL_CONDITION
+CONDID 3 MATID 1 MSHTAG 510
+---------------------------------------------------------------------SOLVER
+SOLVERNAME         STRING          StaticSolver
+-------------------------------------------------------------------POSTPROC
+ELESTRESSES        BOOL            true
+NODESTRESSES       BOOL            false
+ELESTRAIN          BOOL            false
+NODESTRAIN         BOOL            false
+---------------------------------------------------------------------OUTPUT
+WRITEEVERY         NUMERIC         2
+FORMAT             STRING          vtk
+PATH               STRING          <thisdir>
+NAME               STRING          logo
+------------------------------------------------------------------MATLABOUT
+PLOTSETUP         STRUCT            10
+ PLOTGEO          BOOL              true
+ PLOTBC           BOOL              false
+ LABNODES         BOOL              false
+ LABELE           BOOL              false
+ GRID             STRING            off
+ AXIS             STRING            off
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8
+ DIRICHCOLOR      NUMERIC           0,1,0
+ NEUMANNCOLOR     NUMERIC           1,0,0
+ FACEALPHA        NUMERIC           0.8
+PLOTRESULT        STRUCT            4
+ LABNODES         BOOL              false   
+ LABELE           BOOL              false
+ SURFCOLOR        NUMERIC           0.8,0.8,0.8
+ FACEALPHA        NUMERIC           0.8

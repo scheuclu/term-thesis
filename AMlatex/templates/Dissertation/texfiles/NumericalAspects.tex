@@ -1,0 +1,47 @@
+\chapter{Numerical Aspects} \label{chap:NumericalAspects}
+
+Following the process of \cref{fig:PIC_140418_Thesis_Overview}, the models are tested in parametric studies.
+The quality of the model is analyzed and the sensitivity on the crucial parameters is identified.
+The numerical aspects are addressed in this chapter.\par
+%
+The influence of the number of \els in the simulations is analyzed in \cref{sec:SimulationElements}.
+A minimal number for the simulations is found.
+It sets the bounds on the accuracy of the model on the global values.\\
+The difference between a smooth and a non-smooth simulation model is compared next.
+The stiffness between \els and \rings is changed as well as their friction description.
+Besides, the friction between \el-flanks and sheaves is analyzed, which yields conclusions on the non-smooth modeling for the system in \cref{sec:NonsmoothSimulations}.\\
+In \cref{sec:RingModels} different \ring models are compared \wrt local and global effects.
+It is shown, that a specific modeling for the \CVT dynamics improves the results.
+A glance at the spatial outputs shows possibilities for future projects. 
+A compromise between accuracy and computational cost has to be chosen for efficient simulation.\par
+
+To draw general conclusions about the parametric influence, the boundary conditions are varied as well.
+The settings are taken from measurements to ensure realistic settings.
+Three different loads are applied at three different ratios.
+In experiments the transmitted primary torque $M_P^1 = 30 \unit{Nm}$, $M_P^2 = 50 \unit{Nm}$ and $M_P^3 = 100 \unit{Nm}$ is varied.
+The values for $M_S^*$ and $F_S^*$ result from measurements of a reference belt.
+The measurements were conducted by \Bosch.
+All simulations run with the same $\omega_P$, i.e. $2000\ \unit{\RPM}$, as the belt speed has a minor influence on the behavior.
+Altogether, the nine \BCs are given in \cref{tab:BCCasesForParVar}.\\
+The analysis follows the idea to present the global influence on the system behavior at first.
+Mainly the thrust ratio \iF and the local efficiency \eff are given as the most important global measures.
+A local analysis follows explaining the main findings.
+Local and global output curves and values are utilized as examples.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|c c c c c c c c c}
+  \toprule
+   & BC01 & BC02 & BC03 & BC04 & BC05 & BC06 & BC07 & BC08 & BC09\\
+  \midrule
+  $i_s [\unit{-}]$  & 0.47 & 1.00 & 2.42 & 0.47 & 1.00 & 2.42 & 0.47 & 1.00 & 1.30\\
+  $M_P \unit{[Nm]}$ & 30   & 30   & 30   & 50   & 50   & 50   & 100  & 100  & 100\\
+  \bottomrule
+\end{tabular}
+\caption[Boundary conditions used for the parameter variations]{Boundary conditions used for the parameter variations. All cases use $\omega_P = 2000$ \RPM and a safety value of $S \approx 1.3$.}
+\label{tab:BCCasesForParVar}
+\end{table}
+
+%\input{NA_SimulationElements}
+%\input{NA_NonSmoothSimulations}
+%\input{NA_RingModels}

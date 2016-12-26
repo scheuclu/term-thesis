@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage{amsmath}
+\input{\mainpath/customcommands}
+
+\input{\mainpath/colordefinitions}
+
+\begin{document}
+
+
+\begin{tikzpicture}
+
+
+\begin{semilogyaxis}[xmin=0.01,
+width=6cm,
+height=5cm,
+xmax=1,xlabel={$\rho$}, ylabel={$\lambda_{min} \tau$}, samples=1000,cycle list name=linelist]
+  \addplot+[thick] (x,1/x*1/x-1);
+\end{semilogyaxis}
+\end{tikzpicture}
+
+
+\end{document}

@@ -1,0 +1,370 @@
+\documentclass[handout]{AMbeamer}
+\usepackage[skins,listings,xparse]{tcolorbox}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{AMmath}
+\usepackage{hologo}
+\usepackage{csquotes}
+
+\title{AM\LaTeX}
+\subtitle{Introduction Presentation}
+\author{Romain Pennec}
+%\date{Tuesday, July 14, 2015}
+
+\newcommand{\tumprintcolor}[1]{ \draw[fill=#1,draw=white] (0,0) rectangle (1.618,1); }
+\newcommand{\tumprintlabel}[1]{ \node[right,font=\ttfamily] at (0,0.5) {#1}; }
+
+\DeclareTotalTCBox{\cmdbox}{ s O{>} v }{
+    before upper={\vphantom{dlg}},
+    verbatim,boxsep=0pt,tcbox raise base,
+    colframe=TUMDarkBlue,colupper=TUMDarkBlue,
+    colback=TUMDarkBlue!5!white,
+    top=2.5pt,bottom=1pt,boxrule=0.4pt,left=2pt,right=2pt,arc=2pt,
+  }{%
+    \IfBooleanTF{#1}{}{\textcolor{TUMBlue}{\ttfamily\bfseries #2\,}}%
+	\lstinline[%
+	  language=bash,morekeywords={tex,latex,pdflatex},
+	  keywordstyle={\color{TUMBlue}\bfseries}
+    ]^#3^
+}
+
+\newtcblisting{bashshell}[1][]{
+	colback=TUMDarkBlue!5!white,
+	colupper=TUMDarkBlue,
+	colframe=TUMBlue,
+	top=0pt,bottom=0pt,
+	listing engine=listings,
+	listing only,boxrule=0.6pt,
+	listing options={style=tcblatex,language=sh,keywordstyle={\color{TUMBlue}\bfseries}
+		,escapeinside={(*@}{@*)}
+		,morekeywords={ls,ln,rm,mkdir,git,cp,grep,ldd,qmake,make,source,sudo,chmod,wget}},
+	every listing line*={\textcolor{TUMBlue}{\ttfamily\bfseries \$> }},
+	fonttitle=\bfseries,size=fbox,
+	#1
+}
+
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Questions you may have}
+
+\begin{itemize}
+\item Why new classes?
+\item Is it compatible with the current classes?
+\item What are the differences?
+\item How to install it on my computer?
+\item Where can I find the documentation?
+\item Does it changes the way I tex?
+\item What about the students?
+\item How to contribute?
+\item Which AMlatex directory is the right one?
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Until now...}
+
+\parbox{0.4\textwidth}{
+\begin{tikzpicture}[>=latex]
+\node (Ad) at (0,0) {AMdiss.cls};
+\node[anchor=north west] (Ap) at (Ad.south west) {AMpaper.cls};
+\node[anchor=north west] (Adip) at (Ap.south west) {AMdiplom.cls};
+\node[anchor=north west] (At) at (Adip.south west) {AMtools.sty};
+\node[anchor=south east,yshift=2em] (dtx) at (Ad.north) {AMclasses.dtx};
+\draw[->,TUMblue] (dtx) to[bend right] (Ad.west);
+\draw[->,TUMblue] (dtx) to[bend right] (Ap.west);
+\draw[->,TUMblue] (dtx) to[bend right] (Adip.west);
+\draw[->,TUMblue] (dtx) to[bend right] (At.west);
+\end{tikzpicture}
+}
+%
+\hfill
+\parbox{0.5\textwidth}{
+\begin{itemize}
+\item Classes are copied in the directory
+\item Logos are copied in the directory
+\item Modification is only local
+\item Bases on \hologo{KOMAScript}
+\end{itemize}
+}
+
+%\begin{tcolorbox}[enhanced,frame hidden,interior hidden]
+%AMdiplom \\ AMpaper \\ AMdiss \\ AMtools
+%\end{tcolorbox}
+
+\end{frame}
+
+
+\begin{frame}{Soon...}
+
+\begin{itemize}\setlength\itemsep{1.1em}
+\item Minimal package restriction
+\item Many independent packages 
+\item One \texttt{dtx}-file for each package/class
+\item Modern standards for \LaTeX
+\item Development supported by \texttt{Git}
+\item Possible to share modifications
+\item Clean working directory
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Already available}
+
+\textbf{packages:}
+\medskip
+\begin{tcolorbox}[colframe=TUMBlue,colback=white]
+\centering
+\begin{tabular}{p{3cm}p{3cm}p{3cm}}
+AMcolor & AMmath & AMbiblio \\[1ex]
+AMfont & AMgraphic & AMlang \\[1ex]
+AMlayout & AMlogo & AMref \\[1ex]
+AMtitlepage & AMtikz & AMutils \\
+\end{tabular}
+\end{tcolorbox}
+
+\smallskip
+\textbf{classes:}
+\medskip
+\begin{tcolorbox}[colframe=TUMBlue,colback=white]
+\centering
+\begin{tabular}{p{2cm}p{3cm}p{3cm}}
+AMbeamer & AMmasterArbeit & AMdocumentation \\
+AMposter & AMbachelorArbeit & AMsemesterArbeit \\
+\end{tabular}
+\end{tcolorbox}
+
+\end{frame}
+
+\begin{frame}[fragile]{AMcolor}
+ \footnotesize
+\centering
+ \hspace*{-5mm}
+ \begin{tikzpicture}
+ \matrix [column sep=1mm,y=5mm,x=5mm,row sep=2mm]
+ {
+	\tumprintcolor{TUMBlue} & \tumprintlabel{TUMBlue};  &[5mm] 
+   \tumprintcolor{TUMGreen} & \tumprintlabel{TUMGreen}; &[5mm] 
+   \tumprintcolor{TUMOrange} & \tumprintlabel{TUMOrange}; &[5mm] 
+   \tumprintcolor{TUMIvory} & \tumprintlabel{TUMIvory};  \\
+ };	 
+ \end{tikzpicture}
+
+\vskip3mm
+ \begin{tikzpicture}
+ \def\colcolsep{1cm}
+ \matrix [column sep=1mm,y=5mm,x=5mm,row sep=2mm]
+ {%
+	\tumprintcolor{TUMDiag1} & \tumprintlabel{TUMDiag1};  &[\colcolsep] 
+   \tumprintcolor{TUMDiag7} & \tumprintlabel{TUMDiag7}; &[\colcolsep] 
+   \tumprintcolor{TUMDiag13} & \tumprintlabel{TUMDiag13};  \\
+
+	\tumprintcolor{TUMDiag2} & \tumprintlabel{TUMDiag2};  &[\colcolsep] 
+   \tumprintcolor{TUMDiag8} & \tumprintlabel{TUMDiag8}; &[\colcolsep] 
+   \tumprintcolor{TUMDiag14} & \tumprintlabel{TUMDiag14};  \\
+
+	\tumprintcolor{TUMDiag3} & \tumprintlabel{TUMDiag3};  &[\colcolsep] 
+   \tumprintcolor{TUMDiag9} & \tumprintlabel{TUMDiag9}; &[\colcolsep] 
+   \tumprintcolor{TUMDiag15} & \tumprintlabel{TUMDiag15};  \\
+
+	\tumprintcolor{TUMDiag4} & \tumprintlabel{TUMDiag4};  &[\colcolsep] 
+   \tumprintcolor{TUMDiag10} & \tumprintlabel{TUMDiag10}; &[\colcolsep] 
+   \tumprintcolor{TUMDiag16} & \tumprintlabel{TUMDiag16};  \\
+
+	\tumprintcolor{TUMDiag5} & \tumprintlabel{TUMDiag5};  &[\colcolsep] 
+   \tumprintcolor{TUMDiag11} & \tumprintlabel{TUMDiag11}; &[\colcolsep] 
+   \tumprintcolor{TUMDiag17} & \tumprintlabel{TUMDiag17};  \\
+
+	\tumprintcolor{TUMDiag6} & \tumprintlabel{TUMDiag6};  &[\colcolsep] 
+   \tumprintcolor{TUMDiag12} & \tumprintlabel{TUMDiag12}; &[\colcolsep] 
+   \tumprintcolor{TUMDiag18} & \tumprintlabel{TUMDiag18};  \\[3mm]
+
+	\tumprintcolor{TUMGray} & \tumprintlabel{TUMGray};  &[5mm] 
+   \tumprintcolor{TUMDarkGray} & \tumprintlabel{TUMDarkGray}; &[5mm] 
+   \tumprintcolor{TUMLightGray} & \tumprintlabel{TUMLightGray}; \\
+ };	 
+ \end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[t,fragile]{AMmath}
+\renewcommand{\arraystretch}{1.2}
+  \centering\footnotesize
+  \begin{tabular}{>{\begin{math}}l<{\end{math}}>{\color{TUMBlue}}l<{\qquad}>{\begin{math}}l<{\end{math}}>{\color{TUMBlue}}l}
+    \e             & \verb|\e|    &     \dd{x}      & \verb|\dd| \\
+    \konstante{Re} & \verb|\konstante{Re}| &    \vdot{r} & \verb|\vdot\{r\}| \\
+    \const         & \verb|\const|   &   \vddot{r} & \verb|\vddot\{r\}| \\
+    \prox & \verb|\prox| &  \vprox & \verb|\vprox| \\
+    \MR      & \verb|\MR|      &%
+    \MC      & \verb|\MC|      \\
+    \MQ      & \verb|\MQ|      &%
+    \MZ      & \verb|\MZ|      \\
+    \Mone    & \verb|\Mone|    &%
+    \MN      & \verb|\MN|      \\
+    \eqhat   & \verb|\eqhat|   &%
+    \eqexcl  & \verb|\eqexcl|  \\
+    \eqdef   & \verb|\eqdef|   &
+    \defined & \verb|\defined| \\
+    \asin    & \verb|\asin|    &%
+    \acos    & \verb|\acos|    \\
+    \atan    & \verb|\atan|    &%
+    \dive    & \verb|\dive|    \\
+    \sgn     & \verb|\sgn|     &%
+    \order(n)   & \verb|\order(n)| \\
+    \real\left\{A\right\} & \verb|\real\{A\}| &%
+    \imag\left\{A\right\} & \verb|\imag\{A\}| \\
+    \abs{\vA}  & \verb|\abs{\vA}|  &%
+    \norm{\vA} & \verb|\norm{\vA}| \\
+    \proj_{\ve}\vr_{OK}      & \verb|\proj_{\ve}\vr_{OK}| &%
+    \pdiff{f(x)}{{x_j}} & \verb|\pdiff{f(x)}{{x_j}}| \\
+  \end{tabular}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{AMmath}
+\centering\footnotesize
+\begin{tabular}{*{3}{>{\color{TUMBlue}$}l<{$}l!{\quad}}>{\color{TUMBlue}$}l<{$}l}
+    \vnull & \verb|\vnull| &
+    \vone  & \verb|\vone| \\
+    \va & \verb|\va| &
+    \vb & \verb|\vb| &
+    \vc & \verb|\vc| &
+    \vd & \verb|\vd| \\
+    \ve & \verb|\ve| &
+    \vf & \verb|\vf| &
+    \vg & \verb|\vg| &
+    \vh & \verb|\vh| \\
+    \vi & \verb|\vi| &
+    \vj & \verb|\vj| &
+    \vk & \verb|\vk| &
+    \vl & \verb|\vl| \\
+    \vm & \verb|\vm| &
+    \vn & \verb|\vn| &
+    \vo & \verb|\vo| &
+    \vp & \verb|\vp| \\
+    \vq & \verb|\vq| &
+    \vr & \verb|\vr| &
+    \vs & \verb|\vs| &
+    \vt & \verb|\vt| \\
+    \vu & \verb|\vu| &
+    \vv & \verb|\vv| &
+    \vw & \verb|\vw| &
+    \vx & \verb|\vx| \\
+    \vy & \verb|\vy| &
+    \vz & \verb|\vz| \\
+    \valpha   & \verb|\valpha| &
+    \vbeta    & \verb|\vbeta| &
+    \vgamma   & \verb|\vgamma| &
+    \vdelta   & \verb|\vdelta| \\
+    \vepsilon & \verb|\vepsilon| &
+    \vzeta    & \verb|\vzeta| &
+    \veta     & \verb|\veta| &
+    \vtheta   & \verb|\vtheta| \\ 
+    \viota    & \verb|\viota| &
+    \vkappa   & \verb|\vkappa| &
+    \vlambda  & \verb|\vlambda| &
+    \vmu      & \verb|\vmu| \\
+    \vnu      & \verb|\vnu| &
+    \vxi      & \verb|\vxi| &
+    \vpi      & \verb|\vpi| &
+    \vrho     & \verb|\vrho| \\
+    \vsigma   & \verb|\vsigma| &
+    \vtau     & \verb|\vtau| &
+    \vupsilon & \verb|\vupsilon| &
+    \vphi     & \verb|\vphi| \\
+    \vchi     & \verb|\vchi| &
+    \vpsi     & \verb|\vpsi| &
+    \vomega   & \verb|\vomega| \\
+    \vGamma   & \verb|\vGamma| &
+    \vDelta   & \verb|\vDelta| &
+    \vTheta   & \verb|\vTheta| &
+    \vLambda  & \verb|\vLambda| \\
+    \vXi      & \verb|\vXi| &
+    \vPi      & \verb|\vPi| &
+    \vSigma   & \verb|\vSigma| &
+    \vUpsilon & \verb|\vUpsilon| \\
+    \vPhi     & \verb|\vPhi| &
+    \vPsi     & \verb|\vPsi| &
+    \vOmega   & \verb|\vOmega| \\
+  \end{tabular}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{How to install AMlatex?}
+
+\begin{enumerate}
+\item Get a AM\LaTeX{} texmf directory
+\item Make your system aware of it
+\end{enumerate}
+
+\pause
+
+\bigskip
+\textbf{Where?}
+\begin{itemize}
+\item \verb|common/Vorlagen/AMlatex/texmf|
+\item \verb|software/AMlatex/texmf|
+\item intranet $\to$ LaTeX $\to$ zip-Archiv
+\item {\color{red} \url{https://gitlab.lrz.de/AM/AMlatex/wikis/Releases}}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{On Windows (\hologo{MiKTeX})}
+
+\begin{enumerate}\setlength\itemsep{1.5em}
+\item Open \hologo{MiKTeX} settings (Admin)
+\item Go in tab \enquote{Roots}
+\item Add texmf path  {\small(example: \verb|software/AMlatex/texmf|)}
+\item Go in tab \enquote{General}
+\item Clic button \enquote{Refresh FNDB}
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{On Linux}
+
+\textbf{Easy way:} enter in a terminal
+\begin{bashshell}
+cd common/Vorlagen/AMlatex/
+./setup.sh install texhash default
+\end{bashshell}
+
+\bigskip
+\textbf{With Git:}
+\begin{bashshell}
+git clone git@gitlab.lrz.de:AM/AMlatex.git
+AMlatex/setup.sh extract all
+AMlatex/setup.sh install
+\end{bashshell}
+
+\vfill
+\emph{Both methods should also work on MAC OS}
+
+\emph{They work also under Windows with \color{red}\href{https://git-for-windows.github.io/}{Git Bash}}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Incoming work}
+
+\begin{itemize}\renewcommand{\itemsep}{20pt}
+\item Update Documentation (AMclsguide.pdf)
+\item Package \verb|AMvideo| for video inclusion.
+\item More informations on \color{TUMBlue}\url{https://gitlab.lrz.de/AM/AMlatex}
+\end{itemize}
+
+\end{frame}
+
+
+
+\end{document}
+
+
+

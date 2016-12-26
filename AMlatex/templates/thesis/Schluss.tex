@@ -1,0 +1,121 @@
+\chapter{Zusammenfassung und Ausblick}
+\label{cha:Schluss}
+
+Im Rahmen der vorliegenden Masterarbeit wurden 
+Untersuchungen zur optimalen Auslegung von Fliehkraftpendeln durchgeführt.
+
+
+Es wurde allgemein hergeleitet, wie das optimale lineare Tuning $k$
+eines Fliehkraftpendels zu bestimmen ist, was nun direkt in den Entwurfsprozess
+aufgenommen werden kann.
+Untersuchungen des Einflusses eines verallgemeinerten Rotationsgradienten 
+und  des Einflusses von  nichtlinearem Mistuning auf das Systemverhalten wurden durchgeführt.
+Aus den dabei gewonnenen Erkenntnissen wurden
+Aussagen und Vorschläge zur gezielten Beeinflussung und Optimierung
+der Fliehkraftpendelwirkung durch spezielle Wahl des Rotationsgradienten
+und des Mistunings abgeleitet.
+
+
+
+
+% Zusammenfassung der Punkte
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simulation und Bogenlängenverfahren
+Die Untersuchungen wurden auf Basis der Averaging-Gleichungen, welche eine 
+Approximation der stationären Systemantwort  darstellen,  durchgeführt.
+Da die Systemantwort stark nichtlineares Verhalten mit kritischen Punkten
+(horizontale und vertikale Tangenten im Gleichgewichtspfad) aufweist, ist
+es nicht möglich diese in geschlossener Form zu lösen.
+Um eine systematische, numerische Lösung der Gleichungen zu ermöglichen und etwaige 
+Schwierigkeiten klassischer Lösungsverfahren bei kritischen Punkten
+zu vermeiden, wurde in dieser Arbeit ein Bogenlängenverfahren implementiert,
+welches bei den weiteren Untersuchungen zur Anwendung kam.
+Darüber hinaus wurde ein Simulationsprogramm erstellt, 
+mit welchem  die Aussagekraft der auf Basis der Averaging-Gleichungen 
+prognostizierten  Systemantwort durch Vergleich mit den Ergebnissen 
+aus der Simulation der vollständigen, nichtlinearen 
+Bewegungsgleichungen des dynamischen Fliehkraftpendelsystems
+verifiziert wurde.
+
+
+
+
+% Optimales Tuning
+Die Schwingungsreduktionswirkung eines Fliehkraftpendels mit linearem Tuning $k=k_E$ 
+ist durch den Einfluss von viskoser Dämpfung  bei der Anregungsordnung $k_E$ nicht optimal.
+Das gedämpfte Fliehkraftpendel zeigt nicht bei der Anregungsordnung $k_E$ beste Wirkung,
+sondern der Punkt bester Absorberwirkung verschiebt sich zu einer 
+anderen Anregungsordnung. 
+Durch die Wahl des Absorbertunings $k$ wird eine Veränderung der Geometrie und somit
+eine Veränderung der Dynamik erreicht, womit
+dem ungewünschten Einfluss der viskosen Dämpfung entgegengewirkt werden kann. 
+In dieser Arbeit wurde eine  analytische Bedingung, mit welcher das optimale Tuning $k$ eines
+Fliehkraftpendels unter Berücksichtigung linear viskoser Dämpfung bestimmt
+und somit direkt im Entwurfsprozess berücksichtigt werden kann, hergeleitet.
+%
+Damit kann nun  bereits im Auslegungsprozess dem suboptimalen Einfluss der Dämpfung 
+vorgebeugt und optimale Absorberwirkung bei der auftretenden 
+Anregungsordnung $k_E$ erreicht werden.  
+%
+Durch den aus der analytischen Bedingung berechneten Wert für das optimale 
+Tuning $k$ bleibt die tautochrone Eigenschaft des Fliehkraftpendels erhalten
+und es besitzt optimale Schwingungsreduktionswirkung bei der
+auftretenden Anregungsordnung. 
+
+ 
+% Rotationsgradient
+In dieser Arbeit wurde der in \cite{Mayet:Tautochronic} als 
+konstant vorgeschlagene Gradient $\frac{\partial \bar{\alpha}}{\partial s}$ 
+als Reihe angesetzt und damit der Einfluss eines verallgemeinerten Rotationsgradienten 
+auf die Absorberwirkung untersucht. 
+Auf Basis der Averaging-Gleichungen konnte für die im Rahmen dieser Arbeit getroffenen
+Ansätze durch den verallgemeinerten Rotationsgradienten eine scheinbare
+Verbesserung der Absorberperformance erzielt werden, welche allerdings durch die
+vollständige Simulation nicht bestätigt werden konnte.
+Die Averaging-Gleichungen bildeten unter Berücksichtigung des verallgemeinerten Rotationsgradienten das Systemverhalten 
+nur in äußerst kleinen Bereichen hinreichend  genau ab.
+Auch bei der Erweiterung der getroffenen Ansätze um Terme höherer Ordnung
+konnte keine Verbesserung der Absorberperformance %durch einen verallgemeinerten Rotationsgradienten 
+erreicht werden. 
+Die in dieser Arbeit durchgeführten Untersuchungen bestätigten, dass für ein Rotationspendel
+mit den im Rahmen dieser Arbeit zugrunde gelegten  Ansätzen die Wahl von  
+$\frac{\partial \bar{\alpha}}{\partial s} = \sqrt{\mu_r/(1+\mu_r)}= \const$,
+wie in \cite{Mayet:Tautochronic} vorgeschlagen, wahrscheinlich
+optimal ist. 
+Diese Erkenntnis wurde bei der weiteren Untersuchung des Einflusses von
+nichtlinearem Mistuning berücksichtigt. 
+
+% Untersuchung Mistuning
+Durch den gezielten Einsatz von nichtlinearem Mistuning konnte die Robustheit
+eines Absorbers  gegenüber Änderungen in der Anregungsordnung deutlich gesteigert werden.
+Dabei wird der Anstieg der Absorberamplitude und der  Drehungleichförmigkeit 
+zu deutlich größeren Anregungsordnungen verschoben.
+Dadurch wurde die Gefahr zum Sprung in der Absorberamplitude, welche für
+ein Kreisbahnpendel typisch ist und wozu ein tautochrones Rotationspendel 
+auch tendiert, deutlich abgemildert. 
+Die drastische Performanceverschlechterung, welche beim Sprung
+der Absorberamplitude zwangsweise auftreten würde, wurde damit unterbunden.
+Des Weiteren wird beim Einsatz von nichtlinearem Mistuning die Performance 
+bei der Anregungsordnung, für welche das Fliehkraftpendel ausgelegt ist,
+im Rahmen der Näherung durch die Averaging-Gleichungen nicht beeinflusst.
+Der Einfluss des auf Basis der Averaging-Gleichungen ermittelten Vorschlags für das
+nichtlineare Mis"-tuning konnte durch die nichtlineare, vollständige Simulation bestätigt werden. 
+Da das prognostizierte Systemverhalten durch die Averaging-Gleichungen 
+nahezu identisch mit  den Ergebnissen der Simulation ist,
+wird das stationäre Absorberverhalten durch die Averaging-Gleichungen sehr gut approximiert.
+Die auf Basis der Averaging-Gleichungen unter Berücksichtigung von 
+nichtlinearem Mistuning prognostizierte Absorberantwort ist als Auslegungskriterium für den Fliehkraftpendelentwurf
+sehr gut geeignet.
+
+
+Im Rahmen dieser Arbeit konnte das Verhalten mehrerer Fliehkraftpendel
+und die damit verbundenen Effekte wie beispielsweise asynchrones Verhalten
+nicht untersucht werden. 
+Eine mögliche und vielversprechende Anwendung wäre der Einsatz von 
+nichtlinearem Mis"-tuning bei Absorbersystemen mit mehreren Freiheitsgraden.
+Dabei könnte das nichtlineare Mistuning signifikante Effekte bezüglich
+der Vermeidung von asynchronen Pendelbewegungen besitzen.
+Zur genauen  Beurteilung solcher Effekte sind aber noch detaillierte Untersuchungen nötig.
+
+
+

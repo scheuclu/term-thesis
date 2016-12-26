@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+\begin{tikzpicture}
+\begin{semilogxaxis}[legend style={at={(0.5,-0.2)}, anchor=north,legend columns=-1}, ylabel={$2 \Big( \frac{\sqrt{\lambda_{max}/\lambda_{min}}-1}{\sqrt{\lambda_{max}/\lambda_{min}}+1} \Big)^i$}, xlabel={$\lambda_{max}/\lambda_{min}$}, nodes near coords align={vertical}, cycle list name=linelist ]
+
+\addplot+[thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-23_ErrorEstimationPCG/data/relative_error.txt};
+
+\addplot+[thick] table [skip first n=0,x index=0, y index=2, col sep=comma] {\studypath/2016-08-23_ErrorEstimationPCG/data/relative_error.txt};
+
+\addplot+[thick] table [skip first n=0,x index=0, y index=3, col sep=comma] {\studypath/2016-08-23_ErrorEstimationPCG/data/relative_error.txt};
+
+\addplot+[thick] table [skip first n=0,x index=0, y index=4, col sep=comma] {\studypath/2016-08-23_ErrorEstimationPCG/data/relative_error.txt};
+
+\addplot+[thick] table [skip first n=0,x index=0, y index=5, col sep=comma] {\studypath/2016-08-23_ErrorEstimationPCG/data/relative_error.txt};
+
+\legend{i=1,i=2,i=3,i=10,i=100}
+
+%%\title{plane-strain};
+%\node[anchor=north east] at (rel axis cs:1,1) {$\frac{E_{inclusion}}{E_{lattice}}=0.9$~~~};
+%\legend{FETI-1,FETI-2(Geneo),FETI-S} 
+\end{semilogxaxis} 
+\end{tikzpicture}
+\hspace{0.5cm}
+%
+
+
+\end{document}

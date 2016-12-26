@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{AMcolor}
+\usepackage[theme=libertine]{AMfont}
+\usepackage{lmodern}
+\usepackage{shadowtext}
+\newcommand{\logolatex}{%
+%  \fontfamily{lmr}%
+  \fontseries{m}\fontsize{14pt}{1cm}\selectfont%%
+  \LaTeX%
+}
+\newcommand{\textAM}{%
+  \shadowcolor{TUMIvory}\hskip-0.7ex\slshape\shadowtext{AM}
+}
+
+\begin{document}\Huge
+\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0,scale=4}]
+\begin{scope}
+\node[TUMBlue] (AM) at (0,0) {\textAM};
+\node[TUMGreen,anchor=north east,xshift=1pt] (L) at (AM.north west) {$\{$};
+\node[TUMGreen,anchor=north west,xshift=1pt] (R) at (AM.north east) {$\}$};
+\node[anchor=north,yshift=-0.4ex] at (AM.south) {\logolatex};
+\node[anchor=south,yshift=0.5ex] at (AM.north) {};
+\node[anchor=north,yshift=-0.5ex] at (L.south) {};
+\node[TUMGreen,anchor=west,yshift=3pt,xshift=18pt] (W) at (AM.south east) {Wiki};
+\node at (0,-4) {};
+\node[xshift=0.5ex] at (W.east) {};
+\end{scope}
+\end{tikzpicture}
+\end{document}

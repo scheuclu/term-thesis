@@ -1,0 +1,195 @@
+%TODO make a package for this purpose
+\usepackage[toc,xindy,acronym,nopostdot]{glossaries} 
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{glossary-mcols}
+
+% ===== STYLE =======
+\makeatletter
+\renewcommand*{\@glossarysection}[2]{%
+\ifx\@@glossarysecstar\@empty
+\else
+\@gls@toc{#1}{\@@glossarysec}%
+\fi
+\@@glossaryseclabel}
+\makeatother
+% ================
+
+\newacronym{ancf}{ANCF}{absolute nodal coordinate formulation}
+\newacronym{ale}{ALE}{arbitrary Lagrangian-Eulerian}
+\newacronym{bc}{BC}{basis case}
+\newacronym{bosch}{BTT}{Bosch Transmission Technology B.V.}
+\newacronym{cog}{COG}{center of gravity}
+\newacronym{cpu}{CPU}{central processing unit}
+\newacronym{cvt}{CVT}{continuously variable transmission}
+\newacronym[longplural={degrees of freedom}]{dof}{DOF}{degree of freedom}  
+\newacronym{daf}{DAF}{Doorne Automobiel Fabriek}  
+\newacronym[longplural={equations of motion}]{eom}{EOM}{equation of motion}
+\newacronym{ein}{EIN}{element impact noise}
+\newacronym{fe}{FE}{finite element}
+\newacronym{fem}{FEM}{finite element method}
+\newacronym{ffr}{FFR}{floating frame of reference}
+\newacronym{fft}{FFT}{fast Fourier transformation}
+\newacronym{lcp}{LCP}{linear complementarity problem}
+\newacronym{ls}{LS}{lower strand}
+\newacronym{lrvm}{LRVM}{large rotation vector method}
+\newacronym{mbs}{MBS}{multibody system}
+\newacronym{mbsim}{MBSim}{multibody simulator}
+\newacronym{med}{MED}{medium}
+\newacronym{ncp}{NCP}{nonlinear complementarity problem}
+\newacronym{nvh}{NVH}{noise, vibration and harshness}
+\newacronym{od}{OD}{overdrive}
+\newacronym{oep}{OEP}{operational endplay}
+\newacronym{pri}{PRI}{primary arc}
+\newacronym{re}{RE}{rocking-edge} 
+\newacronym{rcm}{RCM}{redundant coordinate method} 
+\newacronym{rpm}{RPM}{\ensuremath{\text{revolutions\ per\ minute}}}
+\newacronym{sr}{SR}{speed ratio} 
+\newacronym{sec}{SEC}{secondary arc}
+\newacronym{tap}{TAP}{turnaround point}
+\newacronym{tr}{TR}{thrust ratio} 
+\newacronym{ud}{UD}{underdrive}
+\newacronym{us}{US}{upper strand}
+\newacronym{wrt}{wrt.}{with respect to}
+
+\makeglossaries
+
+\newcommand{\ANCF}{\gls{ancf}\xspace}
+\newcommand{\ALE}{\gls{ale}\xspace}
+\newcommand{\BC}{\gls{bc}\xspace}
+\newcommand{\BCs}{\glspl{bc}\xspace}
+\newcommand{\Bosch}{\gls{bosch}\xspace}
+\newcommand{\COG}{\gls{cog}\xspace}
+\newcommand{\CPU}{\gls{cpu}\xspace}
+\newcommand{\CVT}{\gls{cvt}\xspace}
+\newcommand{\CVTs}{\glspl{cvt}\xspace}
+\newcommand{\DAF}{\gls{daf}\xspace}
+\newcommand{\DOF}{\gls{dof}\xspace}
+\newcommand{\DOFs}{\glspl{dof}\xspace} 
+\newcommand{\dofs}{\DOFs} 
+\newcommand{\EIN}{\gls{ein}\xspace}
+\newcommand{\EOM}{\gls{eom}\xspace}
+\newcommand{\EOMs}{\glspl{eom}\xspace}
+\newcommand{\eom}{\EOMs}
+\newcommand{\FE}{\gls{fe}\xspace}
+\newcommand{\FEs}{\glspl{fe}\xspace}
+\newcommand{\FEM}{\gls{fem}\xspace}
+\newcommand{\FFR}{\gls{ffr}\xspace}
+\newcommand{\FFT}{\gls{fft}\xspace}
+\newcommand{\LCP}{\gls{lcp}\xspace} 
+\newcommand{\LCPs}{\glspl{lcp}\xspace}
+\newcommand{\LS}{\gls{ls}\xspace}
+\newcommand{\LRVM}{\gls{lrvm}\xspace}
+\newcommand{\MBS}{\gls{mbs}\xspace}
+\newcommand{\MBSs}{\glspl{mbs}\xspace}
+\newcommand{\MBSim}{\gls{mbsim}\xspace}
+\newcommand{\MED}{\gls{med}\xspace}
+\newcommand{\NCP}{\gls{ncp}\xspace}
+\newcommand{\NVH}{\gls{nvh}\xspace}
+\newcommand{\OD}{\gls{od}\xspace}
+\newcommand{\OEP}{\gls{oep}\xspace}
+\newcommand{\PRI}{\gls{pri}\xspace}
+\newcommand{\RE}{\gls{re}\xspace}
+\newcommand{\RCM}{\gls{rcm}\xspace}
+\newcommand{\RPM}{\gls{rpm}\xspace}
+\newcommand{\SEC}{\gls{sec}\xspace}
+\newcommand{\SR}{\gls{sr}\xspace}
+\newcommand{\TAP}{\gls{tap}\xspace}
+\newcommand{\TR}{\gls{tr}\xspace}
+\newcommand{\UD}{\gls{ud}\xspace}
+\newcommand{\US}{\gls{us}\xspace}
+\newcommand{\wrt}{\gls{wrt}\xspace}
+
+%% Just shortcuts in the text
+
+\newcommand{\el}{element\xspace}
+\newcommand{\El}{Element\xspace}
+\newcommand{\els}{elements\xspace}
+\newcommand{\Els}{Elements\xspace}
+\newcommand{\head}{head\xspace}
+\newcommand{\Head}{Head\xspace}
+\newcommand{\heads}{heads\xspace}
+\newcommand{\Heads}{Heads\xspace}
+\newcommand{\PFT}{Push-Force-Tester\xspace}
+\newcommand{\pulley}{pulley\xspace}
+\newcommand{\Pulley}{Pulley\xspace}
+\newcommand{\pulleys}{pulleys\xspace}
+\newcommand{\Pulleys}{Pulleys\xspace}
+\newcommand{\ring}{ring\xspace}
+\newcommand{\Ring}{Ring\xspace}
+\newcommand{\rings}{rings\xspace}
+\newcommand{\Rings}{Rings\xspace}
+\newcommand{\sheave}{sheave\xspace}
+\newcommand{\Sheave}{Sheave\xspace}
+\newcommand{\sheaves}{sheaves\xspace}
+\newcommand{\Sheaves}{Sheaves\xspace}
+
+
+%% Special Environments
+\newtheorem{remark}{Remark}
+
+%% CVT values
+%%% Ratios
+\newcommand{\iF}{\ensuremath{i_F}\xspace}
+\newcommand{\DiF}{\ensuremath{\Delta\iF}\xspace}
+\newcommand{\is}{\ensuremath{i_s}\xspace}
+\newcommand{\Dis}{\ensuremath{\Delta\is}\xspace}
+\newcommand{\ig}[1]{\ensuremath{i_{g#1}}\xspace}
+\newcommand{\Dig}[1]{\ensuremath{\Delta\ig{#1}}\xspace}
+\newcommand{\eff}{\ensuremath{\eta_{loc}}\xspace}
+\newcommand{\effGlob}{\ensuremath{\eta_{glob}}\xspace}
+\newcommand{\Deff}{\ensuremath{\Delta\eff}\xspace}
+\newcommand{\OERE}{\ensuremath{\upsilon}\xspace}
+\newcommand{\DOERE}{\ensuremath{\Delta\OERE}\xspace}
+
+
+\newcommand{\NEZ}{\ensuremath{N_{E0}}\xspace}
+
+
+
+%TODO: das hier müssten eigentlich in sowas wie AMMath
+\newcommand{\AIK}{A_{IK}}
+
+% Double-Line-Symbols (mathbb) 
+\newcommand{\msymb}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\msA}{\msymb{A}}
+\newcommand{\msB}{\msymb{B}}
+\newcommand{\msC}{\msymb{C}}
+\newcommand{\msI}{\msymb{I}}
+\newcommand{\msM}{\msymb{M}}
+\newcommand{\msN}{\msymb{N}}
+\newcommand{\msP}{\msymb{P}}
+\newcommand{\msS}{\msymb{S}}
+
+% Calligarphy-Symbols
+\newcommand{\mc}[1]{\ensuremath{{\cal{#1}}}}
+% Definition of the normal cone symbol
+\newcommand{\NC}{\mc{N}}
+% Energies
+\newcommand{\calL}{\mc{L}}
+\newcommand{\calV}{\mc{V}}
+\newcommand{\calT}{\mc{T}}
+
+%% math symbols for ALE beam
+\newcommand{\barx}{\bar{x}}
+\newcommand{\rRef}{r _{Ref}}
+\newcommand{\tRef}{t _{Ref}}
+\newcommand{\nRef}{n _{Ref}}
+\newcommand{\bRef}{b _{Ref}}
+\newcommand{\qf}[1][]{q_{f #1}}
+\newcommand{\dotq}{\dot{q}}
+\newcommand{\dotqf}[1][]{\dot{q} _{f#1}}
+\newcommand{\dotqk}{\dot{q}_k}
+
+% Derivatives
+%% Absolute Derivatives
+\newcommand{\differential}{\mathrm{d}}
+\newcommand{\difdif}[2]{\frac{\differential #1}{\differential #2}}
+\newcommand{\ddifddif}[2]{\frac{\differential^{2} #1}{\differential #2 ^{2}}}
+\newcommand{\ddifdifdif}[3]{\frac{\differential^{2} #1}{\differential #2~\differential #3}}
+\newcommand{\ddt}[1]{\difdif{#1}{t}}
+
+%% Partial Derivatives
+\newcommand{\pd}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\pdt}[1]{\pd{#1}{t}}
+\newcommand{\pdqk}[1]{\pd{#1}{q_k}}

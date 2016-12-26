@@ -1,0 +1,106 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage{amsmath}
+\input{\mainpath/customcommands}
+
+\input{\mainpath/colordefinitions}
+
+\begin{document}
+
+\begin{tikzpicture}
+ \begin{groupplot}[
+group style = {group size = 1 by 4, horizontal sep=2.0cm, vertical sep=1.0cm},
+height = 5cm,
+width = 14cm,
+]
+
+\nextgroupplot[ymode=log, xmax=90, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={residuum}, cycle list name=linelist]
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti1_incratio-0p95_stiffratio-0p001.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti2g_incratio-0p95_stiffratio-0p001.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetis_incratio-0p95_stiffratio-0p001.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetias_incratio-0p95_stiffratio-0p001.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetifas_incratio-0p95_stiffratio-0p001.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.95$, $\frac{E_{inclusion}}{E_{lattice}}=0.001$, lumped preconditioner};
+
+
+
+
+
+
+
+
+
+
+
+\nextgroupplot[ymode=log, xmax=90, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={residuum}, cycle list name=linelist]
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti1_incratio-0p95_stiffratio-0p001_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti2g_incratio-0p95_stiffratio-0p001_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetis_incratio-0p95_stiffratio-0p001_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetias_incratio-0p95_stiffratio-0p001_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetifas_incratio-0p95_stiffratio-0p001_dirich.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.95$, $\frac{E_{inclusion}}{E_{lattice}}=0.001$, Dirichlet preconditioner};
+
+
+\nextgroupplot[ymode=log, xmax=15, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={residuum}, xlabel={$\# iteration$}, cycle list name=linelist]
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti1_incratio-0p95_stiffratio-1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti2g_incratio-0p95_stiffratio-1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetis_incratio-0p95_stiffratio-1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetias_incratio-0p95_stiffratio-1000.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetifas_incratio-0p95_stiffratio-1000.txt};
+
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.95$, $\frac{E_{inclusion}}{E_{lattice}}=1000$, lumped preconditioner};
+
+
+\nextgroupplot[ymode=log, xmax=15, enlargelimits=0.15, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={residuum}, xlabel={$\# iteration$}, cycle list name=linelist]
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti1_incratio-0p95_stiffratio-1000_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_feti2g_incratio-0p95_stiffratio-1000_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetis_incratio-0p95_stiffratio-1000_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetias_incratio-0p95_stiffratio-1000_dirich.txt};
+
+\addplot+[ opacity=1.0, thick] table [skip first n=0,x index =0, y index=1, col sep=comma] {\studypath/2016-08-19_Inclusion/data/res_fetifas_incratio-0p95_stiffratio-1000_dirich.txt};
+
+
+\node[anchor=north east] at (rel axis cs:1,1) {$\frac{L_{inclusion}}{L_{lattice}}=0.95$, $\frac{E_{inclusion}}{E_{lattice}}=1000$, Dirichlet preconditioner};
+
+
+
+\legend{FETI-1,FETI-2,FETI-S,FETI-AS,FETI-FAS}
+
+
+\end{groupplot}
+\end{tikzpicture}
+
+\end{document}

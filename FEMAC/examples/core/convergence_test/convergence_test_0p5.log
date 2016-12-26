@@ -1,0 +1,538 @@
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.285461 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.388679 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.047996 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.246626 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.100732 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.158168 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition
+resolving dirichlet condition
+resolving neumann condition
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.144439 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.036021 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.218753 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.045298 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.151574 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+{You cannot get the 'id_' property of <a href="matlab:doc ConditionDirichlet">ConditionDirichlet</a>.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ConditionManager/ResolveAll', '/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/fe_core/ConditionManager.m', 28)" style="font-weight:bold">ConditionManager/ResolveAll</a> (<a href="matlab: opentoline('/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/fe_core/ConditionManager.m',28,0)">line 28</a>)
+         disp(['resolving dirichlet condition: ID:',itercond{:}.id_,'
+         MSHTAG:',itercond{:}.mshtag_ ]);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Problem/Calc', '/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/Problem.m', 133)" style="font-weight:bold">Problem/Calc</a> (<a href="matlab: opentoline('/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/Problem.m',133,0)">line 133</a>)
+      this.condman_.ResolveAll();
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/femac.m', 24)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/femac.m',24,0)">line 24</a>)
+  prob.Calc();} 
+prob=femac;
+                       __________  ______  _____
+                      / __/ __/  |/  / _ |/ ___/
+                     / _// _// /|_/ / __ / /__  
+____Welcome to______/_/ /___/_/  /_/_/ |_\___/__________________________________
+ 
+User selected /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+ 
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.138914 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID: MSHTAG:
+resolving dirichlet condition: ID: MSHTAG:
+resolving neumann condition
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.145083 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.036297 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.210018 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.046001 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.140196 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID:1 MSHTAG:1
+resolving dirichlet condition: ID:2 MSHTAG:2
+resolving neumann condition
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.124069 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.034533 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.210286 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.039500 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.134529 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID:1 MSHTAG:1
+resolving dirichlet condition: ID:2 MSHTAG:2
+resolving neumann   condition: ID:3 MSHTAG:3
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.125785 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.037292 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.209333 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.040415 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.144316 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID:1 MSHTAG:1
+resolving dirichlet condition: ID:2 MSHTAG:2
+resolving neumann   condition: ID:3 MSHTAG:3
+Elapsed time is 0.026966 seconds.
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.125599 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.034463 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.206284 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.037647 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.134194 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID:1 MSHTAG:1
+resolving dirichlet condition: ID:2 MSHTAG:2
+resolving neumann   condition: ID:3 MSHTAG:3
+Elapsed time is 0.029676 seconds.
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.120749 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.032629 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.191360 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.039280 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+{Struct contents reference from a non-struct array object.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Problem/Calc', '/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/Problem.m', 193)" style="font-weight:bold">Problem/Calc</a> (<a href="matlab: opentoline('/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/Problem.m',193,0)">line 193</a>)
+      disp(['git-hash: ',gitinfo.hash]);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('femac', '/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/femac.m', 24)" style="font-weight:bold">femac</a> (<a href="matlab: opentoline('/home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/femac.m',24,0)">line 24</a>)
+  prob.Calc();} 
+gitinfo=getGitInfo()
+gitinfo =
+     []
+aaa=getGitInfo
+aaa =
+     []
+isstruct(aaa)
+ans =
+     0
+prob=femac;
+                       __________  ______  _____
+                      / __/ __/  |/  / _ |/ ___/
+                     / _// _// /|_/ / __ / /__  
+____Welcome to______/_/ /___/_/  /_/_/ |_\___/__________________________________
+ 
+User selected /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+ 
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.129680 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID:1 MSHTAG:1
+resolving dirichlet condition: ID:2 MSHTAG:2
+resolving neumann   condition: ID:3 MSHTAG:3
+Elapsed time is 0.023056 seconds.
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START STATIC SOLVER------------------------------------------------------------
+Elapsed time is 0.116315 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.030726 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.191871 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.035266 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+git-hash: unknown
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.127856 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID:1 MSHTAG:1
+resolving dirichlet condition: ID:2 MSHTAG:2
+resolving neumann   condition: ID:3 MSHTAG:3
+Elapsed time is 0.022701 seconds.
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START APPLYING CONDITIONS------------------------------------------------------
+Elapsed time is 0.005775 seconds.
+DONE APPLYING CONDITIONS-------------------------------------------------------
+ 
+START SYSTEM SOLVE-------------------------------------------------------------
+using standard solver
+Elapsed time is 0.001734 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.031756 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.192724 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.036142 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 03-Jun-2016 by lukas on xubuntu
+git-hash: unknown
+END----------------------------------------------------------------------------
+START MESH READING-------------------------------------------------------------
+93 nodes created
+60 stiffness elements created
+3 dirichlet elements created
+2 neumann elements created
+Elapsed time is 0.129974 seconds.
+DONE MESH READING--------------------------------------------------------------
+ 
+START RESOLVING CONDITIONS-----------------------------------------------------
+resolving dirichlet condition: ID:1 MSHTAG:1
+resolving dirichlet condition: ID:2 MSHTAG:2
+resolving neumann   condition: ID:3 MSHTAG:3
+Elapsed time is 0.024607 seconds.
+DONE RESOLVING CONDITIONS------------------------------------------------------
+ 
+START APPLYING CONDITIONS------------------------------------------------------
+Elapsed time is 0.003339 seconds.
+DONE APPLYING CONDITIONS-------------------------------------------------------
+ 
+START SYSTEM SOLVE-------------------------------------------------------------
+using standard solver
+Elapsed time is 0.000713 seconds.
+DONE STATIC SOLVER-------------------------------------------------------------
+ 
+START POSTPROCESSING-----------------------------------------------------------
+element stresses processed
+Elapsed time is 0.042495 seconds.
+DONE POSTPROCESSING------------------------------------------------------------
+ 
+START ERROR EVALUATION---------------------------------------------------------
+total L2-Error:     0.00013864  0.00067345           0
+Elapsed time is 0.208718 seconds.
+DONE ERROR EVALUATION----------------------------------------------------------
+ 
+START VTK-WRITING--------------------------------------------------------------
+93 nodes written
+60 elements written
+field CONDID_1 SCALARS FLOAT written
+field CONDID_2 SCALARS FLOAT written
+field CONDID_3 SCALARS FLOAT written
+field displacement VECTORS FLOAT written
+field l2_error VECTORS FLOAT written
+field MATID_1 SCALARS FLOAT written
+field element_stresses TENSORS FLOAT written
+Elapsed time is 0.056036 seconds.
+DONE VTK-WRITING---------------------------------------------------------------
+ 
+INFO---------------------------------------------------------------------------
+dat   -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test.dat
+mesh  -file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.msh
+output-file: /home/lukas/LRZ Sync+Share/Studium/SA/FETI/FEMAC/examples/convergence_test/convergence_test_0p5.vtk
+matlab-version: 9.0.0.341360 (R2016a)
+calculated on : 06-Jun-2016 by lukas on xubuntu
+git-hash: unknown
+END----------------------------------------------------------------------------

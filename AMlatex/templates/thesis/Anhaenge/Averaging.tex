@@ -1,0 +1,58 @@
+\chapter{Averaging-Methode} \label{ap:Averaging}
+
+
+
+Die \new{Averaging-Methode} oder  \new{Methode der Mittelwertbildung} (engl. \textit{averaging method}) wird zur Analyse 
+nichtlinearer Oszillationen eines dynamischen Systems verwendet \cite{Mitropolsky:Averaging}. 
+Die Grundidee der Methode ist die Approximation des Ausgangssystems durch ein gemitteltes System, welches dadurch 
+deutlich einfacher zu untersuchen ist \cite{Hagedorn:NichtlinSchwingungen1978}.
+Aus dem Verständnis der Dynamik des gemittelten Systems  können Rückschlüsse auf die 
+Dynamik des Ausgangssystems gezogen werden  \cite{Hagedorn:NichtlinSchwingungen1978}. 
+Dabei wird durch Zeitintegration über eine Periode des Ausgangssystems  der Einfluss der hochfrequenten Dynamiken 
+herausgefiltert \cite{Hagedorn:NichtlinSchwingungen1978}. 
+Die wichtigsten Zusammenhänge zur praktischen Anwendung, wie sie im Rahmen der Herleitungen in dieser Arbeit 
+benötigt werden, sind im Folgenden kurz dargelegt, wobei hier die einfachste Form der Mittelwertbildung, 
+die \textit{periodische Mittelwertbildung} \cite{Sanders:AveragingMethods2007}, betrachtet wird. 
+Die  angegebenen Zusammenhänge geben den Grundgedanken der Averaging-Methode wieder.
+Weitere Details, Beweise und Verallgemeinerungen sind in \cite{Sanders:AveragingMethods2007} zu finden. 
+
+Ausgegangen wird von einem System in der Form
+\begin{equation}
+	\vec{\dot{x}} = \epsilon \vf\left(\vx,t\right) + \mathcal{O}(\epsilon^2), \qquad  \vx\left(0\right) = \va,
+\label{eq:AveragingAusgangsgleichung}
+\end{equation}
+wobei $\epsilon$ ein kleiner Parameter und $\vf$ ein $T$-periodisches Vektorfeld in der Zeit $t$ ist.
+
+Vernachlässigung von Termen höherer Ordnung und Mittelwertbildung durch Integration über $t$ führt auf die \textit{gemittelte Gleichung}
+\begin{equation}
+	\vec{\dot{z}} = \epsilon \vec{\bar{f}}\left(\vz\right), \qquad  \vz\left(0\right) = \va, 
+\label{eq:AveragingGemittelteGleichung}
+\end{equation}
+%
+%
+mit
+%
+%
+\begin{equation}
+	\vec{\bar{f}}\left(\vz\right) = \frac{1}{T} \int^T_0{\vf\left(\vz,s\right) \dd s} .
+\label{eq:AveragingGemittelteGleichungRechteSeite}
+\end{equation}
+%
+%
+%
+Das grundlegende Ergebnis dieser Mittelung ist, dass die Lösungen des gemittelten Systems nahe (von Ordnung $\epsilon$) 
+an den Lösungen des Ausgangssystems in einem Zeitintervall der Ordnung $1/\epsilon$ sind \cite{Sanders:AveragingMethods2007}, was sich als
+\begin{equation}
+	\left\| \vx\left(t\right) - \vz\left(t\right) \right\| \leq c \epsilon \quad \text{für} \quad 0 \leq t \leq \frac{L}{\epsilon}
+\label{eq:AveragingEpsilonNah}
+\end{equation}
+mit positiven Konstanten $c$ und $L$ schreiben lässt. Unter weiter spezifizierten Anforderungen, 
+welche für reale Systeme in der Regel zutreffen, bleiben die Lösungen des gemittelten Systems 
+auch für das Zeitintervall $t \in \left[0, \infty \right)$ nahe (von Ordnung $\epsilon$) 
+an den Lösungen des Ausgangssystems \cite{Sanders:AveragingMethods2007}.
+
+
+
+
+
+

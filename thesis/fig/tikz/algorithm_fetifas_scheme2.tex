@@ -1,0 +1,51 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+\begin{struktogramm}(150,60)
+\def\df2{0.40}
+
+
+
+\while[8]{\nassitextbold{\df2}{Loop over all substructures }  $ for~s=1,....,N~do $} %8 decribes the with of the while box
+\assign{\nassitext{\df2}{Convergence indicator}   $t_i^s = \frac{ \langle \sdirnspacemat_i \dvec{\alpha_i},\asmids{\locdualschur} \sdirnspacemat_i \dvec{\alpha}_i\rangle }{ \tp{\resvec_{i+1}} \asmlocschur \resvec_{i+1} }$}
+
+
+\whileend
+
+
+
+\while[8]{\nassitextbold{\df2}{Loop over all substructures }  $ for~s=1,....,N~do $}
+
+
+\ifthenelse[12]{2}{1}
+{\nassitext{0.1}{ } $(t_i^s<t_i^{s-1}) || (i<i_{init})$}{\sTrue}{\sFalse}
+
+
+\ifthenelse[12]{2}{1}
+{\nassitext{0.1}{ } $\frac{t_i^s}{t_i^{0}} < \frac{100}{\tau}$}{\sTrue}{\sFalse}
+\assign{\nassitext{\df2}{Add direction to search space}   $\Zmat_{i+1}=[Z_{i+1} | \asmlocschur \resvec_{i+1}]$}
+\change
+\assign{\nassitext{\df2}{} }
+\ifend
+
+
+\change
+\assign{\nassitext{\df2}{ } }
+\ifend
+
+\whileend
+
+
+\end{struktogramm}
+\end{document}

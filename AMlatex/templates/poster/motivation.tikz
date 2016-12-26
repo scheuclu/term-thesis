@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=3.8]
+	\draw [fill=TUMhighlightblue, TUMhighlightblue] (1,1) rectangle (4.8,4.8);
+	\draw (2.9, 4.8) node [anchor = north, align = center, TUMblue] {online};
+	\draw [->, color=black, very thick] (1,1) -- (5,1) node [below, align = right, anchor = north east] {Anzahl der Simulationen / \\ Simulationszeit};
+	\draw [->, color=black, very thick] (1,1) -- (1,5) node [above, align=right, anchor = south east, rotate = 90] {Rechenaufwand};
+	\draw [TUMred, fill opacity = 0.5, rounded corners=3pt, fill = TUMred, ] (0.9,0.9) rectangle (1.1,3.1); 
+	\draw (1.3, 2) node [TUMred, rotate = 90, align = center] {offline};
+	\draw [color=TUMblue, very thick] (1,1) -- (4.8,4.8);
+	\draw [color=TUMblue, dashed, very thick] (1,1) -- (1,3) -- (4.8,4);
+\end{tikzpicture}

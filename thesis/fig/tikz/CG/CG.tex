@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{struktex}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../..}
+\def\tikzpath{..}
+
+\usepackage{pgfplots}
+
+\input{\mainpath/colordefinitions}
+\input{\mainpath/customcommands}
+\begin{document}
+%\assign{\nassitext{\df2}{text} $equation$  }
+\begin{struktogramm}(85,100)
+\def\df2{0.45}
+\assign{$\dvec{r}_0 = \dvec{b}=\dmat{A}\dvec{x}_0$  }
+\assign{$i=0$  }
+\while[8]{While $\lVert {\dvec{r}_i} \rVert\leq TOL$}
+  \assign{$i=0$  }
+   \ifthenelse[8]{1}{1}{$i=0$}{\sTrue}{\sFalse}
+   \assign{$\alpha_i=0$}
+   \change
+     \assign{$\alpha_i=\frac{ \tp{\dvec{r}_{i}} \dvec{r}_{i} }{\tp{\dvec{r}_{i-1}} \dvec{r}_{i-1}}$}
+     \assign{$\dvec{x}_{i+1}=\dvec{x}_{i}+\alpha_i \dvec{r}_i$}
+     \assign{$\dvec{b}_{i+1}=\dvec{b}-\dmat{A} \dvec{x}_{i_1}$}
+   \ifend
+   
+   
+	\while[8]{For $j=1,...,i$}
+	  \assign{$\beta_i=\frac{[[x_{i+1},\dvec{p}_i]]}{\tp{\dvec{p}_i}\dmat{a} \dvec{p}_i}$}
+	  \assign{$\dvec{p}_{i+1}=\dvec{x}_{i+1}-\beta_i \dvec{p_i}$}
+	\whileend
+	 
+   
+   
+   
+   
+\whileend
+
+\assign{ $\projn=\eyemat - \scalemat\rmodespace\inv{(\tp{\rmodespace}\scalemat\rmodespace)}\tp{\rmodespace}$  }
+\end{struktogramm}
+
+\end{document}

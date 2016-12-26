@@ -1,0 +1,63 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+\begin{tikzpicture}
+
+        
+ \begin{groupplot}[
+     group style = {group size = 1 by 4, horizontal sep=1.0cm, vertical sep=1.cm},
+     height = 5cm,
+     width = 14cm,
+    ]
+
+    \nextgroupplot[ymode=log,legend style={at={(0.5,-0.1)}, anchor=north,legend columns=-1}, enlargelimits=false, ylabel={$\lambda$}, cycle list name=markerlist ]
+      \addplot+[only marks, mark size=0.4] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_raw_feti1.txt};
+  %\legend{unprojected CG}
+  
+%\nextgroupplot[ymode=log,legend style={at={(0.5,-0.1)}, anchor=north,legend columns=-1}, enlargelimits=false, ylabel={$\lambda$}, cycle list name=markerlist]
+%\pgfplotsset{cycle list shift=1};
+%  \addplot+[only marks, mark size=0.4] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_projn_feti1.txt};
+%  \addplot+[only marks, mark size=0.4] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_projn_feti2geneo.txt}; 
+%  %\legend{FETI-1,FETI-2(Geneo), FETI-S}
+  
+  
+\nextgroupplot[ymode=log,legend style={at={(0.5,-0.1)}, anchor=north,legend columns=-1}, enlargelimits=false, ylabel={$\lambda$}, cycle list name=markerlist]
+\pgfplotsset{cycle list shift=1};
+  \addplot+[only marks, mark size=0.4] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_projn_cut_feti1.txt};
+  \addplot+[only marks, mark size=0.4] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_projn_cut_feti2geneo.txt}; 
+  %\legend{FETI-1,FETI-2(Geneo), FETI-S}
+  
+  
+\nextgroupplot[ymode=log,legend style={at={(0.5,-0.35) }, anchor=north,legend columns=-1}, enlargelimits=false, ylabel={$\lambda$}, xlabel={eigenvalue index}, cycle list name=markerlist]
+  \addplot+[only marks, mark size=0.4] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_raw_feti1.txt};
+  \addplot+[only marks, mark size=0.6] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_projn_cut_feti1.txt};
+  \addplot+[only marks, mark size=0.4] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-18_EigenvalueDistribution/data/eigvalues_projn_cut_feti2geneo.txt}; 
+\legend{unprojected CG,FETI-1, FETI-2(Geneo)}
+
+
+\end{groupplot}
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+\end{document}

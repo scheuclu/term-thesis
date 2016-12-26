@@ -1,0 +1,85 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+
+
+
+
+\begin{tikzpicture}[every axis/.style={
+xmax=30,%
+xmin=-0.5,%
+ymin=0,%
+ymax=40,%
+ylabel={ search dir},%
+xlabel={ iterations},%
+bar width=1.5pt,
+%xtick={0,1,...,26}
+}]
+
+\pgfplotstableread[col sep=comma]{\studypath/2016-08-25_StudyContractfac/data/contract2tau_chaco.txt}\loadedtable
+
+ \begin{groupplot}[
+group style = {group size = 1 by 4, horizontal sep=2.0cm, vertical sep=1.5cm},
+height = 5cm,
+width = 14cm,
+]
+
+
+\nextgroupplot[ybar, legend style={at={(0.99,0.9)}, anchor=north east,legend columns=-1}, ylabel={\# serach directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_regular_6x6_fetis.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_regular_6x6_fetias.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_regular_6x6_fetifas.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\rho_{AS}=0.999\rightarrow\tau_{AS}=2.3$, regular partitioning};
+
+
+\nextgroupplot[ybar, legend style={at={(0.99,0.9)}, anchor=north east,legend columns=-1}, ylabel={\# serach directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_6x6_fetis.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_6x6_fetias.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_6x6_fetifas.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\rho_{AS}=0.999\rightarrow\tau_{AS}=2.4$, automatic partitioning};
+
+
+
+\nextgroupplot[ybar, legend style={at={(0.99,0.9)}, anchor=north east,legend columns=-1}, ylabel={\# serach directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_11x1_fetis.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_11x1_fetias.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_11x1_fetifas.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\rho_{AS}=0.999\rightarrow\tau_{AS}=2.2$, vertical~stripes};
+
+
+
+\nextgroupplot[ybar, legend style={at={(0.5,-0.35)}, anchor=north,legend columns=-1}, ylabel={\# serach directions}, xlabel={\# iteration}, nodes near coords align={vertical}, cycle list name=linelist]
+\pgfplotsset{cycle list shift=2};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_1x11_fetis.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_1x11_fetias.txt};
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x expr=\coordindex, y index=0, col sep=comma] {\studypath/2016-08-10_Partitioning/data/numsdir_chaco_1x11_fetifas.txt};
+\node[anchor=north east] at (rel axis cs:1,1) {$\rho_{AS}=0.999\rightarrow\tau_{AS}=3.11$, horizontal~stripes};
+\legend{FETI-S,FETI-AS,FETI-FAS};
+
+
+
+\end{groupplot}
+\end{tikzpicture}
+
+%/home/lukas/Desktop/SA_Thesis/studies/2016-08-10_Partitioning/data/numsdir_regular_6x6_fetifas.txt
+
+
+\end{document}

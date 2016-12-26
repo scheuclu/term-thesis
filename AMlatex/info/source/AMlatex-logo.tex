@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{AMcolor}
+\usepackage[text=tumhlv]{AMfont}
+\usepackage{shadowtext}
+\newcommand{\logolatex}{\fontfamily{lmr}\fontsize{11pt}{11pt}\selectfont\LaTeX}
+\newcommand{\textAM}{\shadowcolor{TUMBlue!30}\hskip-0.7ex\slshape\shadowtext{AM}}
+
+\begin{document}\Huge
+\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0,scale=4}]
+\begin{scope}
+\node[TUMBlue] (AM) at (0,0) {\textAM};
+\node[TUMGreen,anchor=north east] (L) at (AM.north west) {$\{$};
+\node[TUMGreen,anchor=north west] (R) at (AM.north east) {$\}$};
+\node[anchor=north,yshift=-0.4ex] at (AM.south) {\logolatex};
+\node[anchor=south,yshift=0.5ex] at (AM.north) {};
+\node[anchor=north,yshift=-1ex] at (L.south) {};
+\end{scope}
+\end{tikzpicture}
+\end{document}

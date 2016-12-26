@@ -1,0 +1,89 @@
+%%
+%% This is file `struktex-test-4.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% struktex.dtx  (with options: `example5')
+%% 
+%%
+\documentclass{article}
+
+\usepackage{struktxp,struktxf}
+
+\makeatletter
+\newlength{\fdesc@len}
+\newcommand{\fdesc@label}[1]%
+{%
+    \settowidth{\fdesc@len}{{\fdesc@font #1}}%
+    \advance\hsize by -2em
+    \ifdim\fdesc@len>\hsize%               % term > labelwidth
+        \parbox[b]{\hsize}%
+        {%
+            \fdesc@font #1%
+        }\\%
+    \else%                                      % term < labelwidth
+    \ifdim\fdesc@len>\labelwidth%               % term > labelwidth
+        \parbox[b]{\labelwidth}%
+        {%
+            \makebox[0pt][l]{{\fdesc@font #1}}\\%
+        }%
+    \else%                                      % term < labelwidth
+        {\fdesc@font #1}%
+    \fi\fi%
+    \hfil\relax%
+}
+\newenvironment{fdescription}[1][\tt]%
+{%
+    \def\fdesc@font{#1}
+    \begin{quote}%
+    \begin{list}{}%
+    {%
+        \renewcommand{\makelabel}{\fdesc@label}%
+        \setlength{\labelwidth}{120pt}%
+        \setlength{\leftmargin}{\labelwidth}%
+        \addtolength{\leftmargin}{\labelsep}%
+    }%
+}%
+{%
+    \end{list}%
+    \end{quote}%
+}
+\makeatother
+
+\pLanguage{Java}
+
+\begin{document}
+
+\begin{fdescription}
+ \item[\index{Methoden>drawImage(Image img,
+                                    int dx1,
+                                    int dy1,
+                                    int dx2,
+                                    int dy2,
+                                    int sx1,
+                                    int sy1,
+                                    int sx2,
+                                    int sy2,
+                                    ImageObserver observer)=%
+       \Expr{\pKey{public} \pKey{abstract} \pKey{boolean} drawImage(Image img,
+                                    \pKey{int} dx1,
+                                    \pKey{int} dy1,
+                                    \pKey{int} dx2,
+                                    \pKey{int} dy2,
+                                    \pKey{int} sx1,
+                                    \pKey{int} sy1,
+                                    \pKey{int} sx2,
+                                    \pKey{int} sy2,
+                                    ImageObserver observer)}}%
+       \pExp{public abstract boolean drawImage(Image img, int dx1, int
+         dy1, int dx1, int dy2, int sx1, int sy1, int sx2, int sy2,
+         ImageObserver observer)}]%
+ \ldots
+\end{fdescription}
+\end{document}
+%%
+%% End of file `struktex-test-5.tex'.
+%% 
+%%
+%% End of file `struktex-test-4.tex'.

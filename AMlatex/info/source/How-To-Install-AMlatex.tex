@@ -1,0 +1,150 @@
+\documentclass[12pt]{AMdocumentation}
+\usepackage{AMfont}
+\usepackage{filecontents}
+
+\providecommand{\AMlatex}{AM-\LaTeX{}\xspace}
+\renewcommand{\maketitle}{\OLDmaketitle}
+
+\author{Romain Pennec}
+\title{How to Install \AMlatex}
+
+\begin{filecontents}{biblio.bib}
+@online{HOWTOdtx,
+title = {How to compile the dtx files},
+date = {2015},
+url = {http://info/info/pmwiki_files/How-To-compile-dtx-files.pdf},
+}
+@online{HOWTOtexlive,
+title = {How to upgrade texlive},
+date = {2015},
+url = {http://info/info/pmwiki_files/How-To-upgrade-texlive.pdf},
+}
+@online{HOWTOinstall,
+title = {How to install AMlatex},
+date = {2015},
+url = {http://info/info/pmwiki_files/How-To-Install-AMlatex.pdf},
+}
+\end{filecontents}
+
+\addbibresource{biblio.bib}
+\nocite{HOWTOinstall}
+
+\begin{document}
+\maketitle
+
+\vspace{1cm}
+\tableofcontents
+
+\section{From a release}
+\label{sec:release}
+
+The last release can be found in \url{transfer/03_latex/releases/} or on the department intranet (\url{info}).  After extraction of the archive, you should find a directory containing this pdf, the script  \FileName{setup.sh} (for Linux) and a \FileName{texmf} tree. Note also that a \FileName{texmf} tree corresponding to the last release is directly available at the address \url{R:/AMlatex/texmf}. Regardless of the chosen release, we must make the system aware of the \FileName{texmf} tree.
+
+\subsection{Installation for Linux}
+\label{sec:release:linux}
+
+Assuming you have a recent \texlive distribution, you have two possibilities: either you copy 
+\FileName{texmf} in a standard location (like \verb|$HOME| or \verb|/usr/local/share|) and run 
+\cmdbox*{texhash}, or you add the path of the \AMlatex texmf tree to the variable \EnvVariable{TEXMFLOCAL}.
+Both possibilities are implemented in the script \FileName{setup.sh}, so what you have to do is:
+
+\begin{itemize}
+\item Open a terminal and go in the directory \FileName{AMlatex} obtained from the extraction of the release archive.
+\item Enter \cmdbox{./setup.sh install}.
+\item Chose the proposed installation method.
+\end{itemize}
+
+The recommended installation mode is \verb|texhash| (\#1). The easiest choice for the destination of \FileName{texmf} is your
+home directory (\#2) since you will not need to give your \verb|sudo| password. If you want to follow those recommendations you can directly enter \cmdbox{./setup.sh install texhash default} in your terminal. In that case you will have at the end of the installation a \FileName{texmf} tree in your \EnvVariable{HOME} directory and you can delete the downloaded release and the extracted directory \FileName{AMlatex}. 
+
+\subsection{Installation for Windows}
+\label{sec:release:windows}
+
+\begin{itemize}
+\item Open the \miktex Settings (admin if possible)
+\item Select the Roots tab
+\item Add the path to the folder \verb|texmf|. If you work on the department network it is recommended to use the tree located in Software (R:) AMlatex, otherwise use the one you obtained after extraction of the release archive.
+\item Refresh the file name database (FNDB) in the General tab.
+\end{itemize}
+
+Those instruction can be done via the command line (press \verb|Win+r| and enter \verb|cmd| to open a terminal), for example:
+\begin{bashshell}
+initexmf --admin --register-root=R:\AMlatex\texmf
+initexmf --admin --update-fndb 
+\end{bashshell}
+
+\subsection{Installation for Mac OS}
+\label{sec:release:mac}
+
+The installation for Mac OS is slightly different from Linux one, since local package are supposed to be installed in \verb|$HOME/Library/texmf| and \cmdbox*{texhash} is not needed. Nevertheless the procedure is the same:
+\begin{itemize}
+\item Enter \cmdbox{./setup.sh install} in your terminal.
+\item Chose method number 1 then valid installation directory.
+\end{itemize}
+
+\section{From GitLab}
+\label{sec:git}
+
+The project \AMlatex is now hosted in the GitLab of the department at the address 
+\url{https://gitlab.lrz.de/AM/AMlatex}. 
+If you encounter trouble accessing this repository, please contact the LaTeX or GitLab administrator.
+Once access is granted, you just have to enter in your terminal something like:
+\begin{bashshell}
+cd /path/to/where/you/want/to/clone
+git clone git@gitlab.lrz.de:AM/AMlatex.git
+\end{bashshell}
+
+%First you need a git repository. 
+%It can be easily obtained by cloning the main repository of the department, which is located inside  \url{transfer/03_latex/releases/}. 
+%If you intend to share your
+%potential modifications and contributions to \AMlatex, you should put your clone somewhere inside
+%\url{transfer/02_persistent}. If not, you can save it wherever you want. 
+
+Once you have your own repository, you will have to extract the packages, the classes and the documentation yourself from the sources (the \extension{dtx} files). Again, the script \FileName{setup.sh} will assist you for this. 
+
+\begin{bashshell}
+cd /path/to/where/you/want/to/clone
+git clone /path/to/LRZ/transfer/03_latex/AMlatex.git
+cd AMlatex/
+./setup.sh extract sty
+./setup.sh extract doc
+\end{bashshell}
+
+Note that you will likely encounter some troubles to compile the documentation. Note also that compiling
+the documentation is absolutely not mandatory, you can install and use the packages without them.
+However if you want to understand the code and modify it, you will need to compile the documentation
+successfully. You can find some help in this process in\cite{HOWTOdtx}. It is also a nice opportunity
+to test if your \LaTeX{} distribution is up-to-date.
+
+
+\section{From Common}
+\label{sec:common}
+
+In fact this method is exactly the same as \ref{sec:release}, except that you do not need to download a release. On Linux, just have to go in the directory \url{common/Vorlagen/AMlatex/} and run \FileName{setup.sh}, as explained in \ref{sec:release:linux},\ref{sec:release:mac}. That way you will get easily and quickly the last version, the drawback being that this version might be not stable.
+
+On windows, you can use this directory as \miktex-Root as explained in \ref{sec:release:windows}, but you must be aware that if you do that, you will need a working network connection to compile your document, and the compilation will likely be slower as if the packages would be locally installed.
+
+\bigskip
+Actually this works with any \FileName{AMlatex} directory that contains a \FileName{setup.sh} file.
+
+
+\printbibliography
+
+\end{document}
+
+
+
+
+
+
+%\item Latex has some standard paths where he looks for packages and classes. One of those is \verb!$HOME/texmf!. Either we copy \texttt{03\_latex/texmf} directly in the home directory or we create a symbolic link to it;
+%\begin{lstlisting}
+%	cd $HOME
+%	ln -s $AMLATEXDIR/03_latex/texmf texmf
+%\end{lstlisting}
+
+
+%\item Clone the git repository \texttt{LRZ\_common/Vorlagen/AMlatex} anywhere you want by using Git Bash or Git Gui. 
+%\item If your \LaTeX{} distrubution is not MiKTeX you are crazy enough to know how to install a package. Otherwise open the MiKTeX Settings (admin) and go to the Roots tab. Add the path to the folder texmf (normally it is in \texttt{AMlatex}) and then refresh the file name database (FNDB) in the General tab. 
+
+

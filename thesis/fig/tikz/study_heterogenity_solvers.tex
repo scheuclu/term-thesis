@@ -1,0 +1,61 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\def\mainpath{../../}
+\def\tikzpath{./}
+\def\studypath{/home/lukas/Desktop/SA_Thesis/studies}
+
+\usepackage{import}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\input{\mainpath/colordefinitions}
+\begin{document}
+
+
+\begin{tikzpicture}
+ \begin{groupplot}[
+group style = {group size = 2 by 2, horizontal sep=2.0cm, vertical sep=2cm},
+height = 7cm,
+width = 7cm,
+]
+\nextgroupplot[ybar, title={FETI-1}, enlargelimits=0.15, legend style={at={(0.5,-0.2)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$E_{stiff}/E_{soft}$}, symbolic x coords={1,10,100,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_hstripes_feti1.txt};
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_vstripes_feti1.txt};
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_cboard_feti1.txt};
+%\legend{horizontal stripes,vertical stripes,checkerboard pattern}
+
+
+\nextgroupplot[ybar, title={FETI-2(Geneo)}, enlargelimits=0.15, legend style={at={(0.5,-0.2)}, anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$E_{stiff}/E_{soft}$}, symbolic x coords={1,10,100,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_hstripes_feti2g.txt};
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_vstripes_feti2g.txt};
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_cboard_feti2g.txt};
+%\legend{FETI-1,FETI-2(Geneo),FETI-S}
+
+
+
+\nextgroupplot[ybar, title={FETI-S}, enlargelimits=0.15, legend style={column sep = 10pt, legend columns = -1,legend to name = grouplegend,
+anchor=north,legend columns=-1}, ylabel={\# iterations}, xlabel={$E_{stiff}/E_{soft}$}, symbolic x coords={1,10,100,1000}, xtick=data, nodes near coords, nodes near coords align={vertical}, cycle list name=linelist]
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_hstripes_fetis.txt};
+\addlegendentry{horizontal stripes};
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_vstripes_fetis.txt};
+\addlegendentry{vertical stripes};
+
+\addplot+[fill, opacity=1.0, thick] table [skip first n=0,x index=0, y index=1, col sep=comma] {\studypath/2016-08-22_HeterogenityType/data/numiter_cboard_fetis.txt};
+\addlegendentry{checkerboard pattern};
+%\legend{FETI-1,FETI-2(Geneo),FETI-S}
+
+\end{groupplot}
+\node at ($(group c1r2) + (4,-4.5cm)$) {\ref{grouplegend}};
+\end{tikzpicture}
+
+
+\end{document}

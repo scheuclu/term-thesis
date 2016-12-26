@@ -1,0 +1,34 @@
+
+
+\definecolor{list1_1}{RGB}{0,101,189}
+\definecolor{list1_2}{RGB}{156,157,159}
+\definecolor{list1_3}{RGB}{162,173,0}
+\definecolor{list1_4}{RGB}{227,114,34} 
+\definecolor{list1_5}{RGB}{152,198,234}
+
+
+%\definecolor{list1_1}{RGB}{246,81,29}
+%\definecolor{list1_2}{RGB}{255,180,0}
+%\definecolor{list1_3}{RGB}{0,166,237}
+%\definecolor{list1_4}{RGB}{127,184,0}
+%\definecolor{list1_5}{RGB}{13,44,84}
+
+
+\pgfplotscreateplotcyclelist{markerlist}{
+list1_1, thick, solid, mark=*\\%
+list1_2, thick, solid, mark=asterisk\\%
+list1_3, thick, solid, mark=diamond*\\%
+list1_4, thick, solid, mark=triangle\\%
+list1_5, thick, solid, mark=square\\%
+}
+
+\pgfplotscreateplotcyclelist{linelist}{
+list1_1, solid\\%
+list1_2, solid\\%
+list1_3, solid\\%
+list1_4, solid\\%
+list1_5, solid\\%
+}
+
+\definecolor{lightgrey}{RGB}{200,200,200}
+\definecolor{nassitextcolor}{RGB}{0,0,200}

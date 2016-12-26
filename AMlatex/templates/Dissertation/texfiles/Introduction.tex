@@ -1,0 +1,645 @@
+\chapter{Introduction} \label{chap:Introduction}
+% Einleitung: Erst Überblick über das was es gibt
+% - Arbeit einordnen
+% -- Überblick über dieses Kapitel
+
+% Typical approach: specific modeling -> stationary modeling: This approach is more general to check assumptions of simpler models, but also enable broader basis for further research / optimization
+% Modeling aspects:    Broader basis for studies (e.g. Curved Sheaves), enhancements concering sub-parts (Ring model, Simulation Time)
+% Validating aspects:  How good are the models --> reference model for further investigations (Companies work with small models, but this is highly nonlinear and therefore there is a high demand for a relyable detailed model of the pushbelt CVT)
+
+In 1958 the first \DAF-car with a \emph{Variomatic} was released.
+Its rubber belt was replaced with a steel pushbelt in the 1970s and the system was then called \emph{Transmatic} which later became the \CVT.
+In 1985 mass production started and the pushbelt has been enhanced over the years.\\
+The share of \CVTs on the transmission market will increase from 6 \% in 2012 to up to 14 \% in 2020 \cite{idler_fresstragfahigkeit_2014}.
+The continuously ratio coverage enables to operate the engine in an optimal point.
+In combination with a downsizing of the engine the reduction of fuel consumption in the overall drivetrain can be reached.
+According to \cite{srivastava_modeling_2006} passenger cars create about 10 \% of the world wide greenhouse gases.
+The \CVT-system can therefore help to reduce the $CO_2$ footprint.
+The increasing urbanization \cite{martine_state_2007} will lead to more stop-and-go drive states in modern cities.
+A \CVT avoids discrete shifting, which improves the comfort of the driver.\\
+This analysis shows that the pushbelt \CVT is an ideal solution for modern car concepts.
+A further improvement of the system can increase its efficiency and robustness.
+Recent research optimizes the system control as well as the tribology.
+Reliable models, which enable deeper insights into the system, are necessary. 
+They form the basis for design-optimization.\\
+Various models cover particular aspects of the pushbelt \CVT dynamics.
+Restrictive assumptions limit their scope.
+No all-encompassing model has been derived and validated.
+The correct representation of the full nonlinear dynamics for transient maneuvers covering spatial motion was the goal of a joint research project between the Institute of Applied Mechanics of the Technische Universität München and \Bosch\footnote{formerly ``Van Doorne Transmissie``}.
+Preceding PhD-theses \cite{bullinger_dynamik_2005, geier_dynamics_2007, schindler_spatial_2010, cebulla_spatial_2014} form the basis for this contribution.
+The pushbelt \CVT is represented as a \MBS modeling the dynamics and interactions of its parts separately.
+Detailed output of the simulations allow for deep analysis of the inner kinematics and kinetics.\\
+Each model demands for validation to prove its significance.
+This work concerns itself with the analysis of the chosen approach.
+The single submodels are discussed of which some are enhanced.
+Furthermore, the overall models are analyzed in different aspects.
+Due to the approximation of the models with computer technology, the numerical influences are a crucial factor.
+Parameter uncertainties limit the range of informative value of the model.
+A sensitivity study yields this range.
+It furthermore demonstrates the analysis possibilities of the model.
+On the one hand the inner mechanics can be analyzed.
+On the other hand global measures and transient dynamics can be used for future optimization.
+For this goal, the validation of the model is necessary.\par
+
+This chapter introduces the geometric setup and the working principle of a pushbelt \CVT.
+A current research overview follows together with literature remarks concerning \MBS.
+The most important equations are given.
+Prior work, on which this thesis relies on, is finally covered in more detail.
+The overview about the complete thesis concludes this chapter.
+
+\section{Geometric Setup and Working Principle} \label{sec:GeometricSetup}
+
+\begin{figure}[h!tp]
+\begin{center}
+  \includegraphics[width=0.49\textwidth]{1180_Pushbelt_RGB}
+  \hfill
+  \includegraphics[width=0.49\textwidth]{30_er_Schubgliederb_Gruppe2}
+  \caption[Pushbelt CVT]{Pushbelt CVT \copyright\Bosch. It shows the two pulleys -- each with a loose and a fixed sheave -- and the pushbelt consisting of two \rings and about 400 steel \els.}
+  \label{fig:PIC_141223_Bosch-Variator-Pushbelt-Elements}
+\end{center}
+\end{figure}
+
+This work analyzes the dynamics of a pushbelt \CVT as it is depicted in \cref{fig:PIC_141223_Bosch-Variator-Pushbelt-Elements}.
+In the following the geometric setup is described.
+Thus, the main working principles are explained using basic modeling ideas of \MBSs.
+%Different notions for the single parts, e.g. \emph{Elements} \cite{schindler_spatial_2010,cebulla_spatial_2014}, \emph{Blocks} \cite{kanehara_study_1994} or \emph{Segments} \cite{micklem_belt_1994} and \emph{Rings} \cite{schindler_spatial_2010, cebulla_spatial_2014}  or \emph{Bands} \cite{micklem_belt_1994}, are used in the literature. 
+The notions valid for this thesis are introduced to serve as a basis for a general and clear description.\\
+Besides other works, e.g. \cite{dittrich_theorie_1953, gerbert_influence_1985, bullinger_dynamik_2005}, the understanding of the working principle can be supported by three dimensional visualizations, e.g. videos or animations.
+These type of media cannot be included here.
+Two examples -- besides many more which can be found in the world wide web -- are:
+\begin{itemize}
+  \item Animation of \Bosch, the manufacturer of the pushbelt \cite{bosch_mobility_solutions_en_2013}
+  \item Animation of DrivelineNEWS.com \cite{drivelinenews_push_2015}
+\end{itemize}
+\par
+%
+\begin{figure}[h!tp]
+\begin{center}
+  \def\svgwidth{\textwidth}
+  \import{../multimedia/}{PIC_140921_CVTOverview.pdf_tex}
+  \caption[Overview of the pushbelt CVT]{Overview of the pushbelt \CVT with the most important external and internal forces}
+  \label{fig:PIC_140921_CVTOverview}
+\end{center}
+\end{figure}
+%
+\Cref{fig:PIC_140921_CVTOverview} shows an overview about the general kinematics of the system with the most important external and internal forces.
+A torque $M$ is transmitted from a \emph{primary} pulley (Index $P$), i.e. the driving side, to a \emph{secondary} pulley (Index $S$), i.e. the driven side.
+The pulleys have the axle distance $d_A$.
+The respective wrapped angles are called \PRI and \SEC.
+A pushbelt is clamped in both pulleys.
+It consists of about 400 \els that are guided by two \ring-packages or \rings, each consisting of about 6 - 12 layers.\\
+The ratio between the angular speeds $\omega_S$ of the secondary and $\omega_P$ of the primary pulley 
+%
+\begin{align}
+  \label{eq:speedratio}
+  i_S = \frac{\omega_S}{\omega_P}
+\end{align}
+%
+is called \SR.
+The \UD configuration is defined by $i_S < 1$ and the \OD configuration by $i_S > 1$.
+Ratios for $i_S \approx 1$ are referred as \MED configuration.\\
+The \SR is controlled by the ratio of the two clamping forces, i.e. the \TR,
+%
+\begin{align}
+  \label{eq:ThrustRatio}
+  i_F \defined \frac{F_P}{F_S}
+\end{align}
+%
+and due to the V-shape of the pulley sheaves and the \el flanks respectively.\\
+A geometric ratio
+%
+\begin{align}
+  \label{eq:GeometricRatioGeneral}
+  i_{g*} \defined \frac{r_{P*}}{r_{S*}}
+\end{align}
+%
+is defined as the ratio between the \PRI-radius $r_{P*}$ and the \SEC-radius $r_{S*}$.
+Different measures for the radii are possible using either \ring or \el kinematics. 
+On each pulley the forces are applied due to hydraulic pressure on the respective loose sheave, which can move along the shaft.
+The other sheave of the pulley is fixed on the shaft.\par
+%
+Along the belt four main parts are separated.
+Within the \US (Index $u$) and \LS (Index $l$) the forces are transmitted with two dominating effects. 
+On the one hand push-forces ($F_{Pu}$ and $F_{Pl}$) are active between the \els.
+On the other hand tension forces within the \rings ($F_{Tu}$ and $F_{Tl}$) contribute to the overall equilibrium.
+The push-forces between the \els do contribute in the torque transmission in case of $F_{Pu} > F_{Pl}$, which is the intended behavior.
+In case of $F_{Pu} < F_{Pl}$, the push-forces work against the torque as the difference in ring-tensions contribute more than the applied torque.
+In case of $F_{Pu} = F_{Pl}$ the \emph{transition torque} is applied to the system.
+The strand with the higher push-force is called push-strand.
+Otherwise it is referred to as the loose-strand.\\
+If no push-forces are acting in one of the strands an \OEP exists.
+It is defined as the sum of all (positive) gaps between the \els.
+It affects the dynamic behavior of the system and depends on the assembly of the belt as well as the applied loads.\\
+In the two arcs the torques are transmitted via frictional forces.
+These act between \els and sheaves as well as between \els and \rings.
+For the default configuration the \els run in from a loose-strand, i.e. the \LS in this case.
+Thus, the \els transmit low (or no) push-forces at the first part of the \PRI -- the so called \emph{idle arc}.
+Push-forces rise in the \emph{active arc} of the \PRI after the \TAP,.
+These push-forces are reduced to the level of the loose-strand in the \SEC.
+However -- depending on the configuration\footnote{i.e. boundary conditions, contact positions, stiffness as well as friction values} -- the forces can increase in the first part of the arc yielding another \TAP.\par
+%
+\begin{figure}
+  \centering
+    \def\svgwidth{0.6\textwidth}\import{../multimedia/}{PIC_130905_Element_Overview_Directions.pdf_tex}
+    \caption{The \el with local directions}
+    \label{fig:PIC_130905_Element_Overview_Directions}
+\end{figure}
+%
+For the force transmission the \els are the key part.
+All contact forces are transmitted via the \els. 
+\cref{fig:PIC_130905_Element_Overview_Directions} shows a sketch with the contact positions.
+The torque is transferred into the belt at both flanks on the left and on the right side.
+It is distributed on the one hand via contact forces among the \els themselves either at the \RE, the \head or the pin.
+On the other hand the contacts on the saddle or the ear introduce tension forces in the \rings\footnote{which can carry up to 40\% of the transmitted torque \cite{srivastava_review_2009}}. 
+\par
+
+Three local directions are defined for the \el.
+The \emph{longitudinal} (sometimes also \emph{tangential}) direction points from the back to the front of the \el. 
+The \emph{radial} direction points from the bottom of the \el to the \head.
+The third direction is defined as the \emph{axial} direction from the left flank of the \el to the right flank. 
+It is therefore also (disregarding small rotations of the \el) the axial direction of the axes in the \PRI and the \SEC.\\
+With the three local directions three rotation directions are defined which follow the standard definition in automotive or aeronautics.
+\emph{Pitching} is the rotation around the local axial direction, \emph{rolling} around the longitudinal direction and the \el \emph{yaws} around the radial direction.
+
+\section{State of the Art} \label{sec:StateOfTheArt}
+% - Aufzeigen, was schon gemacht wurde auf dem Gebiet (allgemein), welche Lücken vorhanden sind, was Sinn dieser Arbeit ist --> Hinweis, dass sich in den einzelnen Kapiteln weitere Hinweise ergeben werden, da sich das so als Stückwerk sammelt
+
+% Was wurde bisher allgemein auf dem Gebiet gemacht, wie ist der Überblick, wo sind die Lücken
+In the last decades different research groups and authors have contributed to the development and enhancements of \CVTs.
+This development is driven by both, measurements of the system and its modeling.
+This section gives the state of the art with literature focusing on models of pushbelt \CVTs.
+Models concerned with the stationary behavior and the ones focusing on the shifting dynamics are separated.
+It emphasizes that two different approaches exist in the literature to model these two different modes of the \CVT.
+Finally, current research topics are presented.\\
+The model of this thesis combines both modes into one detailed model.
+Non-smooth multibody dynamics is utilized for it.
+Thus, the well-established theory in this field is introduced.
+The section concludes with a detailed summary of prior work, on which this thesis is based on.
+
+\subsection{Pushbelt CVT} \label{subsec:ThePushbeltCVT}
+
+A detailed overview about the dynamic modeling of \CVTs and thus a good starting point for further literature research show \textsc{Srivastava et. al.} (2009) \cite{srivastava_review_2009}. 
+In the following, a short chronological overview is given pointing out the most important works concerning pushbelt \CVTs.
+Thereby stationary models and those who analyze the shifting dynamics are separated.
+The most recent research is given at the end.
+
+\subsubsection{Stationary Models}
+
+\textsc{Dittrich} (1953) compares in \cite{dittrich_theorie_1953} experimental results of conical belt drives to theoretical calculations based on the theory of \textsc{Eytelwein} (1808) \cite{eytelwein_handbuch_1808}.
+He identifies the effect of spiral running and discusses the necessity of over-clamping that leads to a loss of efficiency \cite{simonis_theorie_1959}. 
+He recognizes the complexity of the system and thus draws mainly qualitative conclusions.
+
+\textsc{Gerbert} (1985) discusses the pushbelt mechanics in a planar steady-state model focusing on the velocity distribution of the \els and \rings.
+The model uses  Coloumb friction, omits inertia of the \els and regards an uncoupled plate deformation.
+Low and high torque states are distinguished and their influence on the push-forces as well as on the arc mechanics, i.e. idle and active arc, are discussed.
+The results show the basic effects in a pushbelt \CVT that can be found in measurements -- especially concerning the separation of \rings and \els. 
+
+\textsc{Van Roij} and \textsc{Schaerlaeckens} (1993) discuss the force equilibria within the pushbelt \cite{van_rooij_krafte_1993, van_rooij_krafte_1993-2, van_rooij_krafte_1993-1}.
+Three separated models are derived to compute the clamping forces.
+The \UD configuration before transition torque is treated as well.
+Based on the resulting force distribution the effects on internal losses are given.\par
+
+\textsc{Fuij}, \textsc{Kurokawa}, \textsc{Kanehara} and \textsc{Kitagawa} (1993 - 1995) did a remarkable effort in measurements for the \CVT variator which are published in four parts \cite{fujii_study_1993, fujii_study_1993-1, kanehara_study_1994, kitagawa_study_1995}.
+Besides global analysis of thrust- , torque- and speed-ratio, local measurements have been carried out.
+They yield the forces acting between the \els, \rings and sheaves and give a qualitative reference.
+Stationary and shifting cases are measured and evaluated.\par
+
+\textsc{Sattler} (1999) develops in his thesis a planar \CVT model with a continuous belt for stationary situations.
+The focus is set on the dynamic situation in the two arcs omitting the dynamics in the strands. 
+Besides a parameter variation the work validates the model with measurements concerning global output values like thrust ratio and efficiency \cite{sattler_stationares_1999}.\\ 
+All in all the model is well suited for chains. 
+However, certain effects in the pushbelt, e.g. separation of the \els or the interaction of the \els with the \rings, are missing.\\ 
+\textsc{Sue} (2003) enhances the model of \textsc{Sattler} to enable faster calculations.
+He analyzes the effect of different sheaves on the efficiency of the system \cite{sue_betriebsverhalten_2003}.\par
+
+\textsc{Srnik} (1999) develops the first fully dynamic model of a chain-type \CVT \cite{srnik_dynamik_1999}.
+He uses the theory of non-smooth \MBS. 
+It considers transient dynamics as well as oscillatory effects.
+The separated modeling of the single pins in the chain identifies the polygonal effect to be a important driver for oscillations in the system.
+A detailed deformation representation of the sheaves with the pins yields a good correlation with measurements.\\ 
+\textsc{Sedlmayer} (2003) enhances the model of \textsc{Srnik} using a spatial representation.
+He shows, that the misalignment of the pulleys leads to higher internal forces in the chain and analyzes optimization strategies to reduce these.\par
+
+\textsc{Shimizu et. al.} (2000) model the pushbelt \CVT as a spatial \FE system, however quantitative or qualitative results are missing \cite{shimizu_development_2000}.\\
+\textsc{Saito et. al.} (2002-2011) choose a similar approach as in \cite{shimizu_development_2000}.
+They use \FEs for the single layers of the \rings, rigid or flexible \els and rigid sheaves comprising a deflection motion \cite{saito_development_2002, saito_application_2006, saito_study_2011}.
+Simulation times comparable to ``the [\ldots] time as [\ldots] for durability testing'' \cite[p. 228]{saito_application_2006} yield promising results.
+Yet, it stays unclear which contact forces and geometries are used and which model assumptions are made to gain the results. 
+An analysis of the stresses within the \rings shows the influence of misalignment and suggests improvement possibilities in design.
+Different stiffness as well as geometry changes are analyzed concerning local stresses within the parts and the efficiency of the full variator.\par  
+
+%\textsc{Akehurst} (2001) investigates on the loss mechanisms within pushbelt \CVTs \cite{akehurst_invesitgation_2001}. 
+% \todo{Beschäftigt sich auch mit losses, paper von 2004 vorhanden, ist aber nicht so wichtig für unsere Forschung}
+
+\textsc{Bullinger} (2005) models a pushbelt \CVT as a planar but fully dynamic \MBS. 
+He remarks that \els should be modeled separated \cite[p. 82]{bullinger_dynamik_2005}. 
+Due to a lack of appropriate algorithms, he chooses a quasi-continuous model of the pushbelt covering the single \ring layers as well as the single \els.
+Using an Eulerian description for the kinematics he is able to model stationary cases efficiently and to validate his results with measurements from the literature.\par 
+
+\textsc{Lebrecht} (2007) derives a simplified model to enable the coupling to drivetrain models and fast analysis of transient dynamics. 
+He correlates the results to the models of \textsc{Srnik, Sedlmayer} and \textsc{Bullinger} to measurements.
+Furthermore, he compares chain and pushbelt \CVTs in terms of efficiency and force distribution.
+Finally, he analyzes the \NVH properties of both types and points out the influence of Stribeck friction on the \NVH behavior.% and finds a minimal model to explain scratch noise. 
+
+\textsc{Geier} (2007) develops a planar dynamic \CVT model.
+He separates the dynamics of the \els and the \rings \cite{geier_dynamics_2007} and enables transient dynamics. 
+Based on this \textsc{Schindler} (2010) derives a spatial pushbelt \CVT model using \MBS \cite{schindler_spatial_2010, schindler_spatial_2012}.
+\textsc{Cebulla} (2014) enhances the model of \textsc{Schindler} in \cite{cebulla_spatial_2014}.
+This work is based on these models.
+Detailed summaries are covered in \cref{subsec:PriorWork}. 
+
+\subsubsection{Shifting analysis}
+
+\textsc{Sun} (1988) develops on basis of results of \textsc{Gerbert} a planar but transient model of the pushbelt \CVT assuming one dimensional continuous \els and \ring-layers \cite{sun_performance_1988}. 
+Neglecting the pulley and \ring deformation he is able to derive a set of implicit equations and considers ratio- as well as torque changes.
+He discusses his results qualitatively.\par
+
+\textsc{Ide} (1995) analyzes the shift behavior and builds a heuristic model based on measurements~\cite{ide_simulation_1995}.
+\textsc{Carbone et. al.} (2005 - 2007) develop a theoretical model for the transient dynamics of chain or pushbelt \CVTs, which represents the \emph{creep mode} as well as the \emph{slip mode}~\cite{carbone_influence_2005, carbone_cvt_2007}. The one-dimensional model using an in-elastic band with kinematical prescribed spiral running shows good correlation with performed measurements.
+I is successfully used in further applications \cite{simons_shift_2008}.\par
+
+\textsc{Srivastava} (2005 - 2007) develops a model for the transient dynamics of a continuous one-dimensional metal V-pushbelt \CVT \cite{srivastava_transient_2005, srivastava_transient_2007}. Focusing on high-speed applications the influence of inertia effects is treated neglecting belt deformation but incorporating sheave deformations kinematical.
+
+\subsubsection{Recent Research}
+
+Whereas the improvement of models for pushbelt \CVTs has slowed down in the recent years, research treats more the overall behavior of the system.
+The focus is set on reducing the safety factor for control and increasing the efficiency.\\
+\textsc{Van der Sluis et. al.} (2013) gives an overview about the state of the art for pushbelt \CVT development together with current research focus \cite{van_der_sluis_key_2013}.
+Based on ``Key Performance Indicators'', i.e. efficiency and comfort, he points out the latest improvement strategies.
+Higher friction coefficients between \els and sheaves as well as enhanced control to reduce safety reduce losses.
+The identification of noise sources helps to improve the comfort. 
+
+\textsc{Idler} (2014) employs in his thesis the scuffing for \CVT variators using pushbelts and chains in combination with different variator systems \cite{idler_fresstragfahigkeit_2014}.
+He enhances the models of \textsc{Sattler} and \textsc{Sue} as well as of \textsc{Tenberge} concerning shifting with experimental data for the spiral running and the bearing forces.
+Furthermore, he develops a formula for the traction coefficient to respect the normal force influence on the friction.
+Based on a model for the local surface temperature, he enables the prediction of scuffing in \CVTs.
+
+%\textsc{Shabrov et. al.} (2014) \todo{Der kommt nicht rein, der macht nur Unsinn!}
+
+\textsc{Ji et. al.} (2014) are interested in the differences of the dynamic behavior of the system for micro- and macro slip states \cite{ji_power_2014}.
+With a simple model, which neglects deformation effects, they suggest a mechanism to identify the state the variator online by using external vibrations.
+The comparison to measurements yield qualitative correlation.\par
+
+\textsc{Lee et. al.} (2014) suggest a logic to optimize the clamping forces and thus enhance efficiency \cite{lee_study_2014}.
+With a simple force based model tests on a hardware in the loop and a field vehicle show improved results.\par
+
+%\textsc{Zhang et. al.} (2014) are interested in the pulley strain \cite{zhang_research_2014}. 
+%A simple model is developed whereas it stays unclear which assumptions are used.\par
+%\textsc{Wang et. al.} (2014)  \cite{wang_study_2014}.\todo{Advanced Materials Research (Volume 952), 28\$, kann man noch nicht bekommen --> vielleicht bei Hr Böhm anrufen, 28456}
+
+\textsc{Van der Noll et. al.} (2015) investigate on the \NVH behavior of the variator \cite{van_der_noll_gerauschoptimierung_2015}. 
+They correlate the \EIN phenomenon with eigenmodes of the pulley sheaves and the running-in frequency of the \els in the belt.
+Optimization strategies suggest a randomized \el order.
+Experiments are performed successfully.
+
+\subsection{Multibody Dynamics} \label{subsec:MultibodyDynamics}
+
+% Was ist das, Geschichte, Lage von heute (was ist Forschungsfeld, wo findet es Anwendung)
+% Welche Vorarbeiten gibt es auf denen ich ganz konkret aufbauen kann (Arbeit, Programmierung, modelbildung und Implementierung) --> 
+% Wo starte ich, warum habe ich das gemacht, welche Lücke soll geschlossen werden?
+% Im Bereich Pushbelt CVTs am Institut, welche Software nutze ich
+% Generelle Formel Beschreiben, wie ist MBSim aufgebaut -> nicht glatt, flexibel, generelles framework
+As discussed in the previous section, different models of \CVTs exist. 
+Most of them are limited in one or more aspects.
+Some effects are neglected, e.g. misalignment, transient dynamics or pulley deformation.
+For a deep understanding of the complete system, it is necessary to model the full dynamics of a pushbelt \CVT.
+This thesis uses the theory of \MBS including nonlinear and non-smooth dynamic effects.  
+An introduction to the theory of \MBS is given in this section such that the models discussed in the following chapters can be explained.
+As the implementation is done in the software \textsc{MBSim} the theoretical discussion is based on its idea of \MBSs \cite{forg_mbsim_2015, schindler_analysing_2010}.\par
+
+\subsubsection{Literature Remarks}
+
+Many authors discuss the treatment of systems as a \MBS.
+Different textbooks are available that show the derivation of the \EOMs for smooth or non-smooth modeling.
+It is not possible to list all works.
+The following examples for different approaches may serve the reader as a reference.
+1997 \textsc{Schiehlen} and \textsc{Shabana} summarized in two articles the state of rigid and flexible \MBSs referencing more than 200 other works \cite{schiehlen_multibody_1997,shabana_flexible_1997}.
+
+An overview about the whole field of smooth dynamics is given in \cite{shabana_dynamics_2005}.
+\textsc{Shabana} introduces the basic concepts of dynamical systems to set up a \MBS. 
+The \EOMs for rigid bodies with bilateral constrained conditions are derived.
+A special focus is set on deformable bodies using the \FFR-formulation or the \ANCF-method to represent nonlinear deformation fields of deformable bodies.
+
+\textsc{Glocker} discusses in his thesis rigid body systems with friction and impacts theoretically \cite{glocker_dynamik_1995}. 
+He introduces the fundamental formulations for unilateral and bilateral non-smooth contacts with tangential laws, e.g. friction, and derives the \EOMs, which are then measure differential equations.
+He treats coupled and partly elastic impacts.
+An even broader basis for the theory and numerical treatment of non-smooth system can be found in \cite{acary_numerical_2008}.
+\textsc{Acary} and \textsc{Brogliato} treat non-smooth phenomena also in electrical circuits.
+
+\textsc{Förg} develops a numerical framework for general, i.e. spatial and non-smooth \MBSs \cite{forg_mehrkorpersysteme_2007}. 
+He derives the \EOMs with the constrained conditions and shows numerically efficient solution algorithms using proximal functions which yield a nonlinear equation system.
+\textsc{Zander} treats flexible \MBSs with non-smooth effects on the basis of \textsc{Förg} \cite{zander_flexible_2009}.
+He points out the necessity of locality for the discretization of a flexible body when treating impacts.
+
+\subsubsection{Theory}
+
+\begin{figure}
+\begin{center}
+  \def\svgwidth{\textwidth}\import{../multimedia/}{PIC_150201_MBS_General.pdf_tex}
+  \caption[Overview of a MBS]{Overview of a \MBS with three bodies connected with joints or contacts and excited with forces or prescribed motion.}
+  \label{fig:PIC_150201_MBS_General}
+\end{center}
+\end{figure}
+
+%In the following the equations of a non-smooth dynamical system -- as implemented in \MBSim -- are summarized.
+\paragraph{Dynamics}
+A \MBS consists of $n$ rigid or deformable bodies as sketched in \cref{fig:PIC_150201_MBS_General}.
+The kinematics of every body $i$ is defined by a mathematical model with a set of \DOFs which are the generalized positions $q^i$ and the generalized velocities $u^i$.
+Both can be summarized in vectors for the whole system as
+%
+\begin{align}
+  \label{eq:GeneralizedPositionsAndVelocities}
+  q^T &= \bmat{q^1 & \ldots & q^n} & u^T &= \bmat{u^1 & \ldots & u^n} & z^T &= \bmat{q^T  & u^T} 
+\end{align}
+%
+where $z$ denotes the state vector of the \MBS.\\
+Forces $\lambda$ or impulses $\Lambda$ couple the motion and define the change of acceleration or velocity of the bodies respectively.
+Generally two different kinds of coupling laws can be chosen for joints, contacts, external forces and prescribed movements.\\
+Single-valued laws define the reaction force explicitly\footnote{For practical examples \cite[p. 18]{forg_mehrkorpersysteme_2007}} from the state vector and the time $t$.
+%
+\begin{align}
+  \label{eq:SingleValuedReactions}
+  \lambda = \lambda(z,t)
+\end{align}
+%
+No impulses are covered.\\
+Set-valued laws constrain the motion by a condition\footnote{e.g. in normal contact direction a non-negative distance between the contact partners is enforced}.
+This induces, that the system may change in a non-smooth way, i.e. there are jumps in the velocity.
+Impacts, i.e. impulses, have to be taken into account as well with
+%
+\begin{align}
+  \label{eq:SetValuedReactions}
+  \left(\lambda,\Lambda,z,t\right) \in \NC
+\end{align}
+%
+where \NC summarizes all set-valued conditions of the system which have to be fulfilled by the state, the forces and impacts at every time.\\
+The \EOMs for the whole non-smooth system are then a measure differential equation with
+%
+\begin{subequations}
+  \label{eq:EOMsNonSmooth}
+\begin{align}
+  \label{eq:EOMsNonSmoothPos}
+  &\dot{q} = T u\\
+  \label{eq:EOMsNonSmoothVelSmooth}
+  &M \dot{u} = h + W \lambda\\
+  \label{eq:EOMsNonSmoothVelNonSmooth}
+  &M_k (u^+_k - u^-_k) = W_k \Lambda_k\\
+  \label{eq:EOMsNonSmoothNC}
+  &\left(\lambda,\Lambda_k,z,t\right) \in \NC
+\end{align}
+\end{subequations}
+%
+where $T = T(q)$ is the transformation between generalized velocities and positions, $M = M(q)$ the mass matrix of the system and $h(z,t)$ the smooth right-hand side vector. 
+The wrench matrix $W = W(q)$ defines the direction on how forces or impacts, which result from a set-valued reaction, project into the directions of the generalized velocities.\\ 
+Equation \eqref{eq:EOMsNonSmoothVelSmooth} shows the smooth velocity change for the system whereas \eqref{eq:EOMsNonSmoothVelNonSmooth} contains the non-smooth velocity changes for times $t_k$, the times of an impact within the system.\par
+
+\paragraph{Integration}
+For a numerical integration of \eqref{eq:EOMsNonSmooth} it is necessary to discretize the \EOMs in time. 
+The half explicit time-stepping scheme on velocity level of \cite[section 4.4.1]{forg_mehrkorpersysteme_2007} has proven most sufficient for the present model.
+It is summarized shortly in the following.\\
+Starting from time $t_i$ with the state $z^i$ one approximates with the time step size $\Delta t^i$ the generalized positions of the next time step with
+%
+\begin{align}
+  \label{eq:IntegrationOfGeneralizedPositions}
+  q^{i+1} &\approx q^i + T(q^i) u^{i} \Delta t^i &\Rightarrow \tilde{z}^{i} &= \bmat{q^{i+1}\\ u^i}
+\end{align}
+%
+yielding an intermediate state $\tilde{z}^{i}$ which is used for the evaluation of the following equations.\\
+The constraints for the continuous motion \eqref{eq:EOMsNonSmoothVelSmooth} and non-continuous motion \eqref{eq:EOMsNonSmoothVelNonSmooth} can be treated simultaneously as continuous forces can be interpreted as an impact for a finite time step.
+The velocities of the next time step are approximated with $\tilde{z}^{i}$.
+%
+\begin{align}
+  \label{eq:IntegrationOfGeneralizedVelocities}
+  u^{i+1} \approx u^i + M^{-1}(q^{i+1}) \left( h(\tilde{z}^{i},t^{i+1}) \Delta t^i + W(q^{i+1}) \Lambda^{i+1}\right)
+\end{align}
+%
+The relative velocities $\gamma$ that are associated with the impulses $\Lambda$ depend on the generalized velocities and can be written as
+%
+\begin{align}
+  \label{eq:IntegrationOfRelativeVelocities}
+  \gamma^{i+1} = (W^{i+1})^T u^{i+1} + w^{i+1}
+\end{align}
+%
+where $w^{i+1}$ is a time dependent vector\footnote{Normal impacts with an elastic part are not of interest here but discussed in \cite{glocker_dynamik_1995, forg_mehrkorpersysteme_2007}.}.
+Inserting \eqref{eq:IntegrationOfGeneralizedVelocities} in \eqref{eq:IntegrationOfRelativeVelocities} leads to a linear equation between the impulses $\Lambda$ and the relative velocities $\gamma$ that are in general complementary to each other.
+The mass-action-matrix\footnote{also called ``Delassus-Matrix''} is defined to be
+%
+\begin{align}
+  \label{eq:MassActionMatrix}
+  G = W^T M^{-1} W
+\end{align}
+%
+which plays a central role for the non-smooth solution\footnote{The time step is not given as it is a general definition for time-stepping algorithms}.
+For this time-stepping algorithm $G$ is symmetric.\\
+Projection functions reformulate the complementarity problem of equations \eqref{eq:IntegrationOfGeneralizedVelocities} and \eqref{eq:IntegrationOfRelativeVelocities} to a nonlinear system.
+%
+\begin{align}
+  \label{eq:NonlinearFunctionUsingProx}
+  F(\Lambda^{i+1}, \gamma^{i+1}) = 0
+\end{align}
+%
+\subsection{Prior Works}
+\label{subsec:PriorWork}
+
+Three works, based subsequently on each other, are the direct background for this thesis. 
+All are summarized here in detail emphasizing the most important parts. 
+\textsc{Geier} modeled a planar pushbelt CVT using independent kinematics of the \els. 
+\textsc{Schindler} enhanced the model using spatial dynamics for all parts of the system. 
+\textsc{Cebulla} finally focused on implementing new force laws and optimizing the kinematical description.
+
+\subsubsection{Dynamics of Push Belt CVTs}
+
+% First to model all major effects: cooperating: single \els, beam with deflection and elongation (testen von stäben --> nicht sinnvoll), flexible sheaves, transient movement --> also validating this qualitatively with measurments fomr Honda
+% however: planar, standard / simple, geometry, not modular 
+
+The works introduced in \cref{subsec:ThePushbeltCVT} model specific effects of the \CVT system. 
+Depending on the application some major effects are omitted that are important for a detailed analysis of a pushbelt \CVT. 
+\textsc{Geier} is the first to incorporate all main phenomena within a planar system in \emph{Dynamics of Push Belt CVTs} \cite{geier_dynamics_2007}.\par
+
+The \els can move independently from the \rings and are only coupled by physically based contact laws.
+Sixteen contact points are defined on one \el which could be evaluated fast as they are mostly based on analytical kinematics.
+For the contact between \el and \ring a minimal distance has to be found with a nonlinear function.
+The \rings are modeled with the \RCM using co-rotated-\FEs. 
+Each \FE has an internal set of \DOFs, which describes a nonlinear rigid body movement in a floating reference frame and in addition local deformations. 
+Besides deflection, also elongation of the \rings is possible with this approach.
+The \FEs are coupled due to a global coordinate set. 
+For the planar case the transformation function is linear between both coordinate sets.
+The reader is advised to \cite{zander_flexible_2009} for further details.
+Besides the detailed modeling of the \rings, also a quasi-statical deformation of the pulley set is included.
+Spiral running is therefore represented well.
+All submodels are formulated in a time independent manner such that transient behavior could be studied.\par
+
+In the model the number of \els could be chosen freely. 
+Based on 160 \els that are used in the simulation a number of about 650 % ~ 160*3+32*5
+\DOFs and about 1440 % ~ 160*9 (16 contact points accoring to \cite[p.45]{Geier2007}, but only 9 are used!)
+contact points result\footnote{Up to 1500 \DOFs and 3500 contacts are possible in case of 400 simulated \els \cite[p.81]{geier_dynamics_2007}.}.
+The results are compared qualitatively to literature values. % \cite{fujii_study_1993, fujii_study_1993-1, fujii_study_1993-2}. 
+Local forces and kinematics could be validated as well as global trends for stationary conditions.
+Further simulation results show qualitatively good results.
+The model therefore has proven successful for the simulation of a pushbelt \CVT disregarding spatial effects.
+
+\subsubsection{Spatial Dynamics of Pushbelt CVTs}
+\label{subsub:SpatialDynamicsOfPushbeltCVTs}
+
+\textsc{Schindler} covered also spatial effects in \emph{Spatial Dynamics of Pushbelt CVTs} \cite{schindler_analysing_2010}. 
+The \els are modeled dynamically as rigid bodies with six \DOFs.
+Elastic deformations are covered in the contact laws.
+The \el-\el interaction is modeled as a nonlinear function.
+The \el-sheave interaction uses a linear penalty function.
+Tilting deformation of the sheaves is constrained by linear force laws to cover the coupled deformation of the flat pulley sheaves and the shafts.
+Flexible sheaves based on a Reissner-Mindlin plate theory using \FE are developed but no results are given.
+Two \rings are simulated using an extended \RCM including out of plane movements.
+In the spatial case of the \RCM model the internal \FE and the global coordinate sets are coupled in a nonlinear system.
+It is solved during each time step in the simulation \cite[p. 23]{schindler_spatial_2010}.
+The \els are bound bilaterally to the \rings in normal direction with a set-valued contact law.
+Compared to the planar case the contact kinematics gets more complex.
+Spatial conditions have to be covered leading to more search directions along the surfaces.
+Due to the increased number of \DOFs of about 1200 combined with around 2100 contact points\footnote{based on 160 simulated \els}, %160*(4+2+2+1+4) = 2080 (flanks, Rings, RE, Head, Pin-Hole)% 
+the simulation costs increased\footnote{Up to 2650 \DOFs and 5200 contacts are possible in case of 400 simulated \els.}.
+To reduce computational time, a stationary belt model based on \cite{sattler_stationares_1999} is derived. 
+The transition time at the beginning of each simulation could be shortened compared to a full run up.
+Parallelization techniques are tested for single simulations.
+A parallel computation of different load cases has been found to be more efficient.% \cite[p.70]{Schindler2010}
+\par
+
+Results are compared to values of literature and to measurements conducted by \Bosch.
+All in all correct trends are presented for global as well as for local values.
+However, improvements are suggested concerning the \ring model, the \el-pulley interaction and possible model order reduction techniques. 
+The work offers a basis for a deeper analysis of spatial effects within a pushbelt \CVT.
+
+% Enhancements concerning spatial movement: enhanced ring model, full spatial bodies, dynamic tilting of sheaves, enhanced initialization, more flexibility due to general system,
+% no sheave deformation, long simulation times (ring-\el interaction)
+
+\subsubsection{Spatial Dynamics of Pushbelt CVTs: Model Enhancements to a Non-smooth Flexible Multibody System}
+
+% enhancements concerning physical movement, ring-tracking model (?), 
+\textsc{Cebulla} focused on \CPU time reduction to further improve the models described in \cref{subsub:SpatialDynamicsOfPushbeltCVTs}.
+Due to the complex contact kinematics and the high number of \DOFs, the key part of the model concerning \CPU time are the \rings.
+A spatial rod model, which is presented in \cite{lang_multi-body_2011}, follows the theory of \textsc{Cosserat} and uses finite differences for the discretization,
+It shows promising results and therefore is adapted for the usage within the \CVT model.
+The planar version is described in \emph{Spatial Dynamics of Pushbelt CVTs: Model Enhancements to a Non-smooth Flexible Multibody System} \cite{cebulla_spatial_2014}.
+A planar version of the pushbelt \CVT is therefore set up to test and validate additions to the model.\\
+A coupled contact law for the quasi-static representation of the pulley-sheave deformation in the spatial case has been derived and added to the model. 
+For the solution of the resulting \LCP a \textsc{Lemke} algorithm or a reformulated system using proximal functions is suggested.
+While the same coupling technique of the sheaves is used as in \cite{geier_dynamics_2007} different coupling options for the \els are presented.
+Yet, these have not been validated.\\
+The \el-\ring contact has been enhanced in two steps.
+At first the bilateral contact in normal direction at the \el saddle has been replaced by two unilateral contacts at saddle and ear.
+This yields a remarkable \CPU time reduction \cite[p.129]{cebulla_spatial_2014}.
+In a second step, the penalty function for the axial movement of the \rings on the saddle has been changed from a stiff bilateral function to a heuristic model for the so called ring-tracking.
+The effect of this model has not been tested.
+To cover production uncertainties, tapered \els have been added to the model. 
+An adapted initialization process is given to reduce the transition phase to a stationary point in the simulation.
+Different settings of the boundary conditions are enabled and the necessary equations are derived theoretically.
+Simulation results are compared to values from literature and measurements from \Bosch.
+\par
+
+Altogether \textsc{Cebulla} extended the model of \textsc{Schindler} in many points and shows improvements of different submodels.
+Yet, a detailed analysis of the model is missing. 
+The present work discusses the described models with different submodels in detail \wrt their numerical and physical behavior.
+New submodels have also been added where the analysis showed necessity for improvement.
+
+\subsubsection{Summary of the model}
+
+The three works above lead consecutively to a complex and detailed model of a metal V-pushbelt \CVT.
+The most important properties and assumptions are summarized here in a compact manner. 
+
+\begin{itemize}
+  \item Spatial effects, e.g. misalignment, are modeled besides a planar version.
+  \item Transient dynamics, e.g. torque or speed run up situations as well as shifting movement, are covered
+  \item The \els are treated as single, i.e. non-continuous, rigid bodies covering nonlinear deformation due to contact-laws quasi-statically.
+  \item The \sheaves are treated as single rigid bodies with a coupled deformation, leading to e.g. spiral running.
+  \item The \rings are modeled as one (planar model) or two (spatial model) flexible bodies regarding elongation, in- and out-of-plane bending along the belt.
+  \item Contacts, i.e. normal forces and friction forces, are modeled either non-smooth or regularized possibly using nonlinear functions, e.g. \el deformation or Stribeck friction.
+  \item No overall kinematical assumptions are made concerning contact situations in the arcs, e.g. separation of active or idle ar or separation of the \els in the loose-strand. 
+  Yet, the effects result out of dynamic simulation.
+\end{itemize}
+
+\section{Structure of the Work}
+%
+%\begin{figure}
+%\begin{center}
+%  \def\svgwidth{\textwidth}\import{../multimedia/}{PIC_140418_Thesis_Overview_V02.pdf_tex}
+%  \caption{Overview of the thesis}
+%  \label{fig:PIC_140418_Thesis_Overview}
+%\end{center}
+%\end{figure}
+%
+An overview about this work is visualized in \cref{fig:PIC_140418_Thesis_Overview}. 
+After motivating the thesis the system pushbelt \CVT is described in \cref{sec:GeometricSetup} to introduce the most important concepts to the reader.
+The current research state is given in \cref{sec:StateOfTheArt}.
+A literature overview for pushbelt \CVTs shows the state of modeling at the time of writing.
+Models exist to investigate on specific settings of the \CVT.
+Yet, a detailed model covering all major effects is still missing.
+To enable such a model the method of \MBS is chosen.
+The well-established theory is summarized. 
+A detailed model of this system has been set up and enhanced in the past which is described at last.
+It forms the starting point for this work. 
+\par
+
+The validation of models is an iterative process.
+Comparing to measurements combined  with qualitative discussion of the physical interpretable behavior of a first simple model yield improvement ideas for the next one.
+Eventually a model should consider all relevant effects being as simple as possible to be interpretable after all \cite{ulbrich_maschinendynamik_1996}.
+The iterative process is in fact a loop in which every part affects the others leading to new ideas for either modeling, simulating or validating.
+The sequence for this thesis starts with the modeling in \cref{chap:Modeling}, then discusses the sensitivity on numerical and physical parameters in \cref{chap:NumericalAspects,chap:PhysicalAspects} respectively to finally validate the state of the model in \cref{chap:Validation}.
+It is emphasized that the results of this work can only be seen in context of all these chapters.
+\par
+
+Following this introduction the dynamical models are discussed in \cref{chap:Modeling}.
+Three aspects are discussed separately, i.e. the dynamics of the single parts, their interaction and the resulting numerical challenges.\\
+Efficient models demand rigid dynamics of the \els and \sheaves respecting their deformation in interactions.
+The \rings however deform nonlinear dynamically.
+A specific model covering the overall motion with a minimal number of \DOFs is derived, which enables fast integration.
+Selective adaption of the dynamical representation, e.g. spatial motion or spiral running, allows for efficient integration within specific application.\\
+Interaction models are crucial for the correct representation of the force equilibrium.
+The adaption of the \el's thickness leads to a varied stiffness which is respected in the contacts.
+The contact kinematics for curved surfaces of \sheaves and \els are derived to enable geometrical adaptions.
+The coupled deformation of the two \pulley-\sheaves due to the contact to all \els in one arc is suggested furthermore.
+The nonlinear deformation of the \els in longitudinal direction is respected with a special force law.
+An updating process using a special measuring device, i.e. the \PFT, is performed to gain precise parameters 
+The spatial interaction between \el-saddle and \ring is analyzed in means of \ring-tracking. 
+Former models are discussed and a new one is suggested, which respects the normal force influence.\\
+The computation of the models on a \CPU leads to numerical issues, which are treated at last.
+A kinetics based initialization scheme shortens the transition phase and thus the simulation time.
+The application of modern solution schemes for the complementarity problem between \els and \sheaves reduces the simulation time further in every time step.
+Finally, the usage of sparse matrix algebra in combination with the specific properties of the integration scheme yields faster integration when non-smooth force laws are used in the model.\\
+The post-processing steps conclude the chapter which serve as basis for the further analysis of different aspects of the system.\par
+
+Models are tested on their qualitative output as well as on their sensitivity on parameters.
+Numerical aspects are treated in \cref{chap:NumericalAspects}.
+To save simulation time less \els are used in simulation than in reality.
+The influence of this is studied at first to find a minimal number of \els and to show the difference to a reference simulation, i.e. the overall quality.
+Then the influence of different contact laws is studied using either single- or set-valued functions which affects both the simulation time as well as the physical output behavior.
+Finally different dynamical models for the \rings are compared in means of \CPU costs and physical output.
+A further analysis tests the applicability of the approach for spatial simulation.\par
+
+Besides numerical based parameters, also physical based parameters are not known exactly.
+Their impact on the system's behavior is discussed in \cref{chap:PhysicalAspects}.
+This forms the basis for two improvements.
+On the one hand the parameters can be updated for precise outputs of the model.
+On the other hand it offers optimization strategies for future belt designs.\\
+The number of \els that are used within the belt assembly is not known precisely.
+The parameter is set by experience.
+However, small changes lead to different system outputs which are treated in \cref{sec:SimulationElements}.\\
+In \cref{sec:ElementPulleyContact} the most important parameters for the contact between \el-flank and \pulley-\sheave are discussed.
+The contact position along the flank is unknown as well as the stiffness in axial direction.
+Both influence the system's behavior strongly.\\
+The same holds for the contact in-between the \els.
+The geometry for the \head depends on the element specification.
+Thus the contact point is uncertain in terms of radial as well as longitudinal position.
+Both aspects are discussed in \cref{sec:ElementElementContact}.\\
+Finally, the friction parameters for the contact between \el-\pulley and between \el-\ring are analyzed in \cref{sec:Friction}.\par
+
+The model is validated in \cref{chap:Validation} based on the discussion of the previous chapters.
+Force distributions along the belt and kinematics in the arcs are compared qualitatively for a broad spectrum.
+Furthermore, quantitative measurements are compared for the most important local forces.\\
+Global measures, i.e. descriptive values for certain stationary cases, are compared for varying boundary conditions.
+The trends for the thrust ratio and efficiency yield quantitative matches for a variator with well identified parameters.
+Other variator setups show the necessity for an updating process.
+Furthermore, the influence on external loads and the robustness against e.g. wear are validated with measurements.\\
+At last, instationary effects are treated.
+On the one hand the gear-rattle noise can be related virtually to the frictional curves.
+On the other hand shifting situations are compared to values from the literature qualitatively.\par
+
+Finally, the work is summarized in \cref{chap:Conclusion}.
+Based on the conclusion an outlook on further research possibilities is given.

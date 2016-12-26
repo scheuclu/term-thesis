@@ -1,0 +1,97 @@
+% Conclusion and Outlook
+\chapter{Conclusion} \label{chap:Conclusion}
+
+This thesis described the pushbelt CVT -- its modeling and simulation. 
+This chapter first summarizes the results and the conclusions and then describes possible avenue for future research.
+
+\section{Summary}
+
+\cref{chap:Introduction} explains why detailed insights into the system pushbelt continuously variable transmission (CVT) are required to further improve the system. 
+The increased driving comfort for stop-and-go traffic in modern cities and the decreased $CO_2$-footprint motivate this improvement. 
+A compact overview about the phenomena within the pushbelt is given and the most important concepts to describe the system's state are introduced. 
+The state of literature about dynamics of \CVTs is presented distinguishing between stationary and shifting models. 
+This thesis understands a pushbelt \CVT as a multibody system (\MBS) which enables an overall model approach including stationary and instationary states. 
+Prior models using multibody systems which are validated and enhanced here are summarized as well. 
+An overview about the structure and objectives of this thesis concludes the first chapter. 
+It is emphasized, that the validation of the model is indeed an iterative process which treats the different aspects in a logical order. 
+Yet, all chapters have to be seen in a whole to grasp the results of the work.\par
+
+Modeling ideas are discussed in \cref{chap:Modeling}. 
+The dynamics of the elements, sheaves and rings are discussed first. 
+Elements and sheaves should be treated as rigid bodies considering their deformation in the interactions.
+The rings require a deformable model. 
+An arbitrary Lagrangian-Eulerian (\ALE) model is derived using two reference degrees of freedom (\DOFs), i.e. the rings velocity and its ratio, to describe the nonlinear deformation. 
+Overlaid deformations, which also could be incorporated only kinematical, lead to a highly adaptable and fast model.\\
+Next interactions are discussed beginning with the element's thickness as it changes the stiffness of the element which has to be respected in the normal contact laws.
+Then the three contact positions are treated separately. 
+For the element-pulley contact a new kinematical description enables arbitrary convex shaped sheaves and the coupling of both pulley-sheaves in one contact law reduces the dimension of the contact law. 
+To respect the non-linearity of the element's longitudinal deformation a contact law with physically interpretable parameters is introduced.
+The \PFT system uses parts of the complete \CVT to enable identification of these parameters which are unknown from the overall system. 
+The contact at the element's saddle is discussed in more detail for spatial models. 
+On the one hand the prior contact kinematics are enhanced to avoid unphysical torques around the center line of the rings. 
+On the other hand a tracking law  balances the rings and the elements in case of misalignment respecting the normal force influence.\\
+To reduce simulation time three numerical techniques are presented. 
+The initialization respects the force equilibrium instead of solely the kinematics which reduces the transition phase at the beginning of every simulation. 
+A reformulation of the linear complementarity problem that is used for the representation of the pulley-deformation with projection functions yields faster simulations in case of a compatible contact kinematics. 
+Using algorithms for sparse matrices in combination with specific properties of the integrator reduce the time to set up the mass-action matrix in case of a non-smooth representation of contact laws.\\
+Finally, the steps for post processing are shown. 
+This forms the basis to yield local and global results which are compared in the subsequent chapters.\par
+
+
+
+Parameter studies are performed to check the accuracy of the model. 
+Numerical aspects are treated in \cref{chap:NumericalAspects}. 
+The number of elements that are used to represent the real number of elements in the belt is studied first. 
+A minimal number of 200 elements is needed to achieve results close to a reference of 400 elements. 
+Set-valued contact laws resulting in non-smooth equations of motions are studied next. 
+It is shown that for the element-ring friction it is useful to incorporate non-smooth effects. 
+For all other cases the simulation time increases strongly and the benefit is unclear. 
+Finally, different models for the rings are investigated. 
+It is shown that the \ALE model performs very well.
+The results match with a previously validated ring model but the CPU time is reduced. 
+Robust integration in spatial situations in reasonable simulation time is only possible with the ALE model.
+The stiff \DOFs in axial direction can be incorporated on a kinematical level which is not possible for classical models.\par
+
+Physical based parameters are varied and discussed in \cref{chap:PhysicalAspects} and serve as the basis for parameter identification as well as for design optimizations.
+The most important parameters are treated showing their main influences on the system's behavior. 
+These are the number of elements that exist in the belt assembly, the contact position at the element's flank as well as the axial stiffness, the geometry of the element's head in terms of the contact position and the friction parameters for the contact at the flank as well as at the saddle. 
+The complex interactions, which vary for different ratios and load conditions, are discussed qualitatively using exemplary local phenomena.\par
+
+In \cref{chap:Validation} validating results are presented. 
+A qualitative overview about the most important local measures along the belt validates the model's approach. 
+Quantitative matches are gained comparing the element's axial forces in the arc as well as the longitudinal forces along the belt. 
+Furthermore, kinematical behavior shows good correlation in terms of spiral running for different ratio and load cases. 
+The pitch angle of the elements within the arcs however, only agrees qualitatively.\\
+The thrust ratio and efficiency match quantitative for well identified parameters. 
+Further setups lack  precise parameters. 
+Qualitative accordance results. 
+Slip-curve experiments fit their virtual counterparts approximately, i.e. a slip-step is apparent as well as a maximum torque. 
+Large parameter sensitivity is found with respect to the parameters discussed in \cref{chap:PhysicalAspects}.
+Similarly, the endplay tolerance shows qualitatively  good correlation but the precise parametrization remains unclear.\\
+Finally, instationary phenomena are investigated. 
+The ``scratch'' phenomenon, which causes gear rattle is linked to Stribeck friction when operational endplay is apparent in the belt. 
+For shifting cases, the time derivative of the speed ratio is in line with measurements in the literature.
+
+\section{Outlook}
+
+This thesis demonstrates that modeling the pushbelt \CVT as a \MBS is a useful approach to study the internal dynamics as a whole. 
+Yet, it became clear that further research and development is required for a fully detailed model.\\
+The correct identification of the system's parameters is an essential requirement to obtain correct results. 
+As shown for the nonlinear stiffness of the elements, special measuring devices could be used to avoid a full integration of the system which involves all parametric influences.\par
+
+For well identified variator models the simulations can be used for design optimization. 
+The model's broad field of design parameters leaves room for more influence studies beyond those performed for the validation within this thesis.\\
+The element-sheave pitch is one example that shows a need for it.
+The nonlinear push-force functions, the contact position at the element flank as well as the number of elements in the belt require more dedicated identification.
+Similarly to the \PFT system, submodel testing seems to be a promising approach.\\
+Therefore, a further reduction of simulation times is useful.
+Parallel as well as implicit integration schemes that focus on the efficient evaluation of the nonlinear contact kinematics could reduce the simulation time.\\
+This enables the efficient treatment of the pushbelt \CVT as a spatial system incorporating for example misalignment as well. 
+The proposals for contact kinematics and ring tracking could be tested in practice.
+The expected influence on the force distributions along the belt could be used in post-processing to minimize for example the stresses in the elements.\par
+
+Based on the \ALE technique efficient models for shifting dynamics could be derived.
+The two reference \DOFs have proven to efficiently incorporate the major effects that are apparent within the \CVT. 
+By projecting the masses of the elements onto this model, similarly to ideas presented in \cite{bullinger_dynamik_2005}, an efficient and easily adaptable model could be derived for the application in control, i.e. drivetrain models.
+
+
