@@ -1,15 +1,4 @@
-<!DOCTYPE HTML>
 <html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Made with Remarkable!
-  </title>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
-  <style type="text/css">
-   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);body{padding:20px;color:#8e8071;font-size:15px;font-family:"Open Sans",AppleSDGothicNeo-Medium,"Segoe UI","Malgun Gothic",sans-serif;background:#fff;-webkit-font-smoothing:antialiased}a{color:#3269a0}a:hover{color:#4183c4}h1,h2,h3,h4,h5{font-weight:400;color:#5c5146;letter-spacing:-1px}h2{border-bottom:1px solid #e6e6e6;line-height:1.7em}h6{color:#777}hr{border:1px solid #e6e6e6}p{line-height:19px}p>code{font-family:"Open Sans",AppleSDGothicNeo-Medium,"Segoe UI","Malgun Gothic",sans-serif;color:#e86741;font-size:.9em}pre>code{font-size:1em;font-family:"Open Sans",AppleSDGothicNeo-Medium,"Segoe UI","Malgun Gothic",sans-serif;letter-spacing:-1px;font-weight:400}blockquote{border-left:4px solid #e6e6e6;padding:0 15px;font-style:italic;color:#e86741}table{background-color:#fafafa}table tr td,table tr th{border:1px solid #e6e6e6}table tr:nth-child(2n){background-color:#f2f2f2}
-  </style>
- </head>
  <body>
   <h1 id="incompressibility-study">
    Incompressibility study

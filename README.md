@@ -39,7 +39,7 @@
   </p>
   <p>
    All figures used in this thesis are listed
-   <a href="list_figures.html">
+   <a href="list_figures.md">
     here
    </a>
    .
@@ -60,32 +60,32 @@
    Studies have been carried out with the following objectives:
    <br/>
    -
-   <a href="./studies/2016-08-18_EigenvalueDistribution/README.html">
+   <a href="./studies/2016-08-18_EigenvalueDistribution/README.md">
     Eigenvaule distribution
    </a>
    <br/>
    -
-   <a href="./studies/2016-08-22_HeterogenityType/README.html">
+   <a href="./studies/2016-08-22_HeterogenityType/README.md">
     Influence of heterogeneities
    </a>
    <br/>
    -
-   <a href="./studies/2016-08-10_Partitioning/README.html">
+   <a href="./studies/2016-08-10_Partitioning/README.md">
     Influence of partitioning schemes
    </a>
    <br/>
    -
-   <a href="./studies/2016-08-19_Incompresibility/README.html">
+   <a href="./studies/2016-08-19_Incompresibility/README.md">
     Algortithm properties under incompressiblity
    </a>
    <br/>
    -
-   <a href="./studies/2016-08-19_Inclusion/README.html">
+   <a href="./studies/2016-08-19_Inclusion/README.md">
     Algorithm properties under the presence of inclusions
    </a>
    <br/>
    -
-   <a href="./studies/2016-08-25_StudyContractfac/README.html">
+   <a href="./studies/2016-08-25_StudyContractfac/README.md">
     Choice of a proper contraction factor
    </a>
   </p>
@@ -94,7 +94,7 @@
   </h2>
   <p>
    For the purpose of this thesis a general purpose Finite Elment code was written in Matlab(
-   <a href="./FEMAC/README.html">
+   <a href="./FEMAC/README.md">
     FEMAC
    </a>
    ). The version used for the calculations of this thesis is provided in the subfolder
